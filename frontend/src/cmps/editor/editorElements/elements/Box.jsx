@@ -5,6 +5,7 @@ export function getBox() {
         id: utilService.makeId(),
         type: 'section',
         role: 'card-container',
+        isContainer: true,
         prefs: {
             style: {
                 display: 'flex',

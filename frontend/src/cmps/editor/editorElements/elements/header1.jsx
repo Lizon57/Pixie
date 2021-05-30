@@ -5,6 +5,7 @@ export function getHeader1() {
         id: utilService.makeId(),
         type: 'header',
         role: 'header',
+        isContainer: true,
         prefs: {
             className: "",
             style: {

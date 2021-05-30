@@ -15,12 +15,7 @@ function getFieldsWithPx() {
 }
 
 function getFieldsWithDebounce() {
-    return [
-        'fontSize', 'color', 'letterSpacing',
-        'backgroundColor', 'borderRadius', 'height', 'width',
-        'marginBlockStart', 'marginBlockEnd', 'marginInlineStart', 'marginInlineEnd',
-        'paddingBlockStart', 'paddingBlockEnd', 'paddingInlineStart', 'paddingInlineEnd'
-    ]
+    return ['color', 'backgroundColor']
 }
 
 function getNewElement(element, changedField, newValue) {

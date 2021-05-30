@@ -14,7 +14,9 @@ export function FooterCmp({ data, onReorderingElement, onRemoveElement, setEditi
                 setEditingElement(data, parentId)
             }}
         >
+
             <ElementToolBar
+                isContainer={data.isContainer}
                 id={data.id}
                 onReorderingElement={onReorderingElement}
                 onRemoveElement={onRemoveElement} />

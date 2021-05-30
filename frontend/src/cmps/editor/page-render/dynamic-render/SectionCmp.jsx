@@ -16,6 +16,7 @@ export function SectionCmp({ data, setEditingElement, onReorderingElement, onRem
         >
             <ElementToolBar
                 id={data.id}
+                isContainer={data.isContainer}
                 onReorderingElement={onReorderingElement}
                 onRemoveElement={onRemoveElement} />
 

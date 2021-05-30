@@ -55,7 +55,7 @@ export class _ElementEditor extends React.Component {
             // Text style
             textAlign, fontStyle, textDecoration, fontSize, color, fontWeight, fontFamily, letterSpacing,
             // Box styling
-            backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, borderRadius, backgroundSize, backgroundAttachment,
+            backgroundColor, backgroundImage, borderRadius,
             height, width,
             // Box Orientation
             paddingBlockStart, paddingBlockEnd, paddingInlineStart, paddingInlineEnd, marginBlockStart, marginBlockEnd, marginInlineStart, marginInlineEnd
@@ -97,10 +97,6 @@ export class _ElementEditor extends React.Component {
                         <EditBoxStyling
                             backgroundColor={backgroundColor}
                             backgroundImage={backgroundImage}
-                            backgroundPosition={backgroundPosition}
-                            backgroundRepeat={backgroundRepeat}
-                            backgroundSize={backgroundSize}
-                            backgroundAttachment={backgroundAttachment}
                             borderRadius={borderRadius}
                             height={height}
                             width={width}
