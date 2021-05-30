@@ -2,6 +2,12 @@
     display: flex;
     height: calc(100vh - 50px);
     padding: 16px;
+    gap: 16px;
+
+    .divider {
+        width: 11px;
+        background-color: rgb(233, 233, 233);
+    }
 
     .profile-sidebar {
         width: 300px;
@@ -40,12 +46,53 @@
 
                 .stat {
                     color: $black;
-                }   
+                }
+            }
+        }
+
+        .side-nav {
+            display: flex;
+            flex-direction: column;
+            font-family: inter;
+            font-size: 20px;
+            justify-content: flex-start;
+            width: 100%;
+
+            a {
+                height: 60px;
+                display: flex;
+                align-items: center;
+                padding-left: 16px;
+                transition: 0.3s;
+
+                &:hover {
+                    background-color: rgb(230, 230, 230);
+                }
+            }
+
+            .active {
+                border-left: 4px solid $azure;
             }
         }
     }
 
     .profile-main {
         flex: 1;
+
+        .details {
+            display: flex;
+            justify-content: space-between;
+
+            .greet {
+                font-family: inter;
+                font-size: 30px;
+            }
+
+            .last-active {
+                font-size: 20px;
+                font-family: inter;
+                color: #b9b9b9;
+            }
+        }
     }
 }
