@@ -16,7 +16,6 @@ class _PageRenderV2 extends React.Component {
         return childs
     }
 
-    // ASK ALEX ABOUT UNUSED CHILDS
     onDragEnd = (result) => {
         if (!result.destination) return
         this.reorder(
