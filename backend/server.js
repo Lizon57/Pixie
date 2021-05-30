@@ -28,7 +28,8 @@ if (process.env.NODE_ENV === 'production') {
 
 const authRoutes = require('./api/auth/auth.routes')
 const userRoutes = require('./api/user/user.routes')
-// const tamplateRoutes = require('./api/tamplate/tamplate.routes')
+const webRoutes = require('./api/web/web.routes')
+const tamplateRoutes = require('./api/tamplate/tamplate.routes')
 
 // routes
 const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware')
@@ -45,7 +46,8 @@ app.all('*', setupAsyncLocalStorage)
 
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
-// app.use('/api/tamplate', tamplateRoutes)
+app.use('/api/web', webRoutes)
+app.use('/api/tamplate', tamplateRoutes)
 
 // Make every server-side-route to match the index.html
 // so when requesting http://localhost:3030/index.html/car/123 it will still respond with
