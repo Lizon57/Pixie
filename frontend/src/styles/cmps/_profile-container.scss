@@ -5,6 +5,33 @@
 
     .profile-sidebar {
         width: 300px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .user-img {
+            width: 300px;
+            height: 300px;
+            background-image: url(../../assets/img/user-img.png);
+            background-position: center;
+            border-radius: 50%;
+        }
+
+        .statistics {
+            margin-top: 20px;
+            margin-bottom: 20px;
+            border-top: #c8c8c8 1px solid;
+            border-bottom: #c8c8c8 1px solid;
+            width: 200px;
+            height: 100px;
+            display: flex;
+
+            div {
+                flex-grow: 1;
+                display: flex;
+                flex-direction: column;
+            }
+        }
     }
 
     .profile-main {
