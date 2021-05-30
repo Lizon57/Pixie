@@ -23,13 +23,24 @@
             border-top: #c8c8c8 1px solid;
             border-bottom: #c8c8c8 1px solid;
             width: 200px;
-            height: 100px;
             display: flex;
 
             div {
                 flex-grow: 1;
                 display: flex;
                 flex-direction: column;
+                text-align: center;
+                padding: 10px;
+                gap: 10px;
+                font-family: inter;
+
+                .amount {
+                    font-weight: bold;
+                }
+
+                .stat {
+                    color: $black;
+                }   
             }
         }
     }

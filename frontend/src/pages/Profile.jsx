@@ -11,8 +11,8 @@ export class Profile extends React.Component {
                 <div className="profile-sidebar">
                 <div className="user-img"></div>
                 <div className="statistics">
-                    <div><span>stat1:</span><span>amount1</span></div>
-                    <div><span>stat2:</span><span>amount2</span></div>
+                    <div><span className="amount">1</span><span className="stat">Websites</span></div>
+                    <div><span className="amount">4</span><span className="stat">Drafts</span></div>
                 </div>
                 <div className="side-nav"></div>
                 </div>
