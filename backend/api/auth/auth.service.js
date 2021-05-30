@@ -39,6 +39,8 @@ async function _createUser(userInfo) {
         email,
         password: hash,
         createdAt: Date.now(),
+        lastLogInAt: Date.now(),
+        webSites: 0,
     }
 }
 

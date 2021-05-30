@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { onLoadUser } from '../store/actions/user.actions'
+import { loadUser } from '../store/actions/user.actions'
 import { UserMsg } from '../cmps/UserMsg.jsx';
 
 
@@ -40,8 +40,8 @@ class _LoginForm extends React.Component {
                 email,
                 password,
             }
-            await onLoadUser(credentials)
-            this.props.history.push('/');
+            await loadUser(credentials)
+            this.props.history.push('/editor');
         }
 
         catch (err) {
@@ -126,7 +126,7 @@ class _LoginForm extends React.Component {
 
 
 const mapDispatchToProps = {
-    onLoadUser,
+    loadUser,
 
 }
 

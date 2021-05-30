@@ -9,7 +9,7 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { onSignUp } from '../store/actions/user.actions';
+import { signUp } from '../store/actions/user.actions';
 import { UserMsg } from '../cmps/UserMsg';
 
 
@@ -50,8 +50,8 @@ class _SignUpForm extends React.Component {
             password,
             fullName
         }
-        await onSignUp(userInfo)
-        this.props.history.push('/')
+        await signUp(userInfo)
+        this.props.history.push('/editor')
     }
 
     render() {
@@ -141,7 +141,7 @@ class _SignUpForm extends React.Component {
 
 
 const mapDispatchToProps = {
-    onSignUp,
+    signUp,
 }
 
 
