@@ -1,0 +1,27 @@
+.element-tool-bar {
+  background-color: $black;
+  cursor: pointer;
+  z-index: 5;
+  & ::before {
+    color: $white;
+  }
+}
+
+.element-tool-bar {
+  display: none;
+  position: absolute;
+  top: 0;
+  right: 0;
+  font-size: 20px;
+  color: navy;
+
+  &:hover {
+    border: none;
+  }
+
+  div {
+    border: none;
+    height: 25px;
+    width: 25px;
+  }
+}

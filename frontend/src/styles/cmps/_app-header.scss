@@ -1,0 +1,76 @@
+.main-header {
+  position: fixed;
+  background-color: $black;
+  color: $white;
+  width: 100%;
+  z-index: 1;
+
+  & > div {
+    height: rem(50px);
+  }
+
+  & img {
+    width: 80px;
+  }
+}
+
+.navlinks-container {
+  position: absolute;
+  top: 2.15rem;
+  right: 0;
+  height: 100vh;
+  width: 100%;
+
+  &.hider {
+    display: none;
+  }
+
+  & li {
+    background-color: $light-grey1;
+    color: $black;
+    font-weight: $fw-bold;
+    font-family: raleway;
+    letter-spacing: 1px;
+    padding: 1rem;
+
+    &:not(:last-child) {
+      border-block-end: 1px dotted $black;
+    }
+
+    &:hover {
+      background-color: $black;
+      color: $white;
+    }
+  }
+
+  @include for-normal-layout {
+    display: flex !important;
+    position: inherit;
+    height: inherit;
+
+    & li {
+      background-color: inherit;
+      color: inherit;
+
+      &:not(:last-child) {
+        border-block-end: 0;
+      }
+
+      &:hover {
+        box-shadow: inset 0 -8px 0px -5px $azure;
+      }
+
+      & a {
+        transition: color ease-in-out $t-fast;
+
+        &.active {
+          color: $azure;
+        }
+      }
+    }
+  }
+}
+
+.pseudo-header {
+  height: 50px;
+}

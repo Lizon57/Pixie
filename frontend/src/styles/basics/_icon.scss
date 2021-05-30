@@ -1,0 +1,82 @@
+// App header
+.hamburger-icn {
+  transition: color ease-in-out $t-fast;
+
+  &::before {
+    content: "\f0c9";
+  }
+
+  &:hover {
+    color: $azure;
+  }
+
+  @include for-normal-layout {
+    display: none;
+  }
+}
+
+// Editor
+.create-el-icn {
+  display: block;
+
+  &::before {
+    content: "\f067";
+  }
+}
+
+.edit-el-icn {
+  display: block;
+
+  &::before {
+    content: "\f304";
+  }
+}
+
+.editor-text-pref-icn{
+  cursor: pointer;
+  background-color: $light-grey1;
+  padding: .5rem;
+
+  &.left::before{
+    content: "\f036";
+  }
+
+  &.center::before{
+    content: "\f037";
+  }
+
+  &.right::before{
+    content: "\f038";
+  }
+
+  &.italic::before{
+    content: "\f033";
+  }
+
+  &.underline::before{
+    content: "\f0cd";
+  }
+
+  &.active{
+    background-color: $grey;
+  }
+}
+
+//Element-tool-bar
+.trash-icn {
+  &::before {
+    content: "\f2ed";
+  }
+}
+
+.up-arrow-icn {
+  &::before {
+    content: "\f062";
+  }
+}
+
+.down-arrow-icn {
+  &::before {
+    content: "\f063";
+  }
+}

@@ -1,0 +1,12 @@
+.basic-product {
+  position: relative;
+  border: 1px $grey dashed;
+
+  &:hover {
+    border: 1px $grey solid;
+  }
+
+  &:hover > *.element-tool-bar {
+    display: flex;
+  }
+}

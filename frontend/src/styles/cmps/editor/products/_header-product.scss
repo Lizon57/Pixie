@@ -1,0 +1,38 @@
+.product-nav-bar {
+  display: flex;
+  align-items: center;
+  background-color: $blue;
+  color: $white;
+  border-block-end: 1px solid $black;
+  height: 85px;
+  width: 100%;
+
+  & .product-logo {
+    flex: 1;
+    display: flex;
+    font-size: 2rem;
+  }
+
+  & .product-nav-btns {
+    display: flex;
+    flex: 1;
+    height: 100%;
+  }
+
+  & .nav-btn {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $blue;
+    color: $white;
+    border: none;
+    border-inline-start: 1px solid $black;
+    outline: none;
+    height: 100%;
+  }
+
+  & .nav-btn:last-child {
+    border-right: 1px solid $black;
+  }
+}

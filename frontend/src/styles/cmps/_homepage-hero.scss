@@ -1,0 +1,85 @@
+.homepage-hero {
+    background-image: url(../../assets/img/hero-img.jpg);
+    height: calc(100vh - 50px);
+    background-size: cover;
+    background-position: center;
+    filter: grayscale(0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    div {
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    span {
+        font-size: 45px;
+        font-family: Raleway;
+        font-weight: 600;
+        background-color: #ffffffb3;
+        border-radius: 10px;
+        margin-bottom: 100px;
+        box-shadow: 5px 5px 45px 50px rgba(255, 255, 255, 0.7);
+        border: none
+    }
+
+    button {
+        font-family: inter;
+        background-color: rgba(0, 0, 0, 0.315);
+        border: 3px rgba(255, 255, 255, 0.85) solid;
+        font-size: 30px;
+        padding: 10px 20px 10px 20px;
+        border-radius: 3px;
+        box-shadow: 0 0 0 gray;
+        transition: 0.2s;
+        color: rgba(255, 255, 255, 0.85);
+
+        &:hover {
+            padding: 10px 33px 10px 33px;
+            color: $azure;
+            cursor: pointer;
+            background-color: rgba(255, 255, 255, 0.85);
+            border: 3px rgba(255, 255, 255, 0.85) solid;
+        }
+    }
+}
+
+.hero2 {
+    background-image: url("https://images.unsplash.com/photo-1599707367072-cd6ada2bc375");
+    min-height: 500px;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    padding: 30px;
+
+    .a {
+        font-size: 60px;
+        font-family: cinzel;
+        color: $white;
+    }
+
+    button {
+        width: 120px;
+        height: 40px;
+        font-size: 18px;
+        font-family: Inter;
+        align-self: center;
+        border: none;
+        background-color: $white;
+        color: black;
+        border-radius: 2px;
+    }
+
+    .b {
+        font-size: 30px;
+        font-family: cinzel;
+        color: #c8c8c8;
+        align-self: flex-end;
+    }
+}

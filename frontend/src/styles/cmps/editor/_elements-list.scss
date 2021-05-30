@@ -1,0 +1,14 @@
+.editor-elements-list {
+  & .item {
+    background-color: $light-grey1;
+    @include rounded-corners;
+    padding: 1em;
+    margin: 0.5rem auto;
+    width: 50%;
+    transition: background-color ease-in-out $t-fast;
+
+    &:hover {
+      background-color: $light-grey2;
+    }
+  }
+}

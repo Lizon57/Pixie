@@ -1,0 +1,8 @@
+.site-container {
+  flex-grow: 1;
+  
+  & section {
+    display: flex;
+    flex-direction: column;
+  }
+}

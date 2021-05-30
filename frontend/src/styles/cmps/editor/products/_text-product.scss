@@ -1,0 +1,8 @@
+.text-product-container {
+  width: 100%;
+
+  & .text-product {
+    font-size: 1.5rem;
+    white-space: pre-line;
+  }
+}

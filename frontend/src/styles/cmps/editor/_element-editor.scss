@@ -1,0 +1,60 @@
+.edit-text-textarea {
+  background-color: transparent;
+  border: 1px solid $grey;
+  outline: none;
+  resize: none;
+  height: 5rem;
+  width: 100%;
+}
+
+.editor-text-pref-warper {
+  padding: 0.5rem;
+
+  & span:not(:last-child){
+    margin-inline-end: .5rem;
+  }
+}
+
+.editor-pref-warper {
+  margin-block-end: 0.5rem;
+}
+
+.editor-label {
+  font-size: 0.9rem;
+  margin-inline-end: 1rem;
+  width: 7rem;
+}
+
+.editor-indicator {
+  flex-grow: 1;
+  color: $dark-grey;
+  font-size: rem(12px);
+  margin-inline-start: 0.5rem;
+  width: 6rem;
+  text-align: right;
+}
+
+input[id="color"] {
+  border: none;
+  width: rem(50px);
+  height: rem(24px);
+}
+
+.edit-select {
+  width: 100%;
+
+  & > div {
+    cursor: pointer;
+    @include rounded-corners;
+    background-color: $white;
+
+    &:hover {
+      border-color: $black;
+      box-shadow: none;
+    }
+
+    & :last-child {
+      color: $dark-grey;
+    }
+  }
+}
