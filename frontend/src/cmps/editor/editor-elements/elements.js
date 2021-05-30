@@ -8,6 +8,7 @@ import { getHero } from './elements/Hero';
 import { getVideo } from './elements/Video';
 import { getMap } from './elements/Map';
 import { getBox } from './elements/Box';
+import { getHero1 } from './elements/hero1';
 
 
 export const elements = {
@@ -21,5 +22,6 @@ export const elements = {
     getVideo,
     getMap,
     getBox,
+    getHero1,
 };
 

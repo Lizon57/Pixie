@@ -8,7 +8,7 @@ export class EditOrientation extends React.Component {
         { value: 'row', label: 'Left to right' },
         { value: 'row-reverse', label: 'Right to left' },
         { value: 'column', label: 'Top to bottom' },
-        { value: 'column-reverse', label: 'Bottom to top' },
+        { value: 'column-reverse', label: 'Bottom to top' }
     ]
 
     justifyContentOptions = [
@@ -17,7 +17,7 @@ export class EditOrientation extends React.Component {
         { value: 'flex-end', label: 'End' },
         { value: 'space-between', label: 'Space between' },
         { value: 'space-around', label: 'Space around' },
-        { value: 'space-evenly', label: 'Space evenly' },
+        { value: 'space-evenly', label: 'Space evenly' }
     ]
 
     alignItemsAndSelfOptions = [
@@ -25,7 +25,7 @@ export class EditOrientation extends React.Component {
         { value: 'center', label: 'Center' },
         { value: 'flex-end', label: 'End' },
         { value: 'baseline', label: 'Baseline' },
-        { value: 'stretch', label: 'Stretch' },
+        { value: 'stretch', label: 'Stretch' }
     ]
 
     render() {

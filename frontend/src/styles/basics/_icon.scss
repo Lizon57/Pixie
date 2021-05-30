@@ -32,51 +32,57 @@
   }
 }
 
-.editor-text-pref-icn{
+.editor-text-pref-icn {
   cursor: pointer;
   background-color: $light-grey1;
-  padding: .5rem;
+  padding: 0.5rem;
 
-  &.left::before{
+  &.left::before {
     content: "\f036";
   }
 
-  &.center::before{
+  &.center::before {
     content: "\f037";
   }
 
-  &.right::before{
+  &.right::before {
     content: "\f038";
   }
 
-  &.italic::before{
+  &.italic::before {
     content: "\f033";
   }
 
-  &.underline::before{
+  &.underline::before {
     content: "\f0cd";
   }
 
-  &.active{
+  &.active {
     background-color: $grey;
   }
 }
 
-//Element-tool-bar
-.trash-icn {
-  &::before {
-    content: "\f2ed";
-  }
-}
+// Element toolbar
+.tool-bar-icn {
+  padding: 2px;
 
-.up-arrow-icn {
-  &::before {
+  &:hover {
+    background-color: darken($green-azure, 10);
+  }
+
+  &.trash::before {
+    content: "\f1f8";
+  }
+
+  &.up-arrow::before {
     content: "\f062";
   }
-}
 
-.down-arrow-icn {
-  &::before {
+  &.down-arrow::before {
     content: "\f063";
+  }
+
+  &.edit::before {
+    content: "\f304";
   }
 }

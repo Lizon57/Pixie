@@ -1,4 +1,4 @@
-import { elements } from '../cmps/editor/editorElements/elements'
+import { elements } from '../cmps/editor/editor-elements/elements'
 
 // Export functions
 export const elementService = {
@@ -31,6 +31,8 @@ function getElement(type, src = null) {
             return elements.getCards()
         case 'header1':
             return elements.getHeader1()
+            case 'hero1':
+            return elements.getHero1()
         default: return;
     }
 }

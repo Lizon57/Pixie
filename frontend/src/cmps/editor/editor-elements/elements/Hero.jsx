@@ -4,6 +4,7 @@ export function getHero() {
     return ({
         id: utilService.makeId(),
         type: 'div',
+        isContainer: true,
         prefs: {
             style: {
                 display: 'flex',

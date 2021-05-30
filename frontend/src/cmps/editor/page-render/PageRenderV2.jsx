@@ -4,7 +4,7 @@ import { setEditingElement } from '../../../store/actions/editor-actions';
 import { setData } from '../../../store/actions/data-actions';
 import { utilService } from '../../../service/util-service';
 import { ChildsPreview } from './ChildsPreview';
-import { DragDropContext, Droppable } from 'react-beautiful-dnd'
+import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 class _PageRenderV2 extends React.Component {
 
@@ -16,7 +16,6 @@ class _PageRenderV2 extends React.Component {
         return childs
     }
 
-    // ASK ALEX ABOUT UNUSED CHILDS
     onDragEnd = (result) => {
         if (!result.destination) return
         this.reorder(
@@ -43,6 +42,7 @@ class _PageRenderV2 extends React.Component {
                                 return <ChildsPreview
                                     child={child}
                                     key={child.id}
+                                    isContainer={child.isContainer}
                                     setEditingElement={setEditingElement}
                                     onReorderingElement={onReorderingElement}
                                     onRemoveElement={onRemoveElement}

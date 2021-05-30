@@ -16,6 +16,7 @@ export function IframeCmp({ data, onReorderingElement, onRemoveElement, setEditi
         >
             <ElementToolBar
                 id={data.id}
+                isContainer={data.isContainer}
                 onReorderingElement={onReorderingElement}
                 onRemoveElement={onRemoveElement} />
         </iframe >

@@ -5,6 +5,7 @@ export function getCards() {
         id: utilService.makeId(),
         type: 'div',
         role: 'card-container',
+        isContainer: true,
         prefs: {
             className: "product-card-container"
         },

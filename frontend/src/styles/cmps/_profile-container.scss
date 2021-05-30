@@ -1,0 +1,13 @@
+.profile-container {
+    display: flex;
+    height: calc(100vh - 50px);
+    padding: 16px;
+
+    .profile-sidebar {
+        width: 300px;
+    }
+
+    .profile-main {
+        flex: 1;
+    }
+}

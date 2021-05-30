@@ -5,6 +5,7 @@ export function getFooter() {
         id: utilService.makeId(),
         type: 'footer',
         role: 'footer',
+        isContainer: true,
         prefs: {
             className: "footer-product"
         },

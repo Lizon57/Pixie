@@ -18,6 +18,7 @@ export class _ElementEditor extends React.Component {
         if (this.editFieldsWithDebounce.includes(field)) return this.handleChangeWithDebounce({ element, field, val });
 
         const updatedElement = editorService.getNewElement(element, field, val);
+        console.log(updatedElement)
         this.editElement(updatedElement);
     }
 
@@ -36,7 +37,7 @@ export class _ElementEditor extends React.Component {
         const updatedElement = editorService.getNewElement(editProps.element, editProps.field, editProps.val);
 
         this.editElement(updatedElement);
-    }, 50);
+    }, 10);
 
     editElement = (updatedElement) => {
         const { elementParentId, setEditingElement, onUpdateElement } = this.props;
@@ -55,7 +56,7 @@ export class _ElementEditor extends React.Component {
             // Text style
             textAlign, fontStyle, textDecoration, fontSize, color, fontWeight, fontFamily, letterSpacing,
             // Box styling
-            backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, borderRadius, backgroundSize, backgroundAttachment,
+            backgroundColor, backgroundImage, borderRadius,
             height, width,
             // Box Orientation
             paddingBlockStart, paddingBlockEnd, paddingInlineStart, paddingInlineEnd, marginBlockStart, marginBlockEnd, marginInlineStart, marginInlineEnd
@@ -97,10 +98,6 @@ export class _ElementEditor extends React.Component {
                         <EditBoxStyling
                             backgroundColor={backgroundColor}
                             backgroundImage={backgroundImage}
-                            backgroundPosition={backgroundPosition}
-                            backgroundRepeat={backgroundRepeat}
-                            backgroundSize={backgroundSize}
-                            backgroundAttachment={backgroundAttachment}
                             borderRadius={borderRadius}
                             height={height}
                             width={width}

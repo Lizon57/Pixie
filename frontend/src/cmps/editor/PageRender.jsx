@@ -6,7 +6,7 @@ import { ElementToolBar } from './ElementToolBar';
 class _PageRender extends React.Component {
 
     checkChildren = (elements) => {
-        return elements.map((elChild, idx) => {
+        return elements.map((elChild) => {
             return elChild.childs ?
                 this.renderSection(elChild) :
                 React.createElement(
@@ -53,7 +53,8 @@ class _PageRender extends React.Component {
             [...this.checkChildren(childs),
             cmp.name === 'site container' ? '' :
                 <ElementToolBar
-                    id={cmp.id} key={cmp.id + 't'}
+                    id={cmp.id}
+                    key={cmp.id + 't'}
                     onReorderingElement={this.props.onReorderingElement}
                     onRemoveElement={this.props.onRemoveElement} />
             ]
