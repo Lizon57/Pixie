@@ -1,4 +1,4 @@
-import { elements } from '../cmps/editor/editorElements/elements'
+import { elements } from '../cmps/editor/editor-elements/elements'
 
 // Export functions
 export const elementService = {

@@ -1,8 +1,14 @@
 .editor-side-nav-container {
+  position: fixed;
+  z-index: 5;
   border-inline-end: 1px solid $light-grey2;
+  height: 100%;
   min-width: rem(300px);
   width: rem(300px);
-  word-break: break-all;
+  overflow: auto;
+
+  scrollbar-width: thin;
+  scrollbar-color: $green-azure $light-grey1;
 
   .save {
     cursor: pointer;
@@ -10,5 +16,16 @@
     background-color: $light-grey1;
     padding: 1rem;
     height: 50px;
+  }
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    background-color: $light-grey1;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    width: 3px;
+    background-color: $green-azure;
   }
 }

@@ -4,6 +4,7 @@ export function getHero1() {
     return ({
         id: utilService.makeId(),
         type: 'div',
+        isContainer: true,
         prefs: {
             style: {
                 minHeight: '500px',
