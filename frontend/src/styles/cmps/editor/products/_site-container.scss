@@ -1,6 +1,19 @@
 .site-container {
   flex-grow: 1;
-  
+  max-height: calc(100vh - 50px);
+  overflow-y: auto;
+
+  &::-webkit-scrollbar {
+    width: 3px;
+    background-color: rgb(214, 214, 214);
+  }
+
+  &::-webkit-scrollbar-thumb {
+    border-radius: 20px;
+    width: 3px;
+    background-color: $green-azure;
+  }
+
   & section {
     display: flex;
     flex-direction: column;

@@ -9,64 +9,31 @@ import { IframeCmp } from './dynamic-render/IframeCmp'
 
 export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEditingElement }) {
     const getCmp = (child) => {
+
+        const props = {
+            data: child,
+            onReorderingElement: onReorderingElement,
+            onRemoveElement: onRemoveElement,
+            setEditingElement: setEditingElement
+        }
+
         switch (child.type) {
             case 'section':
-                return <SectionCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-
-                />;
+                return <SectionCmp {...props} />;
             case 'span':
-                return <SpanCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-                />;
+                return <SpanCmp {...props} />;
             case 'div':
-                return <DivCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-                />;
+                return <DivCmp {...props} />;
             case 'footer':
-                return <FooterCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-                />;
+                return <FooterCmp {...props} />;
             case 'header':
-                return <HeaderCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-                />;
+                return <HeaderCmp {...props} />;
             case 'button':
-                return <ButtonCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-                />;
+                return <ButtonCmp {...props} />;
             case 'nav':
-                return <NavCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-                />;
+                return <NavCmp {...props} />;
             case 'iframe':
-                return <IframeCmp
-                    data={child}
-                    onReorderingElement={onReorderingElement}
-                    onRemoveElement={onRemoveElement}
-                    setEditingElement={setEditingElement}
-                />;
+                return <IframeCmp {...props} />;
 
             default:
                 console.log('wtf is this component you sent me???');

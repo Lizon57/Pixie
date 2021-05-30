@@ -36,7 +36,7 @@ export class _ElementEditor extends React.Component {
         const updatedElement = editorService.getNewElement(editProps.element, editProps.field, editProps.val);
 
         this.editElement(updatedElement);
-    }, 50);
+    }, 10);
 
     editElement = (updatedElement) => {
         const { elementParentId, setEditingElement, onUpdateElement } = this.props;
