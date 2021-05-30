@@ -63,20 +63,26 @@
 }
 
 // Element toolbar
-.trash-icn {
-  &::before {
+.tool-bar-icn {
+  padding: 2px;
+
+  &:hover {
+    background-color: darken($green-azure, 10);
+  }
+
+  &.trash::before {
     content: "\f1f8";
   }
-}
 
-.up-arrow-icn {
-  &::before {
+  &.up-arrow::before {
     content: "\f062";
   }
-}
 
-.down-arrow-icn {
-  &::before {
+  &.down-arrow::before {
     content: "\f063";
+  }
+
+  &.edit::before {
+    content: "\f304";
   }
 }

@@ -1,5 +1,6 @@
 import React from 'react';
 import { editorService } from '../../../service/editor-service';
+import { cloudinaryService } from '../../../service/cloudinary-service';
 import Slider from 'rc-slider';
 import Select from 'react-select';
 
@@ -37,6 +38,13 @@ export class EditBoxStyling extends React.Component {
         { value: 'local', label: 'Local' }
     ]
 
+    uploadImg = async (ev) => {
+        const { onChangeSpecialInput } = this.props;
+        const { url } = await cloudinaryService.uploadImg(ev);
+
+        onChangeSpecialInput('backgroundImage', `url('${url}')`);
+    }
+
 
     render() {
         let { backgroundColor, backgroundImage,
@@ -69,7 +77,12 @@ export class EditBoxStyling extends React.Component {
                         <Slider min={0} max={50} value={strippedPropsFromPx.borderRadius} onChange={(value) => onChangeSpecialInput('borderRadius', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.borderRadius} px</span>
                     </div>
-                    HERE COMMES IMAGE UPLOAD
+
+                    {/* Upload background-image */}
+                    <div className="flex align-center editor-pref-warper">
+                        <span className="editor-label">Upload:</span>
+                        <input type="file" onChange={this.uploadImg} />
+                    </div>
                 </div>
 
                 {backgroundImage &&

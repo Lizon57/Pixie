@@ -1,9 +1,9 @@
 .editor-nav-container {
-  margin-block-end: 0.5em;
 
   & > div {
-    background-color: $light-grey2;
     display: inline-block;
+    background-color: $black;
+    color: $white;
     font-weight: $fw-bold;
     letter-spacing: 1px;
     padding: 10px;
@@ -11,12 +11,12 @@
     transition: background-color ease-in-out $t-fast;
 
     &:hover {
-      background-color: $light-grey2;
+      background-color: $dark-grey;
     }
 
     &.active {
-      background-color: $black;
-      color: $white;
+      background-color: $light-grey1;
+      color: $black;
     }
   }
 }

@@ -1,8 +1,7 @@
 import React from 'react';
-import { cloudinaryService } from '../../service/cloudinaryService'
-import { UserMsg } from '../../cmps/UserMsg'
-import TextField from '@material-ui/core/TextField';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
+import { cloudinaryService } from '../../service/cloudinary-service';
+import { UserMsg } from '../../cmps/UserMsg';
 
 
 export class ElementsList extends React.Component {
@@ -38,9 +37,9 @@ export class ElementsList extends React.Component {
     }
 
     uploadImg = async (ev) => {
-        const { onAddElement, onAddSection } = this.props;
+        const { onAddElement } = this.props;
         const { url } = await cloudinaryService.uploadImg(ev);
-        onAddElement('img', url)
+        onAddElement('img', url);
     }
 
     onSubmit = () => {
