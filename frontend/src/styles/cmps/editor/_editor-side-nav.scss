@@ -1,6 +1,8 @@
 .editor-side-nav-container {
   border-inline-end: 1px solid $light-grey2;
-  min-width: rem(250px);
+  min-width: rem(300px);
+  width: rem(300px);
+  word-break: break-all;
 
   .save {
     cursor: pointer;

@@ -18,6 +18,7 @@ export class _ElementEditor extends React.Component {
         if (this.editFieldsWithDebounce.includes(field)) return this.handleChangeWithDebounce({ element, field, val });
 
         const updatedElement = editorService.getNewElement(element, field, val);
+        console.log(updatedElement)
         this.editElement(updatedElement);
     }
 
