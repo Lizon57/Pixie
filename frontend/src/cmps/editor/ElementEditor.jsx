@@ -1,7 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { editorService } from '../../service/editor-service'
+import debounce from 'react-debouncing';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
+import { editorService } from '../../service/editor-service';
 import { setEditingElement } from '../../store/actions/editor-actions';
 import { EditText } from './editor-sections/EditText';
 import { EditOrientation } from './editor-sections/EditOrientation';
@@ -9,11 +10,14 @@ import { EditBoxStyling } from './editor-sections/EditBoxStyling';
 
 export class _ElementEditor extends React.Component {
     editFieldsWithPx = editorService.getFieldsWithPx();
+    editFieldsWithDebounce = editorService.getFieldsWithDebounce();
 
     handleSpecialInputChange = (field, val) => {
         const { element } = this.props;
-        const updatedElement = editorService.getNewElement(element, field, val);
 
+        if (this.editFieldsWithDebounce.includes(field)) return this.handleChangeWithDebounce({ element, field, val });
+
+        const updatedElement = editorService.getNewElement(element, field, val);
         this.editElement(updatedElement);
     }
 
@@ -21,10 +25,18 @@ export class _ElementEditor extends React.Component {
         const { element } = this.props;
         const field = ev.target.name;
         let val = ev.target.value;
-        const updatedElement = editorService.getNewElement(element, field, val);
 
+        if (this.editFieldsWithDebounce.includes(field)) return this.handleChangeWithDebounce({ element, field, val });
+
+        const updatedElement = editorService.getNewElement(element, field, val);
         this.editElement(updatedElement);
     }
+
+    handleChangeWithDebounce = debounce((editProps) => {
+        const updatedElement = editorService.getNewElement(editProps.element, editProps.field, editProps.val);
+
+        this.editElement(updatedElement);
+    }, 50);
 
     editElement = (updatedElement) => {
         const { elementParentId, setEditingElement, onUpdateElement } = this.props;
@@ -43,7 +55,8 @@ export class _ElementEditor extends React.Component {
             // Text style
             textAlign, fontStyle, textDecoration, fontSize, color, fontWeight, fontFamily, letterSpacing,
             // Box styling
-            backgroundColor, borderRadius, height, width,
+            backgroundColor, backgroundImage, backgroundPosition, backgroundRepeat, borderRadius, backgroundSize, backgroundAttachment,
+            height, width,
             // Box Orientation
             paddingBlockStart, paddingBlockEnd, paddingInlineStart, paddingInlineEnd, marginBlockStart, marginBlockEnd, marginInlineStart, marginInlineEnd
             // backgroundColor } = {}, src } = prefs;
@@ -83,6 +96,11 @@ export class _ElementEditor extends React.Component {
                     <AccordionItemPanel>
                         <EditBoxStyling
                             backgroundColor={backgroundColor}
+                            backgroundImage={backgroundImage}
+                            backgroundPosition={backgroundPosition}
+                            backgroundRepeat={backgroundRepeat}
+                            backgroundSize={backgroundSize}
+                            backgroundAttachment={backgroundAttachment}
                             borderRadius={borderRadius}
                             height={height}
                             width={width}

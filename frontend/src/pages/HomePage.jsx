@@ -10,10 +10,10 @@ export function HomePage() {
                     <Link to="/editor"><button>START BUILDING</button></Link>
                 </div>
             </div>
-            <div className="hero2">
-                <span className="a">DIAMONDS.</span>
-                <button>FIND OUT</button>
-                <span className="b">The hardest material on earth.</span>
+            <div className="header1">
+                <span>IMG</span>
+                <span className="logo">LOGO HERE</span>
+                <span>ABOUT</span>
             </div>
         </section>
     );

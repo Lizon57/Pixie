@@ -1,6 +1,7 @@
 // Export functions
 export const editorService = {
     getFieldsWithPx,
+    getFieldsWithDebounce,
     getNewElement,
     stripFromPx
 };
@@ -8,23 +9,30 @@ export const editorService = {
 function getFieldsWithPx() {
     return [
         'fontSize', 'letterSpacing',
-        'borderRadius', 'marginBlockStart', 'marginBlockEnd', 'marginInlineStart', 'marginInlineEnd',
-        'paddingBlockStart', 'paddingBlockEnd', 'paddingInlineStart', 'paddingInlineEnd',
-        'height', 'width',];
+        'borderRadius', 'height', 'width',
+        'marginBlockStart', 'marginBlockEnd', 'marginInlineStart', 'marginInlineEnd',
+        'paddingBlockStart', 'paddingBlockEnd', 'paddingInlineStart', 'paddingInlineEnd'];
+}
+
+function getFieldsWithDebounce() {
+    return [
+        'fontSize', 'color', 'letterSpacing',
+        'backgroundColor', 'borderRadius', 'height', 'width',
+        'marginBlockStart', 'marginBlockEnd', 'marginInlineStart', 'marginInlineEnd',
+        'paddingBlockStart', 'paddingBlockEnd', 'paddingInlineStart', 'paddingInlineEnd'
+    ]
 }
 
 function getNewElement(element, changedField, newValue) {
     if (changedField === 'txt') element = { ...element, [changedField]: newValue };
     else {
-        if (getFieldsWithPx().includes(changedField)) {
-            newValue = newValue + 'px';
-        }
+        if (getFieldsWithPx().includes(changedField)) newValue = newValue + 'px';
         element = { ...element, prefs: { ...element.prefs, style: { ...element.prefs.style, [changedField]: newValue } } };
     };
 
     return element;
 }
 
-function stripFromPx(prop){
+function stripFromPx(prop) {
     return parseInt(prop.replace('px', ''));
 }

@@ -31,8 +31,6 @@ function getElement(type, src = null) {
             return elements.getCards()
         case 'header1':
             return elements.getHeader1()
-        case 'hero1':
-            return elements.getHero1()
         default: return;
     }
 }

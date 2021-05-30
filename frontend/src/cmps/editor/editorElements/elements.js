@@ -7,7 +7,6 @@ import { getImg } from './elements/Img';
 import { getHero } from './elements/Hero';
 import { getVideo } from './elements/Video';
 import { getMap } from './elements/Map';
-import { getHero1 } from './elements/hero1'
 import { getBox } from './elements/Box';
 
 
@@ -21,7 +20,6 @@ export const elements = {
     getHero,
     getVideo,
     getMap,
-    getHero1,
     getBox,
 };
 
