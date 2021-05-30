@@ -43,32 +43,25 @@
   &.space-between {
     justify-content: space-between;
   }
-  &.gap {
-    gap: 20px;
-  }
 }
 
 // Grid helpers
 .grid {
   display: grid;
-
-  & .gap {
-    gap: 20px;
-  }
 }
 
-/* Cursor */
+// Cursor
 .pointer {
   cursor: pointer;
 }
 
-/* Lists */
+// Lists
 .clean-list {
   list-style-type: none;
   padding: 0;
 }
 
-/* Text prefs */
+// Text prefs
 .text-center {
   text-align: center;
 }

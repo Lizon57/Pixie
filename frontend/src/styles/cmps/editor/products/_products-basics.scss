@@ -1,9 +1,10 @@
 .basic-product {
   position: relative;
-  border: 1px $grey dashed;
+  border: 1px dashed $dark-grey;
+  border-collapse: collapse;
 
   &:hover {
-    border: 1px $grey solid;
+    border: 1px solid $dark-grey;
   }
 
   &:hover > *.element-tool-bar {

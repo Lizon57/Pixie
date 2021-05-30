@@ -1,10 +1,9 @@
 .video-product-container {
   display: flex;
-  align-items: center;
   justify-content: center;
 
   & .video-product {
-    width: 50%;
     height: rem(300px);
+    width: 50%;
   }
 }

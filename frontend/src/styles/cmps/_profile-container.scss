@@ -1,13 +1,14 @@
+// Profile
 .profile-container {
-    display: flex;
-    height: calc(100vh - 50px);
-    padding: 16px;
+  display: flex;
+  padding: 16px;
+  height: calc(100vh - 50px);
 
-    .profile-sidebar {
-        width: 300px;
-    }
+  .profile-sidebar {
+    width: 300px;
+  }
 
-    .profile-main {
-        flex: 1;
-    }
+  .profile-main {
+    flex: 1;
+  }
 }

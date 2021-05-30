@@ -16,6 +16,23 @@
 }
 
 // Editor
+.editor-menu-icn::before {
+  content: "\f0ad";
+}
+
+.save-icn::before {
+  content: "\f0c7";
+}
+
+.publish-icn::before {
+  content: "\f1e0";
+}
+
+.save-icn::before,
+.publish-icn::before {
+  margin-inline-end: 0.5rem;
+}
+
 .create-el-icn {
   display: block;
 

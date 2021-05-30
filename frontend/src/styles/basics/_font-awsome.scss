@@ -1,4 +1,4 @@
-/* FONT AWSOME */
+// Font awsome classes
 .fab {
   font-family: fa-brands;
 }
@@ -9,4 +9,20 @@
 
 .far {
   font-family: fa-regular;
+}
+
+// Font Awsome families
+@font-face {
+  font-family: fa-brands;
+  src: url("../../assets/font/font-awesome/fa-brands.woff");
+}
+
+@font-face {
+  font-family: fa-regular;
+  src: url("../../assets/font/font-awesome/fa-regular.woff");
+}
+
+@font-face {
+  font-family: fa-solid;
+  src: url("../../assets/font/font-awesome/fa-solid.woff");
 }

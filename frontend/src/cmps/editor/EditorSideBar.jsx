@@ -15,14 +15,13 @@ export class EditorSideBar extends React.Component {
 
     render() {
         const { mode } = this.state;
-        const { onAddSection, onUpdateElement, onAddElement, saveWebsiteToStorage } = this.props;
+        const { onAddSection, onUpdateElement, onAddElement } = this.props;
 
         return (
-            <div className="editor-side-nav-container">
+            <div className="editor-side-container">
                 <EditorNav mode={mode} onChangeMode={this.changeMode} />
                 {(mode === 'addElement') && <ElementsList onAddElement={onAddElement} onAddSection={onAddSection} />}
                 {(mode === 'editElement') && <ElementEditor onUpdateElement={onUpdateElement} />}
-                <div onClick ={() => {saveWebsiteToStorage()}} className="save">SAVE!</div>
             </div>
         );
     }

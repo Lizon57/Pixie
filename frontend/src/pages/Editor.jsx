@@ -5,8 +5,9 @@ import { elementService } from '../service/element-service';
 import { Loading } from '../cmps/Loading'
 import { EditorSideBar } from '../cmps/editor/EditorSideBar';
 import { PageRender } from '../cmps/editor/page-render/PageRenderV2';
-import { storageService } from '../service/storage-service'
-import { UserMsg } from '../cmps/UserMsg'
+import { storageService } from '../service/storage-service';
+import { UserMsg } from '../cmps/UserMsg';
+import { OptionsCircle } from '../cmps/editor/OptionsCircle';
 
 class _Editor extends React.Component {
 
@@ -71,10 +72,11 @@ class _Editor extends React.Component {
             <>
                 <section className="flex column justify-center align-center text-center editor-prevent-mobile">Sorry, the editor is available only on tablets and wider screens.</section>
                 <section className="flex editor-container">
-                    <EditorSideBar saveWebsiteToStorage={this.saveWebsiteToStorage} onAddElement={this.onAddElement} onAddSection={this.onAddSection} onUpdateElement={this.onUpdateElement} />
+                    <EditorSideBar onAddElement={this.onAddElement} onAddSection={this.onAddSection} onUpdateElement={this.onUpdateElement} />
                     <PageRender onReorderingElement={this.onReorderingElement} onRemoveElement={this.onRemoveElement} childs={childs} />
                 </section>
                 {isUserMsg && <UserMsg msg={'Saved!'} />}
+                <OptionsCircle saveWebsiteToStorage={this.saveWebsiteToStorage} />
             </>
         );
     }

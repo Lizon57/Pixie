@@ -1,9 +1,17 @@
+// Accordion
 .accordion {
   border: 1px solid $grey;
   font-family: inter;
 
   & .accordion__heading {
+    cursor: pointer;
+    background-color: $light-grey1;
+    color: $black;
     font-weight: $fw-bold;
+
+    &:hover {
+      background-color: $light-grey2;
+    }
   }
 }
 
@@ -12,27 +20,19 @@
 }
 
 .accordion__button {
-  cursor: pointer;
-  background-color: $light-grey1;
-  color: $black;
-  padding: 1rem;
-  width: 100%;
+  padding: 1em;
 
-  &:hover {
-    background-color: $light-grey2;
+  &::before {
+    display: inline-block;
+    content: "";
+    border-bottom: 1px solid $dark-grey;
+    border-right: 1px solid $dark-grey;
+    margin-inline-end: 0.5rem;
+    height: 0.5em;
+    width: 0.5em;
+    transition: transform ease-in-out $t-fast;
+    transform: rotate(-45deg);
   }
-}
-
-.accordion__button:before {
-  display: inline-block;
-  content: "";
-  border-bottom: 1px solid $black;
-  border-right: 1px solid $black;
-  margin-inline-end: 0.5rem;
-  height: 0.5rem;
-  width: 0.5rem;
-  transition: transform ease-in-out $t-fast;
-  transform: rotate(-45deg);
 }
 
 .accordion__button[aria-expanded="true"]::before,
@@ -41,13 +41,12 @@
 }
 
 .accordion__panel {
-  border-block-start: 1px dashed $grey;
-  animation: fadein ease-in-out $t-normal;
+  border-block-start: 1px dashed $dark-grey;
+  animation: fadein ease-in $t-normal;
 }
 
 .accordion-inner-title {
   background-color: $light-grey2;
-  font-size: 0.9rem;
   font-weight: $fw-bold;
   padding: 0.2rem 0.5rem;
 }
