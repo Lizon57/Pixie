@@ -7,7 +7,16 @@ export class Profile extends React.Component {
 
     render() {
         return (
-            <div>IM PROFILE!</div>
+            <section className="profile-container">
+                <div className="profile-sidebar">
+                <div className="user-img"></div>
+                <div className="statistics"></div>
+                <div className="side-nav"></div>
+                </div>
+                <div className="profile-main">
+                im main!
+                </div>
+            </section>
         )
     }
 }

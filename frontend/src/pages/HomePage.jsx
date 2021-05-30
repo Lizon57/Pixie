@@ -10,11 +10,6 @@ export function HomePage() {
                     <Link to="/editor"><button>START BUILDING</button></Link>
                 </div>
             </div>
-            <div className="header1">
-                <span>IMG</span>
-                <span className="logo">LOGO HERE</span>
-                <span>ABOUT</span>
-            </div>
         </section>
     );
 }
