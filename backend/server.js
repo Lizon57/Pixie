@@ -28,28 +28,29 @@ if (process.env.NODE_ENV === 'production') {
 
 const authRoutes = require('./api/auth/auth.routes')
 const userRoutes = require('./api/user/user.routes')
-const reviewRoutes = require('./api/review/review.routes')
-const {connectSockets} = require('./services/socket.service')
+// const tamplateRoutes = require('./api/tamplate/tamplate.routes')
 
 // routes
 const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware')
 app.all('*', setupAsyncLocalStorage)
 
-// TODO: check with app.use
-app.get('/api/setup-session', (req, res) =>{
-    req.session.connectedAt = Date.now()
-    console.log('setup-session:', req.sessionID);
-    res.end()
-})
+//Sockets
+// const {connectSockets} = require('./services/socket.service')
+// app.get('/api/setup-session', (req, res) =>{
+//     req.session.connectedAt = Date.now()
+//     console.log('setup-session:', req.sessionID);
+//     res.end()
+// })
+// connectSockets(http, session)
 
 app.use('/api/auth', authRoutes)
 app.use('/api/user', userRoutes)
-app.use('/api/review', reviewRoutes)
-connectSockets(http, session)
+// app.use('/api/tamplate', tamplateRoutes)
 
 // Make every server-side-route to match the index.html
 // so when requesting http://localhost:3030/index.html/car/123 it will still respond with
 // our SPA (single page app) (the index.html file) and allow vue/react-router to take it from there
+
 app.get('/**', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
@@ -60,7 +61,6 @@ http.listen(port, () => {
     logger.info('Server is running on port: ' + port)
 })
 
-console.log('I am Here!, am I?')
 
 
 

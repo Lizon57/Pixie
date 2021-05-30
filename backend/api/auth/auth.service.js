@@ -1,30 +1,48 @@
 const bcrypt = require('bcrypt')
 const userService = require('../user/user.service')
 const logger = require('../../services/logger.service')
+const dbService = require('../../services/db.service')
 
-
-async function login(username, password) {
-    logger.debug(`auth.service - login with username: ${username}`)
-
-    const user = await userService.getByUsername(username)
-    if (!user) return Promise.reject('Invalid username or password')
-    // TODO: un-comment for real login
-    // const match = await bcrypt.compare(password, user.password)
-    // if (!match) return Promise.reject('Invalid username or password')
-
-    delete user.password
-    return user
+async function login(email, password) {
+    logger.debug(`trying to login with email: ${email}`);
+    const user = await userService.getUser(email);
+    if (!user) return Promise.reject('Invalid email or pa;ssword');
+    const match = await bcrypt.compare(password, user.password);
+    console.log('login info', password, user.password);
+    if (!match) return Promise.reject('Invalid email or password');
+    logger.debug(`logined successfully with email: ${email}`);
+    delete user.password;
+    return user;
 }
 
-async function signup(username, password, fullname) {
+async function signup(userInfo) {
+    try {
+        const user = await _createUser(userInfo);
+        const collection = await dbService.getCollection('user');
+        await collection.insertOne(user);
+        return user;
+    } catch (err) {
+        logger.error('cannot signup user', err);
+        throw err;
+    }
+}
+
+
+
+async function _createUser(userInfo) {
     const saltRounds = 10
-
-    logger.debug(`auth.service - signup with username: ${username}, fullname: ${fullname}`)
-    if (!username || !password || !fullname) return Promise.reject('fullname, username and password are required!')
-
+    const { fullName, email, password } = userInfo;
     const hash = await bcrypt.hash(password, saltRounds)
-    return userService.add({ username, password: hash, fullname })
+
+    return {
+        fullName,
+        email,
+        password: hash,
+        createdAt: Date.now(),
+    }
 }
+
+
 
 module.exports = {
     signup,

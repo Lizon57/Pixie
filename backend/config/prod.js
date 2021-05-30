@@ -1,4 +1,4 @@
 module.exports = {
-  dbURL: 'mongodb+srv://puki:puki123@cluster0.oaihw.mongodb.net/myFirstDatabase?retryWrites=true&w=majority',
-  dbName: 'camar21_db',
+  dbURL: 'mongodb+srv://guy:318770245@cluster0.yili3.mongodb.net/toy?retryWrites=true&w=majority',
+  dbName: 'pixie_db',
 }
