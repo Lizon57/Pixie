@@ -1,4 +1,37 @@
 .login-page-container,
 .signup-page-container {
-  margin-block-start: 1rem;
+  padding: 1rem;
+  margin-inline: auto;
+  max-width: 350px;
+}
+
+.login-page-container,
+.signup-page-container {
+
+  & .title{
+    font-size: 1.5em;
+    font-family: inter;
+    font-weight: $fw-bold;
+  }
+
+  & .send-btn,
+  .MuiButton-contained:hover {
+    background-color: $blue;
+    color: $white;
+    font-family: inter;
+  }
+
+  & .toggle-sign-link {
+    font-family: inter;
+    margin-block-start: 1rem;
+
+    & a {
+      @include rounded-corners;
+      background-color: $green-azure;
+      color: $white;
+      padding: 0.5rem 1rem;
+      margin-block-start: 0.5rem;
+      max-width: 50%;
+    }
+  }
 }
