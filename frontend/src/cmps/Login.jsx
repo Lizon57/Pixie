@@ -18,7 +18,7 @@ class _Login extends React.Component {
     state = {
         email: '',
         password: '',
-        isMsg: false,
+        isUserMsg: false,
         msg: '',
     }
 
@@ -30,40 +30,44 @@ class _Login extends React.Component {
 
     }
 
+    userMsgShow = (msg) => {
+        this.setState(prevState => ({ ...prevState, isUserMsg: true, msg: msg }))
+        setTimeout(() => {
+            this.setState(prevState => ({ ...prevState, isUserMsg: false, msg: '' }))
+        }, 2000)
+    }
+
+
     onSubmit = async (ev) => {
         ev.preventDefault();
-        try {
-            const { onLoadUser } = this.props;
-            const { email, password, isMsg } = this.state;
-            if (!email || !password) {
-                this.setState({ isMsg: !isMsg, msg: 'Email address and password required.' });
-                setTimeout(() => {
-                    const { isMsg } = this.state;
-                    this.setState({ isMsg: !isMsg });
-                }, 2000);
-                return;
-            }
-            const credentials = {
-                email,
-                password,
-            }
-            await loadUser(credentials)
-            // this.props.history.push('/editor');
+        const { loadUser } = this.props;
+        const { email, password } = this.state;
+        if (!email || !password) {
+            this.userMsgShow('Email address and password required');
+            return
         }
 
-        catch (err) {
-            const { isMsg } = this.state;
-            this.setState({ isMsg: !isMsg, msg: 'Invalid Mail / Password' });
-            setTimeout(() => {
-                const { isMsg } = this.state;
-                this.setState({ isMsg: !isMsg })
-            }, 2000);
+        const regexEmail = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i);
+        if (!regexEmail.test(email)) {
+            this.userMsgShow('Invalid Email');
+            return
+        }
+
+        const credentials = {
+            email,
+            password,
+        }
+        try {
+            await loadUser(credentials)
+            this.props.history.push('/profile/testy/websites');
+        } catch (err) {
+            this.userMsgShow('Invalid Email or Password');
         }
     }
 
 
     render() {
-        const { isMsg, msg } = this.state;
+        const { isUserMsg, msg } = this.state;
 
         return (
             <>
@@ -123,7 +127,7 @@ class _Login extends React.Component {
                         </form>
                     </div>
                 </Container>
-                {isMsg && < UserMsg msg={msg} />}
+                {isUserMsg && < UserMsg msg={msg} />}
             </>
         );
     }
