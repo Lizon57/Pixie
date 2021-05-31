@@ -5,7 +5,6 @@ export function getNavbar() {
         id: utilService.makeId(),
         type: 'nav',
         role: 'nav',
-        isContainer: true,
         prefs: {
             className: "product-nav-bar"
         },
@@ -59,7 +58,3 @@ export function getNavbar() {
         ]
     })
 }
-
-
-
-

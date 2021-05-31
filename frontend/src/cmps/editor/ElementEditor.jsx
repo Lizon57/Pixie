@@ -100,7 +100,7 @@ export class _ElementEditor extends React.Component {
                         </AccordionItemHeading>
                         <AccordionItemPanel>
                             <EditImgSrc
-                                onChangeSpecialInput={this.handleSpecialInputChange} />
+                                onChangeSrc={this.handleSpecialInputChange} />
                         </AccordionItemPanel>
                     </AccordionItem>}
 

@@ -12,7 +12,7 @@ export class EditImgSrc extends React.Component {
 
     render() {
         return (
-            <div className="flex align-center editor-pref-warper">
+            <div className="flex align-center edit-img-src">
                 <span className="editor-label">Upload:</span>
                 <input type="file" onChange={this.uploadImg} />
             </div>

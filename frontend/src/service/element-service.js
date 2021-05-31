@@ -13,6 +13,10 @@ function getElement(type, src = null) {
     switch (type) {
         case 'box':
             return elements.getBox()
+        case 'header1':
+            return elements.getHeader1()
+        case 'header2':
+            return elements.getHeader2()
         case 'map':
             return elements.getMap()
         case 'youtube':
@@ -29,9 +33,7 @@ function getElement(type, src = null) {
             return elements.getFooter()
         case 'cards':
             return elements.getCards()
-        case 'header1':
-            return elements.getHeader1()
-            case 'hero1':
+        case 'hero1':
             return elements.getHero1()
         default: return;
     }

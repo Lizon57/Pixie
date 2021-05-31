@@ -1,4 +1,4 @@
-import { utilService } from '../../../../service/util-service.js'
+import { utilService } from '../../../../../service/util-service';
 
 export function getHeader1() {
     return ({
@@ -7,24 +7,21 @@ export function getHeader1() {
         role: 'header',
         isContainer: true,
         prefs: {
-            className: "",
             style: {
                 height: '50px',
-                'fontFamily': 'RobotoMono',
                 display: 'flex',
-                'justifyContent': 'space-between',
-                'alignItems': 'center',
-                'paddingRight': '30px',
-                'paddingLeft': '30px',
-                'backgroundColor': '#eee',
-                'color': '#1e1e1e'
+                justifyContent: 'space-between',
+                alignItems: 'center',
+                paddingRight: '30px',
+                paddingLeft: '30px',
+                backgroundColor: '#eeeeee'
             }
         },
         childs: [
             {
                 id: utilService.makeId(),
                 type: 'div',
-                role: 'div',
+                role: 'img',
                 prefs: {
                     style: {
                         backgroundImage: 'url("https://about.gitlab.com/images/press/logo/png/gitlab-icon-1-color-black-rgb.png")',
@@ -40,7 +37,8 @@ export function getHeader1() {
                 role: 'childless',
                 prefs: {
                     style: {
-                        'fontFamily': 'Oxanium',
+                        fontFamily: 'Oxanium',
+                        color: '#1e1e1e'
                     }
                 },
                 txt: 'NAME HERE'
@@ -50,6 +48,10 @@ export function getHeader1() {
                 type: 'span',
                 role: 'childless',
                 prefs: {
+                    style: {
+                        fontFamily: 'RobotoMono',
+                        color: '#1e1e1e'
+                    }
                 },
                 txt: 'ABOUT'
             }
