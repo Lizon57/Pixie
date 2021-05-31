@@ -33,10 +33,59 @@
 
         .entity-preview {
             height: 340px;
-            background-image: url(../../../assets/img/default-preview-img.png);
+            background-image: url(../../../assets/img/default-card-img.jpg);
             border-radius: 5px;
             background-size: cover;
             background-position: center;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+
+            .entity-name {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                height: 80px;
+                background-color: rgba(27, 27, 27, 0.7);
+                font-size: 20px;
+                font-family: Raleway;
+                color: $white;
+            }
+
+            &:hover {
+                .entity-hover {
+                    transform: translateY(0px);
+                }
+            }
+
+            .entity-hover {
+                background-color: rgba(27, 27, 27, 0.7);
+                display: flex;
+                height: 50px;
+                align-items: center;
+                color: $white;
+                transform: translateY(100%);
+                transition: 0.3s;
+                border-top: 2px solid #5d5d5d;
+
+                &>*:not(:last-child) {
+                    border-right: 1px solid #5d5d5d;
+                }
+
+                .option {
+                    flex-grow: 1;
+                    height: 100%;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    &:hover {
+                        background-color: rgba(255, 255, 255, 0.3);
+                    }
+                }
+            }
+
         }
     }
 }
