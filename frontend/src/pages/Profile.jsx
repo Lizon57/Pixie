@@ -5,6 +5,8 @@ import { EntityList } from '../cmps/profile/EntityList.jsx'
 import { webService } from '../service/web-service'
 import { UserMsg } from '../cmps/UserMsg.jsx';
 import { setData } from '../store/actions/data-actions';
+import { utilService } from '../service/util-service';
+
 
 class _Profile extends React.Component {
     state = {
@@ -22,19 +24,14 @@ class _Profile extends React.Component {
             this.props.history.push('/')
             return;
         }
-        const entities = await webService.query(user._id);
-        this.setState({ ...this.state, user, entities })
-        this.getEntitiesAmount();
+        this.setState({ ...this.state, user })
+        await this.getEntities(user._id);
     }
 
     changeEntitiesType = (entitiesType) => {
         this.setState({ entitiesType }, () => {
             if (!this.state.entities) this.userMsgShow(`No websites to show...`);
         })
-    }
-
-    getEntities = () => {
-        return Promise.resolve(this.demoData)
     }
 
     getEntitiesForDisplay(entitiesType) {
@@ -61,9 +58,21 @@ class _Profile extends React.Component {
         this.setState({ ...this.state, draftsAmount, websitesAmount });
     }
 
+    getEntities = async (userId) => {
+        const entities = await webService.query(userId);
+        this.setState({ ...this.state, entities }, this.getEntitiesAmount)
+    }
+
     onSetData = (data) => {
         this.props.setData({ data });
         this.props.history.push('/editor');
+    }
+
+    onDeleteEntity = async (entityId) => {
+        await webService.remove(entityId);
+        this.setState(
+            { ...this.state, entities: this.state.entities.filter(entity => entity._id !== entityId) },
+            this.getEntitiesAmount)
     }
 
     userMsgShow = (msg) => {
@@ -107,9 +116,13 @@ class _Profile extends React.Component {
                     <div className="full profile-main">
                         <div className="flex space-between details">
                             <span className="greet">Hello {user.fullName}</span>
-                            <span className="last-active">Last activity: {user.lastLogInAt}</span>
+                            <span className="last-active">Last activity: {utilService.getHumanTime(user.lastLogInAt)}</span>
                         </div>
-                        <EntityList onSetData={this.onSetData} entities={this.getEntitiesForDisplay(entitiesType)} entitiesType={entitiesType} />
+                        <EntityList
+                            onDeleteEntity={this.onDeleteEntity}
+                            onSetData={this.onSetData}
+                            entities={this.getEntitiesForDisplay(entitiesType)}
+                            entitiesType={entitiesType} />
                     </div>
                 </section>
                 {isUserMsg && < UserMsg msg={msg} />}

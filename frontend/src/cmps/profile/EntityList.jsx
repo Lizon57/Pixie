@@ -1,6 +1,6 @@
 import { EntityPreview } from './EntityPreview';
 
-export function EntityList({ entitiesType, entities, onSetData }) {
+export function EntityList({ entitiesType, entities, onSetData, onDeleteEntity }) {
 
     return (
         <div className="entity-container">
@@ -8,7 +8,7 @@ export function EntityList({ entitiesType, entities, onSetData }) {
                 <>
                     <div className="list-header">{entitiesType}</div>
                     <div className="grid entity-list">
-                        {entities.map(entity => <EntityPreview onSetData={onSetData} entity={entity} key={entity._id} />)}
+                        {entities.map(entity => <EntityPreview onDeleteEntity={onDeleteEntity} onSetData={onSetData} entity={entity} key={entity._id} />)}
                     </div>
                 </>
                 :
