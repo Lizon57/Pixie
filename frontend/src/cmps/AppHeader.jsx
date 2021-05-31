@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
+import { logOut } from '../store/actions/user-actions';
+
 import logo from '../assets/img/logo2.png';
 
 export class _AppHeader extends React.Component {
@@ -13,6 +15,10 @@ export class _AppHeader extends React.Component {
         this.setState({ isNavOpen: !isNavOpen });
     }
 
+
+    onLogOut = async () => {
+        await this.props.logOut();
+    }
 
     render() {
         const { isNavOpen } = this.state;
@@ -34,7 +40,7 @@ export class _AppHeader extends React.Component {
                                 {user &&
                                     <>
                                         <li><NavLink to="/profile/aaa" onClick={this.onToggleNav}>Profile</NavLink></li>
-                                        <li><NavLink to="profile/logout" onClick={this.onToggleNav}>Logout</NavLink></li>
+                                        <li className="pointer" onClick={this.onLogOut}>Logout</li>
                                     </>
                                 }
 
@@ -56,4 +62,9 @@ function mapStateToProps(state) {
     }
 }
 
-export const AppHeader = connect(mapStateToProps, null)(_AppHeader)
+const mapDispatchToProps = {
+    logOut,
+}
+
+
+export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)

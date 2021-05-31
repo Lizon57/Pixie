@@ -32,7 +32,7 @@ class _Login extends React.Component {
 
     onSubmit = async (ev) => {
         ev.preventDefault();
-        const { loadUser } = this.props;
+        const { loadUser, user } = this.props;
         const { email, password } = this.state;
         if (!email || !password) {
             this.userMsgShow('Email address and password required');
@@ -123,11 +123,15 @@ class _Login extends React.Component {
     }
 }
 
-
+function mapStateToProps(state) {
+    return {
+        user: state.userModule.user,
+    }
+}
 
 const mapDispatchToProps = {
     loadUser,
 }
 
 
-export const Login = connect(null, mapDispatchToProps)(_Login)
+export const Login = connect(mapStateToProps, mapDispatchToProps)(_Login)

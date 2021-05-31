@@ -17,7 +17,7 @@ export function App() {
             <Route path="/editor" component={Editor} />
             <Route exact path="/profile/login" component={Login} />
             <Route exact path="/profile/signup" component={SignUp} />
-            <Route exact path="/profile/:userId/" component={Profile} />
+            <Route exact path="/profile/:userId" component={Profile} />
             <Route exact path="/" component={HomePage} />
           </Switch>
         </main>
