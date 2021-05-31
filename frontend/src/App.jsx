@@ -13,7 +13,7 @@ export function App() {
         <main>
           <Switch>
             <Route path="/editor" component={Editor} />
-            <Route exact path="/profile" component={Profile} />
+            <Route exact path="/profile/:userId/:location" component={Profile} />
             <Route exact path="/" component={HomePage} />
           </Switch>
         </main>
