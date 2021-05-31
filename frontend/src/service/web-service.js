@@ -13,7 +13,7 @@ async function query(creatorId) {
     try {
 
         const webSites = await httpService.get(`web?creatorId=${creatorId}`);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(webSites));
+        // localStorage.setItem(STORAGE_KEY, JSON.stringify(webSites));
         return webSites;
     }
     catch (err) {

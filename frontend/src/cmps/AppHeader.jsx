@@ -31,7 +31,7 @@ export class _AppHeader extends React.Component {
                         <span><Link to="/"><img src={logo} className="logo" alt="Logo" /></Link></span>
 
                         <span>
-                            <span className="fas pointer hamburger-icn" onClick={this.onToggleNav}></span>
+                            <span className={"fas pointer hamburger-icn" + (isNavOpen ? ' active' : '')} onClick={this.onToggleNav}></span>
                             <ul className={"clean-list navlinks-container" + (isNavOpen ? "" : " hider")}>
                                 <li><NavLink to="/editor" activeClassName="active" onClick={this.onToggleNav}>Editor</NavLink></li>
                                 <li><NavLink to="/templates" onClick={this.onToggleNav}>Templates</NavLink></li>

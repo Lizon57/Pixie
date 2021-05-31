@@ -6,7 +6,8 @@
     content: "\f0c9";
   }
 
-  &:hover {
+  &:hover,
+  &.active {
     color: $azure;
   }
 

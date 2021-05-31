@@ -51,7 +51,8 @@ class _Login extends React.Component {
         }
         try {
             await loadUser(credentials)
-            this.props.history.push(`/editor`);
+            this.userMsgShow('Welcome');
+            this.props.history.push('/profile/');
         } catch (err) {
             this.userMsgShow('Invalid Email or Password');
         }
@@ -110,7 +111,7 @@ class _Login extends React.Component {
                                 Don't have an account?
                                 </span>
                             <Link to="signup">
-                                SignUp
+                                Signup
                             </Link>
                         </div>
                     </form>
