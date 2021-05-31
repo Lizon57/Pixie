@@ -8,7 +8,7 @@ export const editorService = {
 
 function getFieldsWithPx() {
     return [
-        'fontSize', 'letterSpacing',
+        'fontSize', 'letterSpacing', 'lineHeight',
         'borderRadius', 'height', 'width',
         'marginBlockStart', 'marginBlockEnd', 'marginInlineStart', 'marginInlineEnd',
         'paddingBlockStart', 'paddingBlockEnd', 'paddingInlineStart', 'paddingInlineEnd'];
