@@ -35,13 +35,13 @@ class _Profile extends React.Component {
     }
 
     getEntitiesAmount() {
-        const {entities} = this.state;
+        const { entities } = this.state;
         let draftsAmount = 0;
         let websitesAmount = 0;
         entities.forEach(entity => {
             entity.isPublished ? websitesAmount++ : draftsAmount++;
         })
-        this.setState({ ...this.state, draftsAmount, websitesAmount});
+        this.setState({ ...this.state, draftsAmount, websitesAmount });
     }
 
     render() {
@@ -50,22 +50,30 @@ class _Profile extends React.Component {
         const { userId } = this.props.match.params;
 
         return (
-            <section className="profile-container">
-                <div className="profile-sidebar">
-                    <div className="user-img"></div>
-                    <div className="statistics">
-                        <div><span className="amount">{websitesAmount}</span><span className="stat">Websites</span></div>
-                        <div><span className="amount">{draftsAmount}</span><span className="stat">Drafts</span></div>
+            <section className="flex container profile-container">
+                <div className="flex column align-center profile-sidebar">
+                    <div className="flex align-center justify-center user-img-container">
+                        <span className="fas user-icn"></span>
                     </div>
-                    <div className="side-nav">
+                    <div className="flex statistics">
+                        <div className="flex column full align-center">
+                            <span className="amount">{websitesAmount}</span>
+                            <span className="stat">Websites</span>
+                        </div>
+                        <div className="flex column full align-center">
+                            <span className="amount">{draftsAmount}</span>
+                            <span className="stat">Drafts</span>
+                        </div>
+                    </div>
+                    <div className="flex column side-nav">
                         <div className={entitiesType === 'All' ? 'active' : ''} onClick={() => this.changeEntitiesType('All')}>All</div>
                         <div className={entitiesType === 'Websites' ? 'active' : ''} onClick={() => this.changeEntitiesType('Websites')}>Websites</div>
                         <div className={entitiesType === 'Drafts' ? 'active' : ''} onClick={() => this.changeEntitiesType('Drafts')}>Drafts</div>
                     </div>
                 </div>
-                <div className="divider"></div>
-                <div className="profile-main">
-                    <div className="details">
+
+                <div className="full profile-main">
+                    <div className="flex space-between details">
                         <span className="greet">Hello Puki</span>
                         <span className="last-active">Last activity: 01/01/2021</span>
                     </div>
@@ -84,7 +92,7 @@ class _Profile extends React.Component {
             userId: 'u101',
             previewImg: '../../../assets/img/default-preview-img.png',
             childs: [],
-        }, 
+        },
         {
             _id: 'd102',
             isPublished: false,
