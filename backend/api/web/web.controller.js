@@ -2,9 +2,9 @@ const webService = require('./web.service')
 const logger = require('../../services/logger.service')
 
 async function getWebs(req, res) {
-    const { email } = req.query
+    const { creatorId } = req.query
     try {
-        const websites = await webService.query(email)
+        const websites = await webService.query(creatorId)
         res.send(websites)
     } catch (err) {
         logger.error('Cannot get websites', err)
