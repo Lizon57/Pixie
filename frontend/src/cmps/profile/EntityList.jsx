@@ -8,7 +8,7 @@ export function EntityList({ entitiesType, entities }) {
             {entities ?
                 <>
                     <div className="list-header">{entitiesType}</div>
-                    <div className="entity-list">
+                    <div className="grid entity-list">
                         {entities.map(entity => <EntityPreview entity={entity} key={entity._id} />)}
                     </div>
                 </>

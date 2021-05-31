@@ -86,6 +86,7 @@ class _Profile extends React.Component {
     demoData = [
         {
             _id: 'd101',
+            name: 'website1',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,
@@ -95,6 +96,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd102',
+            name: 'website2',
             isPublished: false,
             createdAt: Date.now(),
             updatedAt: null,
@@ -104,6 +106,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd103',
+            name: 'website3',
             isPublished: false,
             createdAt: Date.now(),
             updatedAt: null,
@@ -113,6 +116,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd104',
+            name: 'website4',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,
@@ -122,6 +126,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd105',
+            name: 'website5',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,
@@ -131,6 +136,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd106',
+            name: 'website6',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,
@@ -140,6 +146,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd107',
+            name: 'website7',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,
@@ -149,6 +156,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd108',
+            name: 'website8',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,
@@ -158,6 +166,7 @@ class _Profile extends React.Component {
         },
         {
             _id: 'd109',
+            name: 'website9',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,
@@ -166,7 +175,8 @@ class _Profile extends React.Component {
             childs: [],
         },
         {
-            _id: 'd1010',
+            _id: 'd110',
+            name: 'website10',
             isPublished: true,
             createdAt: Date.now(),
             updatedAt: null,

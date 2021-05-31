@@ -105,6 +105,14 @@
 }
 
 // Profile
-.user-icn::before{
+.user-icn::before {
   content: "\f504";
+}
+
+.watch-icn::before {
+  content: "\f06e";
+}
+
+.trash-icn::before {
+  content: "\f1f8";
 }
