@@ -32,7 +32,7 @@ class _Login extends React.Component {
 
     onSubmit = async (ev) => {
         ev.preventDefault();
-        const { loadUser, user } = this.props;
+        const { loadUser } = this.props;
         const { email, password } = this.state;
         if (!email || !password) {
             this.userMsgShow('Email address and password required');
@@ -51,8 +51,8 @@ class _Login extends React.Component {
         }
         try {
             await loadUser(credentials)
-            this.userMsgShow('Welcome');
-            this.props.history.push('/profile/');
+            const { user } = this.props;
+            this.props.history.push(`/profile/${user._id}`);
         } catch (err) {
             this.userMsgShow('Invalid Email or Password');
         }
