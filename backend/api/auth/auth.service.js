@@ -10,6 +10,7 @@ async function login(email, password) {
     const match = await bcrypt.compare(password, user.password);
     if (!match) return Promise.reject('Invalid email or password');
     logger.debug(`logined successfully with email: ${email}`);
+    await userService.updateUserLogin(user._id);
     delete user.password;
     return user;
 }
@@ -39,7 +40,6 @@ async function _createUser(userInfo) {
         password: hash,
         createdAt: Date.now(),
         lastLogInAt: Date.now(),
-        webSites: 0,
     }
 }
 

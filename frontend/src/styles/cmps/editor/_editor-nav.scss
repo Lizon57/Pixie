@@ -1,6 +1,6 @@
 // Editor navigation (create, edit)
 .editor-nav-container {
-  & > div {
+  &>div {
     display: inline-block;
     background-color: $dark-grey;
     color: $white;
@@ -19,13 +19,5 @@
       background-color: $light-grey1;
       color: $black;
     }
-  }
-
-  ::-webkit-scrollbar {
-    width: 3px;
-  }
-
-  ::-webkit-scrollbar-thumb {
-    background-color: $grey;
   }
 }
