@@ -40,7 +40,7 @@ export class _AppHeader extends React.Component {
                                 {user &&
                                     <>
                                         <li><NavLink to="/profile/aaa" onClick={this.onToggleNav}>Profile</NavLink></li>
-                                        <li className="pointer" onClick={this.onLogOut}>Logout</li>
+                                        <li><NavLink to="/" activeClassName="" onClick={this.onLogOut}>Logout</NavLink></li>
                                     </>
                                 }
 

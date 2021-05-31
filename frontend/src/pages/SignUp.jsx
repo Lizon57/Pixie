@@ -52,7 +52,8 @@ class _SignUp extends React.Component {
         }
         try {
             await signUp(userInfo);
-            this.props.history.push(`/editor`);
+            const { user } = this.props;
+            this.props.history.push(`/profile/${user._id}`);
         } catch (err) {
             this.userMsgShow('Email Already in use');
         }

@@ -51,8 +51,8 @@ class _Login extends React.Component {
         }
         try {
             await loadUser(credentials)
-            this.userMsgShow('Welcome');
-            this.props.history.push('/profile/');
+            const { user } = this.props;
+            this.props.history.push(`/profile/${user._id}`);
         } catch (err) {
             this.userMsgShow('Invalid Email or Password');
         }
