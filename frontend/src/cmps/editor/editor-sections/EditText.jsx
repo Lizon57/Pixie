@@ -68,7 +68,7 @@ export class EditText extends React.Component {
 
 
     render() {
-        let { txt, textAlign, fontStyle, textDecoration, fontSize, color, letterSpacing, onChangeSpecialInput, onChangeValue } = this.props;
+        let { txt, textAlign, fontStyle, textDecoration, fontSize, color, letterSpacing, lineHeight, onChangeSpecialInput, onChangeValue } = this.props;
 
         // assign default values if the given value is undefined
         color = !color ? '#ffffff' : color;
@@ -76,7 +76,8 @@ export class EditText extends React.Component {
         // Handle parameters with 'px'
         const strippedPropsFromPx = {
             fontSize: (fontSize) ? editorService.stripFromPx(fontSize) : 20,
-            letterSpacing: (letterSpacing) ? editorService.stripFromPx(letterSpacing) : 0
+            letterSpacing: (letterSpacing) ? editorService.stripFromPx(letterSpacing) : 0,
+            lineHeight: (lineHeight) ? editorService.stripFromPx(lineHeight) : 0
         }
 
         return (
@@ -154,6 +155,13 @@ export class EditText extends React.Component {
                         <span className="editor-label">Space:</span>
                         <Slider max={40} value={strippedPropsFromPx.letterSpacing} onChange={(value) => onChangeSpecialInput('letterSpacing', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.letterSpacing} px</span>
+                    </div>
+
+                    {/* Edit line height */}
+                    <div className="flex align-center editor-pref-warper">
+                        <span className="editor-label">Height:</span>
+                        <Slider max={50} value={strippedPropsFromPx.lineHeight} onChange={(value) => onChangeSpecialInput('lineHeight', value)} />
+                        <span className="editor-indicator">{strippedPropsFromPx.lineHeight} px</span>
                     </div>
                 </div>
             </>

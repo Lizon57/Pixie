@@ -54,7 +54,7 @@ export class _ElementEditor extends React.Component {
         // const { txt, prefs, role } = element;
         let { style: {
             // Text style
-            textAlign, fontStyle, textDecoration, fontSize, color, fontWeight, fontFamily, letterSpacing,
+            textAlign, fontStyle, textDecoration, fontSize, color, fontWeight, fontFamily, letterSpacing, lineHeight,
             // Box styling
             backgroundColor, backgroundImage, borderRadius,
             height, width,
@@ -83,6 +83,7 @@ export class _ElementEditor extends React.Component {
                                 fontWeight={fontWeight}
                                 fontFamily={fontFamily}
                                 letterSpacing={letterSpacing}
+                                lineHeight={lineHeight}
                                 onChangeSpecialInput={this.handleSpecialInputChange}
                                 onChangeValue={this.handleRegInputChange} />
                         </AccordionItemPanel>
