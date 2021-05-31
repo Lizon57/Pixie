@@ -1,6 +1,7 @@
 // Headers
 import { getHeader1 } from './elements/headers/Header1';
 import { getHeader2 } from './elements/headers/Header2';
+import { getHeader3 } from './elements/headers/Header3';
 import { getNavbar } from './elements/Navbar';
 
 import { getFooter } from './elements/Footer';
@@ -18,6 +19,7 @@ export const elements = {
     getNavbar,
     getHeader1,
     getHeader2,
+    getHeader3,
     getFooter,
     getCards,
     getText,

@@ -14,7 +14,7 @@ export class EditBoxStyling extends React.Component {
         { value: 'center bottom', label: 'Middle bottom' },
         { value: 'right top', label: 'Right top' },
         { value: 'right center', label: 'Right center' },
-        { value: 'right bottom', label: 'Right left' }
+        { value: 'right bottom', label: 'Right bottom' }
     ]
 
     backgroundImgSizeOptions = [

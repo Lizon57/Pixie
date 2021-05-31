@@ -8,7 +8,7 @@ export class OptionsCircle extends React.Component {
 
     toggleMenu = () => {
         const { isOpen } = this.state;
-        this.setState({ isOpen: !isOpen }, () => console.log(isOpen));
+        this.setState({ isOpen: !isOpen });
     }
 
     render() {

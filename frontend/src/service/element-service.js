@@ -17,6 +17,8 @@ function getElement(type, src = null) {
             return elements.getHeader1()
         case 'header2':
             return elements.getHeader2()
+        case 'header3':
+            return elements.getHeader3()
         case 'map':
             return elements.getMap()
         case 'youtube':

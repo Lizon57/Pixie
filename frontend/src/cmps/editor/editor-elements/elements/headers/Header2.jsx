@@ -9,12 +9,13 @@ export function getHeader2() {
         prefs: {
             style: {
                 display: 'flex',
+                flexWrap: 'wrap',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                backgroundColor: '#cccccc',
+                backgroundColor: '#1e1e1e',
                 paddingRight: '30px',
                 paddingLeft: '30px',
-                height: '75px',
+                height: '52px',
             }
         },
         childs: [
@@ -24,11 +25,11 @@ export function getHeader2() {
                 role: 'img',
                 prefs: {
                     style: {
-                        backgroundImage: 'url("https://i.ibb.co/djbttL1/logo.png")',
+                        backgroundImage: 'url("https://i.ibb.co/b66nCcp/logo2.png")',
                         backgroundSize: 'cover',
                         backgroundRepeat: 'no-repeat',
-                        height: '60px',
-                        width: '107px'
+                        height: '25px',
+                        width: '79px'
                     }
                 },
             },
@@ -51,14 +52,16 @@ export function getHeader2() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                backgroundColor: '#cccccc',
-                                fontSize: '30px',
+                                backgroundColor: '#1e1e1e',
+                                color: '#06aabf',
+                                fontSize: '18px',
                                 fontFamily: 'inter',
                                 fontWeight: 'bold',
-                                paddingInlineEnd: '40px',
+                                letterSpacing: '1px',
+                                paddingInlineStart: '40px',
                             }
                         },
-                        txt: 'Home'
+                        txt: 'Editor'
                     },
                     {
                         id: utilService.makeId(),
@@ -66,14 +69,16 @@ export function getHeader2() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                backgroundColor: '#cccccc',
-                                fontSize: '30px',
+                                backgroundColor: '#1e1e1e',
+                                color: '#d6d6d6',
+                                fontSize: '18px',
                                 fontFamily: 'inter',
                                 fontWeight: 'bold',
-                                paddingInlineEnd: '40px',
+                                letterSpacing: '1px',
+                                paddingInlineStart: '40px',
                             }
                         },
-                        txt: 'Products'
+                        txt: 'Templates'
                     },
                     {
                         id: utilService.makeId(),
@@ -81,11 +86,13 @@ export function getHeader2() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                backgroundColor: '#cccccc',
-                                fontSize: '30px',
+                                backgroundColor: '#1e1e1e',
+                                color: '#d6d6d6',
+                                fontSize: '18px',
                                 fontFamily: 'inter',
                                 fontWeight: 'bold',
-                                paddingInlineEnd: '40px',
+                                letterSpacing: '1px',
+                                paddingInlineStart: '40px',
                             }
                         },
                         txt: 'About'
