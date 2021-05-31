@@ -1,0 +1,42 @@
+.entity-container {
+
+    padding-top: 32px;
+
+    .list-header {
+        font-size: 30px;
+        font-family: inter;
+        margin-bottom: 16px;
+    }
+
+    .entity-list {
+        display: grid;
+        grid-template: repeat(auto-fill, minmax(340px, 1fr)) / repeat(auto-fill, minmax(200px, 1fr));
+        gap: 32px;
+        overflow-y: auto;
+        height: calc(100vh - 210px);
+
+        &::-webkit-scrollbar-track {
+            border-radius: 10px;
+            background-color: $grey;
+        }
+
+        &::-webkit-scrollbar {
+            width: 5px;
+            background-color: $grey;
+        }
+
+        &::-webkit-scrollbar-thumb {
+            border-radius: 10px;
+            background-color: $green-azure;
+        }
+
+
+        .entity-preview {
+            height: 340px;
+            background-image: url(../../../assets/img/default-preview-img.png);
+            border-radius: 5px;
+            background-size: cover;
+            background-position: center;
+        }
+    }
+}

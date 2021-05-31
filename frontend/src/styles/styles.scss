@@ -28,7 +28,10 @@
 @import "cmps/editor/elements-list";
 @import "cmps/editor/element-tool-bar";
 @import "cmps/editor/element-editor";
-@import "cmps/profile-container";
+
+// profile cmps 
+@import "cmps/profile/profile-container";
+@import "cmps/profile/profile-entity-list";
 
 // products sites
 @import "cmps/editor/products/site-container";
