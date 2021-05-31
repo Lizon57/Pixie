@@ -5,6 +5,7 @@ import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, Ac
 import { editorService } from '../../service/editor-service';
 import { setEditingElement } from '../../store/actions/editor-actions';
 import { EditText } from './editor-sections/EditText';
+import { EditImgSrc } from './editor-sections/EditImgSrc';
 import { EditOrientation } from './editor-sections/EditOrientation';
 import { EditBoxStyling } from './editor-sections/EditBoxStyling';
 
@@ -18,7 +19,6 @@ export class _ElementEditor extends React.Component {
         if (this.editFieldsWithDebounce.includes(field)) return this.handleChangeWithDebounce({ element, field, val });
 
         const updatedElement = editorService.getNewElement(element, field, val);
-        console.log(updatedElement)
         this.editElement(updatedElement);
     }
 
@@ -89,6 +89,19 @@ export class _ElementEditor extends React.Component {
                         </AccordionItemPanel>
                     </AccordionItem>}
 
+                {element.role === 'img' &&
+                    <AccordionItem>
+                        <AccordionItemHeading>
+                            <AccordionItemButton>
+                                Image
+                            </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                            <EditImgSrc
+                                onChangeSpecialInput={this.handleSpecialInputChange} />
+                        </AccordionItemPanel>
+                    </AccordionItem>}
+
                 <AccordionItem>
                     <AccordionItemHeading>
                         <AccordionItemButton>
@@ -97,6 +110,7 @@ export class _ElementEditor extends React.Component {
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                         <EditBoxStyling
+                            isImg={(element.role === 'img') ? true : false}
                             backgroundColor={backgroundColor}
                             backgroundImage={backgroundImage}
                             borderRadius={borderRadius}

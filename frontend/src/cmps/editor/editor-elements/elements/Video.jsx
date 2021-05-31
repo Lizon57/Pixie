@@ -5,7 +5,7 @@ export function getVideo(src) {
         id: utilService.makeId(),
         type: 'div',
         role: 'video',
-        iscontainer: true,
+        isContainer: true,
         prefs: {
             className: "video-product-container"
         },
