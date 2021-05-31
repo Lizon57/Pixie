@@ -9,6 +9,7 @@ import { getVideo } from './elements/Video';
 import { getMap } from './elements/Map';
 import { getBox } from './elements/Box';
 import { getHero1 } from './elements/hero1';
+import { getCards1 } from './elements/Cards1';
 
 
 export const elements = {
@@ -16,6 +17,7 @@ export const elements = {
     getHeader1,
     getFooter,
     getCards,
+    getCards1,
     getText,
     getImg,
     getHero,
