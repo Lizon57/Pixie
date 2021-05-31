@@ -65,7 +65,7 @@ export class _ElementEditor extends React.Component {
 
         return (
             <Accordion allowZeroExpanded="true" allowMultipleExpanded="true">
-                {("txt" in element) &&
+                {("txt" in element && element.role !== 'img') &&
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>

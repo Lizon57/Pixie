@@ -3,8 +3,9 @@
   padding: 1rem;
   margin-inline: auto;
   height: calc(100vh - 52px);
-  // background-image: url("../../assets/img/backgroundLogin.jpg");
+  background-image: url("../../assets/img/backgroundLogin.jpg");
   background-size: cover;
+
   & form {
     max-width: em(400px);
   }
@@ -32,8 +33,8 @@
 
     & a {
       @include rounded-corners;
-      background-color: $green-azure;
-      color: $white;
+      border: 1px solid $black;
+      background-color: $light-grey1;
       padding: 0.5rem 1rem;
       margin-block-start: 0.5rem;
       max-width: 50%;

@@ -141,9 +141,11 @@ export class ElementsList extends React.Component {
                         </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
-                            <input type="file"
-                                style={{ display: 'block', marginTop: '10px' }}
-                                onChange={this.uploadImg} />
+                            <div className="file-upload">
+                                <input type="file"
+                                    style={{ display: 'block', marginTop: '10px' }}
+                                    onChange={this.uploadImg} />
+                            </div>
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -165,9 +167,11 @@ export class ElementsList extends React.Component {
                         </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
-                            <input type="text" value={this.state.src} name="src" style={{ display: 'block', width: '100%' }} className="item"
-                                placeholder="YouTube URL" onChange={this.handleChanges} />
-                            <button className="text-center pointer item" onClick={this.onSubmit}>OK</button>
+                            <div className="flex column video">
+                                <input type="text" value={this.state.src} name="src"
+                                    placeholder="YouTube URL" onChange={this.handleChanges} />
+                                <button className="text-center pointer" onClick={this.onSubmit}>OK</button>
+                            </div>
                         </AccordionItemPanel>
                     </AccordionItem>
                 </Accordion>
