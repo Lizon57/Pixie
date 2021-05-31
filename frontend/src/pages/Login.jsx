@@ -32,7 +32,7 @@ class _Login extends React.Component {
 
     onSubmit = async (ev) => {
         ev.preventDefault();
-        const { loadUser } = this.props;
+        const { loadUser, user } = this.props;
         const { email, password } = this.state;
         if (!email || !password) {
             this.userMsgShow('Email address and password required');
@@ -51,7 +51,8 @@ class _Login extends React.Component {
         }
         try {
             await loadUser(credentials)
-            this.props.history.push('/profile/testy/websites');
+            this.userMsgShow('Welcome');
+            this.props.history.push('/profile/');
         } catch (err) {
             this.userMsgShow('Invalid Email or Password');
         }
@@ -110,7 +111,7 @@ class _Login extends React.Component {
                                 Don't have an account?
                                 </span>
                             <Link to="signup">
-                                SignUp
+                                Signup
                             </Link>
                         </div>
                     </form>
@@ -122,11 +123,15 @@ class _Login extends React.Component {
     }
 }
 
-
+function mapStateToProps(state) {
+    return {
+        user: state.userModule.user,
+    }
+}
 
 const mapDispatchToProps = {
     loadUser,
 }
 
 
-export const Login = connect(null, mapDispatchToProps)(_Login)
+export const Login = connect(mapStateToProps, mapDispatchToProps)(_Login)

@@ -31,7 +31,7 @@ class _SignUp extends React.Component {
 
     onSubmit = async (ev) => {
         ev.preventDefault();
-        const { signUp } = this.props;
+        const { signUp, user } = this.props;
         const { email, password, fullName } = this.state;
 
         if (!email || !password || !fullName) {
@@ -52,9 +52,8 @@ class _SignUp extends React.Component {
         }
         try {
             await signUp(userInfo);
-            this.props.history.push('/profile/testy/websites');
+            this.props.history.push(`/editor`);
         } catch (err) {
-
             this.userMsgShow('Email Already in use');
         }
 
@@ -137,11 +136,15 @@ class _SignUp extends React.Component {
     }
 }
 
-
+function mapStateToProps(state) {
+    return {
+        user: state.userModule.user,
+    }
+}
 
 const mapDispatchToProps = {
     signUp,
 }
 
 
-export const SignUp = connect(null, mapDispatchToProps)(_SignUp)
+export const SignUp = connect(mapStateToProps, mapDispatchToProps)(_SignUp)

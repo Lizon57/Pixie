@@ -3,13 +3,12 @@ const ObjectId = require('mongodb').ObjectId
 const logger = require('../../services/logger.service')
 
 
-async function query({ creatorId, isPublished }) {
-    const criteria = _buildCriteria(creatorId, isPublished)
+async function query(creatorId) {
 
     try {
         const collection = await dbService.getCollection('web')
         const query = { _id: ObjectId(creatorId) }
-        var websites = await collection.find(criteria).toArray()
+        var websites = await collection.find(query).toArray()
         return websites
     } catch (err) {
         logger.error('cant find any websites', err)
@@ -67,21 +66,21 @@ async function saveWeb(WebInfo) {
 
 }
 
+// for filter use
+// function _buildCriteria(creatorId, isPublished) {
+//     let criteria = {}
 
-function _buildCriteria(creatorId, isPublished) {
-    let criteria = {}
+//     criteria.id = ObjectId(creatorId)
 
-    criteria.id = ObjectId(creatorId)
+//     if (isPublished) {
+//         criteria.isPublished = { $eq: true }
+//     }
+//     if (!isPublished) {
+//         criteria.isPublished = { $eq: false }
+//     }
 
-    if (isPublished) {
-        criteria.isPublished = { $eq: true }
-    }
-    if (!isPublished) {
-        criteria.isPublished = { $eq: false }
-    }
-
-    return criteria
-}
+//     return criteria
+// }
 
 
 

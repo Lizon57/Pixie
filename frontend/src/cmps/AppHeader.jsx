@@ -1,6 +1,8 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
+import { logOut } from '../store/actions/user-actions';
+
 import logo from '../assets/img/logo2.png';
 
 export class _AppHeader extends React.Component {
@@ -14,6 +16,10 @@ export class _AppHeader extends React.Component {
     }
 
 
+    onLogOut = async () => {
+        await this.props.logOut();
+    }
+
     render() {
         const { isNavOpen } = this.state;
         const { user } = this.props
@@ -25,7 +31,7 @@ export class _AppHeader extends React.Component {
                         <span><Link to="/"><img src={logo} className="logo" alt="Logo" /></Link></span>
 
                         <span>
-                            <span className="fas pointer hamburger-icn" onClick={this.onToggleNav}></span>
+                            <span className={"fas pointer hamburger-icn" + (isNavOpen ? ' active' : '')} onClick={this.onToggleNav}></span>
                             <ul className={"clean-list navlinks-container" + (isNavOpen ? "" : " hider")}>
                                 <li><NavLink to="/editor" activeClassName="active" onClick={this.onToggleNav}>Editor</NavLink></li>
                                 <li><NavLink to="/templates" onClick={this.onToggleNav}>Templates</NavLink></li>
@@ -34,7 +40,7 @@ export class _AppHeader extends React.Component {
                                 {user &&
                                     <>
                                         <li><NavLink to="/profile/aaa" onClick={this.onToggleNav}>Profile</NavLink></li>
-                                        <li>Logout</li>
+                                        <li className="pointer" onClick={this.onLogOut}>Logout</li>
                                     </>
                                 }
 
@@ -56,4 +62,9 @@ function mapStateToProps(state) {
     }
 }
 
-export const AppHeader = connect(mapStateToProps, null)(_AppHeader)
+const mapDispatchToProps = {
+    logOut,
+}
+
+
+export const AppHeader = connect(mapStateToProps, mapDispatchToProps)(_AppHeader)
