@@ -1,5 +1,3 @@
-
-
 const initialState = {
     user: JSON.parse(localStorage.getItem('user')),
 };

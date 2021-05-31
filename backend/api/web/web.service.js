@@ -48,8 +48,7 @@ async function saveWeb(WebInfo) {
     if (_id) {
         try {
             const collection = await dbService.getCollection('web');
-            delete WebInfo._id;
-            await collection.updateOne({ _id: ObjectId(_id) }, { $set: { WebInfo } }, { upsert: false });
+            await collection.updateOne({ _id: ObjectId(_id) }, { $set: WebInfo });
             return WebInfo;
 
         } catch (err) {
