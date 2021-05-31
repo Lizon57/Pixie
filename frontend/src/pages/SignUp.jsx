@@ -54,6 +54,7 @@ class _SignUp extends React.Component {
             await signUp(userInfo);
             this.props.history.push('/profile/testy/websites');
         } catch (err) {
+
             this.userMsgShow('Email Already in use');
         }
 
@@ -64,7 +65,7 @@ class _SignUp extends React.Component {
 
         return (
             <>
-                <div className="flex column align-center signup-page-container">
+                <div className="flex column align-center justify-center signup-page-container">
                     <div className="title">
                         SignUp
                     </div>
