@@ -6,12 +6,8 @@
   width: 100%;
   z-index: 1;
 
-  & > div {
-    height: em(50px);
-  }
-
   & img {
-    height: em(35px);
+    height: em(25px);
     width: auto;
   }
 }
@@ -31,7 +27,6 @@
     font-weight: $fw-bold;
     font-family: inter;
     letter-spacing: 1px;
-    padding: 1em;
     border-block-end: 1px solid $grey;
     transition: all ease-in-out $t-fast;
 
@@ -50,12 +45,13 @@
       color: inherit;
       border-block-end: 0;
 
-      &:hover {
-        box-shadow: inset 0 -8px 0px -5px $azure;
-      }
-
       & a {
+        padding: 1em;
         transition: color ease-in-out $t-fast;
+
+        &:hover {
+          box-shadow: inset 0 -8px 0px -6px $azure;
+        }
 
         &.active {
           color: $azure;
@@ -66,5 +62,5 @@
 }
 
 .pseudo-header {
-  height: em(50px);
+  height: em(51px);
 }
