@@ -2,13 +2,18 @@
 .signup-page-container {
   padding: 1rem;
   margin-inline: auto;
-  max-width: 350px;
-}
+  height: calc(100vh - 52px);
+  // background-image: url("../../assets/img/backgroundLogin.jpg");
+  background-size: cover;
+  & form {
+    max-width: em(400px);
+  }
 
-.login-page-container,
-.signup-page-container {
+  @include for-mobile-layout {
+    background-position: top;
+  }
 
-  & .title{
+  & .title {
     font-size: 1.5em;
     font-family: inter;
     font-weight: $fw-bold;

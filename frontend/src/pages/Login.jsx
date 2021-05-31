@@ -63,7 +63,7 @@ class _Login extends React.Component {
 
         return (
             <>
-                <div className="flex column align-center login-page-container">
+                <div className="flex column align-center justify-center login-page-container">
                     <div className="title">
                         Login
                     </div>
