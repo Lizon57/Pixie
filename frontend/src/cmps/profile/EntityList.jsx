@@ -1,7 +1,6 @@
-import { Loading } from '../Loading'
 import { EntityPreview } from './EntityPreview';
 
-export function EntityList({ entitiesType, entities }) {
+export function EntityList({ entitiesType, entities, onSetData }) {
 
     return (
         <div className="entity-container">
@@ -9,7 +8,7 @@ export function EntityList({ entitiesType, entities }) {
                 <>
                     <div className="list-header">{entitiesType}</div>
                     <div className="grid entity-list">
-                        {entities.map(entity => <EntityPreview entity={entity} key={entity._id} />)}
+                        {entities.map(entity => <EntityPreview onSetData={onSetData} entity={entity} key={entity._id} />)}
                     </div>
                 </>
                 :

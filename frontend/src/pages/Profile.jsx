@@ -4,6 +4,7 @@ import { Loading } from '../cmps/Loading.jsx';
 import { EntityList } from '../cmps/profile/EntityList.jsx'
 import { webService } from '../service/web-service'
 import { UserMsg } from '../cmps/UserMsg.jsx';
+import { setData } from '../store/actions/data-actions';
 
 class _Profile extends React.Component {
     state = {
@@ -17,7 +18,6 @@ class _Profile extends React.Component {
 
     async componentDidMount() {
         const user = this.props.user;
-        console.log(user);
         if (!user) {
             this.props.history.push('/')
             return;
@@ -29,7 +29,6 @@ class _Profile extends React.Component {
 
     changeEntitiesType = (entitiesType) => {
         this.setState({ entitiesType }, () => {
-            console.log(this.state.entities);
             if (!this.state.entities) this.userMsgShow(`No websites to show...`);
         })
     }
@@ -62,6 +61,11 @@ class _Profile extends React.Component {
         this.setState({ ...this.state, draftsAmount, websitesAmount });
     }
 
+    onSetData = (data) => {
+        this.props.setData({ data });
+        this.props.history.push('/editor');
+    }
+
     userMsgShow = (msg) => {
         this.setState(prevState => ({ ...prevState, isUserMsg: true, msg }));
         setTimeout(() => {
@@ -72,7 +76,6 @@ class _Profile extends React.Component {
     render() {
 
         const { entitiesType, websitesAmount, draftsAmount, user, isUserMsg, msg } = this.state
-        console.log(user);
         if (!user) return <Loading />
 
         return (
@@ -106,7 +109,7 @@ class _Profile extends React.Component {
                             <span className="greet">Hello {user.fullName}</span>
                             <span className="last-active">Last activity: {user.lastLogInAt}</span>
                         </div>
-                        <EntityList entities={this.getEntitiesForDisplay(entitiesType)} entitiesType={entitiesType} />
+                        <EntityList onSetData={this.onSetData} entities={this.getEntitiesForDisplay(entitiesType)} entitiesType={entitiesType} />
                     </div>
                 </section>
                 {isUserMsg && < UserMsg msg={msg} />}
@@ -116,6 +119,7 @@ class _Profile extends React.Component {
 }
 
 const mapDispatchToProps = {
+    setData,
 }
 
 function mapStateToProps(state) {

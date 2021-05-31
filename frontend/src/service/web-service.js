@@ -1,6 +1,6 @@
 import { httpService } from './http-service'
 
-const STORAGE_KEY = 'web'
+// const STORAGE_KEY = 'web'
 
 export const webService = {
     query,
@@ -11,9 +11,7 @@ export const webService = {
 
 async function query(creatorId) {
     try {
-
         const webSites = await httpService.get(`web?creatorId=${creatorId}`);
-        // localStorage.setItem(STORAGE_KEY, JSON.stringify(webSites));
         return webSites;
     }
     catch (err) {

@@ -31,7 +31,7 @@ class _SignUp extends React.Component {
 
     onSubmit = async (ev) => {
         ev.preventDefault();
-        const { signUp, user } = this.props;
+        const { signUp } = this.props;
         const { email, password, fullName } = this.state;
 
         if (!email || !password || !fullName) {

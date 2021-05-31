@@ -16,9 +16,13 @@ class _Editor extends React.Component {
     }
 
     async componentDidMount() {
-        const savedData = await storageService.loadFromStorage('website')
-        if (savedData) {
-            this.props.setData({ data: savedData });
+        if (this.props.data.childs.length) {
+            return;
+        } else {
+            const savedData = await storageService.loadFromStorage('website')
+            if (savedData) {
+                this.props.setData({ data: savedData });
+            }
         }
     }
 
