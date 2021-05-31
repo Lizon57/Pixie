@@ -3,10 +3,10 @@ import { cloudinaryService } from '../../../service/cloudinary-service';
 
 export class EditImgSrc extends React.Component {
     uploadImg = async (ev) => {
-        const { onChangeSpecialInput } = this.props;
+        const { onChangeSrc } = this.props;
         const { url } = await cloudinaryService.uploadImg(ev);
 
-        onChangeSpecialInput('backgroundImage', `url('${url}')`);
+        onChangeSrc('backgroundImage', `url('${url}')`);
     }
 
 

@@ -6,6 +6,8 @@ import { editorService } from '../../service/editor-service';
 import { setEditingElement } from '../../store/actions/editor-actions';
 import { EditText } from './editor-sections/EditText';
 import { EditImgSrc } from './editor-sections/EditImgSrc';
+import { EditVideoSrc } from './editor-sections/EditVideoSrc';
+import { EditMapCenter } from './editor-sections/EditMapCenter';
 import { EditOrientation } from './editor-sections/EditOrientation';
 import { EditBoxStyling } from './editor-sections/EditBoxStyling';
 
@@ -93,12 +95,42 @@ export class _ElementEditor extends React.Component {
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>
-                                Image
+                                Source
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
                             <EditImgSrc
                                 onChangeSpecialInput={this.handleSpecialInputChange} />
+                        </AccordionItemPanel>
+                    </AccordionItem>}
+
+                {element.role === 'video-container' &&
+                    <AccordionItem>
+                        <AccordionItemHeading>
+                            <AccordionItemButton>
+                                Source
+                            </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                            <EditVideoSrc
+                                element={element}
+                                editElement={this.editElement}
+                            />
+                        </AccordionItemPanel>
+                    </AccordionItem>}
+
+                {element.role === 'map' &&
+                    <AccordionItem>
+                        <AccordionItemHeading>
+                            <AccordionItemButton>
+                                Center
+                            </AccordionItemButton>
+                        </AccordionItemHeading>
+                        <AccordionItemPanel>
+                            <EditMapCenter
+                                element={element}
+                                editElement={this.editElement}
+                            />
                         </AccordionItemPanel>
                     </AccordionItem>}
 
