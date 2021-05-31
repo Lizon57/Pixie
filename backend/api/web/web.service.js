@@ -4,11 +4,11 @@ const logger = require('../../services/logger.service')
 
 
 async function query(creatorId) {
+    const criteria = _buildCriteria(creatorId)
 
     try {
         const collection = await dbService.getCollection('web')
-        const query = { _id: ObjectId(creatorId) }
-        var websites = await collection.find(query).toArray()
+        var websites = await collection.find(criteria).toArray()
         return websites
     } catch (err) {
         logger.error('cant find any websites', err)
@@ -47,6 +47,7 @@ async function saveWeb(WebInfo) {
     if (_id) {
         try {
             const collection = await dbService.getCollection('web');
+            delete WebInfo._id
             await collection.updateOne({ _id: ObjectId(_id) }, { $set: WebInfo });
             return WebInfo;
 
@@ -66,21 +67,14 @@ async function saveWeb(WebInfo) {
 
 }
 
-// for filter use
-// function _buildCriteria(creatorId, isPublished) {
-//     let criteria = {}
 
-//     criteria.id = ObjectId(creatorId)
-
-//     if (isPublished) {
-//         criteria.isPublished = { $eq: true }
-//     }
-//     if (!isPublished) {
-//         criteria.isPublished = { $eq: false }
-//     }
-
-//     return criteria
-// }
+function _buildCriteria(creatorId) {
+    let criteria = {}
+    criteria.$and = [{
+        creatorId: creatorId
+    }]
+    return criteria
+}
 
 
 
