@@ -26,10 +26,12 @@ export class AppHeader extends React.Component {
                         <span>
                             <span className="fas pointer hamburger-icn" onClick={this.onToggleNav}></span>
                             <ul className={"clean-list navlinks-container" + (isNavOpen ? "" : " hider")}>
-                                <li><NavLink to="/editor" activeClassName="active" onClick={()=>this.onToggleNav()}>Editor</NavLink></li>
-                                <li><NavLink to="/templates" onClick={()=>this.onToggleNav()}>Templates</NavLink></li>
-                                <li><NavLink to="/about" onClick={()=>this.onToggleNav()}>About</NavLink></li>
-                                <li><NavLink to="/profile/aaa/websites" onClick={()=>this.onToggleNav()}>Profile</NavLink></li>
+                                <li><NavLink to="/editor" activeClassName="active" onClick={() => this.onToggleNav()}>Editor</NavLink></li>
+                                <li><NavLink to="/templates" onClick={() => this.onToggleNav()}>Templates</NavLink></li>
+                                <li><NavLink to="/about" onClick={() => this.onToggleNav()}>About</NavLink></li>
+                                <li><NavLink to="/profile/login" onClick={() => this.onToggleNav()}>Login</NavLink></li>
+                                <li><NavLink to="/profile/signup" onClick={() => this.onToggleNav()}>SignUp</NavLink></li>
+                                <li><NavLink to="/profile/aaa/websites" onClick={() => this.onToggleNav()}>Profile</NavLink></li>
                             </ul>
                         </span>
                     </div>

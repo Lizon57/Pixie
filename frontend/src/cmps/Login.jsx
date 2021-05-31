@@ -9,12 +9,12 @@ import Grid from '@material-ui/core/Grid';
 import LockOutlinedIcon from '@material-ui/icons/LockOutlined';
 import Typography from '@material-ui/core/Typography';
 import Container from '@material-ui/core/Container';
-import { loadUser } from '../store/actions/user.actions'
-import { UserMsg } from '../cmps/UserMsg.jsx';
+import { loadUser } from '../store/actions/user-actions';
+import { UserMsg } from './UserMsg.jsx';
 
 
 
-class _LoginForm extends React.Component {
+class _Login extends React.Component {
     state = {
         email: '',
         password: '',
@@ -34,43 +34,49 @@ class _LoginForm extends React.Component {
         ev.preventDefault();
         try {
             const { onLoadUser } = this.props;
-            const { email, password } = this.state;
-            if (!email && !password) return
+            const { email, password, isMsg } = this.state;
+            if (!email || !password) {
+                this.setState({ isMsg: !isMsg, msg: 'Email address and password required.' });
+                setTimeout(() => {
+                    const { isMsg } = this.state;
+                    this.setState({ isMsg: !isMsg });
+                }, 2000);
+                return;
+            }
             const credentials = {
                 email,
                 password,
             }
             await loadUser(credentials)
-            this.props.history.push('/editor');
+            // this.props.history.push('/editor');
         }
 
         catch (err) {
             const { isMsg } = this.state;
-            this.setState({ isMsg: !isMsg, msg: 'Invalid Mail / Password' })
+            this.setState({ isMsg: !isMsg, msg: 'Invalid Mail / Password' });
             setTimeout(() => {
                 const { isMsg } = this.state;
                 this.setState({ isMsg: !isMsg })
-            }
-                , 2000)
+            }, 2000);
         }
-
-
     }
 
 
     render() {
         const { isMsg, msg } = this.state;
+
         return (
             <>
-                <Container component="main" className="login-container" maxWidth="xs">
+                <Container className="login-page-container" component="section" maxWidth="xs">
                     <CssBaseline />
                     <div className="flex column align-center">
-                        <Avatar className="avatar" >
+                        <Avatar>
                             <LockOutlinedIcon />
                         </Avatar>
                         <Typography component="h1" variant="h5">
-                            Sign in
+                            Login
                         </Typography>
+
                         <form>
                             <TextField
                                 variant="outlined"
@@ -84,6 +90,7 @@ class _LoginForm extends React.Component {
                                 autoFocus
                                 onChange={this.handleChange}
                             />
+
                             <TextField
                                 variant="outlined"
                                 margin="normal"
@@ -93,7 +100,6 @@ class _LoginForm extends React.Component {
                                 label="Password"
                                 type="password"
                                 id="password"
-                                autoComplete="current-password"
                                 onChange={this.handleChange}
                             />
 
@@ -104,18 +110,18 @@ class _LoginForm extends React.Component {
                                 color="primary"
                                 onClick={this.onSubmit}
                             >
-                                Sign In
+                                Login
                             </Button>
+
                             <Grid container>
                                 <Grid item>
-                                    <Link to="/signup" >
-                                        {"Don't have an account? Sign Up"}
+                                    <Link to="/profile/signup" >
+                                        {"Don't have an account? SignUp"}
                                     </Link>
                                 </Grid>
                             </Grid>
                         </form>
                     </div>
-
                 </Container>
                 {isMsg && < UserMsg msg={msg} />}
             </>
@@ -127,9 +133,8 @@ class _LoginForm extends React.Component {
 
 const mapDispatchToProps = {
     loadUser,
-
 }
 
 
 
-export const LoginForm = connect(null, mapDispatchToProps)(_LoginForm)
+export const Login = connect(null, mapDispatchToProps)(_Login)

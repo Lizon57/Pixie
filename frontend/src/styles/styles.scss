@@ -21,6 +21,9 @@
 @import "cmps/app-header";
 @import "cmps/homepage-hero";
 
+// Profile cmps
+@import "cmps/login-signup";
+
 // Editor cmps
 @import "cmps/editor/editor-options-circle";
 @import "cmps/editor/editor-nav";
@@ -30,7 +33,7 @@
 @import "cmps/editor/element-editor";
 @import "cmps/profile-container";
 
-// products sites
+// Products sites
 @import "cmps/editor/products/site-container";
 @import "cmps/editor/products/header-product";
 @import "cmps/editor/products/footer-product";
