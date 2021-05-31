@@ -34,7 +34,7 @@
     & .entity-preview {
       overflow: hidden;
       @include ease-rounded-corners;
-      background-image: url("../../../assets/img/default-preview-img.jpg");
+      background-image: url("../../../assets/img/default-card-img.jpg");
       background-size: cover;
       background-position: center;
       height: rem(340px);

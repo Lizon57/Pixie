@@ -13,7 +13,7 @@ export function EntityList({ entitiesType, entities }) {
                     </div>
                 </>
                 :
-                <Loading />}
+                <div className="list-header">We couldnt find any websites...</div>}
         </div>
     )
 }

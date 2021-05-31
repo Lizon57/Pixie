@@ -9,11 +9,11 @@ export const webService = {
     remove,
 }
 
-async function query(creatorId, isPublished) {
+async function query(creatorId) {
     try {
 
-        const webSites = await httpService.get(`web?creatorId=${creatorId}&isPublished=${isPublished}`);
-        localStorage.setItem(STORAGE_KEY, JSON.stringify(webSites));
+        const webSites = await httpService.get(`web?creatorId=${creatorId}`);
+        // localStorage.setItem(STORAGE_KEY, JSON.stringify(webSites));
         return webSites;
     }
     catch (err) {

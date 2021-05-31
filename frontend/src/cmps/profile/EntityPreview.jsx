@@ -7,7 +7,7 @@ export function EntityPreview({ entity }) {
             </div>
             <div className="flex align-center entity-hover-menu">
                 <div className="fas pointer option edit-el-icn"></div>
-                <div className="fas pointer option watch-icn"></div>
+                {entity.isPublished && <div className="fas pointer option watch-icn"></div>}
                 <div className="fas pointer option trash-icn"></div>
             </div>
         </div>
