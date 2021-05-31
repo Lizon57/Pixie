@@ -57,7 +57,7 @@ export class EditBoxStyling extends React.Component {
         const strippedPropsFromPx = {
             borderRadius: (borderRadius) ? editorService.stripFromPx(borderRadius) : 0,
             height: (height) ? editorService.stripFromPx(height) : 100,
-            width: (width) ? editorService.stripFromPx(width) : 0
+            width: (width) ? editorService.stripFromPx(width) : 100
         }
 
         return (

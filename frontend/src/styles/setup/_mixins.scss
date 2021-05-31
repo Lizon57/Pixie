@@ -71,3 +71,8 @@
   border-radius: rem(10px);
   overflow: hidden;
 }
+
+@mixin ease-rounded-corners {
+  border-radius: rem(5px);
+  overflow: hidden;
+}

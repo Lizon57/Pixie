@@ -3,12 +3,11 @@
   justify-content: center;
   align-items: center;
   background-color: $black;
-  height: 85px;
+  height: rem(85px);
   width: 100%;
 
   & .product-copyrights {
     display: flex;
     color: $white;
-    height: 100%;
   }
 }
