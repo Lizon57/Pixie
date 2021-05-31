@@ -111,8 +111,7 @@ class _SignUp extends React.Component {
                                 id="password"
                                 autoComplete="current-password"
                                 margin="normal"
-                                onChange={this.handleChange}
-
+                                onChange={this.handleChange}E
                             />
 
                             <Button
