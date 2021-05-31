@@ -4,8 +4,8 @@ export function getVideo(src) {
     return ({
         id: utilService.makeId(),
         type: 'div',
-        role: 'video',
-        iscontainer: true,
+        role: 'video-container',
+        isContainer: true,
         prefs: {
             className: "video-product-container"
         },
@@ -13,7 +13,7 @@ export function getVideo(src) {
             {
                 id: utilService.makeId(),
                 type: 'iframe',
-                role: 'videos',
+                role: 'video',
                 prefs: {
                     className: "video-product",
                     src: src

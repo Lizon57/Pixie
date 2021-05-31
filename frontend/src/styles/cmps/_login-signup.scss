@@ -7,12 +7,20 @@
   background-size: cover;
   background-position: top;
 
-  & form {
-    max-width: em(400px);
-  }
-
   @include for-normal-layout {
     background-position: center;
+  }
+
+  & form {
+    max-width: em(400px);
+
+    & .MuiOutlinedInput-root {
+      background-color: rgba($light-grey1, 0.8);
+
+      @include for-normal-layout {
+        background-color: transparent;
+      }
+    }
   }
 
   & .title {

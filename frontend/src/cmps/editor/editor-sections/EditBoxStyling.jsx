@@ -45,9 +45,8 @@ export class EditBoxStyling extends React.Component {
         onChangeSpecialInput('backgroundImage', `url('${url}')`);
     }
 
-
     render() {
-        let { backgroundColor, backgroundImage,
+        let { isImg, backgroundColor, backgroundImage,
             borderRadius, height, width, onChangeSpecialInput, onChangeValue } = this.props;
 
         // assign default values if the given value is undefined
@@ -79,10 +78,10 @@ export class EditBoxStyling extends React.Component {
                     </div>
 
                     {/* Upload background-image */}
-                    <div className="flex align-center editor-pref-warper">
+                    {!isImg && <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Upload:</span>
                         <input type="file" onChange={this.uploadImg} />
-                    </div>
+                    </div>}
                 </div>
 
                 {backgroundImage &&

@@ -1,6 +1,7 @@
 import React from 'react';
 import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, AccordionItemPanel } from 'react-accessible-accordion';
 import { cloudinaryService } from '../../service/cloudinary-service';
+import { editorService } from '../../service/editor-service';
 import { UserMsg } from '../../cmps/UserMsg';
 
 
@@ -16,17 +17,6 @@ export class ElementsList extends React.Component {
         const value = target.value;
         this.setState(prevState => ({ ...prevState, [name]: value }))
 
-    }
-
-    fixYoutubeUrl = (src) => {
-        if (src.includes('watch?v=')) {
-            src = src.replace('watch?v=', 'embed/');
-        }
-        if (src.includes('&')) {
-            let idx = src.indexOf('&');
-            src = src.slice(0, idx);
-        }
-        return src;
     }
 
     userMsgShow = (msg) => {
@@ -56,9 +46,9 @@ export class ElementsList extends React.Component {
             this.userMsgShow('Broken Youtube URL');
             return;
         }
-        const fixedSrc = this.fixYoutubeUrl(src);
-        onAddSection('youtube', fixedSrc)
-        this.setState({ src: '', isUserMsg: false, msg: '' })
+        const fixedSrc = editorService.getFixedYoutubeUrl(src);
+        onAddSection('youtube', fixedSrc);
+        this.setState({ src: '', isUserMsg: false, msg: '' });
     }
 
     render() {
