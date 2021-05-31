@@ -84,7 +84,7 @@ class _Profile extends React.Component {
             userId: 'u101',
             previewImg: '../../../assets/img/default-preview-img.png',
             childs: [],
-        },
+        }, 
         {
             _id: 'd102',
             isPublished: false,
