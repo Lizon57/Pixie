@@ -6,9 +6,8 @@ const dbService = require('../../services/db.service')
 async function login(email, password) {
     logger.debug(`trying to login with email: ${email}`);
     const user = await userService.getUser(email);
-    if (!user) return Promise.reject('Invalid email or pa;ssword');
+    if (!user) return Promise.reject('Invalid email or password');
     const match = await bcrypt.compare(password, user.password);
-    console.log('login info', password, user.password);
     if (!match) return Promise.reject('Invalid email or password');
     logger.debug(`logined successfully with email: ${email}`);
     delete user.password;
