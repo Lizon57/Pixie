@@ -18,7 +18,7 @@ class _SignUp extends React.Component {
         email: '',
         fullName: '',
         password: '',
-        isMsg: false,
+        isUserMsg: false,
         msg: ''
     }
 
@@ -28,26 +28,30 @@ class _SignUp extends React.Component {
         this.setState(prevState => ({ ...prevState, [name]: value }));
     }
 
+    userMsgShow = (msg) => {
+        this.setState(prevState => ({ ...prevState, isUserMsg: true, msg: msg }))
+        setTimeout(() => {
+            this.setState(prevState => ({ ...prevState, isUserMsg: false, msg: '' }))
+        }, 2000)
+    }
+
+
+
+
     onSubmit = async (ev) => {
         ev.preventDefault();
-        const { onSignUp } = this.props;
-        const { email, password, fullName, isMsg } = this.state;
-        const regexEmail = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i);
+        const { signUp } = this.props;
+        const { email, password, fullName } = this.state;
 
         if (!email || !password || !fullName) {
-            this.setState({ isMsg: !isMsg, msg: 'All fields required.' });
-            setTimeout(() => {
-                this.setState({ isMsg: !isMsg });
-            }, 2000);
-            return;
+            this.userMsgShow('All fields required');
+            return
         }
-        else if (!regexEmail.test(email)) {
-            this.setState({ isMsg: !isMsg, msg: 'Invalid Email' })
-            setTimeout(() => {
-                const { isMsg } = this.state;
-                this.setState({ isMsg: !isMsg })
-            }, 2000);
-            return;
+
+        const regexEmail = new RegExp(/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i);
+        if (!regexEmail.test(email)) {
+            this.userMsgShow('Invalid Email');
+            return
         }
 
         const userInfo = {
@@ -55,13 +59,17 @@ class _SignUp extends React.Component {
             password,
             fullName
         }
+        try {
+            await signUp(userInfo);
+            this.props.history.push('/profile/testy/websites');
+        } catch (err) {
+            this.userMsgShow('Email Already in use');
+        }
 
-        await signUp(userInfo);
-        this.props.history.push('/editor');
     }
 
     render() {
-        const { isMsg, msg } = this.state;
+        const { isUserMsg, msg } = this.state;
 
         return (
             <>
@@ -136,7 +144,7 @@ class _SignUp extends React.Component {
                         </form>
                     </div>
                 </Container>
-                { isMsg && < UserMsg msg={msg} />}
+                { isUserMsg && < UserMsg msg={msg} />}
             </>
         );
     }

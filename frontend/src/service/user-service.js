@@ -11,7 +11,7 @@ export const userService = {
 async function getUser(credentials) {
     try {
         const user = await httpService.post(`auth/login`, credentials);
-        localStorage.setItem('user', JSON.stringify(user));
+        if (user) localStorage.setItem('user', JSON.stringify(user));
         return user;
     } catch (err) {
         console.log(err)
@@ -33,7 +33,7 @@ async function logOut() {
 async function signUp(userInfo) {
     try {
         const user = await httpService.post(`auth/signup`, userInfo);
-        localStorage.setItem('user', JSON.stringify(user))
+        if (user) localStorage.setItem('user', JSON.stringify(user))
         return user
     } catch (err) {
         console.log(err)
