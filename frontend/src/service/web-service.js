@@ -2,14 +2,14 @@ import { httpService } from './http-service'
 
 const STORAGE_KEY = 'web'
 
-export const toyService = {
+export const webService = {
     query,
     getById,
     save,
     remove,
 }
 
-async function query({ creatorId, isPublished }) {
+async function query(creatorId, isPublished) {
     try {
 
         const webSites = await httpService.get(`web?creatorId=${creatorId}&isPublished=${isPublished}`);

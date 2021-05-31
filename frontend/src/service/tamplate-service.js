@@ -2,7 +2,7 @@ import { httpService } from './http-service'
 
 const STORAGE_KEY = 'tamplate'
 
-export const toyService = {
+export const tamplateService = {
     query,
     getById,
     save,
