@@ -11,7 +11,7 @@ export const userService = {
 async function getUser(credentials) {
     try {
         const user = await httpService.post(`auth/login`, credentials);
-        if (user) localStorage.setItem('user', JSON.stringify(user));
+        if (user) await localStorage.setItem('user', JSON.stringify(user));
         return user;
     } catch (err) {
         console.log(err)

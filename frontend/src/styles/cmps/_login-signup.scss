@@ -3,14 +3,16 @@
   padding: 1rem;
   margin-inline: auto;
   height: calc(100vh - 52px);
-  // background-image: url("../../assets/img/backgroundLogin.jpg");
+  background-image: url("../../assets/img/backgroundLogin.jpg");
   background-size: cover;
+  background-position: top;
+
   & form {
     max-width: em(400px);
   }
 
-  @include for-mobile-layout {
-    background-position: top;
+  @include for-normal-layout {
+    background-position: center;
   }
 
   & .title {
