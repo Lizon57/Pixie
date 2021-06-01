@@ -1,3 +1,14 @@
+.about-page-background{
+  background-image: url("../../assets/img/backgroundLogin.jpg");
+  background-size: cover;
+  background-position: top;
+
+  @include for-normal-layout {
+    background-position: center;
+  }
+}
+
+
 .about-section {
   font-family: inter;
   margin: 0 auto;
