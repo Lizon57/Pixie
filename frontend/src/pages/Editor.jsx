@@ -18,11 +18,11 @@ class _Editor extends React.Component {
 
     }
 
-    async componentDidMount() {
+    componentDidMount() {
         if (this.props.data.childs.length) {
             return;
         } else {
-            const savedData = await storageService.loadFromStorage('website')
+            const savedData = storageService.loadFromStorage('website')
             if (savedData) {
                 this.props.setData({ data: savedData });
             }
@@ -32,6 +32,7 @@ class _Editor extends React.Component {
     onAddSection = (section, src = null) => {
         const addedSection = elementService.getElement(section, src);
         this.props.addSection(addedSection);
+        this.saveWebsiteToStorage();
     }
 
     onAddElement = (elementType, src = null) => {
@@ -43,30 +44,30 @@ class _Editor extends React.Component {
         const { id } = editingElement
         const newData = JSON.parse(JSON.stringify(elementService.addElement(data, id, elementType, src)));
         this.props.setData({ data: newData });
+        this.saveWebsiteToStorage();
     }
 
     onUpdateElement = (newElement) => {
         const elementId = newElement.id;
         const newData = JSON.parse(JSON.stringify(elementService.editElement(this.props.data, elementId, newElement)));
         this.props.setData({ data: newData });
+        this.saveWebsiteToStorage();
     }
 
     onRemoveElement = (elementId) => {
         const newData = JSON.parse(JSON.stringify(elementService.removeElementById(this.props.data, elementId)));
         this.props.setData({ data: newData });
+        this.saveWebsiteToStorage();
     }
 
     onReorderingElement = (elementId, val) => {
         const newData = JSON.parse(JSON.stringify(elementService.reorderElement(this.props.data, elementId, val)));
         this.props.setData({ data: newData });
+        this.saveWebsiteToStorage();
     }
 
-    saveWebsiteToStorage = async () => {
-        await storageService.saveToStorage('website', this.props.data);
-        this.setState({ isUserMsg: true })
-        setTimeout(() => {
-            this.setState({ isUserMsg: false })
-        }, 2000)
+    saveWebsiteToStorage = () => {
+        storageService.saveToStorage('website', this.props.data);
     }
 
     render() {
@@ -83,7 +84,7 @@ class _Editor extends React.Component {
                     <PageRender onReorderingElement={this.onReorderingElement} onRemoveElement={this.onRemoveElement} childs={childs} />
                 </section>
                 {isUserMsg && <UserMsg msg={'Saved!'} />}
-                <OptionsCircle saveWebsiteToStorage={this.saveWebsiteToStorage} />
+                <OptionsCircle />
             </>
         );
     }
