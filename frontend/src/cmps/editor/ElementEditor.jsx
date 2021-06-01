@@ -123,7 +123,7 @@ export class _ElementEditor extends React.Component {
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>
-                                Center
+                                Place
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
