@@ -1,11 +1,11 @@
 import { ElementToolBar } from "../../ElementToolBar";
 
-export function ButtonCmp({ data, setEditingElement, onReorderingElement, onRemoveElement, isEdit }) {
+export function ButtonCmp({ data, setEditingElement, onReorderingElement, onRemoveElement, isEdit, className }) {
     if (isEdit) {
         return (
             <button
                 data-id={data.id}
-                className={data.prefs.className ? `${data.prefs.className} basic-product` : 'basic-product'}
+                className={className}
                 style={{ ...data.prefs.style }}
                 onClick={(ev) => {
                     ev.stopPropagation()

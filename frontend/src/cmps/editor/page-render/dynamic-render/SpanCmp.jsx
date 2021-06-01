@@ -1,11 +1,11 @@
 import { ElementToolBar } from "../../ElementToolBar";
 
-export function SpanCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit }) {
+export function SpanCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, className, isEdit }) {
     if (isEdit) {
         return (
             <span
                 data-id={data.id}
-                className={data.prefs.className ? `${data.prefs.className} basic-product` : 'basic-product'}
+                className={className}
                 style={{ ...data.prefs.style }}
                 onClick={(ev) => {
                     ev.stopPropagation()

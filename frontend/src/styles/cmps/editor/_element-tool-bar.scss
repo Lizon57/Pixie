@@ -18,7 +18,7 @@
     padding: 2px;
   }
 
-  & span:not(:last-child){
+  & span:not(:last-child) {
     border-inline-end: 1px dashed $grey;
   }
 
@@ -26,5 +26,6 @@
     background-color: $dark-grey;
     bottom: 0;
     left: 0;
+    padding: 0;
   }
 }

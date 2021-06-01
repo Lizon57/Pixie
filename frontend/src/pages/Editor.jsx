@@ -26,9 +26,9 @@ class _Editor extends React.Component {
         }
     }
 
-    onAddSection = (section, src = null) => {
+    onAddSection = async (section, src = null) => {
         const addedSection = elementService.getElement(section, src);
-        this.props.addSection(addedSection);
+        await this.props.addSection(addedSection);
         this.saveWebsiteToStorage();
     }
 
@@ -64,7 +64,7 @@ class _Editor extends React.Component {
     }
 
     saveWebsiteToStorage = () => {
-        storageService.saveToStorage('website', this.props.data);
+        storageService.saveToStorage('website', this.props.data)
     }
 
     render() {

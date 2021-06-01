@@ -2,12 +2,12 @@ import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
 
-export function SectionCmp({ data, setEditingElement, onReorderingElement, onRemoveElement, isEdit }) {
+export function SectionCmp({ data, setEditingElement, onReorderingElement, editingElement, onRemoveElement, className, isEdit }) {
     if (isEdit) {
         return (
             <section
                 data-id={data.id}
-                className={data.prefs.className ? `${data.prefs.className} basic-product` : 'basic-product'}
+                className={className}
                 style={{ ...data.prefs.style }}
                 onClick={(ev) => {
                     ev.stopPropagation()
@@ -30,6 +30,7 @@ export function SectionCmp({ data, setEditingElement, onReorderingElement, onRem
                             onReorderingElement={onReorderingElement}
                             onRemoveElement={onRemoveElement}
                             isEdit={isEdit}
+                            editingElement={editingElement}
                         />
                     })}
 
@@ -46,6 +47,7 @@ export function SectionCmp({ data, setEditingElement, onReorderingElement, onRem
                 data.childs.map((child) => {
                     return <ChildsPreview
                         child={child}
+                        editingElement={editingElement}
                         key={child.id}
                     />
                 })}

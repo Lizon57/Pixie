@@ -7,12 +7,25 @@ import { ButtonCmp } from './dynamic-render/ButtonCmp'
 import { NavCmp } from './dynamic-render/NavCmp'
 import { IframeCmp } from './dynamic-render/IframeCmp'
 
-export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEditingElement, isEdit }) {
+export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEditingElement, isEdit, editingElement }) {
+
+    function getClassName(child, editingElement) {
+        if (editingElement && child.id === editingElement.id) {
+            console.log(child.id, editingElement.id);
+            return child.prefs.className ? `${child.prefs.className} basic-product in-editing` : 'basic-product in-editing'
+        } else {
+            return child.prefs.className ? `${child.prefs.className} basic-product` : 'basic-product'
+        }
+    }
+
     const getCmp = (child) => {
 
+        const className = getClassName(child, editingElement);
 
         const props = {
             data: child,
+            editingElement,
+            className,
             isContainer: child.isContainer,
             onReorderingElement: onReorderingElement,
             onRemoveElement: onRemoveElement,
@@ -44,6 +57,7 @@ export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEdi
                 break;
         }
     }
+
     return (
         getCmp(child)
     )

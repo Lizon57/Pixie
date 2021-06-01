@@ -1,11 +1,11 @@
 import { ElementToolBar } from "../../ElementToolBar";
 
-export function IframeCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit }) {
+export function IframeCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit, className }) {
     if (isEdit) {
         return (
             <iframe
                 data-id={data.id}
-                className={data.prefs.className ? `${data.prefs.className} basic-product` : 'basic-product'}
+                className={className}
                 style={{ ...data.prefs.style }}
                 src={data.prefs.src}
                 title={data.prefs.src}

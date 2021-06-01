@@ -1,12 +1,12 @@
 import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
-export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit }) {
+export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit, editingElement, className }) {
     if (isEdit) {
         return (
             <header
                 data-id={data.id}
-                className={data.prefs.className ? `${data.prefs.className} basic-product` : 'basic-product'}
+                className={className}
                 style={{ ...data.prefs.style }}
                 onClick={(ev) => {
                     ev.stopPropagation()
@@ -29,6 +29,7 @@ export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditi
                             onReorderingElement={onReorderingElement}
                             onRemoveElement={onRemoveElement}
                             isEdit={isEdit}
+                            editingElement={editingElement}
 
                         />
                     })}
@@ -45,6 +46,7 @@ export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditi
                 data.childs.map((child) => {
                     return <ChildsPreview
                         child={child}
+                        editingElement={editingElement}
                         key={child.id}
                     />
                 })}
