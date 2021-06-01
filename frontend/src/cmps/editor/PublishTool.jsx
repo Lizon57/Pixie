@@ -1,11 +1,14 @@
 import React from 'react';
 import { Modal } from '../Modal';
 import { connect } from 'react-redux';
-import { saveWeb } from '../../store/actions/web-action'
+import { saveWeb } from '../../store/actions/web-action';
+import { UserMsg } from '../UserMsg';
+
 
 class _PublishTool extends React.Component {
     state = {
         isModalOpen: false,
+
     }
 
 
@@ -14,11 +17,14 @@ class _PublishTool extends React.Component {
         this.setState(prevState => ({ ...prevState, isModalOpen: !isModalOpen }));
     }
 
+
+
     onSubmit = async (name, isPublished) => {
-        const { data, saveWeb, user } = this.props;
+        const { data, saveWeb, user, userMsgShow } = this.props;
         // if there is no user UserMsg "Login required"
         if (!user) {
-            console.log('Login required');
+            userMsgShow('Login required');
+            this.toggleMenu()
             return;
         }
         this.toggleMenu(); //closing modal
@@ -32,7 +38,7 @@ class _PublishTool extends React.Component {
             };
             try {
                 await saveWeb(webInfo);
-                console.log('Saved', webInfo);
+                userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`)
                 return;
             } catch (err) {
                 console.log('Error on Save', err)
@@ -49,7 +55,7 @@ class _PublishTool extends React.Component {
         };
         try {
             await saveWeb(webInfo);
-            console.log('Saved', webInfo);
+            userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`)
 
         } catch (err) {
             console.log('Error on Save', err);
@@ -75,6 +81,7 @@ class _PublishTool extends React.Component {
 
                     />
                 </div>
+
             </>
         )
     }

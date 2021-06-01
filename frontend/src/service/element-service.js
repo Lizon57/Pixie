@@ -19,6 +19,8 @@ function getElement(type, src = null) {
             return elements.getHeader2()
         case 'header3':
             return elements.getHeader3()
+        case 'header4':
+            return elements.getHeader4()
         case 'map':
             return elements.getMap()
         case 'youtube':
@@ -39,6 +41,8 @@ function getElement(type, src = null) {
             return elements.getCards1()
         case 'hero1':
             return elements.getHero1()
+        case 'hero2':
+            return elements.getHero2()
         default: return;
     }
 }
