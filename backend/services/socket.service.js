@@ -1,10 +1,8 @@
-
-
 const asyncLocalStorage = require('./als.service');
 const logger = require('./logger.service');
 
-var gIo = null
-var gSocketBySessionIdMap = {}
+var gIo = null;
+var gSocketBySessionIdMap = {};
 
 function connectSockets(http, session) {
     gIo = require('socket.io')(http);
@@ -29,19 +27,19 @@ function connectSockets(http, session) {
             if (socket.myTopic) {
                 socket.leave(socket.myTopic)
             }
-            socket.join(topic)
+            socket.join(topic);
             // logger.debug('Session ID is', socket.handshake.sessionID)
-            socket.myTopic = topic
+            socket.myTopic = topic;
         })
         socket.on('chat newMsg', msg => {
             console.log('Msg', msg);
             // emits to all sockets:
             // gIo.emit('chat addMsg', msg)
             // emits only to sockets in the same room
-            gIo.to(socket.myTopic).emit('chat addMsg', msg)
+            gIo.to(socket.myTopic).emit('chat addMsg', msg);
         })
         socket.on('user-watch', userId => {
-            socket.join(userId)
+            socket.join(userId);
         })
 
     })

@@ -1,16 +1,16 @@
-const fs = require('fs')
-const asyncLocalStorage = require('./als.service')
+const fs = require('fs');
+const asyncLocalStorage = require('./als.service');
 
 
 const logsDir = './logs'
 if (!fs.existsSync(logsDir)) {
-    fs.mkdirSync(logsDir)
+    fs.mkdirSync(logsDir);
 }
 
 //define the time format
 function getTime() {
-    let now = new Date()
-    return now.toLocaleString()
+    let now = new Date();
+    return now.toLocaleString();
 }
 
 
@@ -25,13 +25,13 @@ function doLog(level, ...args) {
         (typeof arg === 'string') ? arg :
             (isError(arg)) ? arg : JSON.stringify(arg))
             
-    var line = strs.join(' | ')
-    const store = asyncLocalStorage.getStore()
-    const sessionId = store?.sessionId
-    const sid = sessionId ? `(sid: ${sessionId})` : ''
-    line = `${getTime()} - ${level} - ${line} ${sid}\n`
-    console.log(line)
-    fs.appendFileSync('./logs/backend.log', line)
+    var line = strs.join(' | ');
+    const store = asyncLocalStorage.getStore();
+    const sessionId = store?.sessionId;
+    const sid = sessionId ? `(sid: ${sessionId})` : '';
+    line = `${getTime()} - ${level} - ${line} ${sid}\n`;
+    console.log(line);
+    fs.appendFileSync('./logs/backend.log', line);
 }
 
 module.exports = {
