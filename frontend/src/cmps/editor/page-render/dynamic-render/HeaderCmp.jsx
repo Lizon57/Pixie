@@ -1,12 +1,12 @@
 import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
-export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditingElement }) {
+export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, editingElement, className }) {
 
     return (
         <header
             data-id={data.id}
-            className={data.prefs.className ? `${data.prefs.className} basic-product` : 'basic-product'}
+            className={className}
             style={{ ...data.prefs.style }}
             onClick={(ev) => {
                 ev.stopPropagation()
@@ -24,6 +24,7 @@ export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditi
                 data.childs.map((child) => {
                     return <ChildsPreview
                         child={child}
+                        editingElement={editingElement}
                         key={child.id}
                         setEditingElement={setEditingElement}
                         onReorderingElement={onReorderingElement}

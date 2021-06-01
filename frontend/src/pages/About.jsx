@@ -23,9 +23,9 @@ export class About extends React.Component {
                             <p>
                                 As for june 2021, Pixie hires hounders web developers that put all they're effory on one and only mission.
                             </p>
-                            <div className="moto">Help you build you're website!</div>
+                            <div className="moto">Help you build your website!</div>
                         </div>
-                        <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blogs/chart/manage-your-team@2x.png" alt="About us image" />
+                        <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blogs/chart/manage-your-team@2x.png" alt="About us" />
                     </section>
                 </section>
 

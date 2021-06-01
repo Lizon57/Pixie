@@ -2,11 +2,11 @@ import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
 
-export function SectionCmp({ data, setEditingElement, onReorderingElement, onRemoveElement }) {
+export function SectionCmp({ data, setEditingElement, onReorderingElement, onRemoveElement, editingElement, className }) {
     return (
         <section
             data-id={data.id}
-            className={data.prefs.className ? `${data.prefs.className} basic-product` : 'basic-product'}
+            className={className}
             style={{ ...data.prefs.style }}
             onClick={(ev) => {
                 ev.stopPropagation()
@@ -24,6 +24,7 @@ export function SectionCmp({ data, setEditingElement, onReorderingElement, onRem
                 data.childs.map((child) => {
                     return <ChildsPreview
                         child={child}
+                        editingElement={editingElement}
                         key={child.id}
                         setEditingElement={setEditingElement}
                         onReorderingElement={onReorderingElement}

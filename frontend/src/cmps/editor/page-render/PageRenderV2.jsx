@@ -26,7 +26,8 @@ class _PageRenderV2 extends React.Component {
 
 
     render() {
-        const { childs, onReorderingElement, onRemoveElement, setEditingElement } = this.props
+        const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement } = this.props
+
         if (!childs && childs.length === 0) return <div className="site-container">No cmps dragged yet, drag a component to start edit</div>
         return (
             <DragDropContext onDragEnd={this.onDragEnd}>
@@ -41,6 +42,7 @@ class _PageRenderV2 extends React.Component {
                             {childs.map((child, idx) => {
                                 return <ChildsPreview
                                     child={child}
+                                    editingElement={editingElement}
                                     key={child.id}
                                     isContainer={child.isContainer}
                                     setEditingElement={setEditingElement}
@@ -66,7 +68,7 @@ const mapDispatchToProps = {
 
 function mapStateToProps(state) {
     return {
-        data: state.editorModule.data,
+        editingElement: state.editorModule.editingElement
     }
 }
 

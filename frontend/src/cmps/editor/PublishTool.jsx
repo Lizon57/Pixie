@@ -61,7 +61,6 @@ class _PublishTool extends React.Component {
     render() {
         const { isModalOpen } = this.state;
         const { data } = this.props;
-        console.log(data.name)
         return (
             <>
                 <div className="flex editor-options-container">

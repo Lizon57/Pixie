@@ -3,6 +3,14 @@
   border: 1px dashed $dark-grey;
   border-collapse: collapse;
 
+  &.in-editing {
+    border: 2px $azure solid;
+
+    &:hover {
+      border: 2px $azure solid;
+    }
+  }
+
   &:hover {
     border: 1px solid $dark-grey;
   }
