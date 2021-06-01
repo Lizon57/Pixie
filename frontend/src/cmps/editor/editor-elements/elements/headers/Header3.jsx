@@ -30,6 +30,7 @@ export function getHeader3() {
                 id: utilService.makeId(),
                 type: 'div',
                 role: 'left-side',
+                isContainer: true,
                 prefs: {
                     style: {
                         display: 'flex',
@@ -128,6 +129,7 @@ export function getHeader3() {
                 id: utilService.makeId(),
                 type: 'div',
                 role: 'right-side',
+                isContainer: true,
                 prefs: {
                     style: {
                         display: 'flex',

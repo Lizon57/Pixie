@@ -16,6 +16,7 @@
 
 // Pages
 @import "pages/editor";
+@import "pages/about";
 
 // Components
 @import "cmps/app-header";
@@ -32,7 +33,7 @@
 @import "cmps/editor/element-tool-bar";
 @import "cmps/editor/element-editor";
 
-// profile cmps 
+// profile cmps
 @import "cmps/profile/profile-container";
 @import "cmps/profile/profile-entity-list";
 
