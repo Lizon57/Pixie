@@ -4,14 +4,14 @@ import { editorReducer } from './reducers/editor-reducer';
 import { dataReducer } from './reducers/data-reducer';
 import { userReducer } from './reducers/user-reducer';
 import { webReducer } from './reducers/web-reducer';
-// import { appReducer } from './reducers/app-reducer';
+import { appReducer } from './reducers/app-reducer';
 import { tamplateReducer } from './reducers/tamplate-reducer';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
 
 const rootReducer = combineReducers({
-    // appModule: appReducer,
+    appModule: appReducer,
     editorModule: editorReducer,
     dataModule: dataReducer,
     userModule: userReducer,
