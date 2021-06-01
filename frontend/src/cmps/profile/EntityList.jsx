@@ -1,7 +1,6 @@
 import { EntityPreview } from './EntityPreview';
 
 export function EntityList({ entitiesType, entities, onSetData, onDeleteEntity }) {
-
     return (
         <div className="entity-container">
             {entities ?

@@ -6,48 +6,65 @@ import DialogActions from '@material-ui/core/DialogActions';
 import DialogContent from '@material-ui/core/DialogContent';
 import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
+
+
 export class Modal extends React.Component {
     state = {
-        review: '',
+        name: '',
     }
+
+    componentDidMount() {
+        const { name } = this.props;
+        if (name) this.setState({ name })
+        return
+    }
+
+
     handleChange = ({ target }) => {
         const name = target.name;
         const value = target.value;
         this.setState(prevState => ({ ...prevState, [name]: value }))
     }
-    onSubmit = () => {
-        console.log(this.state)
-    }
+
     render() {
-        const { handleClose, isShown } = this.props
+        const { toggleMenu, isModalOpen, onSubbmit } = this.props
+        const { name } = this.state;
         return (
             <div>
-                <Dialog open={isShown} onClose={() => handleClose()} aria-labelledby="form-dialog-title">
-                    <DialogTitle id="form-dialog-title">Toy Review</DialogTitle>
+                <Dialog open={isModalOpen} onClose={() => toggleMenu()} aria-labelledby="form-dialog-title">
+                    <DialogTitle id="form-dialog-title">Choose your next step</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Add Your Review
+                            Your Website Name
                         </DialogContentText>
                         <TextField
                             autoFocus
                             margin="dense"
-                            name="review"
-                            id="review"
-                            label="Review"
+                            name="name"
+                            id="name"
+                            label="Site Name"
                             type="text"
                             fullWidth
+                            value={name}
                             onChange={this.handleChange}
                         />
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={() => handleClose()} color="primary">
-                            Cancel
-                        </Button>
                         <Button
                             color="primary"
-                            onClick={this.onSubmit}
+                            title="Save to Drafts"
+                            variant="contained"
+                            onClick={() => onSubbmit(this.state.name, false)}
                         >
-                            Add
+                            Save
+                        </Button>
+                        <Button
+                            color="secondary"
+                            title="Publish site"
+                            variant="contained"
+                            onClick={() => onSubbmit(this.state.name, true)}
+                        >
+                            Publish
                         </Button>
                     </DialogActions>
                 </Dialog>
