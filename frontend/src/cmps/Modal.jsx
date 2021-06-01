@@ -8,16 +8,15 @@ import DialogContentText from '@material-ui/core/DialogContentText';
 import DialogTitle from '@material-ui/core/DialogTitle';
 export class Modal extends React.Component {
     state = {
-        review: '',
+        name: '',
     }
     handleChange = ({ target }) => {
         const name = target.name;
         const value = target.value;
         this.setState(prevState => ({ ...prevState, [name]: value }))
     }
-    onSubmit = () => {
-        console.log(this.state)
-    }
+
+
     render() {
         const { handleClose, isShown } = this.props
         return (
@@ -26,7 +25,7 @@ export class Modal extends React.Component {
                     <DialogTitle id="form-dialog-title">Toy Review</DialogTitle>
                     <DialogContent>
                         <DialogContentText>
-                            Add Your Review
+                            Add Your Website Name
                         </DialogContentText>
                         <TextField
                             autoFocus
@@ -40,14 +39,13 @@ export class Modal extends React.Component {
                         />
                     </DialogContent>
                     <DialogActions>
-                        <Button onClick={() => handleClose()} color="primary">
-                            Cancel
+                        <Button color="primary">
+                            Save
                         </Button>
                         <Button
                             color="primary"
-                            onClick={this.onSubmit}
                         >
-                            Add
+                            Publish
                         </Button>
                     </DialogActions>
                 </Dialog>

@@ -2,7 +2,8 @@ import React from 'react';
 
 export class OptionsCircle extends React.Component {
     state = {
-        isOpen: false
+        isOpen: false,
+
     }
 
 
