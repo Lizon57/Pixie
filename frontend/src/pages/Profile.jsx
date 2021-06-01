@@ -6,6 +6,7 @@ import { webService } from '../service/web-service'
 import { UserMsg } from '../cmps/UserMsg.jsx';
 import { setData } from '../store/actions/data-actions';
 import { utilService } from '../service/util-service';
+import { pageViewMode } from '../store/actions/app-actions';
 
 
 class _Profile extends React.Component {
@@ -19,6 +20,7 @@ class _Profile extends React.Component {
     }
 
     async componentDidMount() {
+        this.props.pageViewMode(false); //if the user push back from Publishmode its returns the header of the site
         const user = this.props.user;
         if (!user) {
             this.props.history.push('/')
@@ -133,6 +135,7 @@ class _Profile extends React.Component {
 
 const mapDispatchToProps = {
     setData,
+    pageViewMode
 }
 
 function mapStateToProps(state) {
