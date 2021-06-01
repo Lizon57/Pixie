@@ -29,8 +29,9 @@ export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEdi
             isContainer: child.isContainer,
             onReorderingElement: onReorderingElement,
             onRemoveElement: onRemoveElement,
-            setEditingElement: setEditingElement
+            setEditingElement: setEditingElement,
         }
+
 
         switch (child.type) {
             case 'section':

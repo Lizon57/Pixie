@@ -1,3 +1,13 @@
+.about-page-background{
+  background-image: url("../../assets/img/backgroundLogin.jpg");
+  background-size: cover;
+  background-position: top;
+
+  @include for-normal-layout {
+    background-position: center;
+  }
+}
+
 .about-section {
   font-family: inter;
   margin: 0 auto;
@@ -9,7 +19,7 @@
   }
 
   &:first-of-type {
-    margin-block-start: 1rem;
+    padding-block-start: 1rem;
   }
 
   & .title {
@@ -70,10 +80,14 @@
       gap: 2rem;
     }
 
+    & .MuiOutlinedInput-root {
+      background-color: rgba($light-grey1, 0.8);
+    }
+
     & textarea {
       border: 1px solid $grey;
       @include ease-rounded-corners;
-      background-color: transparent;
+      background-color: rgba($light-grey1, 0.8);
       resize: none;
       margin-block: 1rem;
       height: 5rem;

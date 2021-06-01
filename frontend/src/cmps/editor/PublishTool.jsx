@@ -14,7 +14,7 @@ class _PublishTool extends React.Component {
         this.setState(prevState => ({ ...prevState, isModalOpen: !isModalOpen }));
     }
 
-    onSubbmit = async (name, isPublished) => {
+    onSubmit = async (name, isPublished) => {
         const { data, saveWeb, user } = this.props;
         // if there is no user UserMsg "Login required"
         if (!user) {
@@ -71,7 +71,7 @@ class _PublishTool extends React.Component {
                         isModalOpen={isModalOpen}
                         toggleMenu={this.toggleMenu}
                         name={data.name}
-                        onSubbmit={this.onSubbmit}
+                        onSubmit={this.onSubmit}
 
                     />
                 </div>
