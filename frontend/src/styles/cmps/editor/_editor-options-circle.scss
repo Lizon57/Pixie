@@ -27,24 +27,14 @@
 
     & .menu-container {
       display: none;
-      @include rounded-corners;
-      border: 1px solid $dark-grey;
-      background-color: $light-grey1;
-      margin-block-end: 0.5rem;
+      width: 300px;
+      height: 300px;
+      background-color: green;
+      margin-bottom: 0.5rem;
+      border-radius: 3px;
 
       &.open {
         display: block;
-      }
-
-      & .item {
-        font-family: inter;
-        padding: 0.5rem;
-        transition: all ease-in-out $t-fast;
-
-        &:hover {
-          background-color: $black;
-          color: $white;
-        }
       }
     }
   }
