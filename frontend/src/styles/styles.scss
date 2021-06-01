@@ -17,13 +17,12 @@
 // Pages
 @import "pages/editor";
 @import "pages/about";
+@import "pages/login-signup";
 
 // Components
 @import "cmps/app-header";
 @import "cmps/homepage-hero";
 
-// Profile cmps
-@import "cmps/login-signup";
 
 // Editor cmps
 @import "cmps/editor/editor-options-circle";
@@ -33,7 +32,7 @@
 @import "cmps/editor/element-tool-bar";
 @import "cmps/editor/element-editor";
 
-// profile cmps
+// Profile cmps
 @import "cmps/profile/profile-container";
 @import "cmps/profile/profile-entity-list";
 

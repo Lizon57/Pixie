@@ -20,6 +20,7 @@ export function getHeader3() {
             prefs: {
                 style: {
                     display: 'flex',
+                    flexWrap: 'wrap',
                     justifyContent: 'space-between',
                     backgroundColor: '#1a1a1a',
                     paddingInlineStart: '50px',

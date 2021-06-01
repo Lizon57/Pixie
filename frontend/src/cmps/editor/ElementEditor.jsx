@@ -51,7 +51,7 @@ export class _ElementEditor extends React.Component {
 
     render() {
         const { element } = this.props;
-        if (!element) return <div>Select an element for start editing</div>;
+        if (!element) return <div className="select-element-text">Select an element for start editing</div>;
         const { txt, prefs } = element;
         // const { txt, prefs, role } = element;
         let { style: {
