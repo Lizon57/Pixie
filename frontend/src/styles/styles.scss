@@ -15,13 +15,13 @@
 @import "basics/buttons";
 
 // Pages
+@import "pages/home-page.scss";
 @import "pages/editor";
 @import "pages/about";
 @import "pages/login-signup";
 
 // Components
 @import "cmps/app-header";
-@import "cmps/homepage-hero";
 
 
 // Editor cmps

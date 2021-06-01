@@ -1,7 +1,8 @@
 .about-page-background{
-  background-image: url("../../assets/img/backgroundLogin.jpg");
+  background-image: url("../../assets/img/backgroundAbout.jpg");
   background-size: cover;
   background-position: top;
+  background-attachment: fixed;
 
   @include for-normal-layout {
     background-position: center;
@@ -12,7 +13,7 @@
   font-family: inter;
   margin: 0 auto;
   max-width: 370px;
-  margin-block-end: 1.5rem;
+  padding-block-end: 1.5rem;
 
   @include for-normal-layout {
     max-width: 800px;
