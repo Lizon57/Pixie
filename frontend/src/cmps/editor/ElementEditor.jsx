@@ -42,10 +42,10 @@ export class _ElementEditor extends React.Component {
     }, 10);
 
     editElement = (updatedElement) => {
-        const { elementParentId, setEditingElement, onUpdateElement } = this.props;
+        const { setEditingElement, onUpdateElement } = this.props;
 
-        setEditingElement(updatedElement, elementParentId);
-        onUpdateElement(updatedElement, elementParentId);
+        setEditingElement(updatedElement);
+        onUpdateElement(updatedElement);
     }
 
 
@@ -182,7 +182,6 @@ export class _ElementEditor extends React.Component {
 function mapStateToProps(state) {
     return {
         element: state.editorModule.editingElement,
-        elementParentId: state.editorModule.editingElementParentId
     }
 }
 
