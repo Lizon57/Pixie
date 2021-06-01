@@ -6,6 +6,7 @@ import { Profile } from './pages/Profile';
 import { Login } from './pages/Login';
 import { SignUp } from './pages/SignUp';
 import { About } from './pages/About';
+import { WebDetails } from './pages/WebDetails';
 // import { AppFooter } from './cmps/AppFooter';
 
 export function App() {
@@ -15,12 +16,13 @@ export function App() {
         <AppHeader />
         <main>
           <Switch>
+            <Route path="/view/:webId" component={WebDetails} />
+            <Route path="/profile/login" component={Login} />
+            <Route path="/profile/signup" component={SignUp} />
+            <Route path="/profile/:userId" component={Profile} />
             <Route path="/editor" component={Editor} />
-            <Route exact path="/profile/login" component={Login} />
-            <Route exact path="/profile/signup" component={SignUp} />
-            <Route exact path="/profile/:userId" component={Profile} />
-            <Route exact path="/about" component={About} />
-            <Route exact path="/" component={HomePage} />
+            <Route path="/about" component={About} />
+            <Route path="/" component={HomePage} />
           </Switch>
         </main>
         {/* <AppFooter /> */}

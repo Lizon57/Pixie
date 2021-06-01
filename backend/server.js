@@ -36,6 +36,7 @@ const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware');
 app.all('*', setupAsyncLocalStorage);
 
 //Sockets
+// IF 2 USERS LOG IN WITH SAME USER SEE THE CHANGES ONLINE
 // const {connectSockets} = require('./services/socket.service')
 // app.get('/api/setup-session', (req, res) =>{
 //     req.session.connectedAt = Date.now()

@@ -18,6 +18,7 @@ export function ChildsPreview({ child, onReorderingElement, onRemoveElement, set
                             setEditingElement={setEditingElement}
                             onReorderingElement={onReorderingElement}
                             onRemoveElement={onRemoveElement}
+
                         />
                     </div>
                 )}

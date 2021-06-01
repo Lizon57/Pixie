@@ -89,7 +89,7 @@ class _Profile extends React.Component {
 
         return (
             <>
-                <section className="flex container profile-container">
+                <section className="flex container profile-container wrap">
                     <div className="flex column align-center profile-sidebar">
                         <div className="user-img">
                             <div className="user-img-hover">

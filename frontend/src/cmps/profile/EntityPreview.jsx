@@ -1,5 +1,7 @@
-export function EntityPreview({ entity, onSetData, onDeleteEntity }) {
+import { Link } from 'react-router-dom';
 
+
+export function EntityPreview({ entity, onSetData, onDeleteEntity }) {
     return (
         <div className="flex column space-between entity-preview">
             <div className="flex justify-center align-center entity-name">
@@ -8,7 +10,7 @@ export function EntityPreview({ entity, onSetData, onDeleteEntity }) {
             </div>
             <div className="flex align-center entity-hover-menu">
                 <div onClick={() => onSetData(entity)} className="fas pointer option edit-el-icn"></div>
-                {entity.isPublished && <div className="fas pointer option watch-icn"></div>}
+                {entity.isPublished && <Link to={`/view/${entity._id}`} className="fas pointer option watch-icn"></Link>}
                 <div onClick={() => onDeleteEntity(entity._id)} className="fas pointer option trash-icn"></div>
             </div>
         </div>

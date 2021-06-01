@@ -117,7 +117,6 @@ export class About extends React.Component {
                             </form>
                         </section>
 
-
                         <section className="about-section">
                             <h1 className="title">Communication</h1>
                             <section className="flex wrap space-between align-center communication-container">
