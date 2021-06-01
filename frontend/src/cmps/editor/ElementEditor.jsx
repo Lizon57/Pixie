@@ -42,10 +42,10 @@ export class _ElementEditor extends React.Component {
     }, 10);
 
     editElement = (updatedElement) => {
-        const { setEditingElement, onUpdateElement } = this.props;
+        const { elementParentId, setEditingElement, onUpdateElement } = this.props;
 
-        setEditingElement(updatedElement);
-        onUpdateElement(updatedElement);
+        setEditingElement(updatedElement, elementParentId);
+        onUpdateElement(updatedElement, elementParentId);
     }
 
 

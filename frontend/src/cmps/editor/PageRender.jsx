@@ -19,7 +19,7 @@ class _PageRender extends React.Component {
                         onClick: (ev) => {
                             ev.stopPropagation()
                             const parentId = ev.target.parentElement.dataset.id;
-                            this.props.setEditingElement(elChild)
+                            this.props.setEditingElement(elChild, parentId)
                         },
 
                     },
