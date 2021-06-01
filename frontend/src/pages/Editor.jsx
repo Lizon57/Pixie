@@ -13,6 +13,7 @@ class _Editor extends React.Component {
 
     state = {
         isUserMsg: false,
+        msg: '',
     }
 
     componentDidMount() {
@@ -24,6 +25,13 @@ class _Editor extends React.Component {
                 this.props.setData({ data: savedData });
             }
         }
+    }
+
+    userMsgShow = (msg) => {
+        this.setState(prevState => ({ ...prevState, isUserMsg: true, msg: msg }))
+        setTimeout(() => {
+            this.setState(prevState => ({ ...prevState, isUserMsg: false, msg: '' }))
+        }, 2000)
     }
 
     onAddSection = async (section, src = null) => {
@@ -71,7 +79,7 @@ class _Editor extends React.Component {
         let { data } = this.props;
         if (!data) return <Loading />;
         const { childs } = data;
-        const { isUserMsg } = this.state;
+        const { isUserMsg, msg } = this.state;
 
         return (
             <>
@@ -80,8 +88,8 @@ class _Editor extends React.Component {
                     <EditorSideBar onAddElement={this.onAddElement} onAddSection={this.onAddSection} onUpdateElement={this.onUpdateElement} />
                     <PageRender onReorderingElement={this.onReorderingElement} onRemoveElement={this.onRemoveElement} childs={childs} />
                 </section>
-                {isUserMsg && <UserMsg msg={'Saved!'} />}
-                <PublishTool />
+                {isUserMsg && <UserMsg msg={msg} />}
+                <PublishTool userMsgShow={this.userMsgShow} />
             </>
         );
     }

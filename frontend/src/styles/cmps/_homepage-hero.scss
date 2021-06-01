@@ -70,35 +70,3 @@
     flex-grow: 2;
   }
 }
-
-.hero3 {
-  padding-right: 30px;
-  padding-left: 30px;
-  height: 600px;
-  background-image: url("https://images.unsplash.com/photo-1551244072-5d12893278ab");
-  background-size: cover;
-  display: flex;
-
-  div {
-    display: flex;
-    flex-direction: column;
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 30px;
-    margin-top: 80px;
-    border-radius: 20px;
-    height: 165px;
-
-    .title1 {
-      font-size: 70px;
-      color: #BBD3E6;
-      font-family: Grandstander;
-    }
-
-    .title2 {
-      color: #528cbd;
-      font-size: 35px;
-      font-family: Grandstander;
-    }
-  }
-
-}

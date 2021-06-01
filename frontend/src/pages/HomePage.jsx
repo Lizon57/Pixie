@@ -1,21 +1,25 @@
-import { Link } from "react-router-dom";
+import heroGif from '../assets/img/heroGif.gif';
 
 export function HomePage() {
 
     return (
-        <section>
-            <div className="homepage-hero">
-                <div>
-                    <span>Build your desired site, effortlessly.</span>
-                    <Link to="/editor"><button>START BUILDING</button></Link>
+        <section className="container home-page-container">
+            <section className="flex align-center justify-center hero-container">
+                <div className="flex">
+                    <div className="flex column">
+                        <h1>Build your site with Pixie!</h1>
+                        <p>Pixie bla bla bla</p>
+                        <button>Go Pixie!</button>
+                    </div>
+                    <img src={heroGif} />
                 </div>
-            </div>
-            <div className="hero3">
-                <div>
-                    <span className="title1">We Love the Sea</span>
-                    <span className="title2">Come sea why...</span>
-                </div>
-            </div>
+            </section>
+            <section className="section-container">
+                b
+            </section>
+            <section className="section-container">
+                c
+            </section>
         </section>
     );
 }
