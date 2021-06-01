@@ -1,0 +1,27 @@
+.home-page-container {
+  & .hero-container {
+    height: calc(100vh - 51px);
+
+    & div {
+      flex-basis: 80%;
+      max-height: 450px;
+
+      & h1 {
+        font-size: 2rem;
+        font-family: inter;
+        font-weight: $fw-extra-bold;
+        letter-spacing: 1px;
+      }
+
+      p {
+        flex-basis: 100%;
+      }
+    }
+
+    img {
+      mix-blend-mode: multiply;
+      height: auto;
+      width: 700px;
+    }
+  }
+}
