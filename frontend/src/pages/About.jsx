@@ -1,4 +1,6 @@
 import React from 'react';
+import TextField from '@material-ui/core/TextField';
+import Button from '@material-ui/core/Button';
 
 export class About extends React.Component {
     state = {
@@ -30,15 +32,51 @@ export class About extends React.Component {
 
                 <section className="about-section">
                     <h1 className="title">Contact us</h1>
+                    <form className="contact-us-form-container">
+                        <div className="flex space-between contact-us-details">
+                            <TextField
+                                required
+                                label="Full name"
+                                name="fullName"
+                                autoComplete="Full name"
+                                id="fullName"
+                                variant="outlined"
+                                style={{ flexGrow: '1' }}
+                                onChange={this.handleChange}
+                            />
+                            <TextField
+                                required
+                                label="Email Address"
+                                name="email"
+                                autoComplete="email"
+                                id="email"
+                                variant="outlined"
+                                style={{ flexGrow: '1' }}
+                                onChange={this.handleChange}
+                            />
+                        </div>
 
+                        <textarea name="msg" required></textarea>
+
+                        <Button
+                            type="submit"
+                            className="send-btn"
+                            variant="contained"
+                            margin="normal"
+                            onClick={this.onSubmit}
+                        >
+                            Submit!
+                        </Button>
+
+                    </form>
                 </section>
 
 
                 <section className="about-section">
                     <h1 className="title">Communication</h1>
-                    <section className="communication-container">
-                        <div className="flex column">
-                            <div className="brand">Pixie</div>
+                    <section className="flex wrap space-between align-center communication-container">
+                        <iframe src="https://maps.google.com/maps?q=Yosef%20Yekuti'eli%204,%20Tel-Aviv&z=15&output=embed"></iframe>
+                        <div className="flex column communication-details">
                             <div>
                                 <span className="label">Address:</span><span>Yosef Yekuti'eli 4, Tel-Aviv, Israel.</span>
                             </div>
