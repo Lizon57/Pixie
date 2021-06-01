@@ -58,19 +58,18 @@ export class About extends React.Component {
                                 <div className="flex column text">
                                     <h2>We are Pixie!</h2>
                                     <p>
-                                        Pixie is an easy-to-use, strong and uniquie platform for web building.<br />
-                            With Pixie, everyone and every business, can set his own great-looking, responsive and dynamic website,
-                            without any need of technologie knowledge!
-                            </p>
+                                        Pixie is an easy-to-use, strong &amp; uniquie platform for web building.<br />
+                                        With Pixie, everyone and every business, can set his own great-looking, responsive and dynamic website,
+                                        without any need of technologie knowledge!
+                                    </p>
                                     <p>
                                         As for june 2021, Pixie hires hounders web developers that put all they're effory on one and only mission.
-                            </p>
+                                    </p>
                                     <div className="moto">Help you build youre own website!</div>
                                 </div>
                                 <img src="https://d2slcw3kip6qmk.cloudfront.net/marketing/blogs/chart/manage-your-team@2x.png" alt="About us" />
                             </section>
                         </section>
-
 
                         <section className="about-section">
                             <h1 className="title">Contact us</h1>
@@ -111,7 +110,7 @@ export class About extends React.Component {
                                         onClick={this.onSubmit}
                                     >
                                         Submit!
-                        </Button>
+                                    </Button>
                                 </div>
 
                             </form>
