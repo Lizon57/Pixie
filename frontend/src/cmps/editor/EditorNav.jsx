@@ -1,19 +1,47 @@
-export function EditorNav({ mode, onChangeMode }) {
-    return (
-        <div className="text-center flex space-between editor-nav-container">
-            <div
-                onClick={() => onChangeMode('addElement')}
-                className={"pointer" + (mode === 'addElement' ? ' active' : '')}>
-                <span className="fas create-el-icn"></span>
-                Create
-            </div>
+import React from 'react'
+import { connect } from 'react-redux'
+import { setEditorMode } from '../../store/actions/editor-actions'
 
-            <div
-                onClick={() => onChangeMode('editElement')}
-                className={"pointer" + (mode === 'editElement' ? ' active' : '')}>
-                <span className="fas edit-el-icn"></span>
-                Edit
+class _EditorNav extends React.Component {
+    state = {
+    }
+
+    componentDidMount() {
+        console.log(this.props.editorMode);
+    }
+
+    render() {
+
+        const { editorMode, setEditorMode } = this.props
+
+        return (
+            <div className="text-center flex space-between editor-nav-container">
+                <div
+                    onClick={() => setEditorMode('addElement')}
+                    className={"pointer" + (editorMode === 'addElement' ? ' active' : '')}>
+                    <span className="fas create-el-icn"></span>
+                    Create
+                </div>
+
+                <div
+                    onClick={() => setEditorMode('editElement')}
+                    className={"pointer" + (editorMode === 'editElement' ? ' active' : '')}>
+                    <span className="fas edit-el-icn"></span>
+                    Edit
+                </div>
             </div>
-        </div>
-    );
+        )
+    }
 }
+
+const mapDispatchToProps = {
+    setEditorMode,
+}
+
+function mapStateToProps(state) {
+    return {
+        editorMode: state.editorModule.editorMode
+    }
+}
+
+export const EditorNav = connect(mapStateToProps, mapDispatchToProps)(_EditorNav)

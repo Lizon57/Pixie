@@ -182,7 +182,6 @@ export class _ElementEditor extends React.Component {
 function mapStateToProps(state) {
     return {
         element: state.editorModule.editingElement,
-        elementParentId: state.editorModule.editingElementParentId
     }
 }
 
