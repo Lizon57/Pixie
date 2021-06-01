@@ -7,15 +7,12 @@ import { EditorSideBar } from '../cmps/editor/EditorSideBar';
 import { PageRender } from '../cmps/editor/page-render/PageRenderV2';
 import { storageService } from '../service/storage-service';
 import { UserMsg } from '../cmps/UserMsg';
-import { OptionsCircle } from '../cmps/editor/OptionsCircle';
+import { PublishTool } from '../cmps/editor/PublishTool';
 
 class _Editor extends React.Component {
 
     state = {
         isUserMsg: false,
-
-
-
     }
 
     componentDidMount() {
@@ -84,7 +81,7 @@ class _Editor extends React.Component {
                     <PageRender onReorderingElement={this.onReorderingElement} onRemoveElement={this.onRemoveElement} childs={childs} />
                 </section>
                 {isUserMsg && <UserMsg msg={'Saved!'} />}
-                <OptionsCircle />
+                <PublishTool />
             </>
         );
     }
