@@ -7,7 +7,7 @@ import { ButtonCmp } from './dynamic-render/ButtonCmp'
 import { NavCmp } from './dynamic-render/NavCmp'
 import { IframeCmp } from './dynamic-render/IframeCmp'
 
-export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEditingElement }) {
+export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEditingElement, isEdit }) {
     const getCmp = (child) => {
 
 
@@ -17,6 +17,7 @@ export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEdi
             onReorderingElement: onReorderingElement,
             onRemoveElement: onRemoveElement,
             setEditingElement: setEditingElement,
+            isEdit: isEdit
         }
 
 
