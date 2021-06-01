@@ -1,6 +1,6 @@
 import { ElementToolBar } from "../../ElementToolBar";
 
-export function SpanCmp({ data, onReorderingElement, onRemoveElement, setEditingElement }) {
+export function SpanCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isModeEdit }) {
     return (
         <span
             data-id={data.id}
@@ -12,10 +12,10 @@ export function SpanCmp({ data, onReorderingElement, onRemoveElement, setEditing
                 setEditingElement(data, parentId)
             }}
         >
-            <ElementToolBar
+            {isModeEdit && <ElementToolBar
                 id={data.id}
                 onReorderingElement={onReorderingElement}
-                onRemoveElement={onRemoveElement} />
+                onRemoveElement={onRemoveElement} />}
             {data.txt}
 
         </span>

@@ -10,13 +10,15 @@ import { IframeCmp } from './dynamic-render/IframeCmp'
 export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEditingElement }) {
     const getCmp = (child) => {
 
+
         const props = {
             data: child,
             isContainer: child.isContainer,
             onReorderingElement: onReorderingElement,
             onRemoveElement: onRemoveElement,
-            setEditingElement: setEditingElement
+            setEditingElement: setEditingElement,
         }
+
 
         switch (child.type) {
             case 'section':

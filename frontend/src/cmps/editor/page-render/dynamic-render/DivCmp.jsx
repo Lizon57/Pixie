@@ -1,7 +1,7 @@
 import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
-export function DivCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, provided }) {
+export function DivCmp({ data, onReorderingElement, onRemoveElement, setEditingElement }) {
     return (
         <div
             data-id={data.id}
@@ -27,6 +27,7 @@ export function DivCmp({ data, onReorderingElement, onRemoveElement, setEditingE
                         setEditingElement={setEditingElement}
                         onReorderingElement={onReorderingElement}
                         onRemoveElement={onRemoveElement}
+
                     />
                 })}
 

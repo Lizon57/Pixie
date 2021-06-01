@@ -1,6 +1,6 @@
 import { ElementToolBar } from "../../ElementToolBar";
 
-export function IframeCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, provided }) {
+export function IframeCmp({ data, onReorderingElement, onRemoveElement, setEditingElement }) {
     return (
         <iframe
             data-id={data.id}

@@ -27,16 +27,16 @@ export class Modal extends React.Component {
     }
 
     render() {
-        const { toggleMenu, isModalOpen, onSubbmit } = this.props
+        const { toggleMenu, isModalOpen, onSubmit } = this.props
         const { name } = this.state;
         return (
             <div>
-                <Dialog open={isModalOpen} onClose={() => toggleMenu()} aria-labelledby="form-dialog-title">
-                    <DialogTitle id="form-dialog-title">Choose your next step</DialogTitle>
+                <Dialog open={isModalOpen}
+                    onClose={() => toggleMenu()}
+                    aria-labelledby="form-dialog-title"
+                >
+                    <DialogTitle id="form-dialog-title">Choose your WebSite name</DialogTitle>
                     <DialogContent>
-                        <DialogContentText>
-                            Your Website Name
-                        </DialogContentText>
                         <TextField
                             autoFocus
                             margin="dense"
@@ -49,20 +49,18 @@ export class Modal extends React.Component {
                             onChange={this.handleChange}
                         />
                     </DialogContent>
-                    <DialogActions>
+                    <DialogActions className="modal-btns flex justify-center">
                         <Button
-                            color="primary"
                             title="Save to Drafts"
                             variant="contained"
-                            onClick={() => onSubbmit(this.state.name, false)}
+                            onClick={() => onSubmit(this.state.name, false)}
                         >
                             Save
                         </Button>
                         <Button
-                            color="secondary"
                             title="Publish site"
                             variant="contained"
-                            onClick={() => onSubbmit(this.state.name, true)}
+                            onClick={() => onSubmit(this.state.name, true)}
                         >
                             Publish
                         </Button>
