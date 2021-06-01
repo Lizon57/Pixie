@@ -76,6 +76,7 @@ export class ElementsList extends React.Component {
                         <AccordionItemPanel>
                             <div className="text-center pointer item" onClick={() => onAddSection('header1')}>Header 1</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('header2')}>Header 2</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('header3')}>Header 3</div>
                             {/* <div className="text-center pointer item" onClick={() => onAddSection('NavBar')}>Header 2</div> */}
                         </AccordionItemPanel>
                     </AccordionItem>
