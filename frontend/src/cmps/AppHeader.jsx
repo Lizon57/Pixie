@@ -3,6 +3,7 @@ import { connect } from 'react-redux';
 import { Link, NavLink } from 'react-router-dom';
 import { logOut } from '../store/actions/user-actions';
 
+
 import logo from '../assets/img/logo2.png';
 
 export class _AppHeader extends React.Component {

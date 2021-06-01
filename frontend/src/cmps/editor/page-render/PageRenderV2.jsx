@@ -49,6 +49,7 @@ class _PageRenderV2 extends React.Component {
                                     onReorderingElement={onReorderingElement}
                                     onRemoveElement={onRemoveElement}
                                     idx={idx}
+                                    isEdit={true}
                                 />
                             })}
                             {provided.placeholder}

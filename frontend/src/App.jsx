@@ -7,13 +7,14 @@ import { Login } from './pages/Login';
 import { SignUp } from './pages/SignUp';
 import { About } from './pages/About';
 import { WebDetails } from './pages/WebDetails';
+import { connect } from 'react-redux';
 // import { AppFooter } from './cmps/AppFooter';
 
-export function App() {
+function _App({ isPageView }) {
   return (
     <section className="app">
       <Router>
-        <AppHeader />
+        {!isPageView && <AppHeader />}
         <main>
           <Switch>
             <Route path="/view/:webId" component={WebDetails} />
@@ -30,3 +31,12 @@ export function App() {
     </section>
   );
 }
+
+function mapStateToProps(state) {
+  return {
+    isPageView: state.appModule.isPageView
+  }
+}
+
+
+export const App = connect(mapStateToProps, null)(_App)

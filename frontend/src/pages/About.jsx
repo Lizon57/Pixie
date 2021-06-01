@@ -100,7 +100,7 @@ export class About extends React.Component {
                                     />
                                 </div>
 
-                                <textarea name="msg" name="content" value={content} onChange={this.handleChange} required></textarea>
+                                <textarea name="content" value={content} onChange={this.handleChange} required></textarea>
 
                                 <div className="text-center">
                                     <Button
