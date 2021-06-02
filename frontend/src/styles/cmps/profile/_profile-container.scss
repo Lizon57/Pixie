@@ -1,16 +1,39 @@
 // Profile
 .profile-container {
   margin-block-start: 1rem;
-  height: calc(100vh - 70px);
-  gap: 3rem;
+  gap: 1rem;
+  flex-direction: column;
+  padding-bottom: 1rem;
+
+  @include for-normal-layout {
+    flex-direction: row;
+    gap: 1rem;
+    height: calc(100vh - 68px);
+  }
 
   .divider {
-    width: 11px;
+    height: 11px;
     background-color: rgb(233, 233, 233);
+
+    @include for-normal-layout {
+      width: 11px;
+      height: unset;
+    }
   }
 
   & .profile-sidebar {
-    width: 300px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    @include for-normal-layout {
+      width: 220px;
+      flex-direction: column;
+    }
+
+    @media (min-width: 930px) {
+      width: 300px;
+    }
 
     .user-img {
       width: 200px;
@@ -19,6 +42,12 @@
       background-size: contain;
       background-position: center;
       border-radius: 50%;
+      min-width: 200px;
+      margin: auto;
+
+      @include for-normal-layout {
+        margin: unset;
+      }
 
       &:hover {
         .user-img-hover {
@@ -46,8 +75,17 @@
       border-block: 1px solid $light-grey2;
       margin-block: 1.5rem;
       width: 200px;
+      margin: auto;
+
+      @include for-normal-layout {
+        width: 200px;
+        flex-grow: 0;
+        margin: unset;
+      }
 
       & div {
+        height: 100px;
+        justify-content: space-evenly;
         gap: rem(10px);
         font-family: inter;
         padding: rem(10px);
@@ -63,14 +101,26 @@
       font-size: rem(20px);
       font-family: inter;
       width: 100%;
+      flex-direction: row;
+
+      @include for-normal-layout {
+        flex-direction: column;
+      }
 
       & div {
         cursor: pointer;
         display: flex;
         align-items: center;
-        padding-inline-start: 1rem;
         height: rem(60px);
         transition: all ease-in-out $t-fast;
+        flex-grow: 1;
+        justify-content: center;
+
+        @include for-normal-layout {
+          flex-grow: unset;
+          justify-content: start;
+          padding-inline-start: 1rem;
+        }
 
         &:hover {
           background-color: $light-grey1;
@@ -78,21 +128,39 @@
       }
 
       & .active {
-        box-shadow: inset 5px 0px 0 $azure;
+        box-shadow: inset 0px -5px 0px 0px $azure;
+
+        @include for-normal-layout {
+          box-shadow: inset 5px 0px 0 $azure;
+        }
       }
     }
   }
 
-  & .profile-main .details {
-    & .greet {
-      font-family: inter;
-      font-size: 1.8rem;
-    }
+  .profile-main {
 
-    & .last-active {
-      font-size: 1.5rem;
-      font-family: inter;
-      color: $grey;
+    flex-grow: 1;
+
+    .details {
+
+      flex-direction: column;
+      gap: 11px;
+
+      @media (min-width: 930px) {
+        flex-direction: row;
+        gap: unset;
+      }
+
+      & .greet {
+        font-family: inter;
+        font-size: 1.8rem;
+      }
+
+      & .last-active {
+        font-size: 1.5rem;
+        font-family: inter;
+        color: $grey;
+      }
     }
   }
 }

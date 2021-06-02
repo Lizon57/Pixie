@@ -116,7 +116,7 @@ class _Profile extends React.Component {
                         </div>
                     </div>
                     <div className="divider"></div>
-                    <div className="full profile-main">
+                    <div className="profile-main">
                         <div className="flex space-between details">
                             <span className="greet">Hello {user.fullName}</span>
                             <span className="last-active">Last activity: {utilService.getHumanTime(user.lastLogInAt)}</span>
