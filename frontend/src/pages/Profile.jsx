@@ -92,7 +92,7 @@ class _Profile extends React.Component {
 
         return (
             <>
-                <section className="flex container profile-container wrap">
+                <section className="flex profile-container">
                     <div className="flex column align-center profile-sidebar">
                         <div className="user-img">
                             <div className="user-img-hover">
@@ -100,11 +100,11 @@ class _Profile extends React.Component {
                             </div>
                         </div>
                         <div className="flex statistics">
-                            <div className="flex column full align-center">
+                            <div className="flex column align-center">
                                 <span className="amount">{websitesAmount}</span>
                                 <span className="stat">Websites</span>
                             </div>
-                            <div className="flex column full align-center">
+                            <div className="flex column align-center">
                                 <span className="amount">{draftsAmount}</span>
                                 <span className="stat">Drafts</span>
                             </div>
@@ -115,7 +115,6 @@ class _Profile extends React.Component {
                             <div className={entitiesType === 'Drafts' ? 'active' : ''} onClick={() => this.changeEntitiesType('Drafts')}>Drafts</div>
                         </div>
                     </div>
-                    <div className="divider"></div>
                     <div className="profile-main">
                         <div className="flex space-between details">
                             <span className="greet">Hello {user.fullName}</span>
