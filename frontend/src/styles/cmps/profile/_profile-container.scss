@@ -1,14 +1,14 @@
 // Profile
 .profile-container {
-  margin-block-start: 1rem;
   gap: 1rem;
   flex-direction: column;
   padding-bottom: 1rem;
+  padding-top: 1rem;
 
   @include for-normal-layout {
     flex-direction: row;
     gap: 1rem;
-    height: calc(100vh - 68px);
+    height: calc(100vh - 52px);
   }
 
   .divider {
