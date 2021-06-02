@@ -22,6 +22,10 @@
     @include for-normal-layout {
       font-size: 3rem;
     }
+
+    & span{
+      color: $azure;
+    }
   }
 
   & .content-container {

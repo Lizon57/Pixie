@@ -9,7 +9,7 @@ export function HomePage() {
             <section className="container">
                 <section className="flex align-center justify-center hero-container">
                     <div>
-                        <h1 className="text-center title">Create a website you're proud of with Pixie!</h1>
+                        <h1 className="text-center title">Create a website you're proud of with <span>Pixie!</span></h1>
                         <div className="flex wrap">
                             <div className="flex column wrap content-container">
                                 <p>Pixie is an easy-to-use, strong &amp; uniquie platform for web building!</p>
