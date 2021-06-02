@@ -20,6 +20,12 @@ export class EditOrientation extends React.Component {
         { value: 'space-evenly', label: 'Space evenly' }
     ]
 
+    justifyContentTextOptions = [
+        { value: 'flex-start', label: 'Start' },
+        { value: 'center', label: 'Center' },
+        { value: 'flex-end', label: 'End' },
+    ]
+
     alignItemsAndSelfOptions = [
         { value: 'flex-start', label: 'Start' },
         { value: 'center', label: 'Center' },
@@ -89,21 +95,6 @@ export class EditOrientation extends React.Component {
                         </div>
                     </div>}
 
-                {(role === 'text') &&
-                    <div className="accordion-inner-content">
-                        {/* Edit justify content */}
-                        <div className="flex align-center editor-pref-warper">
-                            <span className="editor-label">Main Axis: </span>
-                            <Select
-                                className="edit-select"
-                                placeholder={"Direction"}
-                                onChange={(selectedOption) => onChangeSpecialInput('justifyContent', selectedOption.value)}
-                                options={this.justifyContentOptions}
-                            />
-                        </div>
-                    </div>
-                }
-
 
                 <div className="accordion-inner-content">
                     {/* Edit flex grow */}
@@ -119,28 +110,28 @@ export class EditOrientation extends React.Component {
                     {/* Edit margin block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Top:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.marginBlockStart} onChange={(value) => onChangeSpecialInput('marginBlockStart', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.marginBlockStart} onChange={(value) => onChangeSpecialInput('marginBlockStart', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.marginBlockStart} px</span>
                     </div>
 
                     {/* Edit margin block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Bottom:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.marginBlockEnd} onChange={(value) => onChangeSpecialInput('marginBlockEnd', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.marginBlockEnd} onChange={(value) => onChangeSpecialInput('marginBlockEnd', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.marginBlockEnd} px</span>
                     </div>
 
                     {/* Edit margin block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Left:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.marginInlineStart} onChange={(value) => onChangeSpecialInput('marginInlineStart', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.marginInlineStart} onChange={(value) => onChangeSpecialInput('marginInlineStart', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.marginInlineStart} px</span>
                     </div>
 
                     {/* Edit margin block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Right:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.marginInlineEnd} onChange={(value) => onChangeSpecialInput('marginInlineEnd', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.marginInlineEnd} onChange={(value) => onChangeSpecialInput('marginInlineEnd', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.marginInlineEnd} px</span>
                     </div>
                 </div>
@@ -150,28 +141,28 @@ export class EditOrientation extends React.Component {
                     {/* Edit padding block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Top:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.paddingBlockStart} onChange={(value) => onChangeSpecialInput('paddingBlockStart', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.paddingBlockStart} onChange={(value) => onChangeSpecialInput('paddingBlockStart', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.paddingBlockStart} px</span>
                     </div>
 
                     {/* Edit padding block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Bottom:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.paddingBlockEnd} onChange={(value) => onChangeSpecialInput('paddingBlockEnd', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.paddingBlockEnd} onChange={(value) => onChangeSpecialInput('paddingBlockEnd', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.paddingBlockEnd} px</span>
                     </div>
 
                     {/* Edit padding block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Left:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.paddingInlineStart} onChange={(value) => onChangeSpecialInput('paddingInlineStart', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.paddingInlineStart} onChange={(value) => onChangeSpecialInput('paddingInlineStart', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.paddingInlineStart} px</span>
                     </div>
 
                     {/* Edit padding block start */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Right:</span>
-                        <Slider min={0} max={50} value={strippedPropsFromPx.paddingInlineEnd} onChange={(value) => onChangeSpecialInput('paddingInlineEnd', value)} />
+                        <Slider min={0} max={100} value={strippedPropsFromPx.paddingInlineEnd} onChange={(value) => onChangeSpecialInput('paddingInlineEnd', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.paddingInlineEnd} px</span>
                     </div>
                 </div>

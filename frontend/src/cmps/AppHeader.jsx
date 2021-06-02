@@ -22,7 +22,6 @@ export class _AppHeader extends React.Component {
     render() {
         const { isNavOpen } = this.state;
         const { user } = this.props
-
         return (
             <>
                 <header className="main-header">
@@ -38,7 +37,7 @@ export class _AppHeader extends React.Component {
 
                                 {user &&
                                     <>
-                                        <li><NavLink to="/profile/aaa" onClick={this.onToggleNav}>Profile</NavLink></li>
+                                        <li><NavLink to={`/profile/${user._id}`} onClick={this.onToggleNav}>Profile</NavLink></li>
                                         <li><NavLink to="/" activeClassName="" onClick={this.onLogOut}>Logout</NavLink></li>
                                     </>
                                 }

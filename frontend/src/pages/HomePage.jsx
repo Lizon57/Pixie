@@ -6,49 +6,59 @@ export function HomePage() {
 
     return (
         <section className="homepage">
-            <section className="container">
-                <section className="flex align-center justify-center hero-container">
-                    <div>
-                        <h1 className="text-center title">Create a website you're proud of with Pixie!</h1>
-                        <div className="flex wrap">
-                            <div className="flex column wrap content-container">
-                                <p>Pixie is an easy-to-use, strong &amp; uniquie platform for web building!</p>
-                                <Link to="/templates" className="text-center">Go Pixie!</Link>
-                            </div>
-                            <img src={hero} alt="Go Pixie!" />
+            <section className="flex align-center justify-center hero-container">
+                <div>
+                    <h1 className="title">Create a website you're proud of with <span>Pixie!</span></h1>
+                    <div className="flex wrap">
+                        <div className="flex column wrap content-container">
+                            <p>Pixie is an easy-to-use, strong &amp; uniquie platform for web building!</p>
+                            <Link to="/templates" className="text-center">Go Pixie!</Link>
                         </div>
+                        <img src={hero} alt="Go Pixie!" />
                     </div>
-                </section>
-                <section className="section-container">
-                    <div className="guide-container">
-                        <div className="flex wrap">
-                            <div className="flex column align-center justify-center text">
+                </div>
+            </section>
+
+
+            <section>
+                <div className="guide-parse-background">
+                    <section className="container">
+                        <div className="flex wrap space-between">
+                            <div className="text">
                                 <h2>Pick a template!</h2>
-                                <p>First, register our so fucking awsome tool!</p>
-                                <p>Than, pick a template!</p>
+                                <p>Some text yada yada yada</p>
+                                <p>And some more text yada yada</p>
                             </div>
-                            <img src={construct} alt="Pick!" />
+                            <img src={construct} alt="guide parse" />
                         </div>
-                        <div className="flex wrap">
-                            <img src={construct} alt="Build!" />
-                            <div className="flex column align-center justify-center text">
-                                <h2>Make it special!</h2>
-                                <p>Insert contact.</p>
-                                <p>Design it.</p>
+                    </section>
+                </div>
+
+                <div className="guide-parse-background">
+                    <section className="container">
+                        <div className="flex wrap space-between">
+                            <div className="text">
+                                <h2>Pick a template!</h2>
+                                <p>Some text yada yada yada</p>
+                                <p>And some more text yada yada</p>
                             </div>
+                            <img src={construct} className="parse-even" alt="guide parse" />
                         </div>
-                        <div className="flex wrap">
-                            <div className="flex column align-center justify-center text">
-                                <h2>Publish!</h2>
-                                <p>Send the link to your friends.</p>
-                                <p>Get a lot of bullshit.</p></div>
-                            <img src={construct} alt="Build!" />
+                    </section>
+                </div>
+
+                <div className="guide-parse-background">
+                    <section className="container">
+                        <div className="flex wrap space-between">
+                            <div className="text">
+                                <h2>Pick a template!</h2>
+                                <p>Some text yada yada yada</p>
+                                <p>And some more text yada yada</p>
+                            </div>
+                            <img src={construct} alt="guide parse" />
                         </div>
-                    </div>
-                </section>
-                {/* <section className="section-container">
-                Templates
-            </section> */}
+                    </section>
+                </div>
             </section>
         </section>
     );

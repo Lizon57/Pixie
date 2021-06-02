@@ -1,30 +1,18 @@
 // Profile
 .profile-container {
-  margin-block-start: 1rem;
-  gap: 1rem;
   flex-direction: column;
-  padding-bottom: 1rem;
 
   @include for-normal-layout {
     flex-direction: row;
-    gap: 1rem;
-    height: calc(100vh - 68px);
-  }
-
-  .divider {
-    height: 11px;
-    background-color: rgb(233, 233, 233);
-
-    @include for-normal-layout {
-      width: 11px;
-      height: unset;
-    }
+    height: calc(100vh - 88px);
   }
 
   & .profile-sidebar {
+    padding-top: 2rem;
     flex-direction: row;
     flex-wrap: wrap;
     gap: 3rem;
+    border-right: 1px solid #ccc;
 
     @include for-normal-layout {
       width: 220px;
@@ -74,11 +62,12 @@
     & .statistics {
       border-block: 1px solid $light-grey2;
       margin-block: 1.5rem;
-      width: 200px;
+      width: 100%;
       margin: auto;
+      justify-content: center;
+      gap: 2rem;
 
       @include for-normal-layout {
-        width: 200px;
         flex-grow: 0;
         margin: unset;
       }
@@ -140,16 +129,32 @@
   .profile-main {
 
     flex-grow: 1;
+    padding: 2rem;
+
+    @include for-normal-layout {
+      overflow-y: auto;
+      height: calc(100vh - 88px);
+    }
+
+    &::-webkit-scrollbar-track {
+      border-radius: 10px;
+      background-color: $grey;
+    }
+
+    &::-webkit-scrollbar {
+      width: 3px;
+      background-color: $grey;
+    }
+
+    &::-webkit-scrollbar-thumb {
+      border-radius: 10px;
+      background-color: $green-azure;
+    }
 
     .details {
 
       flex-direction: column;
       gap: 11px;
-
-      @media (min-width: 930px) {
-        flex-direction: row;
-        gap: unset;
-      }
 
       & .greet {
         font-family: inter;
