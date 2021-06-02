@@ -9,7 +9,6 @@ export function appReducer(state = initialState, action) {
             return { ...state, isPageView: action.isPageView }
 
         case 'TOGGLE_EDIT_MODE':
-            console.log(action.mode)
             return {...state, isEditMode: action.mode}
 
         default:

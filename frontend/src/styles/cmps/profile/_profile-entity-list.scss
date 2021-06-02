@@ -4,33 +4,13 @@
   & .list-header {
     font-size: 1.5rem;
     font-family: inter;
-    margin-block-end: 1rem;
+    margin-block-end: 2rem;
   }
 
   & .entity-list {
     grid-template: repeat(auto-fill, minmax(340px, 1fr)) / repeat(auto-fill, minmax(200px, 1fr));
     gap: 2rem;
     padding-bottom: 1rem;
-
-    @include for-normal-layout {
-      overflow-y: auto;
-      height: calc(100vh - 180px);
-    }
-
-    &::-webkit-scrollbar-track {
-      border-radius: 10px;
-      background-color: $grey;
-    }
-
-    &::-webkit-scrollbar {
-      width: 3px;
-      background-color: $grey;
-    }
-
-    &::-webkit-scrollbar-thumb {
-      border-radius: 10px;
-      background-color: $green-azure;
-    }
 
     & .entity-preview {
       overflow: hidden;
