@@ -53,7 +53,7 @@ export class About extends React.Component {
                 <div className="about-page-background">
                     <section className="container">
                         <section className="about-section">
-                            <h1 className="title">About Pixie</h1>
+                            <h1 className="title first">About Pixie</h1>
                             <section className="flex wrap space-between about-pixie-container">
                                 <div className="flex column text">
                                     <h2>We are Pixie!</h2>
@@ -99,7 +99,7 @@ export class About extends React.Component {
                                     />
                                 </div>
 
-                                <textarea name="content" value={content} onChange={this.handleChange} required></textarea>
+                                <textarea placeholder="Message..." name="content" value={content} onChange={this.handleChange} required></textarea>
 
                                 <div className="text-center">
                                     <Button

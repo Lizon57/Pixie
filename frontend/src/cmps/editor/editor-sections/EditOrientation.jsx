@@ -29,10 +29,13 @@ export class EditOrientation extends React.Component {
     ]
 
     render() {
-        let { role,
+        let { role, flexGrow,
             marginBlockStart, marginBlockEnd, marginInlineStart, marginInlineEnd,
             paddingBlockStart, paddingBlockEnd, paddingInlineStart, paddingInlineEnd,
             onChangeSpecialInput } = this.props;
+
+        // Handle flex grow
+        flexGrow = (flexGrow) ? flexGrow : 0;
 
         // Handle parameters with 'px'
         const strippedPropsFromPx = {
@@ -100,6 +103,16 @@ export class EditOrientation extends React.Component {
                         </div>
                     </div>
                 }
+
+
+                <div className="accordion-inner-content">
+                    {/* Edit flex grow */}
+                    <div className="flex align-center editor-pref-warper">
+                        <span className="editor-label">Grow: </span>
+                        <Slider min={0} max={10} value={flexGrow} onChange={(value) => onChangeSpecialInput('flexGrow', value)} />
+                        <span className="editor-indicator">{flexGrow}</span>
+                    </div>
+                </div>
 
                 <div className="accordion-inner-title">Outer spacing</div>
                 <div className="accordion-inner-content">

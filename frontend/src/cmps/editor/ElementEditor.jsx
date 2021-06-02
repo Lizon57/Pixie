@@ -54,7 +54,6 @@ export class _ElementEditor extends React.Component {
         const { element } = this.props;
         if (!element) return <div className="select-element-text">Select an element for start editing</div>;
         const { txt, prefs } = element;
-        // const { txt, prefs, role } = element;
         let { style: {
             // Text style
             textAlign, fontStyle, textDecoration, fontSize, color, fontWeight, fontFamily, letterSpacing, lineHeight,
@@ -62,8 +61,13 @@ export class _ElementEditor extends React.Component {
             backgroundColor, backgroundImage, borderRadius,
             height, width,
             // Box Orientation
-            paddingBlockStart, paddingBlockEnd, paddingInlineStart, paddingInlineEnd, marginBlockStart, marginBlockEnd, marginInlineStart, marginInlineEnd
-            // backgroundColor } = {}, src } = prefs;
+            flexGrow,
+            paddingBlockStart, paddingBlockEnd, paddingInlineStart, paddingInlineEnd,
+            marginBlockStart, marginBlockEnd, marginInlineStart, marginInlineEnd,
+            // Borders
+            borderStyle,
+            borderBlockStartWidth, borderBlockEndWidth, borderInlineStartWidth, borderInlineEndWidth,
+            borderBlockStartColor, borderBlockEndColor, borderInlineStartColor, borderInlineEndColor,
         } = {} } = prefs;
 
         return (
@@ -163,6 +167,7 @@ export class _ElementEditor extends React.Component {
                     <AccordionItemPanel>
                         <EditOrientation
                             role={`${"txt" in element ? 'text' : 'section'}`}
+                            flexGrow={flexGrow}
                             marginBlockStart={marginBlockStart}
                             marginBlockEnd={marginBlockEnd}
                             marginInlineStart={marginInlineStart}
@@ -182,8 +187,17 @@ export class _ElementEditor extends React.Component {
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                         <EditBorder
-                        
-                        />
+                            borderStyle={borderStyle}
+                            borderBlockStartWidth={borderBlockStartWidth}
+                            borderBlockEndWidth={borderBlockEndWidth}
+                            borderBlockStartColor={borderBlockStartColor}
+                            borderBlockEndColor={borderBlockEndColor}
+                            borderInlineStartWidth={borderInlineStartWidth}
+                            borderInlineEndWidth={borderInlineEndWidth}
+                            borderInlineStartColor={borderInlineStartColor}
+                            borderInlineEndColor={borderInlineEndColor}
+                            onChangeSpecialInput={this.handleSpecialInputChange}
+                            onChangeValue={this.handleRegInputChange} />
                     </AccordionItemPanel>
                 </AccordionItem>
             </Accordion>

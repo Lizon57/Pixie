@@ -9,6 +9,7 @@ export function getCards1() {
         prefs: {
             style: {
                 display: 'flex',
+                width: '100%',
                 flexDirection: 'column',
                 paddingRight: '30px',
                 paddingLeft: '30px',
@@ -27,7 +28,6 @@ export function getCards1() {
                     style: {
                         fontSize: '60px',
                         fontFamily: 'Caveat',
-                        width: '600px',
                         textAlign: 'center',
                     }
                 }
@@ -40,6 +40,10 @@ export function getCards1() {
                 prefs: {
                     style: {
                         display: 'flex',
+                        flexWrap: 'wrap',
+                        width: '100%',
+
+
                     }
                 },
                 childs: [
@@ -48,13 +52,14 @@ export function getCards1() {
                         type: 'div',
                         role: 'img',
                         prefs: {
+                            className: 'responsive-card',
                             style: {
                                 backgroundImage: 'url("https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd")',
-                                minWidth: '600px',
+                                // minWidth: '350px',
                                 height: '350px',
                                 backgroundPosition: 'right',
                                 backgroundSize: 'cover',
-                                flexGrow: 2,
+                                flex: 1,
                             }
                         },
                     },
@@ -64,10 +69,11 @@ export function getCards1() {
                         role: 'container',
                         isContainer: true,
                         prefs: {
+                            className: 'responsive-card',
                             style: {
                                 display: 'flex',
                                 flexDirection: 'column',
-                                marginLeft: '30px',
+                                justifyContent: 'center'
                             }
                         },
                         childs: [
@@ -81,6 +87,8 @@ export function getCards1() {
                                         fontSize: '40px',
                                         marginBottom: '15px',
                                         fontFamily: 'Caveat',
+                                        textAlign: 'center',
+
                                     }
                                 }
                             },
@@ -93,6 +101,8 @@ export function getCards1() {
                                     style: {
                                         fontSize: '20px',
                                         fontFamily: 'RobotoSlab',
+                                        textAlign: 'center',
+
                                     }
                                 }
                             }
