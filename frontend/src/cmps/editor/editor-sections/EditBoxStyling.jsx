@@ -135,8 +135,7 @@ export class EditBoxStyling extends React.Component {
                     </>
                 }
 
-                {isImg &&
-                    <>
+                
                         <div className="accordion-inner-title">Sizing</div>
                         <div className="accordion-inner-content">
                             {/* Edit box height */}
@@ -153,7 +152,6 @@ export class EditBoxStyling extends React.Component {
                                 <span className="editor-indicator">{strippedPropsFromPx.width} px</span>
                             </div>
                         </div>
-                    </>}
 
             </>
         )
