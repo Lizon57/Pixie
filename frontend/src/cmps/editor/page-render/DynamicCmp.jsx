@@ -11,7 +11,6 @@ export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEdi
 
     function getClassName(child, editingElement) {
         if (editingElement && child.id === editingElement.id) {
-            console.log(child.id, editingElement.id);
             return child.prefs.className ? `${child.prefs.className} basic-product in-editing` : 'basic-product in-editing'
         } else {
             return child.prefs.className ? `${child.prefs.className} basic-product` : 'basic-product'

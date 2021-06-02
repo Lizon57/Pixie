@@ -5,6 +5,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { signUp } from '../store/actions/user-actions';
 import { UserMsg } from '../cmps/UserMsg';
+import { Loading } from '../cmps/Loading';
 
 
 class _SignUp extends React.Component {
@@ -62,7 +63,8 @@ class _SignUp extends React.Component {
 
     render() {
         const { isUserMsg, msg } = this.state;
-
+        const { isLoading } = this.props;
+        if (isLoading) return <Loading />
         return (
             <>
                 <div className="flex column align-center justify-center signup-page-container">
@@ -140,6 +142,8 @@ class _SignUp extends React.Component {
 function mapStateToProps(state) {
     return {
         user: state.userModule.user,
+        isLoading: state.userModule.isLoading,
+
     }
 }
 
