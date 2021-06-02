@@ -2,6 +2,7 @@ import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { AppHeader } from './cmps/AppHeader';
 import { HomePage } from './pages/HomePage';
 import { Editor } from './pages/Editor';
+import { Template } from './pages/Template';
 import { Profile } from './pages/Profile';
 import { Login } from './pages/Login';
 import { SignUp } from './pages/SignUp';
@@ -21,6 +22,7 @@ function _App({ isPageView, isEditMode }) {
             <Route path="/profile/login" component={Login} />
             <Route path="/profile/signup" component={SignUp} />
             <Route path="/profile/:userId" component={Profile} />
+            <Route path="/template" component={Template} />
             <Route path="/editor" component={Editor} />
             <Route path="/about" component={About} />
             <Route path="/" component={HomePage} />

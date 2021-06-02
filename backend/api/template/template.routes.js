@@ -1,6 +1,6 @@
 const express = require('express')
 const router = express.Router()
-const { getTemplates, getTemplate, saveTemplate, removeTemplate } = require('./tamplate.controller')
+const { getTemplates, getTemplate, saveTemplate, removeTemplate } = require('./template.controller')
 
 
 //get webs

@@ -1,0 +1,25 @@
+.template-list {
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.templete-card {
+  border: 1px solid $black;
+  margin: 10px 0;
+  position: relative;
+  & img {
+    width: 100%;
+  }
+  & .template-btn {
+    display: none;
+    height: 100%;
+    width: 100%;
+    font-size: 2rem;
+    background-color: rgba($color: $white, $alpha: 0.5);
+    position: absolute;
+  }
+  &:hover .template-btn {
+    display: flex;
+  }
+}

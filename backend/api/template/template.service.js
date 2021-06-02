@@ -45,6 +45,7 @@ async function saveTemplate(templateInfo) {
     if (_id) {
         try {
             const collection = await dbService.getCollection('template');
+            delete templateInfo._id
             await collection.updateOne({ _id: ObjectId(_id) }, { $set: templateInfo });
             return templateInfo;
 

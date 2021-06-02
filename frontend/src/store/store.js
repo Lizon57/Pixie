@@ -5,7 +5,7 @@ import { dataReducer } from './reducers/data-reducer';
 import { userReducer } from './reducers/user-reducer';
 import { webReducer } from './reducers/web-reducer';
 import { appReducer } from './reducers/app-reducer';
-import { tamplateReducer } from './reducers/tamplate-reducer';
+import { templateReducer } from './reducers/template-reducer';
 
 
 const composeEnhancers = window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ || compose;
@@ -16,7 +16,7 @@ const rootReducer = combineReducers({
     dataModule: dataReducer,
     userModule: userReducer,
     webModule: webReducer,
-    tamplateModule: tamplateReducer
+    templateModule: templateReducer
 });
 
 
