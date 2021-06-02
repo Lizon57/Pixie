@@ -135,7 +135,7 @@
     @include for-normal-layout {
       width: 250px;
 
-      &.parse-even{
+      &.parse-even {
         order: -1;
       }
     }
