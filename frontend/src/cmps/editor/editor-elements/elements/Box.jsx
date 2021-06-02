@@ -9,8 +9,9 @@ export function getBox() {
         prefs: {
             style: {
                 display: 'flex',
-                height: '400px',
-                width: '100%'
+                flexWrap: 'wrap',
+                width: '100%',
+                minHeight: '50px'
             }
         },
         childs: []
