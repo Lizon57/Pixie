@@ -1,21 +1,19 @@
 .basic-product {
   position: relative;
-  border: 1px dashed $dark-grey;
-  border-collapse: collapse;
 
   &.in-editing {
-    border: 2px $azure solid;
+    box-shadow: inset 0 0 0 2px $azure;
 
     &:hover {
-      border: 2px $azure solid;
+      box-shadow: inset 0 0 0 2px $azure;
     }
   }
 
   &:hover {
-    border: 1px solid $dark-grey;
+    box-shadow: inset 0 0 0 1px $dark-grey;
   }
 
-  &:hover > *.element-tool-bar {
+  &:hover>*.element-tool-bar {
     display: flex;
   }
 }

@@ -14,9 +14,9 @@ export function getHeader4() {
                 fontSize: '30px',
                 paddingLeft: '30px',
                 paddingRight: '30px',
-                borderTopColor: '#cf0000',
-                borderTopWidth: '2px',
-                borderTopStyle: 'solid',
+                borderBottomColor: '#cf0000',
+                borderBottomWidth: '2px',
+                borderBottomStyle: 'solid',
                 backgroundColor: '#eee',
             }
         },

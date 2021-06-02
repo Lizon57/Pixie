@@ -7,7 +7,6 @@ class _EditorNav extends React.Component {
     }
 
     componentDidMount() {
-        console.log(this.props.editorMode);
     }
 
     render() {

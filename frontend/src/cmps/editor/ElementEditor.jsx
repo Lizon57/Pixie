@@ -10,6 +10,7 @@ import { EditVideoSrc } from './editor-sections/EditVideoSrc';
 import { EditMapCenter } from './editor-sections/EditMapCenter';
 import { EditOrientation } from './editor-sections/EditOrientation';
 import { EditBoxStyling } from './editor-sections/EditBoxStyling';
+import { EditBorder } from './editor-sections/EditBorder';
 
 export class _ElementEditor extends React.Component {
     editFieldsWithPx = editorService.getFieldsWithPx();
@@ -72,7 +73,7 @@ export class _ElementEditor extends React.Component {
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 Text
-                                </AccordionItemButton>
+                            </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
                             <EditText
@@ -138,7 +139,7 @@ export class _ElementEditor extends React.Component {
                     <AccordionItemHeading>
                         <AccordionItemButton>
                             Styling
-                            </AccordionItemButton>
+                        </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                         <EditBoxStyling
@@ -157,7 +158,7 @@ export class _ElementEditor extends React.Component {
                     <AccordionItemHeading>
                         <AccordionItemButton>
                             Orientation
-                            </AccordionItemButton>
+                        </AccordionItemButton>
                     </AccordionItemHeading>
                     <AccordionItemPanel>
                         <EditOrientation
@@ -171,6 +172,18 @@ export class _ElementEditor extends React.Component {
                             paddingInlineStart={paddingInlineStart}
                             paddingInlineEnd={paddingInlineEnd}
                             onChangeSpecialInput={this.handleSpecialInputChange} />
+                    </AccordionItemPanel>
+                </AccordionItem>
+                <AccordionItem>
+                    <AccordionItemHeading>
+                        <AccordionItemButton>
+                            Borders
+                        </AccordionItemButton>
+                    </AccordionItemHeading>
+                    <AccordionItemPanel>
+                        <EditBorder
+                        
+                        />
                     </AccordionItemPanel>
                 </AccordionItem>
             </Accordion>
