@@ -1,4 +1,4 @@
-.about-page-background{
+.about-page-background {
   background-image: url("../../assets/img/backgroundAbout.jpg");
   background-size: cover;
   background-position: top;
@@ -13,10 +13,11 @@
   font-family: inter;
   margin: 0 auto;
   max-width: 370px;
-  padding-block-end: 1.5rem;
+  margin-block-end: 2rem;
 
   @include for-normal-layout {
     max-width: 800px;
+    margin-block-end: 3rem;
   }
 
   &:first-of-type {

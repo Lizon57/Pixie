@@ -76,8 +76,8 @@ class _Editor extends React.Component {
     }
 
     render() {
-        let { data } = this.props;
-        if (!data) return <Loading />;
+        let { data, isLoading } = this.props;
+        if (isLoading) return <Loading />;
         const { childs } = data;
         const { isUserMsg, msg } = this.state;
 
@@ -103,7 +103,9 @@ const mapDispatchToProps = {
 function mapStateToProps(state) {
     return {
         data: state.dataModule.data,
-        editingElement: state.editorModule.editingElement
+        editingElement: state.editorModule.editingElement,
+        isLoading: state.webModule.isLoading,
+
     }
 }
 

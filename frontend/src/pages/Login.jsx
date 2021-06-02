@@ -5,7 +5,7 @@ import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
 import { loadUser } from '../store/actions/user-actions';
 import { UserMsg } from '../cmps/UserMsg.jsx';
-
+import { Loading } from '../cmps/Loading';
 
 class _Login extends React.Component {
     state = {
@@ -61,7 +61,9 @@ class _Login extends React.Component {
 
     render() {
         const { isUserMsg, msg } = this.state;
+        const { isLoading } = this.props;
 
+        if (isLoading) return <Loading />
         return (
             <>
                 <div className="flex column align-center justify-center login-page-container">
@@ -126,6 +128,7 @@ class _Login extends React.Component {
 function mapStateToProps(state) {
     return {
         user: state.userModule.user,
+        isLoading: state.userModule.isLoading,
     }
 }
 
