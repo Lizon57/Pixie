@@ -7,7 +7,6 @@ import { saveWeb } from '../../store/actions/web-action';
 class _PublishTool extends React.Component {
     state = {
         isModalOpen: false,
-
     }
 
 
@@ -15,7 +14,6 @@ class _PublishTool extends React.Component {
         const { isModalOpen } = this.state;
         this.setState(prevState => ({ ...prevState, isModalOpen: !isModalOpen }));
     }
-
 
 
     onSubmit = async (name, isPublished) => {

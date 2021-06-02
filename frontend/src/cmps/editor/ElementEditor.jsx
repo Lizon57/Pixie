@@ -61,6 +61,7 @@ export class _ElementEditor extends React.Component {
             backgroundColor, backgroundImage, borderRadius,
             height, width,
             // Box Orientation
+            flexGrow,
             paddingBlockStart, paddingBlockEnd, paddingInlineStart, paddingInlineEnd,
             marginBlockStart, marginBlockEnd, marginInlineStart, marginInlineEnd,
             // Borders
@@ -166,6 +167,7 @@ export class _ElementEditor extends React.Component {
                     <AccordionItemPanel>
                         <EditOrientation
                             role={`${"txt" in element ? 'text' : 'section'}`}
+                            flexGrow={flexGrow}
                             marginBlockStart={marginBlockStart}
                             marginBlockEnd={marginBlockEnd}
                             marginInlineStart={marginInlineStart}
