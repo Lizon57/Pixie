@@ -10,6 +10,7 @@
 
 .hero-container {
   height: calc(100vh - 51px);
+  padding: 2rem;
 
   & h1 {
     color: $dark-blue;
@@ -18,12 +19,18 @@
     font-family: RobotoSlab;
     letter-spacing: 2px;
     text-transform: capitalize;
+    max-width: 32ch;
+    text-align: center;
 
     @include for-normal-layout {
       font-size: 3rem;
     }
 
-    & span{
+    @include for-wide-layout {
+      text-align: left;
+    }
+
+    & span {
       color: $azure;
     }
   }
@@ -31,16 +38,17 @@
   & .content-container {
     flex-grow: 1;
 
-    @include for-normal-layout {
-      justify-content: space-evenly;
-    }
-
     p {
       font-size: 1.8rem;
       font-family: CrimsonPro;
       text-align: center;
       margin: 2rem auto;
       max-width: 30ch;
+
+      @include for-wide-layout {
+        text-align: left;
+        margin-block: 4rem;
+      }
     }
 
     a {
@@ -59,6 +67,7 @@
 
       @include for-wide-layout {
         margin-block-end: -2rem;
+        margin-inline: 0;
       }
 
       &:hover {
@@ -86,59 +95,53 @@
   }
 }
 
-.guide-container {
-  margin: 0 auto;
+.guide-parse-background {
+  padding: 1rem;
 
-  & > .flex {
-    gap: 2rem;
-    padding-block: 2rem;
-    margin-block-end: 2rem;
+  &:nth-child(odd) {
+    background-color: $light-grey1;
+  }
 
-    &:nth-child(odd) {
-      background-color: rgba($light-grey1, 0.5);
+  & .container {
+    max-width: 1000px;
+  }
+
+  & .text {
+    & h2 {
+      color: $azure;
+      font-size: 2rem;
+      font-weight: $fw-bold;
+      font-family: RobotoSlab;
+      text-transform: uppercase;
     }
 
-    & .text {
-      flex-grow: 1;
+    & p {
+      font-size: 1.2rem;
+      font-family: inter;
+      margin-block: 1rem;
+    }
+  }
 
-      & h2 {
-        color: $azure;
-        font-weight: $fw-bold;
-        font-family: RobotoSlab;
-        letter-spacing: 1px;
-        margin-block-end: 1rem;
-      }
-
-      & p {
-        font-size: 1.2rem;
-        font-family: inter;
-        margin-block: 1rem;
-        text-align: center;
-        max-width: 15ch;
-
-        @include for-normal-layout {
-          max-width: 20ch;
-        }
-
-        @include for-wide-layout {
-          max-width: 30ch;
-        }
-      }
+  & img {
+    @include for-mobile-layout {
+      display: none;
     }
 
-    & img {
-      margin: auto;
-      max-width: 90%;
+    @include for-narrow-layout {
       order: 2;
+      width: 150px;
+    }
 
-      @include for-narrow-layout {
-        width: 300px;
-      }
+    @include for-normal-layout {
+      width: 250px;
 
-      @include for-normal-layout {
-        width: 350px;
-        order: inherit;
+      &.parse-even{
+        order: -1;
       }
+    }
+
+    @include for-wide-layout {
+      width: 350px;
     }
   }
 }
