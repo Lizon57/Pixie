@@ -91,7 +91,7 @@
     margin-block-end: 2rem;
 
     &:nth-child(odd) {
-      background-color: $light-grey1;
+      background-color: rgba($light-grey1, 0.5);
     }
 
     & .text {

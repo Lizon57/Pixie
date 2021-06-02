@@ -8,9 +8,9 @@ import { SignUp } from './pages/SignUp';
 import { About } from './pages/About';
 import { WebDetails } from './pages/WebDetails';
 import { connect } from 'react-redux';
-// import { AppFooter } from './cmps/AppFooter';
+import { AppFooter } from './cmps/AppFooter';
 
-function _App({ isPageView }) {
+function _App({ isPageView, isEditMode }) {
   return (
     <section className="app">
       <Router>
@@ -26,7 +26,7 @@ function _App({ isPageView }) {
             <Route path="/" component={HomePage} />
           </Switch>
         </main>
-        {/* <AppFooter /> */}
+        {(!isEditMode && !isPageView) && <AppFooter />}
       </Router>
     </section>
   );
@@ -34,7 +34,8 @@ function _App({ isPageView }) {
 
 function mapStateToProps(state) {
   return {
-    isPageView: state.appModule.isPageView
+    isPageView: state.appModule.isPageView,
+    isEditMode: state.appModule.isEditMode
   }
 }
 

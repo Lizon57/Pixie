@@ -1,6 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setData, addSection } from '../store/actions/data-actions';
+import { isEditorMode } from '../store/actions/app-actions';
 import { elementService } from '../service/element-service';
 import { Loading } from '../cmps/Loading'
 import { EditorSideBar } from '../cmps/editor/EditorSideBar';
@@ -17,6 +18,9 @@ class _Editor extends React.Component {
     }
 
     componentDidMount() {
+        const { isEditorMode } = this.props;
+        isEditorMode(true);
+
         if (this.props.data.childs.length) {
             return;
         } else {
@@ -25,6 +29,11 @@ class _Editor extends React.Component {
                 this.props.setData({ data: savedData });
             }
         }
+    }
+
+    componentWillUnmount(){
+        const { isEditorMode } = this.props;
+        isEditorMode(false);
     }
 
     userMsgShow = (msg) => {
@@ -97,15 +106,15 @@ class _Editor extends React.Component {
 
 const mapDispatchToProps = {
     setData,
-    addSection
+    addSection,
+    isEditorMode
 }
 
 function mapStateToProps(state) {
     return {
         data: state.dataModule.data,
         editingElement: state.editorModule.editingElement,
-        isLoading: state.webModule.isLoading,
-
+        isLoading: state.webModule.isLoading
     }
 }
 

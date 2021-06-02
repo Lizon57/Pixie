@@ -8,3 +8,14 @@ export function pageViewMode(isPageView) {
         }
     }
 }
+
+export function isEditorMode(mode) {
+    return async dispatch => {
+        try {
+            dispatch({ type: 'TOGGLE_EDIT_MODE', mode })
+        } catch (err) {
+            console.log(err)
+            throw err
+        }
+    }
+}
