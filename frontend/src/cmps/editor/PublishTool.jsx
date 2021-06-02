@@ -2,7 +2,6 @@ import React from 'react';
 import { Modal } from '../Modal';
 import { connect } from 'react-redux';
 import { saveWeb } from '../../store/actions/web-action';
-import { UserMsg } from '../UserMsg';
 
 
 class _PublishTool extends React.Component {

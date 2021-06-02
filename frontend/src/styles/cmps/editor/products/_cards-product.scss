@@ -10,3 +10,9 @@
     width: 300px;
   }
 }
+
+.responsive-card {
+  @include for-normal-layout {
+    width: 50%;
+  }
+}
