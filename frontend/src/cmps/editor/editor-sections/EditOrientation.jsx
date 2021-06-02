@@ -91,14 +91,14 @@ export class EditOrientation extends React.Component {
 
                 {(role === 'text') &&
                     <div className="accordion-inner-content">
-                        {/* Edit align self */}
+                        {/* Edit justify content */}
                         <div className="flex align-center editor-pref-warper">
                             <span className="editor-label">Main Axis: </span>
                             <Select
                                 className="edit-select"
                                 placeholder={"Direction"}
-                                onChange={(selectedOption) => onChangeSpecialInput('alignSelf', selectedOption.value)}
-                                options={this.alignItemsAndSelfOptions}
+                                onChange={(selectedOption) => onChangeSpecialInput('justifyContent', selectedOption.value)}
+                                options={this.justifyContentOptions}
                             />
                         </div>
                     </div>

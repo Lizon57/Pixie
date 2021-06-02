@@ -14,7 +14,8 @@ export function getText() {
                 type: 'span',
                 role: 'childless',
                 prefs: {
-                    className: "flex text-product"
+                    className: "flex text-product",
+                    style: { width: '100%' }
                 },
                 txt: `Lorem ipsum dolor sit amet consectetur, adipisicing elit. Eum corrupti sed pariatur dignissimos laudantium quos expedita quibusdam illo deserunt, voluptate maxime minima, magnam culpa. Perferendis nam veritatis tempora cupiditate rem!
                 Impedit laudantium ea recusandae excepturi sed atque culpa exercitationem fugiat nam consequuntur incidunt vitae suscipit error corrupti quam facere ratione, quos minima aliquam hic ex dolorum quia eos quae! Deleniti!
