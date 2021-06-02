@@ -13,7 +13,8 @@ function getFieldsWithPx() {
         'fontSize', 'letterSpacing', 'lineHeight',
         'borderRadius', 'height', 'width',
         'marginBlockStart', 'marginBlockEnd', 'marginInlineStart', 'marginInlineEnd',
-        'paddingBlockStart', 'paddingBlockEnd', 'paddingInlineStart', 'paddingInlineEnd'];
+        'paddingBlockStart', 'paddingBlockEnd', 'paddingInlineStart', 'paddingInlineEnd',
+        'borderBlockStartWidth', 'borderBlockEndWidth', 'borderInlineStartWidth', 'borderInlineEndWidth'];
 }
 
 function getFieldsWithDebounce() {
