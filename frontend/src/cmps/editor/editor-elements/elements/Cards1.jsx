@@ -38,9 +38,9 @@ export function getCards1() {
                 role: 'container',
                 isContainer: true,
                 prefs: {
+                    className: 'responsive-card1',
                     style: {
                         display: 'flex',
-                        flexWrap: 'wrap',
                         width: '100%',
 
 
@@ -52,14 +52,13 @@ export function getCards1() {
                         type: 'div',
                         role: 'img',
                         prefs: {
-                            className: 'responsive-card',
                             style: {
                                 backgroundImage: 'url("https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd")',
-                                // minWidth: '350px',
-                                height: '350px',
+                                minWidth: '350px',
+                                minHeight: '350px',
                                 backgroundPosition: 'right',
                                 backgroundSize: 'cover',
-                                flex: 1,
+                                flexGrow: 1,
                             }
                         },
                     },
@@ -69,7 +68,6 @@ export function getCards1() {
                         role: 'container',
                         isContainer: true,
                         prefs: {
-                            className: 'responsive-card',
                             style: {
                                 display: 'flex',
                                 flexDirection: 'column',
@@ -101,7 +99,7 @@ export function getCards1() {
                                     style: {
                                         fontSize: '20px',
                                         fontFamily: 'RobotoSlab',
-                                        textAlign: 'center',
+                                        textAlign: 'left',
 
                                     }
                                 }
