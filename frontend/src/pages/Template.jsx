@@ -23,6 +23,17 @@ class _Template extends React.Component {
         if (isLoading) return <Loading />
         return (
             <div className="grid template-list ">
+
+                {/* Make new website */}
+
+                <div onClick={() => this.onSetData({ childs: []})} className="flex column space-between template-preview make-new">
+                    <div className="flex justify-center align-center template-name">
+                        <span>Make New</span>
+                    </div>
+                    <div className="flex align-center justify-center template-hover-menu">
+                        <div className="fas plus-icon edit-template-button"></div>
+                    </div>
+                </div>
                 {templates.map(template => <TemplatePreview key={template._id} onSetData={this.onSetData} template={template} />)}
             </div>
         )

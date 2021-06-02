@@ -118,6 +118,10 @@
   content: "\f1f8";
 }
 
+.plus-icon::before {
+  content: "\f067"
+}
+
 // Footer
 .footer-icn {
   @include rounded-corners;
