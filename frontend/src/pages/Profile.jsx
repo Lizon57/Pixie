@@ -87,7 +87,8 @@ class _Profile extends React.Component {
     render() {
 
         const { entitiesType, websitesAmount, draftsAmount, user, isUserMsg, msg } = this.state
-        if (!user) return <Loading />
+        const { isLoading } = this.props;
+        if (isLoading) return <Loading />
 
         return (
             <>
@@ -141,6 +142,8 @@ const mapDispatchToProps = {
 function mapStateToProps(state) {
     return {
         user: state.userModule.user,
+        isLoading: state.userModule.isLoading,
+
     }
 }
 
