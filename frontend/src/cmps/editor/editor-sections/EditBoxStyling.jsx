@@ -135,26 +135,22 @@ export class EditBoxStyling extends React.Component {
                     </>
                 }
 
-                {isImg &&
-                    <>
-                        <div className="accordion-inner-title">Sizing</div>
-                        <div className="accordion-inner-content">
-                            {/* Edit box height */}
-                            <div className="flex align-center editor-pref-warper">
-                                <span className="editor-label">Height:</span>
-                                <Slider min={10} max={1000} value={strippedPropsFromPx.height} onChange={(value) => onChangeSpecialInput('height', value)} />
-                                <span className="editor-indicator">{strippedPropsFromPx.height} px</span>
-                            </div>
+                <div className="accordion-inner-title">Sizing</div>
+                <div className="accordion-inner-content">
+                    {/* Edit box height */}
+                    <div className="flex align-center editor-pref-warper">
+                        <span className="editor-label">Height:</span>
+                        <Slider min={10} max={1000} value={strippedPropsFromPx.height} onChange={(value) => onChangeSpecialInput('height', value)} />
+                        <span className="editor-indicator">{strippedPropsFromPx.height} px</span>
+                    </div>
 
-                            {/* Edit box width */}
-                            <div className="flex align-center editor-pref-warper">
-                                <span className="editor-label">Width:</span>
-                                <Slider min={10} max={1000} value={strippedPropsFromPx.width} onChange={(value) => onChangeSpecialInput('width', value)} />
-                                <span className="editor-indicator">{strippedPropsFromPx.width} px</span>
-                            </div>
-                        </div>
-                    </>}
-
+                    {/* Edit box width */}
+                    <div className="flex align-center editor-pref-warper">
+                        <span className="editor-label">Width:</span>
+                        <Slider min={10} max={1000} value={strippedPropsFromPx.width} onChange={(value) => onChangeSpecialInput('width', value)} />
+                        <span className="editor-indicator">{strippedPropsFromPx.width} px</span>
+                    </div>
+                </div>
             </>
         )
     }
