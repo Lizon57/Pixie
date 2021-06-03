@@ -35,6 +35,7 @@ export function getHeader3() {
                 prefs: {
                     style: {
                         display: 'flex',
+                        flexWrap: 'wrap',
                         alignItems: 'center'
                     }
                 },
