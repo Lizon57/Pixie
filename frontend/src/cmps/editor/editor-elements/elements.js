@@ -6,6 +6,7 @@ import { getHeader4 } from './elements/headers/Header4';
 import { getNavbar } from './elements/Navbar';
 
 import { getFooter } from './elements/Footer';
+import { getFooter1 } from './elements/Footer1';
 import { getCards } from './elements/Cards';
 import { getText } from './elements/Text';
 import { getImg } from './elements/Img';
@@ -37,5 +38,6 @@ export const elements = {
     getHero1,
     getHero2,
     getCards2,
+    getFooter1,
 };
 

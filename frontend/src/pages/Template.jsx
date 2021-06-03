@@ -38,24 +38,8 @@ class _Template extends React.Component {
                     {templates.map(template => <TemplatePreview key={template._id} onSetData={this.onSetData} template={template} />)}
                 </div>
 
-                <div className="cards11">
-                    <span className="title11">Our Dishes</span>
-                    <div className="gallery11">
-
-                        <div className="card11">
-                            <div className="cardImg111"></div>
-                            <span className="title2">Mushroom Soup</span>
-                        </div>
-                        <div className="card11">
-                            <div className="cardImg111"></div>
-                            <span className="title2">Mushroom Soup</span>
-                        </div>
-                        <div className="card11">
-                            <div className="cardImg111"></div>
-                            <span className="title2">Mushroom Soup</span>
-                        </div>
-                        
-                    </div>
+                <div className="footer11">
+                    <span>&copy; Hot-Bowls inc. 1995</span>
                 </div>
             </>
         )

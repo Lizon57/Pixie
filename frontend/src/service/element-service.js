@@ -35,6 +35,8 @@ function getElement(type, src = null) {
             return elements.getNavbar()
         case 'footer':
             return elements.getFooter()
+        case 'footer1':
+            return elements.getFooter1()
         case 'cards':
             return elements.getCards()
         case 'cards1':
