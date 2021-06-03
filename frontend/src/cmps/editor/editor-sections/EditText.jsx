@@ -53,7 +53,7 @@ export class EditText extends React.Component {
         { value: 'Arial', label: 'Arial' },
         { value: 'David', label: 'David' },
         { value: 'CrimsonPro', label: 'CrimsonPro' },
-        { value: 'caveat', label: 'caveat' },
+        { value: 'Caveat', label: 'Caveat' },
         { value: 'DancingScript', label: 'DancingScript' },
         { value: 'Grandstander', label: 'Grandstander' },
         { value: 'GrenzeGotisch', label: 'GrenzeGotisch' },
