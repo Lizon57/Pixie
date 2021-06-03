@@ -1,4 +1,4 @@
-import { utilService } from '../../../../service/util-service.js'
+import { utilService } from '../../../../../service/util-service';
 
 export function getCards2() {
     return ({

@@ -5,37 +5,53 @@ import { getHeader3 } from './elements/headers/Header3';
 import { getHeader4 } from './elements/headers/Header4';
 import { getNavbar } from './elements/Navbar';
 
-import { getFooter } from './elements/Footer';
+
+// Heros
+import { getHero } from './elements/heros/Hero';
+import { getHero1 } from './elements/heros/Hero1';
+import { getHero2 } from './elements/heros/Hero2';
+
+
+// Cards
 import { getCards } from './elements/Cards';
-import { getText } from './elements/Text';
+import { getCards1 } from './elements/cards/Cards1';
+import { getCards2 } from './elements/cards/Cards2';
+
+// Footers
+import { getFooter } from './elements/footers/Footer';
+import { getFooter1 } from './elements/footers/Footer1';
+
+// Texts
+import { getText } from './elements/texts/Text';
+
 import { getImg } from './elements/Img';
-import { getHero } from './elements/Hero';
 import { getVideo } from './elements/Video';
 import { getMap } from './elements/Map';
 import { getBox } from './elements/Box';
-import { getHero1 } from './elements/hero1';
-import { getHero2 } from './elements/Hero2';
-import { getCards1 } from './elements/Cards1';
-import { getCards2 } from './elements/Cards2';
 
 
 export const elements = {
-    getNavbar,
     getHeader1,
     getHeader2,
     getHeader3,
     getHeader4,
-    getFooter,
+    getNavbar,
+
+    getHero,
+    getHero1,
+    getHero2,
+
     getCards,
     getCards1,
+    getCards2,
+
+
+    getFooter,
     getText,
     getImg,
-    getHero,
     getVideo,
     getMap,
     getBox,
-    getHero1,
-    getHero2,
-    getCards2,
+    getFooter1,
 };
 
