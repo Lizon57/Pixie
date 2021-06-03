@@ -5,27 +5,42 @@ export function getMap() {
         id: utilService.makeId(),
         type: 'div',
         role: 'map',
+        isContainer: true,
+        className: 'responsive-card1',
         prefs: {
-            className: 'product-map',
             style: {
-                margin: '50px auto',
-                width: '50vw',
-                height: '40vh'
+                display: 'flex',
+                padding: '30px',
+                height: '500px'
             }
         },
         childs: [
             {
                 id: utilService.makeId(),
-                type: 'iframe',
-                role: 'childless',
+                type: 'div',
+                role: 'map',
                 prefs: {
                     style: {
-                        width: '100%',
-                        height: '100%',
-                    },
-                    src: `https://maps.google.com/maps?q=Tel-Aviv&z=15&output=embed`
+                        margin: '50px auto',
+                        width: '400px',
+                        height: '300px',
+                    }
                 },
+                childs: [
+                    {
+                        id: utilService.makeId(),
+                        type: 'iframe',
+                        role: 'childless',
+                        prefs: {
+                            style: {
+                                width: '100%',
+                                height: '100%',
+                            },
+                            src: `https://maps.google.com/maps?q=Tel-Aviv&z=15&output=embed`
+                        },
+                    }
+                ]
             }
         ]
-    };
+    }
 };

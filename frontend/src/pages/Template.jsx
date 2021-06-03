@@ -22,7 +22,6 @@ class _Template extends React.Component {
         const { templates, isLoading } = this.props;
         if (isLoading) return <Loading />
         return (
-            <>
                 <div className="grid template-list ">
 
                     {/* Make new website */}
@@ -37,11 +36,6 @@ class _Template extends React.Component {
                     </div>
                     {templates.map(template => <TemplatePreview key={template._id} onSetData={this.onSetData} template={template} />)}
                 </div>
-
-                <div className="footer11">
-                    <span>&copy; Hot-Bowls inc. 1995</span>
-                </div>
-            </>
         )
     }
 }
