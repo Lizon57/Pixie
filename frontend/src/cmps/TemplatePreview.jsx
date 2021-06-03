@@ -1,9 +1,6 @@
 import React from "react";
 
 export function TemplatePreview({ template, onSetData }) {
-
-    console.log();
-
     return (
         // <div className="templete-card flex align-center justify-center  column">
         //     <h3>{template.title}</h3>
