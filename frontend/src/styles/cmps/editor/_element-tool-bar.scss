@@ -6,6 +6,7 @@
   background-color: $black;
   font-size: rem(13px);
   letter-spacing: 0 !important;
+  line-height: initial;
   z-index: 5;
 
   &:not(.container) {

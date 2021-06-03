@@ -22,6 +22,4 @@ export function TemplatePreview({ template, onSetData }) {
             </div>
         </div>
     )
-
-
 }
