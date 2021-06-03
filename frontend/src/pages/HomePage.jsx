@@ -12,7 +12,7 @@ export function HomePage() {
                     <div className="flex wrap">
                         <div className="flex column wrap content-container">
                             <p>Pixie is an easy-to-use, strong &amp; uniquie platform for web building!</p>
-                            <Link to="/templates" className="text-center">Go Pixie!</Link>
+                            <Link to="/template" className="text-center">Go Pixie!</Link>
                         </div>
                         <img src={hero} alt="Go Pixie!" />
                     </div>
@@ -25,9 +25,12 @@ export function HomePage() {
                     <section className="container">
                         <div className="flex wrap space-between">
                             <div className="text">
-                                <h2>Pick a template!</h2>
-                                <p>Some text yada yada yada</p>
-                                <p>And some more text yada yada</p>
+                                <h2>The Freedom to Create the Websites You Want</h2>
+                                <p>
+                                    Design and build your own high-quality websites.
+                                    Whether you’re promoting your business,
+                                    showcasing your work,
+                                    you can do it all with the PIXIE website Editor.</p>
                             </div>
                             <img src={construct} alt="guide parse" />
                         </div>
@@ -38,9 +41,9 @@ export function HomePage() {
                     <section className="container">
                         <div className="flex wrap space-between">
                             <div className="text">
-                                <h2>Pick a template!</h2>
-                                <p>Some text yada yada yada</p>
-                                <p>And some more text yada yada</p>
+                                <h2>Customize your site</h2>
+                                <p>Pick a template and customize anything,
+                                    or answer a few questions and get a free website designed just for you</p>
                             </div>
                             <img src={construct} className="parse-even" alt="guide parse" />
                         </div>
@@ -51,9 +54,9 @@ export function HomePage() {
                     <section className="container">
                         <div className="flex wrap space-between">
                             <div className="text">
-                                <h2>Pick a template!</h2>
-                                <p>Some text yada yada yada</p>
-                                <p>And some more text yada yada</p>
+                                <h2>PIXIE Editor</h2>
+                                <p>Start from scratch or choose from over designer-made templates that you can fully
+                                    customize using PIXIE website Editor.</p>
                             </div>
                             <img src={construct} alt="guide parse" />
                         </div>
