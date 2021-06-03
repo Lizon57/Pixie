@@ -24,9 +24,11 @@ import { getFooter1 } from './elements/footers/Footer1';
 // Texts
 import { getText } from './elements/texts/Text';
 
+// Maps
+import { getMap } from './elements/Map';
+
 import { getImg } from './elements/Img';
 import { getVideo } from './elements/Video';
-import { getMap } from './elements/Map';
 import { getBox } from './elements/Box';
 
 
@@ -47,11 +49,14 @@ export const elements = {
 
 
     getFooter,
+    getFooter1,
+
     getText,
+
+    getMap,
+
     getImg,
     getVideo,
-    getMap,
     getBox,
-    getFooter1,
 };
 
