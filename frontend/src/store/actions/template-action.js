@@ -1,4 +1,4 @@
-import { templateService as templateService } from '../../service/template-service'
+import { templateService } from '../../service/template-service'
 
 export function loadTemplates() { // Action Creator
     return async dispatch => {

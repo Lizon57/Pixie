@@ -23,13 +23,13 @@
   padding: 1em;
 
   &::before {
-    display: inline-block;
     content: "";
-    border-bottom: 1px solid $dark-grey;
-    border-right: 1px solid $dark-grey;
+    display: inline-block;
     margin-inline-end: 0.5rem;
     height: 0.5em;
     width: 0.5em;
+    border-bottom: 1px solid $dark-grey;
+    border-right: 1px solid $dark-grey;
     transition: transform ease-in-out $t-fast;
     transform: rotate(-45deg);
   }

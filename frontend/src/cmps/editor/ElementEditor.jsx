@@ -71,8 +71,9 @@ export class _ElementEditor extends React.Component {
         } = {} } = prefs;
 
         return (
-            <Accordion allowZeroExpanded="true" allowMultipleExpanded="true">
-                {("txt" in element && element.role !== 'img') &&
+            <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
+
+                {('txt' in element && element.role !== 'img') &&
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>
@@ -96,7 +97,8 @@ export class _ElementEditor extends React.Component {
                         </AccordionItemPanel>
                     </AccordionItem>}
 
-                {element.role === 'img' &&
+                {
+                    element.role === 'img' &&
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>
@@ -107,9 +109,11 @@ export class _ElementEditor extends React.Component {
                             <EditImgSrc
                                 onChangeSrc={this.handleSpecialInputChange} />
                         </AccordionItemPanel>
-                    </AccordionItem>}
+                    </AccordionItem>
+                }
 
-                {element.role === 'video-container' &&
+                {
+                    element.role === 'video-container' &&
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>
@@ -122,9 +126,11 @@ export class _ElementEditor extends React.Component {
                                 editElement={this.editElement}
                             />
                         </AccordionItemPanel>
-                    </AccordionItem>}
+                    </AccordionItem>
+                }
 
-                {element.role === 'map' &&
+                {
+                    element.role === 'map' &&
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>
@@ -137,7 +143,8 @@ export class _ElementEditor extends React.Component {
                                 editElement={this.editElement}
                             />
                         </AccordionItemPanel>
-                    </AccordionItem>}
+                    </AccordionItem>
+                }
 
                 <AccordionItem>
                     <AccordionItemHeading>
@@ -200,7 +207,7 @@ export class _ElementEditor extends React.Component {
                             onChangeValue={this.handleRegInputChange} />
                     </AccordionItemPanel>
                 </AccordionItem>
-            </Accordion>
+            </Accordion >
         )
     }
 }

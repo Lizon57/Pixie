@@ -1,8 +1,8 @@
 import React from "react";
 import { connect } from 'react-redux';
-import { Loading } from '../cmps/Loading';
 import { setData } from '../store/actions/data-actions';
 import { loadTemplates } from '../store/actions/template-action';
+import { Loading } from '../cmps/Loading';
 import { TemplatePreview } from "../cmps/TemplatePreview";
 
 
