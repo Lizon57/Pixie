@@ -39,6 +39,8 @@ function getElement(type, src = null) {
             return elements.getCards()
         case 'cards1':
             return elements.getCards1()
+        case 'cards2':
+            return elements.getCards2()
         case 'hero1':
             return elements.getHero1()
         case 'hero2':

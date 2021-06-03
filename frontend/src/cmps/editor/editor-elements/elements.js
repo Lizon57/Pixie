@@ -16,6 +16,7 @@ import { getBox } from './elements/Box';
 import { getHero1 } from './elements/hero1';
 import { getHero2 } from './elements/Hero2';
 import { getCards1 } from './elements/Cards1';
+import { getCards2 } from './elements/Cards2';
 
 
 export const elements = {
@@ -35,5 +36,6 @@ export const elements = {
     getBox,
     getHero1,
     getHero2,
+    getCards2,
 };
 

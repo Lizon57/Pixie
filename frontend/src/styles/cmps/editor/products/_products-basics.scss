@@ -18,8 +18,57 @@
   }
 }
 
-.responsive {
+.responsive-card1 {
   @media (max-width: 920px) {
-    flex-direction: column !important;
+    flex-wrap: wrap !important;
+  }
+}
+
+.cards11 {
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-left: 30px;
+  padding-right: 30px;
+
+  .title11 {
+    font-size: 35px;
+    font-family: caveat;
+  }
+
+  .gallery11 {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    width: 100%;
+
+
+    .card11 {
+      width: 250px;
+      height: 350px;
+      display: flex;
+      flex-direction: column;
+      padding: 5px;
+      border: 1px solid #ccc;
+      margin: 15px;
+      align-items: center;
+
+      .cardImg111 {
+        width: 100%;
+        height: 80%;
+        background-image: url("https://images.unsplash.com/photo-1514540746696-d285708190bb");
+        background-size: cover;
+        background-position: center;
+      }
+
+      .title2 {
+        flex-grow: 1;
+        display: flex;
+        align-items: center;
+        font-size: 25px;
+        font-family: caveat;
+      }
+    }
   }
 }
