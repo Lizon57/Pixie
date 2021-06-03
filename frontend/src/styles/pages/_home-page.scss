@@ -113,12 +113,28 @@
       font-weight: $fw-bold;
       font-family: RobotoSlab;
       text-transform: uppercase;
+
+      @include for-normal-layout {
+        max-width: 25ch;
+      }
+
+      @include for-wide-layout {
+        max-width: 35ch;
+      }
     }
 
     & p {
       font-size: 1.2rem;
       font-family: inter;
       margin-block: 1rem;
+
+      @include for-normal-layout {
+        max-width: 25ch;
+      }
+
+      @include for-wide-layout {
+        max-width: 40ch;
+      }
     }
   }
 
@@ -133,7 +149,7 @@
     }
 
     @include for-normal-layout {
-      width: 250px;
+      width: 200px;
 
       &.parse-even {
         order: -1;

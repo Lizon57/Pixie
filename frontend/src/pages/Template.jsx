@@ -1,8 +1,8 @@
 import React from "react";
-import { Loading } from '../cmps/Loading'
 import { connect } from 'react-redux';
+import { Loading } from '../cmps/Loading';
 import { setData } from '../store/actions/data-actions';
-import { loadTemplates } from '../store/actions/template-action'
+import { loadTemplates } from '../store/actions/template-action';
 import { TemplatePreview } from "../cmps/TemplatePreview";
 
 
@@ -25,7 +25,6 @@ class _Template extends React.Component {
             <div className="grid template-list ">
 
                 {/* Make new website */}
-
                 <div onClick={() => this.onSetData({ childs: []})} className="flex column space-between template-preview make-new">
                     <div className="flex justify-center align-center template-name">
                         <span>Make New</span>

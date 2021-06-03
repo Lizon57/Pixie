@@ -1,8 +1,8 @@
 import React from "react";
-import { ChildsPreview } from '../cmps/editor/page-render/ChildsPreview'
-import { webService } from '../service/web-service'
-import { Loading } from '../cmps/Loading'
 import { connect } from 'react-redux';
+import { ChildsPreview } from '../cmps/editor/page-render/ChildsPreview';
+import { webService } from '../service/web-service';
+import { Loading } from '../cmps/Loading';
 import { pageViewMode } from '../store/actions/app-actions';
 
 
@@ -22,11 +22,10 @@ class _WebDetails extends React.Component {
     render() {
         const { web } = this.state;
         if (!web) return <Loading />
+
         return (
             web.childs.map(child => <ChildsPreview child={child} key={child.id} />)
         )
-
-
     }
 }
 

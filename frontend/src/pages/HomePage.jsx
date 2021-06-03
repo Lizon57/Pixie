@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { Template } from './Template';
 import hero from '../assets/img/homepage/hero.gif';
 import construct from '../assets/img/homepage/construct.jpg';
 
@@ -62,7 +63,13 @@ export function HomePage() {
                         </div>
                     </section>
                 </div>
+
             </section>
+
+            <section className="container templates-container">
+                <Template />
+            </section>
+
         </section>
     );
 }
