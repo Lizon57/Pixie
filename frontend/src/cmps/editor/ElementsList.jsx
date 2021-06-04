@@ -3,6 +3,24 @@ import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, Ac
 import { cloudinaryService } from '../../service/cloudinary-service';
 import { editorService } from '../../service/editor-service';
 import { UserMsg } from '../../cmps/UserMsg';
+import sportsHeader from '../../assets/img/editor/elements/sportsHeader.jpg';
+import maizHeader from '../../assets/img/editor/elements/maizHeader.jpg';
+import cofeeHeader from '../../assets/img/editor/elements/cofeeHeader.jpg';
+import sportsHero from '../../assets/img/editor/elements/sportsHero.jpg';
+import diamondsHero from '../../assets/img/editor/elements/diamondsHero.jpg';
+import seaHero from '../../assets/img/editor/elements/seaHero.jpg';
+import maizHero from '../../assets/img/editor/elements/maizHero.jpg';
+import cofeeHero from '../../assets/img/editor/elements/cofeeHero.jpg';
+import threeCards from '../../assets/img/editor/elements/threeCards.jpg';
+import cofeeCards from '../../assets/img/editor/elements/cofeeCards.jpg';
+import fullWidthImgFirstCard from '../../assets/img/editor/elements/fullWidthImgFirstCard.jpg';
+import fullWidthTxtFirstCard from '../../assets/img/editor/elements/fullWidthTxtFirstCard.jpg';
+import maizCards from '../../assets/img/editor/elements/maizCards.jpg';
+import cofeeForm from '../../assets/img/editor/elements/cofeeForm.jpg';
+import maizFooter from '../../assets/img/editor/elements/maizFooter.jpg';
+import cofeeFooter from '../../assets/img/editor/elements/cofeeFooter.jpg';
+import maizText from '../../assets/img/editor/elements/maizText.jpg';
+import cofeeText from '../../assets/img/editor/elements/cofeeText.jpg';
 
 
 export class ElementsList extends React.Component {
@@ -73,14 +91,13 @@ export class ElementsList extends React.Component {
                                 Navigation bars
                         </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="elements-container">
                             <div className="text-center pointer item" onClick={() => onAddSection('header1')}>Header 1</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('header2')}>Header 2</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('sportsHeader')}>Sports header</div>
+                            <img src={sportsHeader} alt="Sports header" onClick={() => onAddSection('sportsHeader')} />
                             <div className="text-center pointer item" onClick={() => onAddSection('header4')}>Header 4</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('MaizHeader')}>Maiz Header</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('CoffeeHeader')}>Coffee Header</div>
-                            {/* <div className="text-center pointer item" onClick={() => onAddSection('NavBar')}>Header 2</div> */}
+                            <img src={maizHeader} alt="Maiz header" onClick={() => onAddSection('MaizHeader')} />
+                            <img src={cofeeHeader} alt="Cofee header" onClick={() => onAddSection('CoffeeHeader')} />
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -90,12 +107,12 @@ export class ElementsList extends React.Component {
                                 Heros
                         </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
-                            <div className="text-center pointer item" onClick={() => onAddSection('sportsHero')}>Sports hero</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('hero1')}>Hero1</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('hero2')}>Hero2</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('MaizHero')}>Maiz Hero</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('CoffeeHero')}>Coffee Hero</div>
+                        <AccordionItemPanel className="elements-container">
+                            <img src={sportsHero} alt="Sports header" onClick={() => onAddSection('sportsHero')} />
+                            <img src={diamondsHero} alt="Diamonds header" onClick={() => onAddSection('hero1')} />
+                            <img src={seaHero} alt="Sea header" onClick={() => onAddSection('hero2')} />
+                            <img src={maizHero} alt="Maiz header" onClick={() => onAddSection('MaizHero')} />
+                            <img src={cofeeHero} alt="Cofee header" onClick={() => onAddSection('CofeeHero')} />
                             <div className="text-center pointer item" onClick={() => onAddSection('StyleHero')}>Style Hero</div>
                         </AccordionItemPanel>
                     </AccordionItem>
@@ -106,14 +123,14 @@ export class ElementsList extends React.Component {
                                 Cards
                         </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="elements-container">
                             <div className="text-center pointer item" onClick={() => onAddSection('cards')}>Cards</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('cards1')}>Cards1</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('cards2')}>Cards2</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('fullWidthCardImgFirst')}>Full width img first</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('fullWidthCardTextFirst')}>Full width text first</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('MaizCards')}>Maiz Cards</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('CoffeeCards')}>Coffee Cards</div>
+                            <img src={threeCards} alt="Three cards" onClick={() => onAddSection('cards2')} />
+                            <img src={fullWidthImgFirstCard} alt="Full width image first card" onClick={() => onAddSection('fullWidthCardImgFirst')} />
+                            <img src={fullWidthTxtFirstCard} alt="Full width text first card" onClick={() => onAddSection('fullWidthCardTextFirst')} />
+                            <img src={maizCards} alt="Maiz cards" onClick={() => onAddSection('MaizCards')} />
+                            <img src={cofeeCards} alt="Cofee cards" onClick={() => onAddSection('CofeeCards')} />
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -123,8 +140,8 @@ export class ElementsList extends React.Component {
                                 Contact
                         </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
-                            <div className="text-center pointer item" onClick={() => onAddSection('CoffeeForm')}>Coffee Form</div>
+                        <AccordionItemPanel className="elements-container">
+                            <img src={cofeeForm} alt="Cofee Form" onClick={() => onAddSection('CofeeForm')} />
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -134,11 +151,11 @@ export class ElementsList extends React.Component {
                                 Footers
                         </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="elements-container">
                             <div className="text-center pointer item" onClick={() => onAddSection('footer')}>Footer</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('footer1')}>Footer1</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('MaizFooter')}>Maiz Footer</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('CoffeeFooter')}>Coffee Footer</div>
+                            <img src={maizFooter} alt="Maiz footer" onClick={() => onAddSection('MaizFooter')} />
+                            <img src={cofeeFooter} alt="Cofee footer" onClick={() => onAddSection('CoffeeFooter')} />
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -148,12 +165,13 @@ export class ElementsList extends React.Component {
                                 Texts
                         </AccordionItemButton>
                         </AccordionItemHeading>
-                        <AccordionItemPanel>
+                        <AccordionItemPanel className="elements-container">
                             <div className="text-center pointer item" onClick={() => onAddSection('text')}>Text Box</div>
                             <div className="text-center pointer item" onClick={() => onAddElement('text')}>Inside Box Text</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('MaizTextSection')}>Maiz Text</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('CoffeeTextSection')}>Coffee Text</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('StyleTextSection')}>Style Text</div>
+                            <div className="text-center pointer item" onClick={() => onAddElement('text')}>Text Inside</div>
+                            <img src={maizText} alt="Maiz text" onClick={() => onAddSection('MaizTextSection')} />
+                            <img src={cofeeText} alt="Cofee text" onClick={() => onAddSection('CoffeeTextSection')} />
                         </AccordionItemPanel>
                     </AccordionItem>
 

@@ -16,7 +16,7 @@ export function getStyleTextSection() {
                 justifyContent: 'center',
                 alignItems: 'center',
                 backgroundColor: '#fff',
-                marginBlockStart: '32px',
+                paddingBlockStart: '20px',
 
             }
         },
@@ -96,6 +96,23 @@ export function getStyleTextSection() {
                         Be stylish, be unique with Stylepont!`
                     }
                 ]
+            },
+            {
+                id: utilService.makeId(),
+                type: 'button',
+                role: 'childless',
+                prefs: {
+                    style: {
+                        fontFamily: 'Montserrat',
+                        fontWeight: 'bold',
+                        backgroundColor: '#fff',
+                        border: '2px solid #295f67',
+                        padding: '10px 20px 10px 20px',
+                        fontSize: '1rem',
+                        marginBlock: '15px',
+                    }
+                },
+                txt: 'Read More'
             },
         ]
     }

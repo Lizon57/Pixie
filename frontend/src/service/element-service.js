@@ -52,7 +52,7 @@ function getElement(type, src = null) {
         case 'hero2':
             return elements.getHero2()
         case 'MaizHero':
-            return elements.getMazeHero()
+            return elements.getmaizHero()
         case 'MaizHeader':
             return elements.getMaizHeader()
         case 'MaizTextSection':
