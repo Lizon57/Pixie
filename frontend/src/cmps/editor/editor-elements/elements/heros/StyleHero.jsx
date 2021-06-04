@@ -28,6 +28,7 @@ export function getStyleHero() {
                     style: {
                         display: 'flex',
                         alignItems: 'center',
+                        flexWrap: 'wrap',
                         height: '85px',
                         width: '100%',
                         margin: '10px 0'
@@ -60,8 +61,8 @@ export function getStyleHero() {
                         role: 'div',
                         isContainer: true,
                         prefs: {
+                            className: 'header-product-nav-btns',
                             style: {
-                                display: 'flex',
                                 alignItems: 'center',
                                 height: '100%',
                             }
@@ -131,7 +132,7 @@ export function getStyleHero() {
 
                                     }
                                 },
-                                txt: 'About Us'
+                                txt: 'About'
                             },
                             {
                                 id: utilService.makeId(),
@@ -156,6 +157,28 @@ export function getStyleHero() {
                                 txt: 'Blog'
                             }
                         ]
+                    },
+                    {
+                        id: utilService.makeId(),
+                        type: 'button',
+                        role: 'button',
+                        prefs: {
+                            className: 'product-header-humburger-btn',
+                            style: {
+                                alignItems: 'center',
+                                height: '100%',
+                                backgroundColor: 'transparent',
+                                outline: 'none',
+                                border: 'none',
+                                fontFamily: 'Raleway',
+                                fontSize: '1.5rem',
+                                fontWeight: '600',
+                                color: '#fff',
+                                cursor: 'pointer',
+
+                            }
+                        },
+                        txt: '☰'
                     }
 
 
