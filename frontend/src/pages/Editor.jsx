@@ -17,7 +17,7 @@ class _Editor extends React.Component {
         isUserMsg: false,
         msg: '',
 
-        stepsEnabled: true,
+        // stepsEnabled: true,
         initialStep: 0,
         steps: [
             {
@@ -136,7 +136,7 @@ class _Editor extends React.Component {
                 {isUserMsg && <UserMsg msg={msg} />}
                 <PublishTool userMsgShow={this.userMsgShow} />
 
-                
+
                 <Steps
                     hidePrev={true}
                     hideNext={true}

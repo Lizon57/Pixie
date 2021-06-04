@@ -96,6 +96,7 @@ export class ElementsList extends React.Component {
                             <div className="text-center pointer item" onClick={() => onAddSection('hero2')}>Hero2</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('MaizHero')}>Maiz Hero</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('CoffeeHero')}>Coffee Hero</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('StyleHero')}>Style Hero</div>
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -149,9 +150,10 @@ export class ElementsList extends React.Component {
                         </AccordionItemHeading>
                         <AccordionItemPanel>
                             <div className="text-center pointer item" onClick={() => onAddSection('text')}>Text Box</div>
-                            <div className="text-center pointer item" onClick={() => onAddElement('text')}>Text Inside</div>
+                            <div className="text-center pointer item" onClick={() => onAddElement('text')}>Inside Box Text</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('MaizTextSection')}>Maiz Text</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('CoffeeTextSection')}>Coffee Text</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('StyleTextSection')}>Style Text</div>
                         </AccordionItemPanel>
                     </AccordionItem>
 
