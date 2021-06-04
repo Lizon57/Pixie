@@ -14,6 +14,7 @@ import { getHero1 } from './elements/heros/Hero1';
 import { getHero2 } from './elements/heros/Hero2';
 import { getmaizHero } from './elements/heros/MaizHero';
 import { getCoffeeHero } from './elements/heros/CoffeeHero';
+import { getStyleHero } from './elements/heros/StyleHero';
 
 
 // Cards
@@ -41,6 +42,7 @@ import { getImg } from './elements/Img';
 import { getText } from './elements/texts/Text';
 import { getMaizTextSection } from './elements/texts/MaizTextSection';
 import { getCoffeeTextSection } from './elements/texts/CoffeeTextSection';
+import { getStyleTextSection } from './elements/texts/StyleTextSection';
 
 // Maps
 import { getMap } from './elements/Map';
@@ -64,6 +66,7 @@ export const elements = {
     getHero2,
     getmaizHero,
     getCoffeeHero,
+    getStyleHero,
 
     getCards,
     getCards1,
@@ -85,6 +88,7 @@ export const elements = {
     getText,
     getMaizTextSection,
     getCoffeeTextSection,
+    getStyleTextSection,
 
     getMap,
     getMapWithTxt,

@@ -35,3 +35,16 @@
     }
   }
 }
+
+.header-product-nav-btns {
+  display: none;
+  @include for-normal-layout {
+    display: flex;
+  }
+}
+.product-header-humburger-btn {
+  display: flex;
+  @include for-normal-layout {
+    display: none;
+  }
+}

@@ -103,6 +103,7 @@ export class ElementsList extends React.Component {
                             <img src={seaHero['default']} alt="Sea header" onClick={() => onAddSection('hero2')} />
                             <img src={maizHero['default']} alt="Maiz header" onClick={() => onAddSection('MaizHero')} />
                             <img src={coffeeHero['default']} alt="coffee header" onClick={() => onAddSection('CoffeeHero')} />
+                            <div className="text-center pointer item" onClick={() => onAddSection('StyleHero')}>Style Hero</div>
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -156,6 +157,8 @@ export class ElementsList extends React.Component {
                         </AccordionItemHeading>
                         <AccordionItemPanel className="elements-container">
                             <div className="text-center pointer item" onClick={() => onAddSection('text')}>Text Box</div>
+                            <div className="text-center pointer item" onClick={() => onAddElement('text')}>Inside Box Text</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('StyleTextSection')}>Style Text</div>
                             <div className="text-center pointer item" onClick={() => onAddElement('text')}>Text Inside</div>
                             <img src={maizText['default']} alt="Maiz text" onClick={() => onAddSection('MaizTextSection')} />
                             <img src={coffeeText['default']} alt="coffee text" onClick={() => onAddSection('CoffeeTextSection')} />

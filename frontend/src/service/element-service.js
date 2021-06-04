@@ -76,6 +76,10 @@ function getElement(type, src = null) {
             return elements.getCoffeeForm()
         case 'CoffeeFooter':
             return elements.getCoffeeFooter()
+        case 'StyleHero':
+            return elements.getStyleHero()
+        case 'StyleTextSection':
+            return elements.getStyleTextSection()
         default: return;
     }
 }
