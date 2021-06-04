@@ -1,11 +1,8 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
 import TextField from '@material-ui/core/TextField';
-import Dialog from '@material-ui/core/Dialog';
-import DialogActions from '@material-ui/core/DialogActions';
-import DialogContent from '@material-ui/core/DialogContent';
-import DialogTitle from '@material-ui/core/DialogTitle';
-
+import PublicIcon from '@material-ui/icons/Public';
+import SaveIcon from '@material-ui/icons/Save';
 
 export class Modal extends React.Component {
     state = {
@@ -26,34 +23,27 @@ export class Modal extends React.Component {
     }
 
     render() {
-        const { toggleMenu, isModalOpen, onSubmit } = this.props
+        const { onSubmit, isModalOpen } = this.props
         const { name } = this.state;
         return (
-            <div>
-                <Dialog open={isModalOpen}
-                    onClose={() => toggleMenu()}
-                    aria-labelledby="form-dialog-title"
-                >
-                    <DialogTitle id="form-dialog-title">Choose your WebSite name</DialogTitle>
-                    <DialogContent>
-                        <TextField
-                            autoFocus
-                            margin="dense"
-                            name="name"
-                            id="name"
-                            label="Site Name"
-                            type="text"
-                            fullWidth
-                            value={name}
-                            onChange={this.handleChange}
-                        />
-                    </DialogContent>
-                    <DialogActions className="modal-btns flex justify-center">
+            <>
+                <div className={`modal flex column align-center  ${isModalOpen ? 'show' : ''}`}>
+                    <label htmlFor="name">Website Name</label>
+                    <input type="text"
+                        autoFocus
+                        value={name}
+                        onChange={this.handleChange}
+                        name="name"
+                        id="name"
+                    />
+
+                    <div className="publish-btns flex space-between">
                         <Button
                             title="Save to Drafts"
                             variant="contained"
                             onClick={() => onSubmit(this.state.name, false)}
                         >
+                            <SaveIcon />
                             Save
                         </Button>
                         <Button
@@ -61,11 +51,12 @@ export class Modal extends React.Component {
                             variant="contained"
                             onClick={() => onSubmit(this.state.name, true)}
                         >
+                            <PublicIcon />
                             Publish
                         </Button>
-                    </DialogActions>
-                </Dialog>
-            </div>
+                    </div>
+                </div>
+            </>
         );
     }
 }
