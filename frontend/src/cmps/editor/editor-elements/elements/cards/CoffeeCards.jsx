@@ -1,4 +1,4 @@
-import { utilService } from '../../../../../service/util-service.js'
+import { utilService } from '../../../../../service/util-service.js';
 
 export function getCoffeeCards() {
     return ({
@@ -27,7 +27,6 @@ export function getCoffeeCards() {
                         display: 'flex',
                         padding: '30px',
                         backgroundColor: '#fbf5ef',
-                        display: 'flex',
                         minHeight: '200px',
                         width: '100%',
                     }
@@ -103,7 +102,6 @@ export function getCoffeeCards() {
                         display: 'flex',
                         padding: '30px',
                         backgroundColor: '#fbf5ef',
-                        display: 'flex',
                         minHeight: '200px',
                         width: '100%',
                     }
