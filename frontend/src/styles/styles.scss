@@ -34,6 +34,7 @@
 @import "cmps/editor/element-tool-bar";
 @import "cmps/editor/element-editor";
 @import "cmps/editor/modal";
+@import "cmps/editor/intro";
 
 // Profile cmps
 @import "cmps/profile/profile-container";
@@ -48,6 +49,9 @@
 @import "cmps/editor/products/text-product";
 @import "cmps/editor/products/videos-product";
 
-// templates
-
+// Products templates
 @import "cmps/editor/products/maze-template";
+@import "cmps/editor/products/sports-template";
+
+// Products cmps
+@import "cmps/editor/products/full-width-cards";

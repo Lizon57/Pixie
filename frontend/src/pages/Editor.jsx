@@ -1,5 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
+import { Steps } from 'intro.js-react';
 import { setData, addSection } from '../store/actions/data-actions';
 import { removeEditingElement } from '../store/actions/editor-actions';
 import { isEditorMode } from '../store/actions/app-actions';
@@ -11,11 +12,36 @@ import { PageRender } from '../cmps/editor/page-render/PageRenderV2';
 import { PublishTool } from '../cmps/editor/PublishTool';
 import { UserMsg } from '../cmps/UserMsg';
 
-class _Editor extends React.Component {ע
-
+class _Editor extends React.Component {
     state = {
         isUserMsg: false,
         msg: '',
+
+        // stepsEnabled: true,
+        initialStep: 0,
+        steps: [
+            {
+                element: '.editor-nav-container',
+                intro: 'Press the editor\'s navigation buttons to decide rather create or edit elements.',
+                position: 'right',
+                highlightClass: 'intro-highlight editor-step',
+                tooltipClass: 'steps-tool-tip',
+            },
+            {
+                element: '.editor-options-container',
+                intro: 'Press the publish tool button to save or publish your website.',
+                position: 'bottom-right-aligned',
+                tooltipClass: 'steps-tool-tip publish-step',
+                highlightClass: 'intro-highlight',
+            },
+            {
+                element: '.intro-profile',
+                intro: 'On the profile page you\'ll be able to see your saved ot published website.',
+                highlightClass: 'intro-highlight profile-step',
+                position: 'left',
+                tooltipClass: 'steps-tool-tip',
+            },
+        ]
     }
 
     componentDidMount() {
@@ -35,6 +61,8 @@ class _Editor extends React.Component {ע
     componentWillUnmount() {
         const { isEditorMode } = this.props;
         isEditorMode(false);
+
+        this.setState(prevState => ({ ...prevState, stepsEnabled: false }));
     }
 
     userMsgShow = (msg) => {
@@ -86,14 +114,32 @@ class _Editor extends React.Component {ע
         storageService.saveToStorage('website', this.props.data)
     }
 
+
+    onExitSteps = () => {
+        this.setState(prevState => ({ ...prevState, stepsEnabled: false }));
+    };
+
+
     render() {
         let { data, isLoading } = this.props;
         if (isLoading) return <Loading />;
         const { childs } = data;
-        const { isUserMsg, msg } = this.state;
+        const { isUserMsg, msg, stepsEnabled, initialStep, steps } = this.state;
 
         return (
             <>
+                <Steps
+                    hidePrev={true}
+                    hideNext={true}
+                    exitOnEsc={true}
+                    keyboardNavigation={true}
+                    enabled={stepsEnabled}
+                    steps={steps}
+                    initialStep={initialStep}
+                    onExit={this.onExitSteps}
+                />
+
+
                 <section className="flex column justify-center align-center text-center editor-prevent-mobile">Sorry, the editor is available only on tablets and wider screens.</section>
                 <section className="flex editor-container">
                     <EditorSideBar onAddElement={this.onAddElement} onAddSection={this.onAddSection} onUpdateElement={this.onUpdateElement} />

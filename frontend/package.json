@@ -13,6 +13,8 @@
     "formik": "^2.2.6",
     "google-maps-react": "^2.0.6",
     "i": "^0.3.6",
+    "intro.js": "^3.4.0",
+    "intro.js-react": "^0.3.0",
     "node-sass": "^4.14.1",
     "npm": "^7.15.0",
     "rc-slider": "^9.7.2",
