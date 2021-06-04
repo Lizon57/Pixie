@@ -44,6 +44,7 @@ import { getCoffeeTextSection } from './elements/texts/CoffeeTextSection';
 
 // Maps
 import { getMap } from './elements/Map';
+import { getMapWithTxt } from './elements/maps/MapWithTxt';
 
 import { getVideo } from './elements/Video';
 import { getBox } from './elements/Box';
@@ -86,6 +87,7 @@ export const elements = {
     getCoffeeTextSection,
 
     getMap,
+    getMapWithTxt,
 
     getVideo,
     getBox,

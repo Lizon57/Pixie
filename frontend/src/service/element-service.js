@@ -24,6 +24,8 @@ function getElement(type, src = null) {
             return elements.getHeader4()
         case 'map':
             return elements.getMap()
+        case 'mapWithTxt':
+            return elements.getMapWithTxt()
         case 'youtube':
             return elements.getVideo(src)
         case 'sportsHero':
