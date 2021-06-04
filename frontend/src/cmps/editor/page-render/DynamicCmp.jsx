@@ -50,7 +50,6 @@ export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEdi
                 return <NavCmp {...props} />;
             case 'iframe':
                 return <IframeCmp {...props} />;
-
             default:
                 console.log('wtf is this component you sent me???');
                 break;
