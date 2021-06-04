@@ -31,6 +31,7 @@ class _PageRenderV2 extends React.Component {
             //if there is no childs in store it shows msg.
             return (
                 <>
+                    { localStorage.removeItem('website')}
                     <section
                         data-id={utilService.makeId()}
                         className="site-container">
