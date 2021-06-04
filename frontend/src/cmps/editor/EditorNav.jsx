@@ -1,23 +1,16 @@
-import React from 'react'
-import { connect } from 'react-redux'
-import { setEditorMode } from '../../store/actions/editor-actions'
+import React from 'react';
+import { connect } from 'react-redux';
+import { setEditorMode } from '../../store/actions/editor-actions';
 
 class _EditorNav extends React.Component {
-    state = {
-    }
-
-    componentDidMount() {
-    }
-
     render() {
-
         const { editorMode, setEditorMode } = this.props
 
         return (
             <div className="text-center flex space-between editor-nav-container">
                 <div
                     onClick={() => setEditorMode('addElement')}
-                    className={"pointer" + (editorMode === 'addElement' ? ' active' : '')}>
+                    className={"pointer " + (editorMode === 'addElement' ? ' active' : '')}>
                     <span className="fas create-el-icn"></span>
                     Create
                 </div>

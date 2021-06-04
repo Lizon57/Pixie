@@ -5,7 +5,8 @@ import ScrollAnimation from 'react-animate-on-scroll';
 import { setData } from '../store/actions/data-actions';
 import { loadTemplates } from '../store/actions/template-action';
 import hero from '../assets/img/homepage/hero.gif';
-import create from '../assets/img/homepage/create.png';
+import freedom from '../assets/img/homepage/freedom.png';
+import customize from '../assets/img/homepage/customize.png';
 import editor from '../assets/img/homepage/editor.png';
 import { Loading } from '../cmps/Loading';
 import { TemplatePreview } from "../cmps/TemplatePreview";
@@ -54,7 +55,7 @@ export class _HomePage extends React.Component {
                                             showcasing your work,
                                     you can do it all with the <span>Pixie</span> website Editor.</p>
                                     </div>
-                                    <img src={create} alt="guide parse" />
+                                    <img src={freedom} alt="guide parse" />
                                 </div>
                             </section>
                         </ScrollAnimation>
@@ -70,7 +71,7 @@ export class _HomePage extends React.Component {
                                         <p>Pick a template and customize anything,
                                     or answer a few questions and get a free website designed just for you</p>
                                     </div>
-                                    <img src={editor} className="parse-even" alt="guide parse" />
+                                    <img src={customize} className="parse-even" alt="guide parse" />
                                 </div>
                             </section>
                         </ScrollAnimation>
@@ -85,7 +86,7 @@ export class _HomePage extends React.Component {
                                         <p>Start from scratch or choose from over designer-made templates that you can fully
                                     customize using <span>Pixie</span> website Editor.</p>
                                     </div>
-                                    <img src={create} alt="guide parse" />
+                                    <img src={editor} alt="guide parse" />
                                 </div>
                             </section>
                         </ScrollAnimation>

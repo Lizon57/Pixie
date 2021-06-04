@@ -76,7 +76,7 @@ export class ElementsList extends React.Component {
                         <AccordionItemPanel>
                             <div className="text-center pointer item" onClick={() => onAddSection('header1')}>Header 1</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('header2')}>Header 2</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('header3')}>Header 3</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('sportsHeader')}>Sports header</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('header4')}>Header 4</div>
                             {/* <div className="text-center pointer item" onClick={() => onAddSection('NavBar')}>Header 2</div> */}
                         </AccordionItemPanel>
@@ -89,7 +89,7 @@ export class ElementsList extends React.Component {
                         </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel>
-                            <div className="text-center pointer item" onClick={() => onAddSection('hero')}>Hero</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('sportsHero')}>Sports hero</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('hero1')}>Hero1</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('hero2')}>Hero2</div>
                         </AccordionItemPanel>
@@ -105,6 +105,8 @@ export class ElementsList extends React.Component {
                             <div className="text-center pointer item" onClick={() => onAddSection('cards')}>Cards</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('cards1')}>Cards1</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('cards2')}>Cards2</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('fullWidthCardImgFirst')}>Full width img first</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('fullWidthCardTextFirst')}>Full width text first</div>
                         </AccordionItemPanel>
                     </AccordionItem>
 
