@@ -33,6 +33,7 @@ export function DivCmp({ data, onReorderingElement, onRemoveElement, setEditingE
 
                         />
                     })}
+                {isEdit && data.txt}
             </div>
         )
     }
