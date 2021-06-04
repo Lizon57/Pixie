@@ -37,7 +37,7 @@ export class _AppHeader extends React.Component {
 
                                 {user &&
                                     <>
-                                        <li><NavLink to={`/profile/${user._id}`} onClick={this.onToggleNav}>Profile</NavLink></li>
+                                        <li><NavLink to={`/profile/${user._id}`} onClick={this.onToggleNav} className="intro-profile">Profile</NavLink></li>
                                         <li><NavLink to="/" activeClassName="" onClick={this.onLogOut}>Logout</NavLink></li>
                                     </>
                                 }

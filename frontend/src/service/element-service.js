@@ -51,6 +51,16 @@ function getElement(type, src = null) {
             return elements.getHero1()
         case 'hero2':
             return elements.getHero2()
+        case 'MaizHero':
+            return elements.getMazeHero()
+        case 'MaizHeader':
+            return elements.getMaizHeader()
+        case 'MaizTextSection':
+            return elements.getMaizTextSection()
+        case 'MaizCards':
+            return elements.getMaizCards()
+        case 'MaizFooter':
+            return elements.getMaizFooter()
         default: return;
     }
 }

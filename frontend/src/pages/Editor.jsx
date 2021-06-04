@@ -1,6 +1,6 @@
 import React from 'react';
 import { connect } from 'react-redux';
-import { Steps, Hints } from 'intro.js-react';
+import { Steps } from 'intro.js-react';
 import { setData, addSection } from '../store/actions/data-actions';
 import { removeEditingElement } from '../store/actions/editor-actions';
 import { isEditorMode } from '../store/actions/app-actions';
@@ -17,13 +17,30 @@ class _Editor extends React.Component {
         isUserMsg: false,
         msg: '',
 
-        stepsEnabled: true,
+        // stepsEnabled: true,
         initialStep: 0,
         steps: [
             {
-                element: ".editor-nav-container",
-                intro: "Hello step"
-            }
+                element: '.editor-nav-container',
+                intro: 'Press the editor\'s navigation buttons to decide rather create or edit elements.',
+                position: 'right',
+                highlightClass: 'intro-highlight editor-step',
+                tooltipClass: 'steps-tool-tip',
+            },
+            {
+                element: '.editor-options-container',
+                intro: 'Press the publish tool button to save or publish your website.',
+                position: 'bottom-right-aligned',
+                tooltipClass: 'steps-tool-tip publish-step',
+                highlightClass: 'intro-highlight',
+            },
+            {
+                element: '.intro-profile',
+                intro: 'On the profile page you\'ll be able to see your saved ot published website.',
+                highlightClass: 'intro-highlight profile-step',
+                position: 'left',
+                tooltipClass: 'steps-tool-tip',
+            },
         ]
     }
 
@@ -112,10 +129,14 @@ class _Editor extends React.Component {
         return (
             <>
                 <Steps
+                    hidePrev={true}
+                    hideNext={true}
+                    exitOnEsc={true}
+                    keyboardNavigation={true}
                     enabled={stepsEnabled}
                     steps={steps}
                     initialStep={initialStep}
-                    onExit={this.onExit}
+                    onExit={this.onExitSteps}
                 />
 
 
