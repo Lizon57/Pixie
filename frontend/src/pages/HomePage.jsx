@@ -44,7 +44,7 @@ export class _HomePage extends React.Component {
 
                 <section>
                     <div className="guide-parse-background">
-                        <ScrollAnimation animateIn='bounceInRight'>
+                        <ScrollAnimation animateIn='bounceInRight' duration='2'>
                             <section className="container" data-aos="fade-left">
                                 <div className="flex wrap space-between">
                                     <div className="text">
@@ -63,7 +63,7 @@ export class _HomePage extends React.Component {
 
 
                     <div className="guide-parse-background">
-                        <ScrollAnimation animateIn='bounceInLeft'>
+                        <ScrollAnimation animateIn='bounceInLeft' duration='2'>
                             <section className="container">
                                 <div className="flex wrap space-between">
                                     <div className="text">
@@ -78,7 +78,7 @@ export class _HomePage extends React.Component {
                     </div>
 
                     <div className="guide-parse-background">
-                        <ScrollAnimation animateIn='bounceInRight'>
+                        <ScrollAnimation animateIn='bounceInRight' duration='2'>
                             <section className="container">
                                 <div className="flex wrap space-between">
                                     <div className="text">

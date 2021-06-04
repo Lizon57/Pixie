@@ -28,3 +28,255 @@ h6 {
   margin: 0;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.header11 {
+  background-color: #FCF6F1;
+  font-family: Montserrat;
+  display: flex;
+  align-items: center;
+  font-weight: bold;
+  padding: 20px 30px;
+  color: #0C1115;
+
+  .logo {
+    font-size: 24px;
+    flex-grow: 1;
+    font-family: Literata;
+    color: #A67D69;
+  }
+
+  .menu {
+    padding: 0px 10px
+  }
+}
+
+.hero11 {
+  display: flex;
+  padding: 30px;
+  background-color: #FBF5EF;
+  flex-direction: column;
+
+  @include for-normal-layout {
+    flex-direction: row !important;
+  }
+
+  .hero-left {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+
+    @include for-normal-layout {
+      align-items: flex-start !important;
+      width: 50% !important;
+    }
+
+    .span-container11 {
+      font-size: 50px;
+      font-family: Literata;
+
+      .span112 {
+        color: #A67D69;
+      }
+    }
+
+    .span113 {
+      font-family: Mulish;
+      line-height: 1.75em
+    }
+
+    button {
+      padding: 15px 20px;
+      border-radius: 30px;
+      font-family: Montserrat;
+      border: none;
+      background-color: #A67D69;
+      color: #EEEEEE;
+    }
+  }
+
+  .hero-right {
+    width: 50%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+
+    .image11 {
+      width: 75%;
+      height: 150px;
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-image: url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622798617/mypics/jptgwhbuq1gklcukkk6h.png");
+
+      @include for-normal-layout {
+        height: 75% !important;
+      }
+    }
+  }
+}
+
+.text-container11 {
+  font-size: 24px;
+  font-family: Literata;
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 15px;
+  background-color: #EEEEEE;
+
+  .span115 {
+    color: $black;
+  }
+
+  .span116 {
+    color: #A67D69;
+  }
+}
+
+.card-container11 {
+  padding: 30px;
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+
+  @include for-normal-layout {
+    flex-wrap: unset;
+  }
+
+  .card11 {
+    display: flex;
+    padding: 30px;
+    background-color: #fbf5ef;
+    display: flex;
+    min-height: 200px;
+    width: 100%;
+
+    .card-img11 {
+      width: 25%;
+      height: 100%;
+      border-right: 1px #e0e0e0 solid;
+      margin-right: 10px;
+      background-image: url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622798617/mypics/jptgwhbuq1gklcukkk6h.png");
+      background-position: 50% 50%;
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+
+    .card-span11 {
+
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      width: 75%;
+
+      .title11 {
+        font-size: 24px;
+        font-family: Montserrat;
+      }
+
+      .span117 {
+        font-family: Mulish;
+        color: #6a6b6c;
+        width: 100%;
+      }
+    }
+  }
+}
+
+.form-div {
+  padding: 30px;
+  background-color: #eeeeee;
+}
+
+.form11 {
+  padding: 30px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 600px;
+  margin: auto;
+  gap: 30px;
+  background-color: #fbf5ef;
+
+  .form-open {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+
+    .span120 {
+      font-size: 10px;
+      font-family: Montserrat;
+      font-weight: bold;
+    }
+
+    .span121 {
+      font-size: 32px;
+      font-family: Montserrat;
+      font-weight: bold;
+    }
+  }
+
+  .span122 {
+    font-family: Mulish;
+    color: #6A6B6C;
+  }
+
+  input {
+    font-family: Mulish;
+    color: #6a6b6c;
+    width: 100%;
+    padding: 10px;
+    background-color: unset;
+    border: none;
+    border-bottom: 1px solid #6a6b6c;
+    outline: none;
+  }
+
+  button {
+    padding: 15px 20px;
+    border-radius: 30px;
+    font-family: Montserrat;
+    border: none;
+    background-color: #A67D69;
+    color: #EEEEEE;
+  }
+}
+
+.footer11 {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  background-color: #fbf5ef;
+  color: #6a6b6c;
+  padding: 10px 30px;
+
+  .logo {
+    text-align: center;
+  }
+
+  .small11 {
+    font-size: 10px;
+    text-align: center;
+  }
+}

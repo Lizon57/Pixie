@@ -5,10 +5,16 @@
   }
   
   & img{
+    border: 1px solid $grey;
+    @include ease-rounded-corners;
     cursor: pointer;
-    margin: 0 auto;
+    margin: 0.5rem auto;
     height: 40px;
     width: 90%;
+
+    &:first-of-type{
+      margin-block-start: 1.5rem;
+    }
   }
 
 

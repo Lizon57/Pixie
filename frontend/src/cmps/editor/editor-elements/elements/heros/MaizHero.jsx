@@ -1,6 +1,6 @@
 import { utilService } from '../../../../../service/util-service'
 
-export function getMazeHero() {
+export function getmaizHero() {
     return ({
         id: utilService.makeId(),
         type: 'div',

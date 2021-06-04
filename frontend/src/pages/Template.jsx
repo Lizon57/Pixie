@@ -22,10 +22,10 @@ class _Template extends React.Component {
         const { templates, isLoading } = this.props;
         if (isLoading) return <Loading />
         return (
+            <>
                 <div className="grid template-list ">
 
                     {/* Make new website */}
-
                     <div onClick={() => this.onSetData({ childs: [] })} className="flex column space-between template-preview make-new">
                         <div className="flex justify-center align-center template-name-new">
                             <span>Make New</span>
@@ -36,6 +36,7 @@ class _Template extends React.Component {
                     </div>
                     {templates.map(template => <TemplatePreview key={template._id} onSetData={this.onSetData} template={template} />)}
                 </div>
+            </>
         )
     }
 }

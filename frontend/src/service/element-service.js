@@ -52,7 +52,7 @@ function getElement(type, src = null) {
         case 'hero2':
             return elements.getHero2()
         case 'MaizHero':
-            return elements.getMazeHero()
+            return elements.getmaizHero()
         case 'MaizHeader':
             return elements.getMaizHeader()
         case 'MaizTextSection':
@@ -61,6 +61,18 @@ function getElement(type, src = null) {
             return elements.getMaizCards()
         case 'MaizFooter':
             return elements.getMaizFooter()
+        case 'CoffeeHeader':
+            return elements.getCoffeeHeader()
+        case 'CoffeeHero':
+            return elements.getCoffeeHero()
+        case 'CoffeeCards':
+            return elements.getCoffeeCards()
+        case 'CoffeeTextSection':
+            return elements.getCoffeeTextSection()
+        case 'CoffeeForm':
+            return elements.getCoffeeForm()
+        case 'CoffeeFooter':
+            return elements.getCoffeeFooter()
         default: return;
     }
 }
