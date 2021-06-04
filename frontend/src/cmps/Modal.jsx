@@ -1,6 +1,5 @@
 import React from 'react';
 import Button from '@material-ui/core/Button';
-import TextField from '@material-ui/core/TextField';
 import PublicIcon from '@material-ui/icons/Public';
 import SaveIcon from '@material-ui/icons/Save';
 
@@ -27,7 +26,7 @@ export class Modal extends React.Component {
         const { name } = this.state;
         return (
             <>
-                <div className={`modal flex column align-center  ${isModalOpen ? 'show' : ''}`}>
+                <div className={`flex column align-center modal ${isModalOpen ? 'show' : ''}`}>
                     <label htmlFor="name">Website Name</label>
                     <input type="text"
                         autoFocus

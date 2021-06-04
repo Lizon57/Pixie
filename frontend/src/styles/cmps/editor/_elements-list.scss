@@ -1,5 +1,17 @@
 // Elements list
 .editor-elements-list {
+  & .elements-container{
+    text-align: center;
+  }
+  
+  & img{
+    cursor: pointer;
+    margin: 0 auto;
+    height: 40px;
+    width: 90%;
+  }
+
+
   & .item {
     background-color: $light-grey1;
     @include rounded-corners;
