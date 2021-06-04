@@ -5,6 +5,7 @@ import { FooterCmp } from './dynamic-render/FooterCmp'
 import { HeaderCmp } from './dynamic-render/HeaderCmp'
 import { ButtonCmp } from './dynamic-render/ButtonCmp'
 import { NavCmp } from './dynamic-render/NavCmp'
+import { InputCmp } from './dynamic-render/InputCmp.jsx'
 import { IframeCmp } from './dynamic-render/IframeCmp'
 
 export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEditingElement, isEdit, editingElement }) {
@@ -48,6 +49,8 @@ export function DynamicCmp({ child, onReorderingElement, onRemoveElement, setEdi
                 return <ButtonCmp {...props} />;
             case 'nav':
                 return <NavCmp {...props} />;
+            case 'input':
+                return <InputCmp {...props} />;
             case 'iframe':
                 return <IframeCmp {...props} />;
             default:
