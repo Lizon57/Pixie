@@ -17,7 +17,7 @@ class _Editor extends React.Component {
         isUserMsg: false,
         msg: '',
 
-        // stepsEnabled: true,
+        stepsEnabled: true,
         initialStep: 0,
         steps: [
             {
