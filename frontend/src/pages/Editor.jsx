@@ -11,7 +11,7 @@ import { PageRender } from '../cmps/editor/page-render/PageRenderV2';
 import { PublishTool } from '../cmps/editor/PublishTool';
 import { UserMsg } from '../cmps/UserMsg';
 
-class _Editor extends React.Component {
+class _Editor extends React.Component {ע
 
     state = {
         isUserMsg: false,
