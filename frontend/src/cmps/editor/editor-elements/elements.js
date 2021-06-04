@@ -29,9 +29,11 @@ import { getMaizFooter } from './elements/footers/MaizFooter';
 import { getText } from './elements/texts/Text';
 import { getMaizTextSection } from './elements/texts/MaizTextSection';
 
+// Maps
+import { getMap } from './elements/Map';
+
 import { getImg } from './elements/Img';
 import { getVideo } from './elements/Video';
-import { getMap } from './elements/Map';
 import { getBox } from './elements/Box';
 
 
@@ -57,11 +59,14 @@ export const elements = {
     getFooter,
     getMaizFooter,
     getMaizTextSection,
+    getFooter1,
+
     getText,
+
+    getMap,
+
     getImg,
     getVideo,
-    getMap,
     getBox,
-    getFooter1,
 };
 
