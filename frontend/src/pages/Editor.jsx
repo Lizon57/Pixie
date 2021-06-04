@@ -17,7 +17,7 @@ class _Editor extends React.Component {
         isUserMsg: false,
         msg: '',
 
-        // stepsEnabled: true,
+        stepsEnabled: true,
         initialStep: 0,
         steps: [
             {
@@ -30,15 +30,15 @@ class _Editor extends React.Component {
             {
                 element: '.editor-options-container',
                 intro: 'Press the publish tool button to save or publish your website.',
-                position: 'bottom-right-aligned',
+                position: 'top',
                 tooltipClass: 'steps-tool-tip publish-step',
                 highlightClass: 'intro-highlight',
             },
             {
                 element: '.intro-profile',
                 intro: 'On the profile page you\'ll be able to see your saved ot published website.',
+                position: 'bottom-right-aligned',
                 highlightClass: 'intro-highlight profile-step',
-                position: 'left',
                 tooltipClass: 'steps-tool-tip',
             },
         ]
@@ -128,6 +128,15 @@ class _Editor extends React.Component {
 
         return (
             <>
+                <section className="flex column justify-center align-center text-center editor-prevent-mobile">Sorry, the editor is available only on tablets and wider screens.</section>
+                <section className="flex editor-container">
+                    <EditorSideBar onAddElement={this.onAddElement} onAddSection={this.onAddSection} onUpdateElement={this.onUpdateElement} />
+                    <PageRender onReorderingElement={this.onReorderingElement} onRemoveElement={this.onRemoveElement} childs={childs} />
+                </section>
+                {isUserMsg && <UserMsg msg={msg} />}
+                <PublishTool userMsgShow={this.userMsgShow} />
+
+                
                 <Steps
                     hidePrev={true}
                     hideNext={true}
@@ -138,15 +147,6 @@ class _Editor extends React.Component {
                     initialStep={initialStep}
                     onExit={this.onExitSteps}
                 />
-
-
-                <section className="flex column justify-center align-center text-center editor-prevent-mobile">Sorry, the editor is available only on tablets and wider screens.</section>
-                <section className="flex editor-container">
-                    <EditorSideBar onAddElement={this.onAddElement} onAddSection={this.onAddSection} onUpdateElement={this.onUpdateElement} />
-                    <PageRender onReorderingElement={this.onReorderingElement} onRemoveElement={this.onRemoveElement} childs={childs} />
-                </section>
-                {isUserMsg && <UserMsg msg={msg} />}
-                <PublishTool userMsgShow={this.userMsgShow} />
             </>
         );
     }
