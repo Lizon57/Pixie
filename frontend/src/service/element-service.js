@@ -17,16 +17,16 @@ function getElement(type, src = null) {
             return elements.getHeader1()
         case 'header2':
             return elements.getHeader2()
-        case 'header3':
-            return elements.getHeader3()
+        case 'sportsHeader':
+            return elements.getSportsHeader()
         case 'header4':
             return elements.getHeader4()
         case 'map':
             return elements.getMap()
         case 'youtube':
             return elements.getVideo(src)
-        case 'hero':
-            return elements.getHero()
+        case 'sportsHero':
+            return elements.getSportsHero()
         case 'img':
             return elements.getImg(src)
         case 'text':
@@ -43,6 +43,10 @@ function getElement(type, src = null) {
             return elements.getCards1()
         case 'cards2':
             return elements.getCards2()
+        case 'fullWidthCardImgFirst':
+            return elements.getFullWidthCardImgFirst()
+        case 'fullWidthCardTextFirst':
+            return elements.getFullWidthCardTextFirst()
         case 'hero1':
             return elements.getHero1()
         case 'hero2':

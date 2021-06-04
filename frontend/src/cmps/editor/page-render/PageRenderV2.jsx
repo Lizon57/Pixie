@@ -26,11 +26,49 @@ class _PageRenderV2 extends React.Component {
 
 
     render() {
-        const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement } = this.props
+        const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement } = this.props;
+        if (childs.length === 0) {
+            //if there is no childs in store it shows msg.
+            return (
+                <>
+                    { localStorage.removeItem('website')}
+                    <section
+                        data-id={utilService.makeId()}
+                        className="site-container">
+                        <ChildsPreview
+                            child={
+                                {
+                                    type: "div",
+                                    role: "childless",
+                                    prefs: {
+                                        style: {
+                                            fontFamily: "Oxanium",
+                                            display: 'flex',
+                                            alignItems: 'center',
+                                            justifyContent: 'center',
+                                            color: "#888",
+                                            marginBlockStart: "20px",
+                                            width: '100%',
+                                            border: '5px dotted #888',
+                                            padding: '200px 20px',
+                                            fontSize: '2rem',
+                                            pointerEvents: 'none'
 
-        if (!childs && childs.length === 0) return <div className="site-container">No cmps dragged yet, drag a component to start edit</div>
+                                        }
+                                    },
+                                    txt: "Choose Your Design from Create Menu"
+
+                                }}
+                            isEdit={true}
+                        />
+                    </section>
+                </>
+            )
+        }
+
+        //if the user choose, it shows the choosen element
         return (
-            <DragDropContext onDragEnd={this.onDragEnd}>
+            <DragDropContext onDragEnd={this.onDragEnd} >
                 <Droppable droppableId="childs">
                     {(provided) => (
                         <section

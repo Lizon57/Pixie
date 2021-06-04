@@ -16,6 +16,19 @@ class _PublishTool extends React.Component {
     }
 
 
+    componentDidMount() {
+        const { name } = this.props;
+        if (name) this.setState({ name })
+        return
+    }
+
+
+    handleChange = ({ target }) => {
+        const name = target.name;
+        const value = target.value;
+        this.setState(prevState => ({ ...prevState, [name]: value }))
+    }
+
     onSubmit = async (name, isPublished) => {
         const { data, saveWeb, user, userMsgShow } = this.props;
         // if there is no user UserMsg "Login required"
@@ -66,17 +79,20 @@ class _PublishTool extends React.Component {
         const { data } = this.props;
         return (
             <>
+                <div className={isModalOpen ? 'background-modal' : ''}
+                    onClick={this.toggleMenu}
+                ></div>
                 <div className="flex editor-options-container">
                     <div className={"pointer circle" + (isModalOpen ? ' open' : '')} title="Save and publish" onClick={this.toggleMenu}>
                         <span className="fas editor-menu-icn"></span>
                     </div>
-                    <Modal
+                    {isModalOpen && <Modal
                         isModalOpen={isModalOpen}
                         toggleMenu={this.toggleMenu}
                         name={data.name}
                         onSubmit={this.onSubmit}
 
-                    />
+                    />}
                 </div>
 
             </>
