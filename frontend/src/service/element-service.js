@@ -9,6 +9,7 @@ export const elementService = {
     reorderElement,
 }
 
+// Get element
 function getElement(type, src = null) {
     switch (type) {
         case 'box':
@@ -82,9 +83,7 @@ function getElement(type, src = null) {
 }
 
 // REMOVE DONE
-
 function removeElementById(data, elementId) {
-
     findTarget(data, elementId)
 
     return data;
@@ -102,9 +101,7 @@ function removeElementById(data, elementId) {
 }
 
 // EDIT DONE
-
 function editElement(data, elementId, newElement) {
-
     findTarget(data, elementId, newElement)
 
     return data;
@@ -122,9 +119,7 @@ function editElement(data, elementId, newElement) {
 }
 
 //ADD ELEMENT
-
 function addElement(data, elementId, elementType, src = null) {
-
     const newElement = getElement(elementType, src);
 
     findTarget(data, elementId, newElement);
@@ -144,9 +139,7 @@ function addElement(data, elementId, elementType, src = null) {
 }
 
 // UP / DOWN
-
 function reorderElement(data, elementId, val) {
-
     findTarget(data, elementId, val)
 
     return data;
