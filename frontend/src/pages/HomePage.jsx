@@ -96,7 +96,10 @@ export class _HomePage extends React.Component {
                     {isLoading && <Loading />}
                     {!isLoading &&
                         <div className="grid templates-preview-container">
-                            <div onClick={() => this.onSetData({ childs: [] })} className="flex column space-between template-preview make-new">
+                            <div onClick={() => {
+                                localStorage.removeItem('website');
+                                this.onSetData({ childs: [] })
+                            }} className="flex column space-between template-preview make-new">
                                 <div className="flex justify-center align-center template-name-new">
                                     <span>Make New</span>
                                 </div>

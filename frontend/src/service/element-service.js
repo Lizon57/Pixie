@@ -20,8 +20,6 @@ function getElement(type, src = null) {
             return elements.getHeader2()
         case 'sportsHeader':
             return elements.getSportsHeader()
-        case 'header4':
-            return elements.getHeader4()
         case 'map':
             return elements.getMap()
         case 'mapBeforeTxt':
@@ -38,14 +36,6 @@ function getElement(type, src = null) {
             return elements.getText()
         case 'navBar':
             return elements.getNavbar()
-        case 'footer':
-            return elements.getFooter()
-        case 'footer1':
-            return elements.getFooter1()
-        case 'cards':
-            return elements.getCards()
-        case 'cards1':
-            return elements.getCards1()
         case 'cards2':
             return elements.getCards2()
         case 'fourCards':
@@ -56,10 +46,6 @@ function getElement(type, src = null) {
             return elements.getFullWidthCardTextFirst()
         case 'heroWithNavbar':
             return elements.getHeroWithNavbar()
-        case 'hero1':
-            return elements.getHero1()
-        case 'hero2':
-            return elements.getHero2()
         case 'MaizHero':
             return elements.getmaizHero()
         case 'MaizHeader':
@@ -88,6 +74,18 @@ function getElement(type, src = null) {
             return elements.getStyleHero()
         case 'StyleTextSection':
             return elements.getStyleTextSection()
+        case 'FlowerHero':
+            return elements.getFlowerHero()
+        case 'FlowerHeader':
+            return elements.getFlowerHeader()
+        case 'FlowerTextSection':
+            return elements.getFlowerTextSection()
+        case 'FlowerGallery':
+            return elements.getFlowerGallery()
+        case 'FlowerFooter':
+            return elements.getFlowerFooter()
+        case 'FlowerCards':
+            return elements.getFlowerCards()
         default: return;
     }
 }
