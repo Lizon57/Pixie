@@ -28,7 +28,7 @@ export function getStyleTextSection() {
                 prefs: {
                     style: {
                         display: 'flex',
-                        backgroundImage: 'url(http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622832495/mypics/rnyy788zgnuza2su11t6.gif)',
+                        backgroundImage: 'url(https://i.ibb.co/w0XYR99/rnyy788zgnuza2su11t6.gif)',
                         backgroundSize: 'cover',
                         height: '100px',
                         width: '100px'

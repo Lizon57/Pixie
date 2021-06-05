@@ -145,7 +145,7 @@ export function getCoffeeHero() {
                         role: 'img',
                         prefs: {
                             style: {
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622798617/mypics/jptgwhbuq1gklcukkk6h.png")',
+                                backgroundImage: 'url("https://i.ibb.co/3B0fpzJ/jptgwhbuq1gklcukkk6h.png")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',

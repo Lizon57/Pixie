@@ -40,7 +40,7 @@ export function getFlowerGallery() {
                             style: {
                                 height: '33.3%',
                                 borderRadius: '5px',
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622896592/mypics/xsknmmwcxaibl4fuxdfj.jpg")',
+                                backgroundImage: 'url("https://i.ibb.co/NT0FTMM/xsknmmwcxaibl4fuxdfj.jpg")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
                             }
@@ -56,7 +56,7 @@ export function getFlowerGallery() {
                                 borderRadius: '5px',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622896572/mypics/rawspbnxv91imayw3voj.jpg")',
+                                backgroundImage: 'url("https://i.ibb.co/8zzSnjH/rawspbnxv91imayw3voj.jpg")',
                             }
                         },
                     },
@@ -87,7 +87,7 @@ export function getFlowerGallery() {
                                 borderRadius: '5px',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622896604/mypics/mzckdgbrrrhnjqwvvawr.jpg")',
+                                backgroundImage: 'url("https://i.ibb.co/rGKpVWb/mzckdgbrrrhnjqwvvawr.jpg")',
                             }
                         },
                     },
@@ -118,7 +118,7 @@ export function getFlowerGallery() {
                                 borderRadius: '5px',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622896662/mypics/hhv95tfr3rugrlwrhxpl.jpg")',
+                                backgroundImage: 'url("https://i.ibb.co/Y2Db1DK/hhv95tfr3rugrlwrhxpl.jpg")',
                             }
                         },
                     },
@@ -132,7 +132,7 @@ export function getFlowerGallery() {
                                 borderRadius: '5px',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622896615/mypics/jej7wrurmrikm9cwbgef.jpg")',
+                                backgroundImage: 'url("https://i.ibb.co/VTGFsY3/jej7wrurmrikm9cwbgef.jpg")',
                             }
                         },
                     },

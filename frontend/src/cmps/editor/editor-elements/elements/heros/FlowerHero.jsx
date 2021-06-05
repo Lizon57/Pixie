@@ -43,7 +43,7 @@ export function getFlowerHero() {
                         prefs: {
                             style: {
                                 width: '40%',
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622875450/mypics/ghivdhlwzsgbrcnbk05n.png")',
+                                backgroundImage: 'url("https://i.ibb.co/DY0Xvzy/ghivdhlwzsgbrcnbk05n.png")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',

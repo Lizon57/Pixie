@@ -70,7 +70,7 @@ export function getFlowerTextSection() {
                     style: {
                         width: '100%',
                         height: '400px',
-                        backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622882648/mypics/tphkq3tozqklg261ku8x.jpg")',
+                        backgroundImage: 'url("https://i.ibb.co/cLsDqjw/tphkq3tozqklg261ku8x.jpg")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'top',
                         borderRadius: '5px',

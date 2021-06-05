@@ -117,7 +117,7 @@ export class ElementsList extends React.Component {
                         </AccordionItemHeading>
                         <AccordionItemPanel className="elements-container">
                             <img src={threeCards['default']} alt="Three cards" title="Three cards" className="lg-img" onClick={() => onAddSection('ThreeCards')} />
-                            <img src={fullWidthImgFirstCard['default']} alt="Full width image first card" title="Full image img first card" className="lg-img" onClick={() => onAddSection('FullWidthCardImgFirst')} />
+                            <img src={fullWidthImgFirstCard['default']} alt="Full width img first card" title="Full image img first card" className="lg-img" onClick={() => onAddSection('FullWidthCardImgFirst')} />
                             <img src={fullWidthTxtFirstCard['default']} alt="Full width text first card" title="Full width text first card" className="lg-img" onClick={() => onAddSection('FullWidthCardTxtFirst')} />
                             <img src={maizCards['default']} alt="Maiz cards" title="Maiz cards" className="lg-img" onClick={() => onAddSection('MaizCards')} />
                             <img src={coffeeCards['default']} alt="Coffee cards" title="Coffee cards" className="lg-img" onClick={() => onAddSection('CoffeeCards')} />
