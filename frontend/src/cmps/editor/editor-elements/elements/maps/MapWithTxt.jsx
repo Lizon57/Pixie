@@ -37,6 +37,7 @@ export function getMapWithTxt() {
                             style: {
                                 width: '100%',
                                 height: '100%',
+                                border: 'none',
                             },
                             src: `https://maps.google.com/maps?q=Old%20Trafford%20Stadium&z=15&output=embed`
                         },

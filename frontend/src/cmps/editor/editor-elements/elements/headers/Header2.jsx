@@ -48,7 +48,7 @@ export function getHeader2() {
                 childs: [
                     {
                         id: utilService.makeId(),
-                        type: 'button',
+                        type: 'span',
                         role: 'childless',
                         prefs: {
                             style: {
@@ -65,7 +65,7 @@ export function getHeader2() {
                     },
                     {
                         id: utilService.makeId(),
-                        type: 'button',
+                        type: 'span',
                         role: 'childless',
                         prefs: {
                             style: {
@@ -82,7 +82,7 @@ export function getHeader2() {
                     },
                     {
                         id: utilService.makeId(),
-                        type: 'button',
+                        type: 'span',
                         role: 'childless',
                         prefs: {
                             style: {
