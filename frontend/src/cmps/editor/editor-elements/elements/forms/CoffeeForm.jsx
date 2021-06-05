@@ -8,8 +8,12 @@ export function getCoffeeForm() {
         isContainer: true,
         prefs: {
             style: {
-                padding: '30px',
+                display: 'flex',
                 backgroundColor: '#eeeeee',
+                paddingBlockStart: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -20,14 +24,17 @@ export function getCoffeeForm() {
                 isContainer: true,
                 prefs: {
                     style: {
-                        padding: '30px',
                         display: 'flex',
+                        gap: '30px',
                         flexDirection: 'column',
                         alignItems: 'center',
-                        maxWidth: '600px',
-                        margin: 'auto',
-                        gap: '30px',
                         backgroundColor: '#fbf5ef',
+                        paddingBlockStart: '30px',
+                        paddingBlockEnd: '30px',
+                        paddingInlineStart: '30px',
+                        paddingInlineEnd: '30px',
+                        margin: 'auto',
+                        maxWidth: '600px',
                     }
                 },
                 childs: [
@@ -50,6 +57,8 @@ export function getCoffeeForm() {
                                 role: 'childsless',
                                 prefs: {
                                     style: {
+                                        alignSelf: 'center',
+                                        display: 'flex',
                                         fontSize: '10px',
                                         fontFamily: 'Montserrat',
                                         fontWeight: 'bold',
@@ -63,9 +72,10 @@ export function getCoffeeForm() {
                                 role: 'childsless',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontSize: '32px',
                                         fontFamily: 'Montserrat',
-                                        fontWeight: 'bold',
+                                        fontWeight: '600',
                                     }
                                 },
                                 txt: 'THE COFFEE GURU'
@@ -78,8 +88,9 @@ export function getCoffeeForm() {
                         role: 'childsless',
                         prefs: {
                             style: {
-                                fontFamily: 'Mulish',
+                                display: 'flex',
                                 color: '#6A6B6C',
+                                fontFamily: 'Mulish',
                             }
                         },
                         txt: 'Stay connected and stay informed with The Coffee Guru. Get the freshest coffee content straight to your inbox without having to miss a thing!'
@@ -90,13 +101,21 @@ export function getCoffeeForm() {
                         role: 'childsless',
                         prefs: {
                             style: {
-                                fontFamily: 'Mulish',
-                                color: '#6a6b6c',
-                                width: '100%',
-                                padding: '10px',
+                                display: 'flex',
+                                bortderStyle: 'solid',
+                                borderBlockStartWidth: '0px',
+                                borderInlineStartWidth: '0px',
+                                borderInlineEndWidth: '0px',
+                                borderBlockEndWidth: '1px',
+                                borderBlockEndColor: '#6a6b6c',
                                 backgroundColor: 'unset',
-                                border: 'none',
-                                borderBottom: '1px solid #6a6b6c',
+                                color: '#6a6b6c',
+                                fontFamily: 'Mulish',
+                                paddingBlockStart: '10px',
+                                paddingBlockEnd: '10px',
+                                paddingInlineStart: '10px',
+                                paddingInlineEnd: '10px',
+                                width: '100%',
                                 outline: 'none',
                             }
                         },
@@ -108,13 +127,21 @@ export function getCoffeeForm() {
                         role: 'childsless',
                         prefs: {
                             style: {
-                                fontFamily: 'Mulish',
-                                color: '#6a6b6c',
-                                width: '100%',
-                                padding: '10px',
+                                display: 'flex',
+                                bortderStyle: 'solid',
+                                borderBlockStartWidth: '0px',
+                                borderInlineStartWidth: '0px',
+                                borderInlineEndWidth: '0px',
+                                borderBlockEndWidth: '1px',
+                                borderBlockEndColor: '#6a6b6c',
                                 backgroundColor: 'unset',
-                                border: 'none',
-                                borderBottom: '1px solid #6a6b6c',
+                                color: '#6a6b6c',
+                                fontFamily: 'Mulish',
+                                paddingBlockStart: '10px',
+                                paddingBlockEnd: '10px',
+                                paddingInlineStart: '10px',
+                                paddingInlineEnd: '10px',
+                                width: '100%',
                                 outline: 'none',
                             }
                         },
@@ -126,12 +153,16 @@ export function getCoffeeForm() {
                         role: 'childsless',
                         prefs: {
                             style: {
-                                padding: '15px 20px',
-                                borderRadius: '30px',
-                                fontFamily: 'Montserrat',
+                                display: 'flex',
                                 border: 'none',
+                                borderRadius: '30px',
                                 backgroundColor: '#A67D69',
-                                color: '#EEEEEE',
+                                color: '#eeeeee',
+                                fontFamily: 'Montserrat',
+                                paddingBlockStart: '15px',
+                                paddingBlockEnd: '15px',
+                                paddingInlineStart: '20px',
+                                paddingInlineEnd: '20px',
                             }
                         },
                         txt: 'SIGN ME UP'

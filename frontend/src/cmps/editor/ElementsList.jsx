@@ -98,6 +98,7 @@ export class ElementsList extends React.Component {
                         </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel className="elements-container">
+                            <div className="text-center pointer item" onClick={() => onAddSection('heroWithNavbar')}>Hero with navbar</div>
                             <img src={sportsHero['default']} alt="Sports header" onClick={() => onAddSection('sportsHero')} />
                             <img src={diamondsHero['default']} alt="Diamonds header" onClick={() => onAddSection('hero1')} />
                             <img src={seaHero['default']} alt="Sea header" onClick={() => onAddSection('hero2')} />
@@ -159,9 +160,9 @@ export class ElementsList extends React.Component {
                             <div className="text-center pointer item" onClick={() => onAddSection('text')}>Text Box</div>
                             <div className="text-center pointer item" onClick={() => onAddElement('text')}>Inside Box Text</div>
                             <div className="text-center pointer item" onClick={() => onAddSection('StyleTextSection')}>Style Text</div>
-                            <div className="text-center pointer item" onClick={() => onAddElement('text')}>Text Inside</div>
                             <img src={maizText['default']} alt="Maiz text" onClick={() => onAddSection('MaizTextSection')} />
                             <img src={coffeeText['default']} alt="coffee text" onClick={() => onAddSection('CoffeeTextSection')} />
+                            <div className="text-center pointer item" onClick={() => onAddSection('AlwaysCenterText')}>Always Center Text</div>
                         </AccordionItemPanel>
                     </AccordionItem>
 

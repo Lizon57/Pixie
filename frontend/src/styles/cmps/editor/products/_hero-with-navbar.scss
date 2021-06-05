@@ -1,0 +1,13 @@
+.hero-with-navbar-hamburger {
+  @include for-normal-layout {
+    display: none !important;
+  }
+}
+
+.hero-with-navbar-nav-container {
+  display: none !important;
+
+  @include for-normal-layout {
+    display: flex !important;
+  }
+}

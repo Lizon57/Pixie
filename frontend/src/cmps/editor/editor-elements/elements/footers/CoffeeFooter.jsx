@@ -13,7 +13,10 @@ export function getCoffeeFooter() {
                 gap: '10px',
                 backgroundColor: '#fbf5ef',
                 color: '#6a6b6c',
-                padding: '10px 30px',
+                paddingBlockStart: '10px',
+                paddingBlockEnd: '10px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -23,6 +26,8 @@ export function getCoffeeFooter() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        alignSelf: 'center',
+                        display: 'flex',
                         textAlign: 'center',
                     }
                 },
@@ -34,6 +39,8 @@ export function getCoffeeFooter() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        alignSelf: 'center',
+                        display: 'flex',
                         fontSize: '10px',
                         textAlign: 'center',
                     }

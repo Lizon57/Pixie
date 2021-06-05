@@ -11,8 +11,8 @@ export function getCards2() {
                 display: 'flex',
                 flexDirection: 'column',
                 alignItems: 'center',
-                paddingLeft: '30px',
-                paddingRight: '30px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -23,6 +23,7 @@ export function getCards2() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex',
                         fontSize: '35px',
                         fontFamily: 'caveat',
                     }
@@ -36,8 +37,8 @@ export function getCards2() {
                 prefs: {
                     style: {
                         display: 'flex',
-                        justifyContent: 'space-evenly',
                         flexWrap: 'wrap',
+                        justifyContent: 'space-evenly',
                         width: '100%',
                     }
                 },
@@ -49,14 +50,20 @@ export function getCards2() {
                         isContainer: true,
                         prefs: {
                             style: {
-                                width: '250px',
-                                height: '350px',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                padding: '5px',
-                                border: '1px solid #ccc',
-                                margin: '15px',
                                 alignItems: 'center',
+                                border: '1px solid #ccc',
+                                paddingBlockStart: '5px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineStart: '5px',
+                                paddingInlineEnd: '5px',
+                                marginBlockStart: '15px',
+                                marginBlockEnd: '15px',
+                                margininlineStart: '15px',
+                                marginInlineEnd: '15px',
+                                height: '350px',
+                                width: '250px',
                             }
                         },
                         childs: [
@@ -66,11 +73,12 @@ export function getCards2() {
                                 role: 'img',
                                 prefs: {
                                     style: {
-                                        width: '100%',
-                                        height: '80%',
+                                        display: 'flex',
                                         backgroundImage: 'url("https://images.unsplash.com/photo-1610452220299-5edf90b8a6ed")',
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
+                                        height: '80%',
+                                        width: '100%',
                                     }
                                 },
                             },
@@ -98,14 +106,20 @@ export function getCards2() {
                         isContainer: true,
                         prefs: {
                             style: {
-                                width: '250px',
-                                height: '350px',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                padding: '5px',
-                                border: '1px solid #ccc',
-                                margin: '15px',
                                 alignItems: 'center',
+                                border: '1px solid #cccccc',
+                                paddingBlockStart: '5px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineStart: '5px',
+                                paddingInlineEnd: '5px',
+                                marginBlockStart: '15px',
+                                marginBlockEnd: '15px',
+                                margininlineStart: '15px',
+                                marginInlineEnd: '15px',
+                                height: '350px',
+                                width: '250px',
                             }
                         },
                         childs: [
@@ -115,11 +129,12 @@ export function getCards2() {
                                 role: 'img',
                                 prefs: {
                                     style: {
-                                        width: '100%',
-                                        height: '80%',
+                                        display: 'flex',
                                         backgroundImage: 'url("https://images.unsplash.com/photo-1594756202469-9ff9799b2e4e")',
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
+                                        width: '100%',
+                                        height: '80%',
                                     }
                                 },
                             },
@@ -147,14 +162,20 @@ export function getCards2() {
                         isContainer: true,
                         prefs: {
                             style: {
-                                width: '250px',
-                                height: '350px',
                                 display: 'flex',
                                 flexDirection: 'column',
-                                padding: '5px',
-                                border: '1px solid #ccc',
-                                margin: '15px',
                                 alignItems: 'center',
+                                border: '1px solid #cccccc',
+                                paddingBlockStart: '5px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineStart: '5px',
+                                paddingInlineEnd: '5px',
+                                marginBlockStart: '15px',
+                                marginBlockEnd: '15px',
+                                margininlineStart: '15px',
+                                marginInlineEnd: '15px',
+                                height: '350px',
+                                width: '250px',
                             }
                         },
                         childs: [
@@ -164,11 +185,12 @@ export function getCards2() {
                                 role: 'img',
                                 prefs: {
                                     style: {
-                                        width: '100%',
-                                        height: '80%',
+                                        display: 'flex',
                                         backgroundImage: 'url("https://images.unsplash.com/photo-1514540746696-d285708190bb")',
                                         backgroundSize: 'cover',
                                         backgroundPosition: 'center',
+                                        height: '80%',
+                                        width: '100%',
                                     }
                                 },
                             },
