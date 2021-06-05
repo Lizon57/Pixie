@@ -46,6 +46,7 @@ import { getStyleTextSection } from './elements/texts/StyleTextSection';
 
 // Maps
 import { getMap } from './elements/Map';
+import { getMapWithTxt } from './elements/maps/MapWithTxt';
 
 import { getVideo } from './elements/Video';
 import { getBox } from './elements/Box';
@@ -90,6 +91,7 @@ export const elements = {
     getStyleTextSection,
 
     getMap,
+    getMapWithTxt,
 
     getVideo,
     getBox,
