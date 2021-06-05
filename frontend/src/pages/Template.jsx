@@ -26,7 +26,11 @@ class _Template extends React.Component {
                 <div className="grid template-list ">
 
                     {/* Make new website */}
-                    <div onClick={() => this.onSetData({ childs: [] })} className="flex column space-between template-preview make-new">
+                    <div onClick={() => {
+                        localStorage.removeItem('website');
+                        this.onSetData({ childs: [] })
+                    }
+                    } className="flex column space-between template-preview make-new">
                         <div className="flex justify-center align-center template-name-new">
                             <span>Make New</span>
                         </div>

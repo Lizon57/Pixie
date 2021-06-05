@@ -118,6 +118,8 @@ class _Editor extends React.Component {
         let { data, isLoading } = this.props;
         if (isLoading) return <Loading />;
         const { childs } = data;
+        console.log(data)
+
         const { isUserMsg, msg, stepsEnabled, initialStep, steps } = this.state;
 
         return (
