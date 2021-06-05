@@ -45,7 +45,7 @@ export class EditText extends React.Component {
     fontWeightOptions = [
         { value: '200', label: 'Thin' },
         { value: '400', label: 'Normal' },
-        { value: '600', label: 'Bold' },
+        { value: 'bold', label: 'Bold' },
         { value: '900', label: 'Boldest' },
     ]
 

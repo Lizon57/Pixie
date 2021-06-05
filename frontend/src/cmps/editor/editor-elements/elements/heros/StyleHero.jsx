@@ -48,7 +48,7 @@ export function getStyleHero() {
                                 color: '#ffffff',
                                 fontSize: '32px',
                                 fontFamily: 'Raleway',
-                                fontWeight: '600',
+                                fontWeight: 'bold',
                                 flex: 1,
                                 height: '100%',
                             }
@@ -82,7 +82,7 @@ export function getStyleHero() {
                                         color: '#fff',
                                         fontSize: '21px',
                                         fontFamily: 'Raleway',
-                                        fontWeight: '600',
+                                        fontWeight: 'bold',
                                         height: '100%',
                                         outline: 'none',
                                     }
@@ -103,7 +103,7 @@ export function getStyleHero() {
                                         color: '#fff',
                                         fontSize: '21px',
                                         fontFamily: 'Raleway',
-                                        fontWeight: '600',
+                                        fontWeight: 'bold',
                                         height: '100%',
                                         outline: 'none',
                                     }
@@ -124,7 +124,7 @@ export function getStyleHero() {
                                         color: '#fff',
                                         fontSize: '21px',
                                         fontFamily: 'Raleway',
-                                        fontWeight: '600',
+                                        fontWeight: 'bold',
                                         height: '100%',
                                         outline: 'none',
                                     }
@@ -145,7 +145,7 @@ export function getStyleHero() {
                                         border: 'none',
                                         fontFamily: 'Raleway',
                                         fontSize: '1.3rem',
-                                        fontWeight: '600',
+                                        fontWeight: 'bold',
                                         color: '#fff',
                                         cursor: 'pointer',
                                     }
@@ -168,7 +168,7 @@ export function getStyleHero() {
                                 color: '#ffffff',
                                 fontSize: '24px',
                                 fontFamily: 'Raleway',
-                                fontWeight: '600',
+                                fontWeight: 'bold',
                                 height: '100%',
                                 outline: 'none',
                             }
@@ -188,7 +188,7 @@ export function getStyleHero() {
                         color: '#ffffff',
                         fontSize: '56px',
                         fontFamily: 'Raleway',
-                        fontWeight: '600',
+                        fontWeight: 'bold',
                         textAlign: 'center',
                         textShadow: '0 0 5px #000000',
                     }
@@ -221,7 +221,7 @@ export function getStyleHero() {
                                 color: '#ffffff',
                                 fontSize: '25px',
                                 fontFamily: 'Raleway',
-                                fontWeight: '600',
+                                fontWeight: 'bold',
                                 textShadow: '0 0 5px #000000'
                             }
                         },
@@ -238,7 +238,7 @@ export function getStyleHero() {
                                 color: '#ffffff',
                                 fontSize: '25px',
                                 fontFamily: 'Raleway',
-                                fontWeight: '600',
+                                fontWeight: 'bold',
                                 textShadow: '0 0 5px #000000'
                             }
                         },

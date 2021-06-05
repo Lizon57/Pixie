@@ -46,7 +46,7 @@ export function getFullWidthCardTextFirst() {
                                 color: '#c70101',
                                 fontSize: '20px',
                                 fontFamily: 'inter',
-                                fontWeight: '600'
+                                fontWeight: 'bold'
                             }
                         },
                         txt: 'Cavani voted Player of the Month for May 2021'

@@ -75,7 +75,7 @@ export function getCoffeeForm() {
                                         display: 'flex',
                                         fontSize: '32px',
                                         fontFamily: 'Montserrat',
-                                        fontWeight: '600',
+                                        fontWeight: 'bold',
                                     }
                                 },
                                 txt: 'THE COFFEE GURU'

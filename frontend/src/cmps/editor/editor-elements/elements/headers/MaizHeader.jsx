@@ -8,16 +8,16 @@ export function getMaizHeader() {
         isContainer: true,
         prefs: {
             style: {
-                height: '90px',
                 display: 'flex',
+                gap: '15px',
                 alignItems: 'center',
-                paddingLeft: '30px',
-                paddingRight: '30px',
+                backgroundColor: '#262931',
+                color: '#eeeeee',
                 fontFamily: 'Montserrat',
                 fontWeight: 'bold',
-                color: '#EEEEEE',
-                gap: '15px',
-                backgroundColor: '#262931',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
+                height: '90px',
             }
         },
         childs: [
@@ -27,9 +27,9 @@ export function getMaizHeader() {
                 role: 'childless',
                 prefs: {
                     style: {
-                        fontSize: '42px',
                         flexGrow: 1,
                         color: '#FBA91A',
+                        fontSize: '42px',
                         fontWeight: 'bold',
                     }
                 },
@@ -75,12 +75,16 @@ export function getMaizHeader() {
                 prefs: {
                     className: "nav-desktop",
                     style: {
+                        border: 'unset',
+                        backgroundColor: '#FBA91A',
+                        fontSize: '1rem',
                         fontFamily: 'Montserrat',
                         fontWeight: 'bold',
-                        backgroundColor: '#FBA91A',
-                        border: 'unset',
+                        paddingBlockStart: '10px',
+                        paddingBlockEnd: '10px',
+                        paddingInlineStart: '20px',
+                        paddingInlineEnd: '20px',
                         padding: '10px 20px 10px 20px',
-                        fontSize: '1rem',
                     }
                 },
                 txt: 'ORDER NOW'

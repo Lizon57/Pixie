@@ -1,3 +1,9 @@
+.hero-with-navbar-container {
+  @include for-normal-layout {
+    height: 90vh;
+  }
+}
+
 .hero-with-navbar-hamburger {
   @include for-normal-layout {
     display: none !important;

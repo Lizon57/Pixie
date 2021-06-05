@@ -8,13 +8,16 @@ export function getCoffeeHeader() {
         isContainer: true,
         prefs: {
             style: {
-                backgroundColor: '#FCF6F1',
-                fontFamily: 'Montserrat',
                 display: 'flex',
                 alignItems: 'center',
-                fontWeight: 'bold',
-                padding: '20px 30px',
+                backgroundColor: '#FCF6F1',
                 color: '#0C1115',
+                fontFamily: 'Montserrat',
+                fontWeight: 'bold',
+                paddingBlockStart: '20px',
+                paddingBlockEnd: '20px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -24,10 +27,11 @@ export function getCoffeeHeader() {
                 role: 'childless',
                 prefs: {
                     style: {
-                        fontSize: '24px',
+                        display: 'flex',
                         flexGrow: 1,
-                        fontFamily: 'Literata',
                         color: '#A67D69',
+                        fontSize: '24px',
+                        fontFamily: 'Literata',
                     }
                 },
                 txt: 'The Coffee Guru'
@@ -50,7 +54,8 @@ export function getCoffeeHeader() {
                 prefs: {
                     className: "nav-desktop",
                     style: {
-                        padding: '0px 10px',
+                        paddingInlineStart: '10px',
+                        paddingInlineEnd: '10px',
                     }
                 },
                 txt: 'Brewing'
@@ -62,7 +67,8 @@ export function getCoffeeHeader() {
                 prefs: {
                     className: "nav-desktop",
                     style: {
-                        padding: '0px 10px',
+                        paddingInlineStart: '10px',
+                        paddingInlineEnd: '10px',
                     }
                 },
                 txt: 'Guide'
@@ -74,7 +80,8 @@ export function getCoffeeHeader() {
                 prefs: {
                     className: "fas hamburger-icon",
                     style: {
-                        padding: '0px 10px',
+                        paddingInlineStart: '10px',
+                        paddingInlineEnd: '10px',
                     }
                 },
                 txt: ''

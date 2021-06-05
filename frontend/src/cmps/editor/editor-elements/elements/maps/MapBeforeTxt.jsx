@@ -1,6 +1,6 @@
 import { utilService } from '../../../../../service/util-service';
 
-export function getMapWithTxt() {
+export function getMapBeforeTxt() {
     return {
         id: utilService.makeId(),
         type: 'div',
@@ -68,7 +68,7 @@ export function getMapWithTxt() {
                             style: {
                                 display: 'flex',
                                 fontSize: '20px',
-                                fontWeight: '600',
+                                fontWeight: 'bold',
                                 fontFamily: 'inter',
                                 letterSpacing: '1px',
                                 marginBlockEnd: '16px'
@@ -109,7 +109,7 @@ export function getMapWithTxt() {
                                             style: {
                                                 display: 'flex',
                                                 flexBasis: '20%',
-                                                fontWeight: '600',
+                                                fontWeight: 'bold',
                                                 marginInlineEnd: '10px'
                                             }
                                         },
@@ -147,7 +147,7 @@ export function getMapWithTxt() {
                                             style: {
                                                 display: 'flex',
                                                 flexBasis: '20%',
-                                                fontWeight: '600',
+                                                fontWeight: 'bold',
                                                 marginInlineEnd: '10px'
                                             }
                                         },
@@ -185,7 +185,7 @@ export function getMapWithTxt() {
                                             style: {
                                                 display: 'flex',
                                                 flexBasis: '20%',
-                                                fontWeight: '600',
+                                                fontWeight: 'bold',
                                                 marginInlineEnd: '10px'
                                             }
                                         },
@@ -223,7 +223,7 @@ export function getMapWithTxt() {
                                             style: {
                                                 display: 'flex',
                                                 flexBasis: '20%',
-                                                fontWeight: '600',
+                                                fontWeight: 'bold',
                                                 marginInlineEnd: '10px'
                                             }
                                         },

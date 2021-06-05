@@ -55,7 +55,7 @@ export function getStyleTextSection() {
                                 textAlign: 'center',
                                 justifyContent: 'center',
                                 fontSize: '58px',
-                                fontWeight: '600',
+                                fontWeight: 'bold',
                                 fontFamily: 'DancingScript',
                                 marginBlockBtart: '15px',
                             }

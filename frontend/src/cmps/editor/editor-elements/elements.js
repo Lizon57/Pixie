@@ -26,6 +26,7 @@ import { getFullWidthCardImgFirst } from './elements/cards/FullWidthCardImgFirst
 import { getFullWidthCardTextFirst } from './elements/cards/FullWidthCardTextFirst';
 import { getMaizCards } from './elements/cards/MaizCards';
 import { getCoffeeCards } from './elements/cards/CoffeeCards';
+import { getFourCards } from './elements/cards/FourCards';
 
 // Forms 
 import { getCoffeeForm } from './elements/forms/CoffeeForm';
@@ -44,11 +45,12 @@ import { getText } from './elements/texts/Text';
 import { getMaizTextSection } from './elements/texts/MaizTextSection';
 import { getCoffeeTextSection } from './elements/texts/CoffeeTextSection';
 import { getStyleTextSection } from './elements/texts/StyleTextSection';
-import {getAlwaysCenterText} from './elements/texts/AlwaysCenterText';
+import { getAlwaysCenterText } from './elements/texts/AlwaysCenterText';
 
 // Maps
 import { getMap } from './elements/Map';
-import { getMapWithTxt } from './elements/maps/MapWithTxt';
+import { getMapBeforeTxt } from './elements/maps/MapBeforeTxt';
+import { getTxtBeforeMap } from './elements/maps/TxtBeforeMap';
 
 import { getVideo } from './elements/Video';
 import { getBox } from './elements/Box';
@@ -78,6 +80,7 @@ export const elements = {
     getFullWidthCardTextFirst,
     getMaizCards,
     getCoffeeCards,
+    getFourCards,
 
     getCoffeeForm,
 
@@ -95,7 +98,8 @@ export const elements = {
     getAlwaysCenterText,
 
     getMap,
-    getMapWithTxt,
+    getMapBeforeTxt,
+    getTxtBeforeMap,
 
     getVideo,
     getBox,

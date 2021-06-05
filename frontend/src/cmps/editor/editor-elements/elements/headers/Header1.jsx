@@ -8,13 +8,13 @@ export function getHeader1() {
         isContainer: true,
         prefs: {
             style: {
-                height: '50px',
                 display: 'flex',
                 justifyContent: 'space-between',
                 alignItems: 'center',
-                paddingRight: '30px',
-                paddingLeft: '30px',
-                backgroundColor: '#eeeeee'
+                backgroundColor: '#eeeeee',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
+                height: '50px',
             }
         },
         childs: [
@@ -37,6 +37,7 @@ export function getHeader1() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex',
                         fontFamily: 'Oxanium',
                         color: '#1e1e1e'
                     }
@@ -49,6 +50,7 @@ export function getHeader1() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex',
                         fontFamily: 'RobotoMono',
                         color: '#1e1e1e'
                     }

@@ -56,7 +56,7 @@ export function getSportsHeader() {
                         borderRadius: '5px',
                         color: '#ffffcc',
                         fontSize: '12px',
-                        fontWeight: '600',
+                        fontWeight: 'bold',
                         fontFamily: 'JetBrainsMono',
                         fontStyle: 'italic',
                         paddingInlineStart: '15px',
@@ -113,7 +113,7 @@ export function getSportsHeader() {
                                         color: '#ffffcc',
                                         fontSize: '18px',
                                         fontFamily: 'inter',
-                                        fontWeight: '600',
+                                        fontWeight: 'bold',
                                         paddingInlineEnd: '10px'
                                     }
                                 },
@@ -135,7 +135,7 @@ export function getSportsHeader() {
                                         color: '#ffffcc',
                                         fontSize: '18px',
                                         fontFamily: 'inter',
-                                        fontWeight: '600'
+                                        fontWeight: 'bold'
                                     }
                                 },
                                 txt: 'News'
@@ -156,7 +156,7 @@ export function getSportsHeader() {
                                         color: '#ffffcc',
                                         fontSize: '18px',
                                         fontFamily: 'inter',
-                                        fontWeight: '600'
+                                        fontWeight: 'bold'
                                     }
                                 },
                                 txt: 'Shop'
@@ -174,7 +174,7 @@ export function getSportsHeader() {
                                         color: '#ffffcc',
                                         fontSize: '18px',
                                         fontFamily: 'inter',
-                                        fontWeight: '600'
+                                        fontWeight: 'bold'
                                     }
                                 },
                                 txt: 'Fixures'
@@ -236,7 +236,7 @@ export function getSportsHeader() {
                                 style: {
                                     display: 'flex',
                                     color: '#ffffcc',
-                                    fontWeight: '600',
+                                    fontWeight: 'bold',
                                     paddingInlineEnd: '10px',
                                     letterSpacing: '1px'
                                 }
@@ -268,7 +268,7 @@ export function getSportsHeader() {
                         style: {
                             display: 'flex',
                             color: '#ffffcc',
-                            fontWeight: '600',
+                            fontWeight: 'bold',
                             letterSpacing: '1px',
                             textAlign: 'right'
                         }

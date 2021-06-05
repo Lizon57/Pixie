@@ -7,6 +7,7 @@ export function getHeroWithNavbar() {
         role: 'hero-container',
         isContainer: true,
         prefs: {
+            className: 'hero-with-navbar-container',
             style: {
                 display: 'flex',
                 flexDirection: 'column',
@@ -18,7 +19,6 @@ export function getHeroWithNavbar() {
                 paddingBlockStart: '30px',
                 paddingInlineStart: '36px',
                 paddingInlineEnd: '36px',
-                height: '90vh',
             }
         },
         childs: [
@@ -45,7 +45,7 @@ export function getHeroWithNavbar() {
                                 color: '#1e1e1e',
                                 fontSize: '32px',
                                 fontFamily: 'Inter',
-                                fontWeight: '200'
+                                fontWeight: '200',
                             }
                         },
                         txt: 'HR'
@@ -165,7 +165,7 @@ export function getHeroWithNavbar() {
                                 color: '#1e1e1e',
                                 fontSize: '60px',
                                 fontFamily: 'Inter',
-                                fontWeight: '600',
+                                fontWeight: 'bold',
                                 letterSpacing: '2px'
                             }
                         },

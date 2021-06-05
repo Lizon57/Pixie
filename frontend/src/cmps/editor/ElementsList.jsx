@@ -122,6 +122,7 @@ export class ElementsList extends React.Component {
                             <img src={fullWidthTxtFirstCard['default']} alt="Full width text first card" onClick={() => onAddSection('fullWidthCardTextFirst')} />
                             <img src={maizCards['default']} alt="Maiz cards" onClick={() => onAddSection('MaizCards')} />
                             <img src={coffeeCards['default']} alt="coffee cards" onClick={() => onAddSection('CoffeeCards')} />
+                            <div className="text-center pointer item" onClick={() => onAddSection('fourCards')}>Four Cards</div>
                         </AccordionItemPanel>
                     </AccordionItem>
 
@@ -189,7 +190,8 @@ export class ElementsList extends React.Component {
                         </AccordionItemHeading>
                         <AccordionItemPanel>
                             <div className="text-center pointer item" onClick={() => onAddSection('map')}>Map</div>
-                            <div className="text-center pointer item" onClick={() => onAddSection('mapWithTxt')}>Map with text</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('mapBeforeTxt')}>Map before text</div>
+                            <div className="text-center pointer item" onClick={() => onAddSection('txtBeforeMap')}>Text before map</div>
                         </AccordionItemPanel>
                     </AccordionItem>
 

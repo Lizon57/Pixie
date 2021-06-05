@@ -49,7 +49,6 @@
 @import "cmps/editor/products/text-product";
 @import "cmps/editor/products/videos-product";
 
-
 // Products templates
 @import "cmps/editor/products/sports-template";
 @import "cmps/editor/products/maiz-template";
@@ -57,5 +56,7 @@
 
 // Products cmps
 @import "cmps/editor/products/full-width-cards";
-@import "cmps/editor/products/map-with-text";
+@import "cmps/editor/products/map-before-text";
+@import "cmps/editor/products/text-before-map";
 @import "cmps/editor/products/hero-with-navbar";
+@import "cmps/editor/products/four-cards";

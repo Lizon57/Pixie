@@ -24,8 +24,10 @@ function getElement(type, src = null) {
             return elements.getHeader4()
         case 'map':
             return elements.getMap()
-        case 'mapWithTxt':
-            return elements.getMapWithTxt()
+        case 'mapBeforeTxt':
+            return elements.getMapBeforeTxt()
+        case 'txtBeforeMap':
+            return elements.getTxtBeforeMap()
         case 'youtube':
             return elements.getVideo(src)
         case 'sportsHero':
@@ -46,6 +48,8 @@ function getElement(type, src = null) {
             return elements.getCards1()
         case 'cards2':
             return elements.getCards2()
+        case 'fourCards':
+            return elements.getFourCards()
         case 'fullWidthCardImgFirst':
             return elements.getFullWidthCardImgFirst()
         case 'fullWidthCardTextFirst':
