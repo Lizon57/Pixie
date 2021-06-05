@@ -1,4 +1,4 @@
-import { utilService } from '../../../../../service/util-service'
+import { utilService } from '../../../../../service/util-service';
 
 export function getHero1() {
     return ({

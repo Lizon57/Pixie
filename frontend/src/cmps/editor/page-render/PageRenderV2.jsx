@@ -52,6 +52,7 @@ class _PageRenderV2 extends React.Component {
                                             fontSize: '2rem',
                                             fontFamily: "Inter",
                                             letterSpacing: '1px',
+                                            textAlign: 'center',
                                             paddingBlock: '200px',
                                             width: '100%',
                                             pointerEvents: 'none'
