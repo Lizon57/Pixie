@@ -10,6 +10,7 @@ import { getFlowerHeader } from './elements/headers/FlowerHeader';
 
 
 // Heros
+import { getHeroWithNavbar } from './elements/heros/HeroWithNavbar';
 import { getSportsHero } from './elements/heros/SportsHero';
 import { getHero1 } from './elements/heros/Hero1';
 import { getHero2 } from './elements/heros/Hero2';
@@ -51,6 +52,7 @@ import { getMaizTextSection } from './elements/texts/MaizTextSection';
 import { getCoffeeTextSection } from './elements/texts/CoffeeTextSection';
 import { getStyleTextSection } from './elements/texts/StyleTextSection';
 import { getFlowerTextSection } from './elements/texts/FlowerTextSection';
+import { getAlwaysCenterText } from './elements/texts/AlwaysCenterText';
 
 // Maps
 import { getMap } from './elements/Map';
@@ -70,6 +72,7 @@ export const elements = {
     getCoffeeHeader,
     getFlowerHeader,
 
+    getHeroWithNavbar,
     getSportsHero,
     getHero1,
     getHero2,
@@ -104,6 +107,7 @@ export const elements = {
     getFlowerTextSection,
 
     getFlowerGallery,
+    getAlwaysCenterText,
 
     getMap,
     getMapWithTxt,

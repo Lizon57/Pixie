@@ -9,12 +9,13 @@ export function getMaizHero() {
         prefs: {
             className: 'maiz-hero',
             style: {
-                height: '800px',
-                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622734799/mypics/o8c98nc0dms1ihyu1jmg.jpg")',
+                display: 'flex',
+                backgroundImage: 'url("https://i.ibb.co/3NV1m47/o8c98nc0dms1ihyu1jmg.jpg")',
                 backgroundSize: 'cover',
                 backgroundPosition: '50% 50%',
-                lineFeight: '1.6',
                 fontFamily: 'Montserrat',
+                lineHeight: '1.6',
+                height: '800px',
             }
         },
         childs: [
@@ -26,12 +27,12 @@ export function getMaizHero() {
                 prefs: {
                     className: 'maiz-hero-container',
                     style: {
-                        margin: 'auto',
-                        height: '100%',
-                        width: '80%',
                         display: 'flex',
                         justifyContent: 'flex-end',
                         alignItems: 'center',
+                        margin: 'auto',
+                        height: '100%',
+                        width: '80%',
                     }
                 },
                 childs: [
@@ -58,6 +59,7 @@ export function getMaizHero() {
                                 className: "maiz-hero-span",
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontSize: '42px',
                                         color: '#FBA91A',
                                         fontWeight: 900,
@@ -71,6 +73,7 @@ export function getMaizHero() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         color: '#EEEEEE',
                                         fontWeight: 900,
                                     }
@@ -83,6 +86,7 @@ export function getMaizHero() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         color: '#EEEEEE',
                                     }
                                 },

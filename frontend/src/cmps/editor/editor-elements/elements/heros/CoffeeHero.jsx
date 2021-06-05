@@ -10,9 +10,12 @@ export function getCoffeeHero() {
             className: "coffee-hero",
             style: {
                 display: 'flex',
-                padding: '30px',
-                backgroundColor: '#FBF5EF',
                 flexDirection: 'column',
+                backgroundColor: '#FBF5EF',
+                paddingBlockStart: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -26,7 +29,7 @@ export function getCoffeeHero() {
                     style: {
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: 'center',
+                        alignItems: 'flex-start',
                         gap: '15px',
                         width: '100%',
                     }
@@ -94,8 +97,9 @@ export function getCoffeeHero() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
                                 fontFamily: 'Mulish',
-                                lineHeight: '1.75em',
+                                lineHeight: '28px',
                             }
                         },
                         txt: 'Learn about the latest coffee gear and brewing techniques today with our informative coffee guides. Brewing coffee shouldn\'t be rocket science. Let us help! Stay informed with the latest coffee information today with The Coffee Guru coffee blog!'
@@ -106,12 +110,15 @@ export function getCoffeeHero() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                padding: '15px 20px',
-                                borderRadius: '30px',
-                                fontFamily: 'Montserrat',
                                 border: 'none',
+                                borderRadius: '30px',
                                 backgroundColor: '#A67D69',
-                                color: '#EEEEEE',
+                                color: '#eeeeee',
+                                fontFamily: 'Montserrat',
+                                paddingBlockStart: '15px',
+                                paddingBlockEnd: '15px',
+                                paddingInlineStart: '20px',
+                                paddingInlineEnd: '20px',
                             }
                         },
                         txt: 'JOIN TODAY',
@@ -125,8 +132,8 @@ export function getCoffeeHero() {
                 isContainer: true,
                 prefs: {
                     style: {
-                        width: '50%',
                         display: 'flex',
+                        flexBasis: '50%',
                         alignItems: 'flex-end',
                         justifyContent: 'flex-start',
                     }
@@ -138,12 +145,12 @@ export function getCoffeeHero() {
                         role: 'img',
                         prefs: {
                             style: {
-                                width: '75%',
-                                height: '150px',
+                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622798617/mypics/jptgwhbuq1gklcukkk6h.png")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',
-                                backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622798617/mypics/jptgwhbuq1gklcukkk6h.png")',
+                                height: '150px',
+                                width: '75%',
                             }
                         },
                     }

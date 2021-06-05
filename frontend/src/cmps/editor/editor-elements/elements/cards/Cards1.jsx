@@ -9,13 +9,13 @@ export function getCards1() {
         prefs: {
             style: {
                 display: 'flex',
-                width: '100%',
                 flexDirection: 'column',
-                paddingRight: '30px',
-                paddingLeft: '30px',
-                paddingBottom: '15px',
                 justifyContent: 'flex-start',
-                backgroundColor: '#e2e2e2'
+                backgroundColor: '#e2e2e2',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
+                paddingBlockEnd: '15px',
+                width: '100%',
             }
         },
         childs: [
@@ -26,6 +26,7 @@ export function getCards1() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex',
                         fontSize: '60px',
                         fontFamily: 'Caveat',
                         textAlign: 'center',
@@ -42,8 +43,6 @@ export function getCards1() {
                     style: {
                         display: 'flex',
                         width: '100%',
-
-
                     }
                 },
                 childs: [
@@ -53,12 +52,13 @@ export function getCards1() {
                         role: 'img',
                         prefs: {
                             style: {
+                                flexGrow: 1,
+                                display: 'flex',
                                 backgroundImage: 'url("https://images.unsplash.com/photo-1455619452474-d2be8b1e70cd")',
-                                minWidth: '350px',
-                                minHeight: '350px',
                                 backgroundPosition: 'right',
                                 backgroundSize: 'cover',
-                                flexGrow: 1,
+                                minWidth: '350px',
+                                minHeight: '350px',
                             }
                         },
                     },
@@ -82,10 +82,11 @@ export function getCards1() {
                                 txt: 'WE DO FOOD.',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontSize: '40px',
-                                        marginBottom: '15px',
                                         fontFamily: 'Caveat',
                                         textAlign: 'center',
+                                        marginBlockEnd: '15px',
 
                                     }
                                 }
@@ -97,10 +98,10 @@ export function getCards1() {
                                 txt: 'Lorem ipsum dolor sit amet consectetur, adipisicing elit. Numquam, atque quae tempora magnam omnis iure dolor? Beatae itaque quis autem officiis? Odio, dolorum ratione nobis voluptas necessitatibus explicabo neque cupiditate illum veritatis natus.',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontSize: '20px',
                                         fontFamily: 'RobotoSlab',
                                         textAlign: 'left',
-
                                     }
                                 }
                             }

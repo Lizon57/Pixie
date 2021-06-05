@@ -1,4 +1,4 @@
-import { utilService } from '../../../../../service/util-service'
+import { utilService } from '../../../../../service/util-service';
 
 export function getHero1() {
     return ({
@@ -7,14 +7,17 @@ export function getHero1() {
         isContainer: true,
         prefs: {
             style: {
-                minHeight: '500px',
-                backgroundSize: 'cover',
-                backgroundPosition: 'center',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
-                padding: '30px',
                 backgroundImage: 'URL(https://images.unsplash.com/photo-1599707367072-cd6ada2bc375)',
+                backgroundSize: 'cover',
+                backgroundPosition: 'center',
+                paddingBlockStart: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
+                height: '500px',
             }
         },
         childs: [{
@@ -23,9 +26,9 @@ export function getHero1() {
             role: 'childless',
             prefs: {
                 style: {
+                    color: '#eeeeee',
                     fontSize: '60px',
                     fontFamily: 'cinzel',
-                    color: '#eee',
                 }
             },
             txt: 'DIAMONDS.'
@@ -36,17 +39,18 @@ export function getHero1() {
             role: 'childless',
             prefs: {
                 style: {
-                    paddingBottom: '10px',
-                    paddingTop: '10px',
-                    paddingRight: '20px',
-                    paddingLeft: '20px',
-                    fontSize: '18px',
-                    fontFamily: 'Inter',
                     alignSelf: 'center',
+                    display: 'flex',
                     border: 'none',
+                    borderRadius: '2px',
                     backgroundColor: '#eee',
                     color: 'black',
-                    borderRadius: '2px',
+                    fontFamily: 'Inter',
+                    fontSize: '18px',
+                    paddingBlockStart: '10px',
+                    paddingBlockEnd: '10px',
+                    paddingInlineStart: '20px',
+                    paddingInlineEnd: '20px',
                 }
             },
             txt: 'FIND OUT',
@@ -57,10 +61,11 @@ export function getHero1() {
             role: 'childless',
             prefs: {
                 style: {
-                    fontFamily: 'cinzel',
-                    fontSize: '30px',
-                    color: '#c8c8c8',
+                    display: 'flex',
                     alignSelf: 'flex-end',
+                    color: '#c8c8c8',
+                    fontSize: '30px',
+                    fontFamily: 'cinzel',
                 }
             },
             txt: 'The hardest material on earth.'

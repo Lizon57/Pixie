@@ -1,4 +1,4 @@
-import { elements } from '../cmps/editor/editor-elements/elements'
+import { elements } from '../cmps/editor/editor-elements/elements';
 
 // Export functions
 export const elementService = {
@@ -7,7 +7,7 @@ export const elementService = {
     editElement,
     addElement,
     reorderElement,
-}
+};
 
 // Get element
 function getElement(type, src = null) {
@@ -50,6 +50,8 @@ function getElement(type, src = null) {
             return elements.getFullWidthCardImgFirst()
         case 'fullWidthCardTextFirst':
             return elements.getFullWidthCardTextFirst()
+        case 'heroWithNavbar':
+            return elements.getHeroWithNavbar()
         case 'hero1':
             return elements.getHero1()
         case 'hero2':
@@ -72,6 +74,8 @@ function getElement(type, src = null) {
             return elements.getCoffeeCards()
         case 'CoffeeTextSection':
             return elements.getCoffeeTextSection()
+        case 'AlwaysCenterText':
+            return elements.getAlwaysCenterText()
         case 'CoffeeForm':
             return elements.getCoffeeForm()
         case 'CoffeeFooter':

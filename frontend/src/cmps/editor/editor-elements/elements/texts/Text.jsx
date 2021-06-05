@@ -6,7 +6,7 @@ export function getText() {
         type: 'div',
         role: 'text-div',
         prefs: {
-            className: "text-product-container"
+            className: "flex text-product-container"
         },
         childs: [
             {

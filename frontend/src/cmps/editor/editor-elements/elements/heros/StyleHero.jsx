@@ -8,14 +8,14 @@ export function getStyleHero() {
         isContainer: true,
         prefs: {
             style: {
-                paddingRight: '30px',
-                paddingLeft: '30px',
-                height: '100vh',
-                backgroundImage: 'url("https://images.unsplash.com/photo-1584500403203-c9727ebf2a0f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")',
-                backgroundSize: 'cover',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
+                backgroundImage: 'url("https://images.unsplash.com/photo-1584500403203-c9727ebf2a0f?ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1&auto=format&fit=crop&w=750&q=80")',
+                backgroundSize: 'cover',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
+                height: '100vh',
             }
         },
         childs: [
@@ -29,9 +29,10 @@ export function getStyleHero() {
                         display: 'flex',
                         alignItems: 'center',
                         flexWrap: 'wrap',
+                        marginBlockStart: '10px',
+                        marginBlockEnd: '10px',
                         height: '85px',
                         width: '100%',
-                        margin: '10px 0'
                     }
                 },
                 childs: [
@@ -41,16 +42,15 @@ export function getStyleHero() {
                         role: 'span',
                         prefs: {
                             style: {
+                                curson: 'pointer',
                                 display: 'flex',
-                                height: '100%',
-                                fontSize: '2rem',
                                 alignItems: 'center',
+                                color: '#ffffff',
+                                fontSize: '32px',
                                 fontFamily: 'Raleway',
                                 fontWeight: '600',
-                                color: '#fff',
-                                flex: '1',
-                                curson: 'pointer',
-
+                                flex: 1,
+                                height: '100%',
                             }
                         },
                         txt: 'STYLEPONT'
@@ -74,18 +74,17 @@ export function getStyleHero() {
                                 role: 'button',
                                 prefs: {
                                     style: {
+                                        cursor: 'pointer',
                                         display: 'flex',
                                         alignItems: 'center',
-                                        height: '100%',
-                                        backgroundColor: 'transparent',
-                                        outline: 'none',
                                         border: 'none',
-                                        fontFamily: 'Raleway',
-                                        fontSize: '1.3rem',
-                                        fontWeight: '600',
+                                        backgroundColor: 'transparent',
                                         color: '#fff',
-                                        cursor: 'pointer',
-
+                                        fontSize: '21px',
+                                        fontFamily: 'Raleway',
+                                        fontWeight: '600',
+                                        height: '100%',
+                                        outline: 'none',
                                     }
                                 },
                                 txt: 'Services'
@@ -96,18 +95,17 @@ export function getStyleHero() {
                                 role: 'button',
                                 prefs: {
                                     style: {
+                                        cursor: 'pointer',
                                         display: 'flex',
                                         alignItems: 'center',
-                                        height: '100%',
-                                        backgroundColor: 'transparent',
-                                        outline: 'none',
                                         border: 'none',
-                                        fontFamily: 'Raleway',
-                                        fontSize: '1.3rem',
-                                        fontWeight: '600',
+                                        backgroundColor: 'transparent',
                                         color: '#fff',
-                                        cursor: 'pointer',
-
+                                        fontSize: '21px',
+                                        fontFamily: 'Raleway',
+                                        fontWeight: '600',
+                                        height: '100%',
+                                        outline: 'none',
                                     }
                                 },
                                 txt: 'Collections'
@@ -118,18 +116,17 @@ export function getStyleHero() {
                                 role: 'button',
                                 prefs: {
                                     style: {
+                                        cursor: 'pointer',
                                         display: 'flex',
                                         alignItems: 'center',
-                                        height: '100%',
-                                        backgroundColor: 'transparent',
-                                        outline: 'none',
                                         border: 'none',
-                                        fontFamily: 'Raleway',
-                                        fontSize: '1.3rem',
-                                        fontWeight: '600',
+                                        backgroundColor: 'transparent',
                                         color: '#fff',
-                                        cursor: 'pointer',
-
+                                        fontSize: '21px',
+                                        fontFamily: 'Raleway',
+                                        fontWeight: '600',
+                                        height: '100%',
+                                        outline: 'none',
                                     }
                                 },
                                 txt: 'About'
@@ -151,7 +148,6 @@ export function getStyleHero() {
                                         fontWeight: '600',
                                         color: '#fff',
                                         cursor: 'pointer',
-
                                     }
                                 },
                                 txt: 'Blog'
@@ -165,23 +161,20 @@ export function getStyleHero() {
                         prefs: {
                             className: 'product-header-humburger-btn',
                             style: {
-                                alignItems: 'center',
-                                height: '100%',
-                                backgroundColor: 'transparent',
-                                outline: 'none',
-                                border: 'none',
-                                fontFamily: 'Raleway',
-                                fontSize: '1.5rem',
-                                fontWeight: '600',
-                                color: '#fff',
                                 cursor: 'pointer',
-
+                                alignItems: 'center',
+                                border: 'none',
+                                backgroundColor: 'transparent',
+                                color: '#ffffff',
+                                fontSize: '24px',
+                                fontFamily: 'Raleway',
+                                fontWeight: '600',
+                                height: '100%',
+                                outline: 'none',
                             }
                         },
                         txt: '☰'
                     }
-
-
                 ]
             },
             {
@@ -191,15 +184,13 @@ export function getStyleHero() {
                 prefs: {
                     style: {
                         display: 'flex',
-                        fontSize: '3.5rem',
-                        width: '100%',
                         justifyContent: 'center',
-                        textAlign: 'center',
+                        color: '#ffffff',
+                        fontSize: '56px',
                         fontFamily: 'Raleway',
                         fontWeight: '600',
-                        color: '#fff',
-                        textShadow: '0 0 5px #000'
-
+                        textAlign: 'center',
+                        textShadow: '0 0 5px #000000',
                     }
                 },
                 txt: 'Do you believe in style?'
@@ -226,14 +217,12 @@ export function getStyleHero() {
                         prefs: {
                             style: {
                                 display: 'flex',
-                                fontSize: '1.5rem',
-                                width: '100%',
                                 justifyContent: 'center',
+                                color: '#ffffff',
+                                fontSize: '25px',
                                 fontFamily: 'Raleway',
                                 fontWeight: '600',
-                                color: '#fff',
-                                textShadow: '0 0 5px #000'
-
+                                textShadow: '0 0 5px #000000'
                             }
                         },
                         txt: 'scroll down'
@@ -245,14 +234,12 @@ export function getStyleHero() {
                         prefs: {
                             style: {
                                 display: 'flex',
-                                fontSize: '2.5rem',
-                                width: '100%',
                                 justifyContent: 'center',
+                                color: '#ffffff',
+                                fontSize: '25px',
                                 fontFamily: 'Raleway',
                                 fontWeight: '600',
-                                color: '#fff',
-                                textShadow: '0 0 5px #000'
-
+                                textShadow: '0 0 5px #000000'
                             }
                         },
                         txt: '⬇'

@@ -11,14 +11,17 @@ export function getMaizFooter() {
             style: {
                 display: 'flex',
                 flexDirection: 'column',
+                justifyContent: 'space-between',
                 alignItems: 'center',
                 gap: '15px',
-                justifyContent: 'space-between',
-                padding: '30px',
-                fontSize: '18px',
-                color: '#EEEEEE',
                 backgroundColor: '#262931',
+                color: '#eeeeee',
+                fontSize: '18px',
                 fontFamily: 'Montserrat',
+                paddingBlockStart: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -28,6 +31,7 @@ export function getMaizFooter() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex'
                     }
                 },
                 txt: '© 2019 Maiz Hospitality Pvt Ltd.'
@@ -38,6 +42,7 @@ export function getMaizFooter() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex',
                         color: '#FBA91A',
                         fontSize: '24px',
                     }
@@ -50,6 +55,7 @@ export function getMaizFooter() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex'
                     }
                 },
                 txt: 'Privacy Policy | About'
