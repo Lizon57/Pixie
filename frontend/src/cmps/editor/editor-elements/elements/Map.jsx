@@ -4,7 +4,7 @@ export function getMap() {
     return {
         id: utilService.makeId(),
         type: 'div',
-        role: 'map',
+        role: 'map-container',
         isContainer: true,
         className: 'responsive-card1',
         prefs: {

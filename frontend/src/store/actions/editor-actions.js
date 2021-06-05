@@ -12,7 +12,6 @@ export function setEditorMode(editorMode) { // Action Creator
 }
 
 export function removeEditingElement() { // Action Creator
-    console.log('here');
     return dispatch => {
         dispatch({ type: 'REMOVE_EDITING_CMP', element: null, parentId: null });
         dispatch({ type: 'SET_EDITOR_MODE', editorMode: 'addElement' });

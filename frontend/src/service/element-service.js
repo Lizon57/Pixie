@@ -9,6 +9,7 @@ export const elementService = {
     reorderElement,
 }
 
+// Get element
 function getElement(type, src = null) {
     switch (type) {
         case 'box':
@@ -23,6 +24,8 @@ function getElement(type, src = null) {
             return elements.getHeader4()
         case 'map':
             return elements.getMap()
+        case 'mapWithTxt':
+            return elements.getMapWithTxt()
         case 'youtube':
             return elements.getVideo(src)
         case 'sportsHero':
@@ -52,7 +55,7 @@ function getElement(type, src = null) {
         case 'hero2':
             return elements.getHero2()
         case 'MaizHero':
-            return elements.getMazeHero()
+            return elements.getmaizHero()
         case 'MaizHeader':
             return elements.getMaizHeader()
         case 'MaizTextSection':
@@ -73,14 +76,28 @@ function getElement(type, src = null) {
             return elements.getCoffeeForm()
         case 'CoffeeFooter':
             return elements.getCoffeeFooter()
+        case 'StyleHero':
+            return elements.getStyleHero()
+        case 'StyleTextSection':
+            return elements.getStyleTextSection()
+        case 'FlowerHero':
+            return elements.getFlowerHero()
+        case 'FlowerHeader':
+            return elements.getFlowerHeader()
+        case 'FlowerTextSection':
+            return elements.getFlowerTextSection()
+        case 'FlowerGallery':
+            return elements.getFlowerGallery()
+        case 'FlowerFooter':
+            return elements.getFlowerFooter()
+        case 'FlowerCards':
+            return elements.getFlowerCards()
         default: return;
     }
 }
 
 // REMOVE DONE
-
 function removeElementById(data, elementId) {
-
     findTarget(data, elementId)
 
     return data;
@@ -98,9 +115,7 @@ function removeElementById(data, elementId) {
 }
 
 // EDIT DONE
-
 function editElement(data, elementId, newElement) {
-
     findTarget(data, elementId, newElement)
 
     return data;
@@ -118,9 +133,7 @@ function editElement(data, elementId, newElement) {
 }
 
 //ADD ELEMENT
-
 function addElement(data, elementId, elementType, src = null) {
-
     const newElement = getElement(elementType, src);
 
     findTarget(data, elementId, newElement);
@@ -140,9 +153,7 @@ function addElement(data, elementId, elementType, src = null) {
 }
 
 // UP / DOWN
-
 function reorderElement(data, elementId, val) {
-
     findTarget(data, elementId, val)
 
     return data;

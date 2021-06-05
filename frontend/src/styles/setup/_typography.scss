@@ -1,4 +1,4 @@
-/* Client fonts */ 
+/* Client fonts */
 @font-face {
   font-family: Caveat;
   src: url("../../assets/font/for-client-use/Caveat.ttf");
@@ -75,11 +75,6 @@
 }
 
 @font-face {
-  font-family: Montserrat;
-  src: url("../../assets/font/for-client-use/Montserrat-Regular.ttf");
-}
-
-@font-face {
   font-family: Blenda Script;
   src: url("../../assets/font/for-client-use/Blenda\ Script.otf") format("opentype");
 }
@@ -92,4 +87,9 @@
 @font-face {
   font-family: Mulish;
   src: url("../../assets/font/for-client-use/Mulish-VariableFont_wght.ttf");
+}
+
+@font-face {
+  font-family: Josefine Sans;
+  src: url("../../assets/font/for-client-use/JosefinSans-VariableFont_wght.ttf");
 }

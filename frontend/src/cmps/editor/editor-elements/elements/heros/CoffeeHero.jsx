@@ -26,7 +26,6 @@ export function getCoffeeHero() {
                     style: {
                         display: 'flex',
                         flexDirection: 'column',
-                        alignItems: 'flex-start',
                         alignItems: 'center',
                         gap: '15px',
                         width: '100%',

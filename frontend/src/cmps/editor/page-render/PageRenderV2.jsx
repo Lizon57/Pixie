@@ -31,7 +31,6 @@ class _PageRenderV2 extends React.Component {
             //if there is no childs in store it shows msg.
             return (
                 <>
-                    { localStorage.removeItem('website')}
                     <section
                         data-id={utilService.makeId()}
                         className="site-container">
@@ -42,18 +41,17 @@ class _PageRenderV2 extends React.Component {
                                     role: "childless",
                                     prefs: {
                                         style: {
-                                            fontFamily: "Oxanium",
                                             display: 'flex',
                                             alignItems: 'center',
                                             justifyContent: 'center',
-                                            color: "#888",
-                                            marginBlockStart: "20px",
-                                            width: '100%',
-                                            border: '5px dotted #888',
-                                            padding: '200px 20px',
+                                            border: '5px dashed #aaaaaa',
+                                            color: "#555555",
                                             fontSize: '2rem',
+                                            fontFamily: "Inter",
+                                            letterSpacing: '1px',
+                                            paddingBlock: '200px',
+                                            width: '100%',
                                             pointerEvents: 'none'
-
                                         }
                                     },
                                     txt: "Choose Your Design from Create Menu"
