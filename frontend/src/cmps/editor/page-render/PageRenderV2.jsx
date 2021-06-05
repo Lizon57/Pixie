@@ -1,7 +1,7 @@
 import React from 'react';
 import { connect } from 'react-redux';
 import { setEditingElement } from '../../../store/actions/editor-actions';
-import { setData } from '../../../store/actions/data-actions';
+import { setData, editData } from '../../../store/actions/data-actions';
 import { utilService } from '../../../service/util-service';
 import { ChildsPreview } from './ChildsPreview';
 import { DragDropContext, Droppable } from 'react-beautiful-dnd';
@@ -10,23 +10,25 @@ class _PageRenderV2 extends React.Component {
 
     reorder = (startIndex, endIndex) => {
         const { childs } = this.props;
-        let elDragged = childs.splice(startIndex, 1)
+        let data = childs.slice();
+        let elDragged = data.splice(startIndex, 1)
         elDragged = elDragged[0];
-        childs.splice(endIndex, 0, elDragged)
-        return childs
+        data.splice(endIndex, 0, elDragged)
+        return data
     }
 
     onDragEnd = (result) => {
         if (!result.destination) return
-        this.reorder(
+        const childs = this.reorder(
             result.source.index,
             result.destination.index
         )
+        this.props.editData(childs)
     }
 
 
     render() {
-        const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement } = this.props;
+        const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement, saveWebsiteToStorage } = this.props;
         if (childs.length === 0) {
             //if there is no childs in store it shows msg.
             return (
@@ -65,6 +67,7 @@ class _PageRenderV2 extends React.Component {
         }
 
         //if the user choose, it shows the choosen element
+        saveWebsiteToStorage();
         return (
             <DragDropContext onDragEnd={this.onDragEnd} >
                 <Droppable droppableId="childs">
@@ -100,7 +103,8 @@ class _PageRenderV2 extends React.Component {
 
 const mapDispatchToProps = {
     setEditingElement,
-    setData
+    setData,
+    editData
 }
 
 function mapStateToProps(state) {

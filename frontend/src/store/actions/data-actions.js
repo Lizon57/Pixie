@@ -10,3 +10,9 @@ export function addSection(child) { // Action Creator
     }
 }
 
+export function editData(childs) { // Action Creator
+    return dispatch => {
+        dispatch({ type: 'EDIT_DATA', childs });
+    }
+}
+
