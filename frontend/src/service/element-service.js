@@ -14,78 +14,99 @@ function getElement(type, src = null) {
     switch (type) {
         case 'box':
             return elements.getBox()
-        case 'header1':
-            return elements.getHeader1()
-        case 'header2':
-            return elements.getHeader2()
-        case 'sportsHeader':
-            return elements.getSportsHeader()
-        case 'map':
-            return elements.getMap()
-        case 'mapBeforeTxt':
-            return elements.getMapBeforeTxt()
-        case 'txtBeforeMap':
-            return elements.getTxtBeforeMap()
-        case 'youtube':
-            return elements.getVideo(src)
-        case 'sportsHero':
-            return elements.getSportsHero()
-        case 'img':
-            return elements.getImg(src)
-        case 'text':
-            return elements.getText()
-        case 'navBar':
-            return elements.getNavbar()
-        case 'cards2':
-            return elements.getCards2()
-        case 'fourCards':
-            return elements.getFourCards()
-        case 'fullWidthCardImgFirst':
-            return elements.getFullWidthCardImgFirst()
-        case 'fullWidthCardTextFirst':
-            return elements.getFullWidthCardTextFirst()
-        case 'heroWithNavbar':
-            return elements.getHeroWithNavbar()
-        case 'MaizHero':
-            return elements.getmaizHero()
+
+        // Headers
+        case 'CleanHeader':
+            return elements.getCleanHeader();
+        case 'PixieHeader':
+            return elements.getPixieHeader();
+        case 'SportHeader':
+            return elements.getSportHeader();
         case 'MaizHeader':
-            return elements.getMaizHeader()
-        case 'MaizTextSection':
-            return elements.getMaizTextSection()
-        case 'MaizCards':
-            return elements.getMaizCards()
-        case 'MaizFooter':
-            return elements.getMaizFooter()
+            return elements.getMaizHeader();
         case 'CoffeeHeader':
-            return elements.getCoffeeHeader()
-        case 'CoffeeHero':
-            return elements.getCoffeeHero()
-        case 'CoffeeCards':
-            return elements.getCoffeeCards()
-        case 'CoffeeTextSection':
-            return elements.getCoffeeTextSection()
-        case 'AlwaysCenterText':
-            return elements.getAlwaysCenterText()
-        case 'CoffeeForm':
-            return elements.getCoffeeForm()
-        case 'CoffeeFooter':
-            return elements.getCoffeeFooter()
-        case 'StyleHero':
-            return elements.getStyleHero()
-        case 'StyleTextSection':
-            return elements.getStyleTextSection()
-        case 'FlowerHero':
-            return elements.getFlowerHero()
+            return elements.getCoffeeHeader();
         case 'FlowerHeader':
-            return elements.getFlowerHeader()
-        case 'FlowerTextSection':
-            return elements.getFlowerTextSection()
-        case 'FlowerGallery':
-            return elements.getFlowerGallery()
-        case 'FlowerFooter':
-            return elements.getFlowerFooter()
+            return elements.getFlowerHeader();
+
+        // Heros
+        case 'WaveHero':
+            return elements.getWaveHero();
+        case 'SportHero':
+            return elements.getSportHero();
+        case 'MaizHero':
+            return elements.getMaizHero();
+        case 'CoffeeHero':
+            return elements.getCoffeeHero();
+        case 'StyleHero':
+            return elements.getStyleHero();
+        case 'FlowerHero':
+            return elements.getFlowerHero();
+
+        // Cards
+        case 'ThreeCards':
+            return elements.getThreeCards();
+        case 'FullWidthCardImgFirst':
+            return elements.getFullWidthCardImgFirst();
+        case 'FullWidthCardTxtFirst':
+            return elements.getFullWidthCardTextFirst();
+        case 'MaizCards':
+            return elements.getMaizCards();
+        case 'CoffeeCards':
+            return elements.getCoffeeCards();
+        case 'FourCards':
+            return elements.getFourCards();
         case 'FlowerCards':
-            return elements.getFlowerCards()
+            return elements.getFlowerCards();
+
+        // Forms
+        case 'CoffeeForm':
+            return elements.getCoffeeForm();
+
+        // Footers
+        case 'MaizFooter':
+            return elements.getMaizFooter();
+        case 'CoffeeFooter':
+            return elements.getCoffeeFooter();
+        case 'FlowerFooter':
+            return elements.getFlowerFooter();
+        case 'footerWithSocials':
+            return elements.getFooterWithSocails();
+
+        // Texts
+        case 'Text':
+            return elements.getText();
+        case 'AlwaysCenterText':
+            return elements.getAlwaysCenterText();
+        case 'StyleTextSection':
+            return elements.getStyleTextSection();
+        case 'MaizTextSection':
+            return elements.getMaizTextSection();
+        case 'CoffeeTextSection':
+            return elements.getCoffeeTextSection();
+        case 'FlowerTextSection':
+            return elements.getFlowerTextSection();
+
+        // Galleries
+        case 'FlowerGallery':
+            return elements.getFlowerGallery();
+
+        // Images
+        case 'img':
+            return elements.getImg(src);
+
+        // Maps
+        case 'mapBlock':
+            return elements.getMapBlock();
+        case 'mapBeforeTxt':
+            return elements.getMapBeforeTxt();
+        case 'txtBeforeMap':
+            return elements.getTxtBeforeMap();
+
+        // Videos
+        case 'youtube':
+            return elements.getVideo(src);
+
         default: return;
     }
 }

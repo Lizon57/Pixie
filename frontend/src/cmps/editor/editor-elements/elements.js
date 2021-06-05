@@ -1,29 +1,29 @@
 // Headers
-import { getHeader1 } from './elements/headers/Header1';
-import { getHeader2 } from './elements/headers/Header2';
-import { getSportsHeader } from './elements/headers/SportsHeader';
-import { getNavbar } from './elements/Navbar';
+import { getCleanHeader } from './elements/headers/CleanHeader';
+import { getPixieHeader } from './elements/headers/PixieHeader';
+import { getSportHeader } from './elements/headers/SportHeader';
 import { getMaizHeader } from './elements/headers/MaizHeader';
 import { getCoffeeHeader } from './elements/headers/CoffeeHeader';
 import { getFlowerHeader } from './elements/headers/FlowerHeader';
 
-
 // Heros
-import { getHeroWithNavbar } from './elements/heros/HeroWithNavbar';
-import { getSportsHero } from './elements/heros/SportsHero';
+import { getWaveHero } from './elements/heros/WaveHero';
+import { getSportHero } from './elements/heros/SportHero';
 import { getMaizHero } from './elements/heros/MaizHero';
 import { getCoffeeHero } from './elements/heros/CoffeeHero';
 import { getStyleHero } from './elements/heros/StyleHero';
 import { getFlowerHero } from './elements/heros/FlowerHero';
 
-
 // Cards
-import { getCards2 } from './elements/cards/Cards2';
+import { getThreeCards } from './elements/cards/ThreeCards';
 import { getFullWidthCardImgFirst } from './elements/cards/FullWidthCardImgFirst';
 import { getFullWidthCardTextFirst } from './elements/cards/FullWidthCardTextFirst';
 import { getMaizCards } from './elements/cards/MaizCards';
 import { getCoffeeCards } from './elements/cards/CoffeeCards';
 import { getFourCards } from './elements/cards/FourCards';
+
+
+
 import { getFlowerCards } from './elements/cards/FlowerCards';
 
 // Forms 
@@ -33,6 +33,7 @@ import { getCoffeeForm } from './elements/forms/CoffeeForm';
 import { getMaizFooter } from './elements/footers/MaizFooter';
 import { getCoffeeFooter } from './elements/footers/CoffeeFooter';
 import { getFlowerFooter } from './elements/footers/FlowerFooter';
+import { getFooterWithSocails } from './elements/footers/FooterWithSocials';
 
 // Imgs
 import { getImg } from './elements/Img';
@@ -49,7 +50,7 @@ import { getFlowerTextSection } from './elements/texts/FlowerTextSection';
 import { getAlwaysCenterText } from './elements/texts/AlwaysCenterText';
 
 // Maps
-import { getMap } from './elements/Map';
+import { getMapBlock } from './elements/maps/MapBlock';
 import { getMapBeforeTxt } from './elements/maps/MapBeforeTxt';
 import { getTxtBeforeMap } from './elements/maps/TxtBeforeMap';
 
@@ -58,22 +59,27 @@ import { getBox } from './elements/Box';
 
 
 export const elements = {
-    getHeader1,
-    getHeader2,
-    getSportsHeader,
-    getNavbar,
+    // Empty box
+    getBox,
+
+    // Headers
+    getCleanHeader,
+    getPixieHeader,
+    getSportHeader,
     getMaizHeader,
     getCoffeeHeader,
     getFlowerHeader,
 
-    getHeroWithNavbar,
-    getSportsHero,
+    // Heros
+    getWaveHero,
+    getSportHero,
     getMaizHero,
     getCoffeeHero,
     getStyleHero,
     getFlowerHero,
 
-    getCards2,
+    // Cards
+    getThreeCards,
     getFullWidthCardImgFirst,
     getFullWidthCardTextFirst,
     getMaizCards,
@@ -81,28 +87,34 @@ export const elements = {
     getFourCards,
     getFlowerCards,
 
+    // Forms
     getCoffeeForm,
 
+    // Footers
     getMaizFooter,
     getCoffeeFooter,
     getFlowerFooter,
+    getFooterWithSocails,
 
-    getImg,
-
+    // Texts
     getText,
+    getAlwaysCenterText,
+    getStyleTextSection,
     getMaizTextSection,
     getCoffeeTextSection,
-    getStyleTextSection,
     getFlowerTextSection,
 
+    // Galleries
     getFlowerGallery,
-    getAlwaysCenterText,
 
-    getMap,
+    // Img    
+    getImg,
+
+    // Maps
+    getMapBlock,
     getMapBeforeTxt,
     getTxtBeforeMap,
 
     getVideo,
-    getBox,
 };
 

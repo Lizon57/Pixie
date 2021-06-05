@@ -18,7 +18,6 @@ export function getMaizCards() {
                 id: utilService.makeId(),
                 type: 'div',
                 role: 'container',
-                isContainer: true,
                 prefs: {
                     className: "maiz-cards",
                     style: {
@@ -71,7 +70,6 @@ export function getMaizCards() {
                 id: utilService.makeId(),
                 type: 'div',
                 role: 'container',
-                isContainer: true,
                 prefs: {
                     className: "maiz-cards",
                     style: {
@@ -124,7 +122,6 @@ export function getMaizCards() {
                 id: utilService.makeId(),
                 type: 'div',
                 role: 'container',
-                isContainer: true,
                 prefs: {
                     className: "maiz-cards",
                     style: {

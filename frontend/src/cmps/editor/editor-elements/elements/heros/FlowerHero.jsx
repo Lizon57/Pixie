@@ -1,5 +1,5 @@
 import { utilService } from '../../../../../service/util-service';
-import heroImg from '../../../../../assets/img/svg-white-borders.svg'
+import heroImg from '../../../../../assets/img/svg-white-borders.svg';
 
 export function getFlowerHero() {
     return ({
