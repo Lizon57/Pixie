@@ -4,7 +4,7 @@ import { cloudinaryService } from '../../service/cloudinary-service';
 import { editorService } from '../../service/editor-service';
 import {
     sportsHeader, maizHeader, coffeeHeader,
-    sportsHero, diamondsHero, seaHero, maizHero, coffeeHero,
+    sportsHero, maizHero, coffeeHero,
     threeCards, coffeeCards, fullWidthImgFirstCard, fullWidthTxtFirstCard, maizCards,
     coffeeForm,
     maizFooter, coffeeFooter,
@@ -163,7 +163,7 @@ export class ElementsList extends React.Component {
                             <div className="text-center pointer item" onClick={() => onAddSection('FlowerTextSection')}>Flower Text Section</div>
                         </AccordionItemPanel>
                     </AccordionItem>
-                    
+
                     <AccordionItem>
                         <AccordionItemHeading>
                             <AccordionItemButton>
