@@ -9,10 +9,13 @@ export function getCoffeeCards() {
         prefs: {
             className: "coffee-card-container",
             style: {
-                padding: '15px 30px',
                 display: 'flex',
-                gap: '30px',
                 flexWrap: 'wrap',
+                gap: '30px',
+                paddingBlockStart: '15px',
+                paddingBlockEnd: '15px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -25,8 +28,11 @@ export function getCoffeeCards() {
                     className: 'Coffee-card',
                     style: {
                         display: 'flex',
-                        padding: '30px',
                         backgroundColor: '#fbf5ef',
+                        paddingBlockStart: '30px',
+                        paddingBlockEnd: '30px',
+                        paddingInlineStart: '30px',
+                        paddingInlineEnd: '30px',
                         minHeight: '200px',
                         width: '100%',
                     }
@@ -38,14 +44,16 @@ export function getCoffeeCards() {
                         role: 'img',
                         prefs: {
                             style: {
-                                width: '25%',
-                                height: '100%',
-                                borderRight: '1px #e0e0e0 solid',
-                                marginRight: '10px',
+                                display: 'flex',
                                 backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622798617/mypics/jptgwhbuq1gklcukkk6h.png")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',
+                                borderRight: '1px #e0e0e0 solid',
+                                borderInlineEnd: '1px solid #e0e0e0',
+                                marginInlineEnd: '10px',
+                                height: '100%',
+                                width: '25%',
                             }
                         },
                     },
@@ -69,6 +77,7 @@ export function getCoffeeCards() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontSize: '24px',
                                         fontFamily: 'Montserrat',
                                     }
@@ -81,6 +90,7 @@ export function getCoffeeCards() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontFamily: 'Mulish',
                                         color: '#6a6b6c',
                                     }
@@ -100,8 +110,11 @@ export function getCoffeeCards() {
                     className: 'Coffee-card',
                     style: {
                         display: 'flex',
-                        padding: '30px',
                         backgroundColor: '#fbf5ef',
+                        paddingBlockStart: '30px',
+                        paddingBlockEnd: '30px',
+                        paddingInlineStart: '30px',
+                        paddingInlineEnd: '30px',
                         minHeight: '200px',
                         width: '100%',
                     }
@@ -113,14 +126,15 @@ export function getCoffeeCards() {
                         role: 'img',
                         prefs: {
                             style: {
-                                width: '25%',
-                                height: '100%',
-                                borderRight: '1px #e0e0e0 solid',
-                                marginRight: '10px',
+                                display: 'flex',
                                 backgroundImage: 'url("http://res.cloudinary.com/dxbnzz0s3/image/upload/v1622798617/mypics/jptgwhbuq1gklcukkk6h.png")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',
+                                borderInlineEnd: '1px solid #e0e0e0',
+                                marginInlineEnd: '10px',
+                                height: '100%',
+                                width: '25%',
                             }
                         },
                     },
@@ -144,6 +158,7 @@ export function getCoffeeCards() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontSize: '24px',
                                         fontFamily: 'Montserrat',
                                     }
@@ -156,6 +171,7 @@ export function getCoffeeCards() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
+                                        display: 'flex',
                                         fontFamily: 'Mulish',
                                         color: '#6a6b6c',
                                     }

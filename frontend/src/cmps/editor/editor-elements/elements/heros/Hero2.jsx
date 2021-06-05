@@ -8,12 +8,12 @@ export function getHero2() {
         isContainer: true,
         prefs: {
             style: {
-                paddingRight: '30px',
-                paddingLeft: '30px',
-                height: '600px',
+                display: 'flex',
                 backgroundImage: 'url("https://images.unsplash.com/photo-1551244072-5d12893278ab")',
                 backgroundSize: 'cover',
-                display: 'flex',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
+                height: '600px',
             }
         },
         childs: [
@@ -26,10 +26,13 @@ export function getHero2() {
                     style: {
                         display: 'flex',
                         flexDirection: 'column',
-                        backgroundColor: '#00000080',
-                        padding: '30px',
-                        marginTop: '80px',
                         borderRadius: '20px',
+                        backgroundColor: '#00000080',
+                        paddingInlineStart: '30px',
+                        paddingInlineEnd: '30px',
+                        paddingBlockStart: '30px',
+                        paddingBlockEnd: '30px',
+                        marginBlockStart: '80px',
                         height: '165px',
                     }
                 },
@@ -40,8 +43,9 @@ export function getHero2() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                fontSize: '70px',
+                                display: 'flex',
                                 color: '#BBD3E6',
+                                fontSize: '70px',
                                 fontFamily: 'Grandstander',
                             }
                         },
@@ -53,6 +57,7 @@ export function getHero2() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
                                 fontSize: '35px',
                                 color: '#528cbd',
                                 fontFamily: 'Grandstander',

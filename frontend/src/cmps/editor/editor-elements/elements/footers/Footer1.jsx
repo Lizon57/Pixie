@@ -8,28 +8,34 @@ export function getFooter1() {
         isContainer: true,
         prefs: {
             style: {
-                fontFamily: 'inter',
-                height: '40px',
-                fontSize: '16px',
-                backgroundColor: '#ccc',
                 display: 'flex',
                 alignItems: 'center',
                 justifyContent: 'center',
-                borderTop: '2px #cf0000 solid',
+                backgroundColor: '#cccccc',
+                fontSize: '16px',
+                fontFamily: 'inter',
+                borderStyle: 'solid',
+                borderBlockStartWidth: '2px',
+                borderBlockStartColor: '#cf0000',
+                borderBlockEndWidth: '0',
+                borderInlineStartWidth: '0',
+                borderInlineEndWidth: '0',
+                height: '40px',
             }
         },
         childs: [
             {
                 id: utilService.makeId(),
                 type: 'span',
-                txt: '© Hot-Bowls inc. 1995',
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex'
                     }
-                }
+                },
+                txt: '© Hot-Bowls inc. 1995',
             },
-            
+
         ]
     })
 }
