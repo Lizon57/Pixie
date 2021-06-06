@@ -22,7 +22,7 @@ class _Template extends React.Component {
         const { templates, isLoading } = this.props;
         if (isLoading) return <Loading />
         return (
-            <div className="template-list ">
+            <div className="template-list">
 
                 {/* Make new website */}
 
