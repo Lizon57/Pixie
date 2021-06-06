@@ -17,7 +17,7 @@ class _Editor extends React.Component {
         isUserMsg: false,
         msg: '',
 
-        // stepsEnabled: true,
+        stepsEnabled: false,
         initialStep: 0,
         steps: [
             {
@@ -75,6 +75,8 @@ class _Editor extends React.Component {
     onAddSection = async (section, src = null) => {
         const addedSection = elementService.getElement(section, src);
         await this.props.addSection(addedSection);
+
+        this.resetEditorAccordion();
     }
 
     onAddElement = (elementType, src = null) => {
@@ -109,10 +111,15 @@ class _Editor extends React.Component {
         storageService.saveToStorage('website', this.props.data)
     }
 
-
     onExitSteps = () => {
         this.setState(prevState => ({ ...prevState, stepsEnabled: false }));
     };
+
+    resetEditorAccordion = () => {
+        const { setEditorMode } = this.props;
+        setEditorMode('editElement');
+        setEditorMode('addElement');
+    }
 
 
     render() {

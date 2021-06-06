@@ -11,96 +11,94 @@ class _PageRenderV2 extends React.Component {
     reorder = (startIndex, endIndex) => {
         const { childs } = this.props;
         let data = childs.slice();
-        let elDragged = data.splice(startIndex, 1)
+        let elDragged = data.splice(startIndex, 1);
         elDragged = elDragged[0];
-        data.splice(endIndex, 0, elDragged)
-        return data
+        data.splice(endIndex, 0, elDragged);
+        return data;
     }
 
     onDragEnd = (result) => {
-        if (!result.destination) return
+        if (!result.destination) return;
         const childs = this.reorder(
             result.source.index,
             result.destination.index
         )
-        this.props.editData(childs)
+        this.props.editData(childs);
     }
 
 
     render() {
         const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement, saveWebsiteToStorage, onUpdateElement } = this.props;
-        
+
         if (childs.length === 0) {
             //if there is no childs in store it shows msg.
             // localStorage.removeItem('website');
             return (
-                <>
-                    <section
-                        data-id={utilService.makeId()}
-                        className="site-container">
-                        <ChildsPreview
-                            child={
-                                {
-                                    type: "div",
-                                    role: "childless",
-                                    prefs: {
-                                        style: {
-                                            display: 'flex',
-                                            alignItems: 'center',
-                                            justifyContent: 'center',
-                                            border: '5px dashed #aaaaaa',
-                                            color: "#555555",
-                                            fontSize: '2rem',
-                                            fontFamily: "Inter",
-                                            letterSpacing: '1px',
-                                            textAlign: 'center',
-                                            paddingBlock: '200px',
-                                            width: '100%',
-                                            pointerEvents: 'none'
-                                        }
-                                    },
-                                    txt: "Choose Your Design from Create Menu"
-
-                                }}
-                            isEdit={true}
-                        />
-                    </section>
-                </>
+                <section
+                    data-id={utilService.makeId()}
+                    className="site-container">
+                    <ChildsPreview
+                        child={
+                            {
+                                type: "div",
+                                role: "childless",
+                                prefs: {
+                                    style: {
+                                        display: 'flex',
+                                        alignItems: 'center',
+                                        justifyContent: 'center',
+                                        border: '5px dashed #aaaaaa',
+                                        color: "#555555",
+                                        fontSize: '2rem',
+                                        fontFamily: "Inter",
+                                        letterSpacing: '1px',
+                                        textAlign: 'center',
+                                        paddingBlock: '200px',
+                                        width: '100%',
+                                        pointerEvents: 'none'
+                                    }
+                                },
+                                txt: "Choose Your Design from Create Menu"
+                            }}
+                        isEdit={true}
+                    />
+                </section>
             )
         }
 
         //if the user choose, it shows the choosen element
         saveWebsiteToStorage();
         return (
-            <DragDropContext onDragEnd={this.onDragEnd} >
-                <Droppable droppableId="childs">
-                    {(provided) => (
-                        <section
-                            data-id={utilService.makeId()}
-                            className="site-container"
-                            {...provided.droppableProps}
-                            ref={provided.innerRef}
-                        >
-                            {childs.map((child, idx) => {
-                                return <ChildsPreview
-                                    child={child}
-                                    editingElement={editingElement}
-                                    key={child.id}
-                                    isContainer={child.isContainer}
-                                    setEditingElement={setEditingElement}
-                                    onReorderingElement={onReorderingElement}
-                                    onRemoveElement={onRemoveElement}
-                                    onUpdateElement={onUpdateElement}
-                                    idx={idx}
-                                    isEdit={true}
-                                />
-                            })}
-                            {provided.placeholder}
-                        </section>
-                    )}
-                </Droppable>
-            </DragDropContext>
-
+            <>
+                <DragDropContext onDragEnd={this.onDragEnd} >
+                    <Droppable droppableId="childs">
+                        {(provided) => (
+                            <section
+                                data-id={utilService.makeId()}
+                                className="site-container"
+                                {...provided.droppableProps}
+                                ref={provided.innerRef}
+                            >
+                                {childs.map((child, idx) => {
+                                    return <ChildsPreview
+                                        child={child}
+                                        editingElement={editingElement}
+                                        key={child.id}
+                                        isContainer={child.isContainer}
+                                        setEditingElement={setEditingElement}
+                                        onReorderingElement={onReorderingElement}
+                                        onRemoveElement={onRemoveElement}
+                                        onUpdateElement={onUpdateElement}
+                                        idx={idx}
+                                        isEdit={true}
+                                    />
+                                })}
+                                {provided.placeholder}
+                            </section>
+                        )}
+                    </Droppable>
+                </DragDropContext>
+            </>
         )
     }
 }
