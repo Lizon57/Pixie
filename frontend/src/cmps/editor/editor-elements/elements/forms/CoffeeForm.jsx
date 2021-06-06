@@ -1,4 +1,4 @@
-import { utilService } from '../../../../../service/util-service.js'
+import { utilService } from '../../../../../service/util-service.js';
 
 export function getCoffeeForm() {
     return ({

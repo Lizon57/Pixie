@@ -1,3 +1,6 @@
+// Empty box
+import { getBox } from './elements/Box';
+
 // Headers
 import { getCleanHeader } from './elements/headers/CleanHeader';
 import { getPixieHeader } from './elements/headers/PixieHeader';
@@ -21,13 +24,11 @@ import { getFullWidthCardTextFirst } from './elements/cards/FullWidthCardTextFir
 import { getMaizCards } from './elements/cards/MaizCards';
 import { getCoffeeCards } from './elements/cards/CoffeeCards';
 import { getFourCards } from './elements/cards/FourCards';
-
-
-
 import { getFlowerCards } from './elements/cards/FlowerCards';
 
 // Forms 
 import { getCoffeeForm } from './elements/forms/CoffeeForm';
+import { getFlowerForm } from './elements/forms/FlowerForm';
 
 // Footers
 import { getMaizFooter } from './elements/footers/MaizFooter';
@@ -54,8 +55,9 @@ import { getMapBlock } from './elements/maps/MapBlock';
 import { getMapBeforeTxt } from './elements/maps/MapBeforeTxt';
 import { getTxtBeforeMap } from './elements/maps/TxtBeforeMap';
 
+// Videos
 import { getVideo } from './elements/Video';
-import { getBox } from './elements/Box';
+
 
 
 export const elements = {
@@ -89,6 +91,7 @@ export const elements = {
 
     // Forms
     getCoffeeForm,
+    getFlowerForm,
 
     // Footers
     getMaizFooter,
@@ -115,6 +118,7 @@ export const elements = {
     getMapBeforeTxt,
     getTxtBeforeMap,
 
+    // Videos
     getVideo,
 };
 

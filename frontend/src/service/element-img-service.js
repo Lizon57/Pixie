@@ -25,6 +25,7 @@ export const flowerCards = require('../assets/img/editor/elements/cards/flower.j
 
 // Export forms
 export const coffeeForm = require('../assets/img/editor/elements/forms/coffee.jpg');
+export const flowerForm = require('../assets/img/editor/elements/forms/flower.jpg');
 
 // Export footers
 export const maizFooter = require('../assets/img/editor/elements/footers/maiz.jpg');

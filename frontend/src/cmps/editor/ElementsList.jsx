@@ -6,7 +6,7 @@ import {
     cleanHeader, pixieHeader, sportHeader, maizHeader, coffeeHeader, flowerHeader,
     waveHero, sportHero, maizHero, coffeeHero, styleHero, flowerHero,
     threeCards, fullWidthImgFirstCard, fullWidthTxtFirstCard, maizCards, coffeeCards, fourCards, flowerCards,
-    coffeeForm,
+    coffeeForm, flowerForm,
     maizFooter, coffeeFooter, flowerFooter, withSocials,
     boxText, alwaysCenterText, styleText, maizText, coffeeText, flowerText,
     flowerGallery,
@@ -134,6 +134,7 @@ export class ElementsList extends React.Component {
                         </AccordionItemHeading>
                         <AccordionItemPanel className="elements-container">
                             <img src={coffeeForm['default']} alt="Coffee form" title="Coffee form" className="lg-img" onClick={() => onAddSection('CoffeeForm')} />
+                            <img src={flowerForm['default']} alt="Flower form" title="Flower form" className="lg-img" onClick={() => onAddSection('FlowerForm')} />
                         </AccordionItemPanel>
                     </AccordionItem>
 
