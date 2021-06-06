@@ -48,7 +48,8 @@ class _PublishTool extends React.Component {
             };
             try {
                 await saveWeb(webInfo);
-                userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`);
+                userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`)
+
                 return;
             } catch (err) {
                 return;
@@ -108,7 +109,8 @@ const mapDispatchToProps = {
 function mapStateToProps(state) {
     return {
         data: state.dataModule.data,
-        user: state.userModule.user
+        user: state.userModule.user,
+        web: state.webModule.web
     }
 }
 
