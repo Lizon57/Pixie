@@ -2,7 +2,8 @@ import { DynamicCmp } from './DynamicCmp'
 import { Draggable } from 'react-beautiful-dnd'
 
 
-export function ChildsPreview({ child, onReorderingElement, onRemoveElement, setEditingElement, idx, editingElement, isEdit }) {
+export function ChildsPreview({ child, onReorderingElement, onRemoveElement, setEditingElement, idx, editingElement, isEdit, onUpdateElement }) {
+
     if (idx !== undefined) {
         return (
             <Draggable key={child.id} draggableId={child.id} index={idx}>
@@ -20,6 +21,7 @@ export function ChildsPreview({ child, onReorderingElement, onRemoveElement, set
                             onReorderingElement={onReorderingElement}
                             onRemoveElement={onRemoveElement}
                             isEdit={isEdit}
+                            onUpdateElement={onUpdateElement}
                         />
                     </div>
                 )}
@@ -34,6 +36,7 @@ export function ChildsPreview({ child, onReorderingElement, onRemoveElement, set
             onReorderingElement={onReorderingElement}
             onRemoveElement={onRemoveElement}
             isEdit={isEdit}
+            onUpdateElement={onUpdateElement}
         />
     }
 

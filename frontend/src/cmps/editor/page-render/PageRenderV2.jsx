@@ -28,7 +28,8 @@ class _PageRenderV2 extends React.Component {
 
 
     render() {
-        const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement, saveWebsiteToStorage } = this.props;
+        const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement, saveWebsiteToStorage, onUpdateElement } = this.props;
+        
         if (childs.length === 0) {
             //if there is no childs in store it shows msg.
             // localStorage.removeItem('website');
@@ -89,6 +90,7 @@ class _PageRenderV2 extends React.Component {
                                     setEditingElement={setEditingElement}
                                     onReorderingElement={onReorderingElement}
                                     onRemoveElement={onRemoveElement}
+                                    onUpdateElement={onUpdateElement}
                                     idx={idx}
                                     isEdit={true}
                                 />

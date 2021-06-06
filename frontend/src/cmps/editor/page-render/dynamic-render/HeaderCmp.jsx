@@ -1,7 +1,7 @@
 import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
-export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit, editingElement, className }) {
+export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit, editingElement, className, onUpdateElement }) {
     if (isEdit) {
         return (
             <header
@@ -30,6 +30,7 @@ export function HeaderCmp({ data, onReorderingElement, onRemoveElement, setEditi
                             onRemoveElement={onRemoveElement}
                             isEdit={isEdit}
                             editingElement={editingElement}
+                            onUpdateElement={onUpdateElement}
 
                         />
                     })}

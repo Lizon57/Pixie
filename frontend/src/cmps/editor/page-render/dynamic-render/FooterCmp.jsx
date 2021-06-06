@@ -1,7 +1,7 @@
 import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
-export function FooterCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit, className, editingElement }) {
+export function FooterCmp({ data, onReorderingElement, onRemoveElement, setEditingElement, isEdit, className, editingElement, onUpdateElement }) {
     if (isEdit) {
         return (
             <footer
@@ -31,6 +31,7 @@ export function FooterCmp({ data, onReorderingElement, onRemoveElement, setEditi
                             onRemoveElement={onRemoveElement}
                             isEdit={isEdit}
                             editingElement={editingElement}
+                            onUpdateElement={onUpdateElement}
                         />
                     })}
             </footer >

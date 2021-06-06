@@ -7,6 +7,7 @@ const initialState = {
 export function editorReducer(state = initialState, action) {
     switch (action.type) {
         case 'SET_EDITING_CMP':
+            console.log(action.element);
             return { ...state, editingElement: action.element, editingElementParentId: action.parentId };
         case 'REMOVE_EDITING_CMP':
             return { ...state, editingElement: null, editingElementParentId: null };
