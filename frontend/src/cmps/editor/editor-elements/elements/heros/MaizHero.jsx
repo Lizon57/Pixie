@@ -48,7 +48,7 @@ export function getMaizHero() {
                                 flexDirection: 'column',
                                 gap: '15px',
                                 height: '350px',
-                                width: '350px',
+                                width: '390px',
                             }
                         },
                         childs: [

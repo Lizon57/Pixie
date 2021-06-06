@@ -1,6 +1,6 @@
 export function ElementToolBar({ onReorderingElement, onRemoveElement, id, isContainer=false }) {
     return (
-        <div className={"element-tool-bar " + (isContainer ? 'container ' : '')}>
+        <div contentEditable={false} className={"element-tool-bar " + (isContainer ? 'container ' : '')}>
             <span onClick={(ev) =>{
                 ev.stopPropagation();
                 onRemoveElement(id)}

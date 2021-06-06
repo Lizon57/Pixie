@@ -128,6 +128,7 @@ class _Editor extends React.Component {
                     <PageRender
                         onReorderingElement={this.onReorderingElement}
                         onRemoveElement={this.onRemoveElement}
+                        onUpdateElement={this.onUpdateElement}
                         saveWebsiteToStorage={this.saveWebsiteToStorage}
                         childs={childs} />
                 </section>

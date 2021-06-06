@@ -2,7 +2,7 @@ import { ElementToolBar } from "../../ElementToolBar";
 import { ChildsPreview } from "../ChildsPreview";
 
 
-export function SectionCmp({ data, setEditingElement, onReorderingElement, editingElement, onRemoveElement, className, isEdit }) {
+export function SectionCmp({ data, setEditingElement, onReorderingElement, editingElement, onRemoveElement, className, isEdit, onUpdateElement }) {
     if (isEdit) {
         return (
             <section
@@ -31,6 +31,7 @@ export function SectionCmp({ data, setEditingElement, onReorderingElement, editi
                             onRemoveElement={onRemoveElement}
                             isEdit={isEdit}
                             editingElement={editingElement}
+                            onUpdateElement={onUpdateElement}
                         />
                     })}
 
