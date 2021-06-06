@@ -10,6 +10,8 @@ import customize from '../assets/img/homepage/customize.png';
 import editor from '../assets/img/homepage/editor.png';
 import { Loading } from '../cmps/Loading';
 import { TemplatePreview } from "../cmps/TemplatePreview";
+import ExpandMoreIcon from '@material-ui/icons/ExpandMore';
+
 
 export class _HomePage extends React.Component {
     async componentDidMount() {
@@ -40,6 +42,12 @@ export class _HomePage extends React.Component {
                         </div>
                     </div>
                 </section>
+                <div className=" scroll-down-animation">
+                    <div className="flex justify-center column align-center msg">
+                        <h6>Scroll Down</h6>
+                        <ExpandMoreIcon />
+                    </div>
+                </div>
 
                 <section>
                     <div className="guide-parse-background">
