@@ -10,13 +10,16 @@ export function getFlowerHero() {
         prefs: {
             className: 'flower-hero',
             style: {
+                display: 'flex',
+                alignItems: 'center',
                 backgroundImage: `url(${heroImg})`,
                 backgroundSize: 'cover',
                 backgroundPosition: '50% 50%',
                 backgroundColor: '#FFB2DF',
-                padding: '30px',
-                display: 'flex',
-                alignItems: 'center',
+                paddingBlockStart: '30px',
+                paddingInlineStart: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -31,8 +34,8 @@ export function getFlowerHero() {
                         display: 'flex',
                         flexDirection: 'column-reverse',
                         gap: '15px',
-                        width: '100%',
                         height: '100%',
+                        width: '100%',
                     }
                 },
                 childs: [
@@ -42,13 +45,14 @@ export function getFlowerHero() {
                         role: 'img',
                         prefs: {
                             style: {
-                                width: '40%',
+                                display: 'flex',
                                 backgroundImage: 'url("https://i.ibb.co/DY0Xvzy/ghivdhlwzsgbrcnbk05n.png")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'contain',
                                 backgroundRepeat: 'no-repeat',
-                                minWidth: '320px',
                                 minHeight: '400px',
+                                minWidth: '320px',
+                                width: '40%',
                             }
                         },
                     },
@@ -60,13 +64,12 @@ export function getFlowerHero() {
                         prefs: {
                             className: 'flower-hero-text',
                             style: {
-                                width: '100%',
                                 display: 'flex',
-                                flexDirection: 'column',
                                 gap: '24px',
+                                flexDirection: 'column',
                                 alignItems: 'center',
                                 fontFamily: 'Josefine Sans',
-                                maxWidth: '500px',
+                                width: '100%',
                             }
                         },
                         childs: [
@@ -76,8 +79,9 @@ export function getFlowerHero() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
-                                        fontSize: '64px',
+                                        display: 'flex',
                                         color: '#eeeeee',
+                                        fontSize: '64px',
                                     }
                                 },
                                 txt: 'Everybody Loves the Sunshine.'
@@ -88,8 +92,9 @@ export function getFlowerHero() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
-                                        fontSize: '20px',
+                                        display: 'flex',
                                         color: '#53440c',
+                                        fontSize: '20px',
                                     }
                                 },
                                 txt: 'After you’ve finished your Friday shopping and had brunch, it’s well worth it to pass through the flower shop at the end of the market.'
@@ -100,14 +105,18 @@ export function getFlowerHero() {
                                 role: 'childless',
                                 prefs: {
                                     style: {
-                                        padding: '16px 32px',
-                                        borderRadius: '30px',
-                                        fontFamily: 'Raleway',
-                                        fontSize: '18px',
-                                        backgroundColor: '#ffc935',
-                                        fontWeight: 'bold',
+                                        display: 'flex',
                                         border: 'none',
+                                        borderRadius: '30px',
+                                        backgroundColor: '#ffc935',
                                         color: '#53440c',
+                                        fontSize: '18px',
+                                        fontFamily: 'Raleway',
+                                        fontWeight: 'bold',
+                                        paddingBlockStart: '16px',
+                                        paddingInlineStart: '32px',
+                                        paddingBlockEnd: '16px',
+                                        paddingInlineEnd: '32px',
                                     }
                                 },
                                 txt: 'TAKE ME'

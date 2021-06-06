@@ -14,6 +14,7 @@ export function getTxtBeforeMap() {
                 justifyContent: 'space-between',
                 flexWrap: 'wrap',
                 gap: '30px',
+                backgroundColor: '#eeeeee',
                 paddingInlineStart: '36px',
                 paddingInlineEnd: '36px',
                 paddingBlockStart: '10px',

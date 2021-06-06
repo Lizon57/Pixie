@@ -71,10 +71,10 @@ export class _ElementEditor extends React.Component {
         } = {} } = prefs;
 
         return (
-            <Accordion allowZeroExpanded={true} allowMultipleExpanded={true}>
+            <Accordion preExpanded={['txtAC', 'imgAc', 'videoAc', 'mapAc']} allowZeroExpanded={true} allowMultipleExpanded={false}>
 
                 {('txt' in element && element.role !== 'img') &&
-                    <AccordionItem>
+                    <AccordionItem uuid={'txtAC'}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 Text
@@ -99,7 +99,7 @@ export class _ElementEditor extends React.Component {
 
                 {
                     element.role === 'img' &&
-                    <AccordionItem>
+                    <AccordionItem uuid={'imgAc'}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 Source
@@ -114,7 +114,7 @@ export class _ElementEditor extends React.Component {
 
                 {
                     element.role === 'video-container' &&
-                    <AccordionItem>
+                    <AccordionItem uuid={'videoAc'}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 Source
@@ -131,7 +131,7 @@ export class _ElementEditor extends React.Component {
 
                 {
                     element.role === 'map' &&
-                    <AccordionItem>
+                    <AccordionItem uuid={'mapAc'}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 Location

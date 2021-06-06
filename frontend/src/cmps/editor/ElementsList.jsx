@@ -66,8 +66,8 @@ export class ElementsList extends React.Component {
         const { isUserMsg, msg } = this.state;
         return (
             <div className="editor-elements-list">
-                <Accordion allowZeroExpanded="true" allowMultipleExpanded="false">
-                    <AccordionItem>
+                <Accordion preExpanded={['boxAc']} allowZeroExpanded={true} allowMultipleExpanded={false}>
+                    <AccordionItem uuid={'boxAc'}>
                         <AccordionItemHeading>
                             <AccordionItemButton>
                                 Box
