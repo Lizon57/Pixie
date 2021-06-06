@@ -1,15 +1,14 @@
 .scroll-down-animation {
   font-weight: $fw-extra-bold;
   font-family: RobotoSlab;
-  color: rgba($color: $black, $alpha: 0.4);
+  color: rgba($color: $black, $alpha: 0.5);
   height: 48px;
-  & h6 {
-    animation: rotate 10s 10s linear infinite;
-  }
+
   & .msg {
     position: relative;
     animation: jump 1s linear infinite;
   }
+
   & img {
     height: 30px;
     width: 30px;
@@ -79,38 +78,5 @@
   }
   100% {
     bottom: 0px;
-  }
-}
-
-@include keyframes(rotate) {
-  0% {
-    transform: rotate(360deg);
-  }
-  10% {
-    transform: rotate(0);
-  }
-  20% {
-    transform: rotate(0);
-  }
-  30% {
-    transform: rotate(0);
-  }
-  50% {
-    transform: rotate(0);
-  }
-  60% {
-    transform: rotate(0);
-  }
-  70% {
-    transform: rotate(0);
-  }
-  80% {
-    transform: rotate(0);
-  }
-  90% {
-    transform: rotate(0);
-  }
-  100% {
-    transform: rotate(0);
   }
 }

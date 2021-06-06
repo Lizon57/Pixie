@@ -33,7 +33,7 @@ export class _AppHeader extends React.Component {
                             <ul className={"clean-list navlinks-container" + (isNavOpen ? "" : " hider")}>
                                 <li><NavLink to="/editor" activeClassName="active" onClick={this.onToggleNav}>Editor</NavLink></li>
                                 <li><NavLink to="/template" onClick={this.onToggleNav}>Templates</NavLink></li>
-                                <li><NavLink to="/about" onClick={this.onToggleNav}>About</NavLink></li>
+                                {/* <li><NavLink to="/about" onClick={this.onToggleNav}>About</NavLink></li> */}
 
                                 {user &&
                                     <>

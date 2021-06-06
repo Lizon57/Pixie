@@ -4,7 +4,6 @@ import { setEditingElement } from '../../store/actions/editor-actions';
 import { ElementToolBar } from './ElementToolBar';
 
 class _PageRender extends React.Component {
-
     checkChildren = (elements) => {
         return elements.map((elChild) => {
             return elChild.childs ?

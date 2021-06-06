@@ -122,6 +122,11 @@
   content: "\f067"
 }
 
+// Homepage
+.scroll-arrow-icn::before{
+  content: "\f309";
+}
+
 // Footer
 .footer-icn {
   @include rounded-corners;
