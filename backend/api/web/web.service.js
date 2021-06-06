@@ -57,8 +57,8 @@ async function saveWeb(WebInfo) {
     }
     try {
         const collection = await dbService.getCollection('web');
-        const insertedweb = await collection.insertOne({ ...WebInfo });
-        return WebInfo;
+        const insertedWeb = await collection.insertOne({ ...WebInfo });
+        return insertedWeb.ops[0];
     } catch (err) {
         logger.error('cannot insert web', err);
         throw err;

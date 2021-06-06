@@ -32,6 +32,7 @@ export function saveWeb(webInfo) { // Action Creator
             savedWeb
         }
         dispatch(action)
+        return savedWeb
 
     }
 }
