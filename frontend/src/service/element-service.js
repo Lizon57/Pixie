@@ -62,6 +62,8 @@ function getElement(type, src = null) {
         // Forms
         case 'CoffeeForm':
             return elements.getCoffeeForm();
+        case 'FlowerForm':
+            return elements.getFlowerForm();
 
         // Footers
         case 'MaizFooter':
