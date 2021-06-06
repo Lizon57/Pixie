@@ -9,11 +9,14 @@ export function getFlowerGallery() {
         prefs: {
             className: 'flower-gallery',
             style: {
-                padding: '30px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'center',
                 gap: '10px',
+                paddingBlockStart: '30px',
+                paddingInlineEnd: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineStart: '30px',
             }
         },
         childs: [
@@ -27,8 +30,8 @@ export function getFlowerGallery() {
                     style: {
                         display: 'flex',
                         flexDirection: 'column',
-                        height: '120vw',
                         gap: '10px',
+                        height: '120vw',
                     }
                 },
                 childs: [
@@ -38,11 +41,12 @@ export function getFlowerGallery() {
                         role: 'img',
                         prefs: {
                             style: {
-                                height: '33.3%',
+                                display: 'flex',
                                 borderRadius: '5px',
                                 backgroundImage: 'url("https://i.ibb.co/NT0FTMM/xsknmmwcxaibl4fuxdfj.jpg")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
+                                height: '33.3%',
                             }
                         },
                     },
@@ -52,73 +56,76 @@ export function getFlowerGallery() {
                         role: 'img',
                         prefs: {
                             style: {
-                                height: '66.6%',
+                                display: 'flex',
                                 borderRadius: '5px',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
                                 backgroundImage: 'url("https://i.ibb.co/8zzSnjH/rawspbnxv91imayw3voj.jpg")',
-                            }
-                        },
-                    },
-                ]
-            },
-            {
-                id: utilService.makeId(),
-                type: 'div',
-                role: 'div',
-                isContainer: true,
-                prefs: {
-                    className: 'flower-gallery-col',
-                    style: {
-                        display: 'flex',
-                        flexDirection: 'column',
-                        height: '120vw',
-                        gap: '10px',
-                    }
-                },
-                childs: [
-                    {
-                        id: utilService.makeId(),
-                        type: 'div',
-                        role: 'img',
-                        prefs: {
-                            style: {
-                                height: '100%',
-                                borderRadius: '5px',
-                                backgroundPosition: '50% 50%',
-                                backgroundSize: 'cover',
-                                backgroundImage: 'url("https://i.ibb.co/rGKpVWb/mzckdgbrrrhnjqwvvawr.jpg")',
-                            }
-                        },
-                    },
-                ]
-            },
-            {
-                id: utilService.makeId(),
-                type: 'div',
-                role: 'div',
-                isContainer: true,
-                prefs: {
-                    className: 'flower-gallery-col',
-                    style: {
-                        display: 'flex',
-                        flexDirection: 'column',
-                        height: '120vw',
-                        gap: '10px',
-                    }
-                },
-                childs: [
-                    {
-                        id: utilService.makeId(),
-                        type: 'div',
-                        role: 'img',
-                        prefs: {
-                            style: {
                                 height: '66.6%',
+                            }
+                        },
+                    },
+                ]
+            },
+            {
+                id: utilService.makeId(),
+                type: 'div',
+                role: 'div',
+                isContainer: true,
+                prefs: {
+                    className: 'flower-gallery-col',
+                    style: {
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '10px',
+                        height: '120vw',
+                    }
+                },
+                childs: [
+                    {
+                        id: utilService.makeId(),
+                        type: 'div',
+                        role: 'img',
+                        prefs: {
+                            style: {
+                                display: 'flex',
                                 borderRadius: '5px',
+                                backgroundImage: 'url("https://i.ibb.co/rGKpVWb/mzckdgbrrrhnjqwvvawr.jpg")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
+                                height: '100%',
+                            }
+                        },
+                    },
+                ]
+            },
+            {
+                id: utilService.makeId(),
+                type: 'div',
+                role: 'div',
+                isContainer: true,
+                prefs: {
+                    className: 'flower-gallery-col',
+                    style: {
+                        display: 'flex',
+                        flexDirection: 'column',
+                        gap: '10px',
+                        height: '120vw',
+                    }
+                },
+                childs: [
+                    {
+                        id: utilService.makeId(),
+                        type: 'div',
+                        role: 'img',
+                        prefs: {
+                            style: {
+                                display: 'flex',
+                                borderRadius: '5px',
                                 backgroundImage: 'url("https://i.ibb.co/Y2Db1DK/hhv95tfr3rugrlwrhxpl.jpg")',
+                                backgroundPosition: '50% 50%',
+                                backgroundSize: 'cover',
+                                height: '66.6%',
                             }
                         },
                     },
@@ -128,11 +135,12 @@ export function getFlowerGallery() {
                         role: 'img',
                         prefs: {
                             style: {
-                                height: '33.3%',
+                                display: 'flex',
                                 borderRadius: '5px',
+                                backgroundImage: 'url("https://i.ibb.co/VTGFsY3/jej7wrurmrikm9cwbgef.jpg")',
                                 backgroundPosition: '50% 50%',
                                 backgroundSize: 'cover',
-                                backgroundImage: 'url("https://i.ibb.co/VTGFsY3/jej7wrurmrikm9cwbgef.jpg")',
+                                height: '33.3%',
                             }
                         },
                     },

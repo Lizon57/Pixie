@@ -9,11 +9,14 @@ export function getFlowerCards() {
         prefs: {
             className: 'flower-cards-container',
             style: {
-                padding: '30px',
                 display: 'flex',
                 flexDirection: 'column',
                 justifyContent: 'space-between',
                 gap: '30px',
+                paddingBlockStart: '30px',
+                paddingInlineStart: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -25,13 +28,16 @@ export function getFlowerCards() {
                 prefs: {
                     className: 'flower-card',
                     style: {
-                        padding: '30px',
-                        backgroundColor: '#FFFFFF',
                         display: 'flex',
                         flexDirection: 'column',
-                        textAlign: 'center',
-                        fontFamily: 'Josefine Sans',
                         borderRadius: '5px',
+                        backgroundColor: '#FFFFFF',
+                        fontFamily: 'Josefine Sans',
+                        textAlign: 'center',
+                        paddingBlockStart: '30px',
+                        paddingInlineStart: '30px',
+                        paddingBlockEnd: '30px',
+                        paddingInlineEnd: '30px',
                     }
                 },
                 childs: [
@@ -42,9 +48,11 @@ export function getFlowerCards() {
                         prefs: {
                             className: 'fas deliver-icon',
                             style: {
-                                fontSize: '50px',
+                                display: 'flex',
+                                justifyContent: 'center',
                                 color: '#EF903A',
-                                marginBottom: '30px',
+                                fontSize: '50px',
+                                marginBlockEnd: '30px',
                             }
                         },
                         txt: ''
@@ -55,9 +63,11 @@ export function getFlowerCards() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
+                                justifyContent: 'center',
                                 fontSize: '24px',
                                 fontWeight: 'bold',
-                                marginBottom: '24px',
+                                marginBlockEnd: '24px',
                             }
                         },
                         txt: 'Delivery Around Tel-Aviv'
@@ -68,6 +78,7 @@ export function getFlowerCards() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
                                 fontSize: '18px',
                             }
                         },
@@ -83,13 +94,16 @@ export function getFlowerCards() {
                 prefs: {
                     className: 'flower-card',
                     style: {
-                        padding: '30px',
-                        backgroundColor: '#FFFFFF',
                         display: 'flex',
                         flexDirection: 'column',
-                        textAlign: 'center',
-                        fontFamily: 'Josefine Sans',
                         borderRadius: '5px',
+                        backgroundColor: '#FFFFFF',
+                        fontFamily: 'Josefine Sans',
+                        textAlign: 'center',
+                        paddingBlockStart: '30px',
+                        paddingInlineStart: '30px',
+                        paddingBlockEnd: '30px',
+                        paddingInlineEnd: '30px',
                     }
                 },
                 childs: [
@@ -100,9 +114,11 @@ export function getFlowerCards() {
                         prefs: {
                             className: 'fas fast-icon',
                             style: {
-                                fontSize: '50px',
+                                display: 'flex',
+                                justifyContent: 'center',
                                 color: '#EF903A',
-                                marginBottom: '30px',
+                                fontSize: '50px',
+                                marginBlockEnd: '30px',
                             }
                         },
                         txt: ''
@@ -113,9 +129,11 @@ export function getFlowerCards() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
+                                justifyContent: 'center',
                                 fontSize: '24px',
                                 fontWeight: 'bold',
-                                marginBottom: '24px',
+                                marginBlockEnd: '24px',
                             }
                         },
                         txt: 'Quick to Arive'
@@ -126,6 +144,7 @@ export function getFlowerCards() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
                                 fontSize: '18px',
                             }
                         },
@@ -141,13 +160,16 @@ export function getFlowerCards() {
                 prefs: {
                     className: 'flower-card',
                     style: {
-                        padding: '30px',
-                        backgroundColor: '#FFFFFF',
                         display: 'flex',
                         flexDirection: 'column',
-                        textAlign: 'center',
-                        fontFamily: 'Josefine Sans',
                         borderRadius: '5px',
+                        backgroundColor: '#FFFFFF',
+                        fontFamily: 'Josefine Sans',
+                        textAlign: 'center',
+                        paddingBlockStart: '30px',
+                        paddingInlineStart: '30px',
+                        paddingBlockEnd: '30px',
+                        paddingInlineEnd: '30px',
                     }
                 },
                 childs: [
@@ -158,9 +180,11 @@ export function getFlowerCards() {
                         prefs: {
                             className: 'fas care-icon',
                             style: {
-                                fontSize: '50px',
+                                display: 'flex',
+                                justifyContent: 'center',
                                 color: '#EF903A',
-                                marginBottom: '30px',
+                                fontSize: '50px',
+                                marginBlockEnd: '30px',
                             }
                         },
                         txt: ''
@@ -171,9 +195,11 @@ export function getFlowerCards() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
+                                justifyContent: 'center',
                                 fontSize: '24px',
                                 fontWeight: 'bold',
-                                marginBottom: '24px',
+                                marginBlockEnd: '24px',
                             }
                         },
                         txt: 'Handled With Care'
@@ -184,6 +210,7 @@ export function getFlowerCards() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
                                 fontSize: '18px',
                             }
                         },

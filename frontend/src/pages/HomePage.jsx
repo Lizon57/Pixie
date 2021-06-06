@@ -42,7 +42,7 @@ export class _HomePage extends React.Component {
                         </div>
                     </div>
                 </section>
-                <div className=" scroll-down-animation">
+                <div className="scroll-down-animation">
                     <div className="flex justify-center column align-center msg">
                         <h6>Scroll Down</h6>
                         <ExpandMoreIcon />

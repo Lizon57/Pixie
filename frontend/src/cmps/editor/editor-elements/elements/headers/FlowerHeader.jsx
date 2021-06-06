@@ -8,15 +8,17 @@ export function getFlowerHeader() {
         isContainer: true,
         prefs: {
             style: {
-                backgroundColor: '#FFB2DF',
-                padding: '15px 30px',
                 display: 'flex',
-                alignItems: 'center',
                 flexDirection: 'column',
                 gap: '30px',
-                color: '#eeeeee',
+                alignItems: 'center',
+                backgroundColor: '#FFB2DF',
                 fontFamily: 'Raleway',
                 fontWeight: 'bold',
+                paddingBlockStart: '15px',
+                paddingInlineStart: '30px',
+                paddingBlockEnd: '15px',
+                paddingInlineEnd: '30px',
             }
         },
         childs: [
@@ -26,7 +28,9 @@ export function getFlowerHeader() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex',
                         fontSize: '32px',
+                        color: '#eeeeee',
                     }
                 },
                 txt: 'FLOWERTIN'
@@ -48,7 +52,11 @@ export function getFlowerHeader() {
                         prefs: {
                             className: 'nav-desktop',
                             style: {
-                                padding: '5px 30px',
+                                display: 'flex',
+                                paddingBlockStart: '5px',
+                                paddingInlineStart: '30px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineEnd: '30px',
                                 color: '#53440c',
                             }
                         },
@@ -61,7 +69,11 @@ export function getFlowerHeader() {
                         prefs: {
                             className: 'nav-desktop',
                             style: {
-                                padding: '5px 30px',
+                                display: 'flex',
+                                paddingBlockStart: '5px',
+                                paddingInlineStart: '30px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineEnd: '30px',
                                 color: '#53440c',
                             }
                         },
@@ -74,7 +86,11 @@ export function getFlowerHeader() {
                         prefs: {
                             className: 'nav-desktop',
                             style: {
-                                padding: '5px 30px',
+                                display: 'flex',
+                                paddingBlockStart: '5px',
+                                paddingInlineStart: '30px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineEnd: '30px',
                                 color: '#53440c',
                             }
                         },
@@ -87,7 +103,11 @@ export function getFlowerHeader() {
                         prefs: {
                             className: 'nav-desktop',
                             style: {
-                                padding: '5px 30px',
+                                display: 'flex',
+                                paddingBlockStart: '5px',
+                                paddingInlineStart: '30px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineEnd: '30px',
                                 color: '#53440c',
                             }
                         },
@@ -100,7 +120,12 @@ export function getFlowerHeader() {
                         prefs: {
                             className: 'fas hamburger-icon',
                             style: {
-                                padding: '5px 30px',
+                                cursor: 'pointer',
+                                display: 'flex',
+                                paddingBlockStart: '5px',
+                                paddingInlineStart: '30px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineEnd: '30px',
                                 color: '#53440c',
                             }
                         },

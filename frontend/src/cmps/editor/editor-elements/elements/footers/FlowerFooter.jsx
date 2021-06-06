@@ -8,12 +8,15 @@ export function getFlowerFooter() {
         isContainer: true,
         prefs: {
             style: {
-                backgroundColor: '#332a08',
                 display: 'flex',
                 flexWrap: 'wrap',
                 justifyContent: 'space-between',
-                padding: '10px 30px',
+                backgroundColor: '#332a08',
                 fontFamily: 'Raleway',
+                paddingBlockStart: '10px',
+                paddingInlineEnd: '30px',
+                paddingBlockEnd: '10px',
+                paddingInlineStart: '30px',
             }
         },
         childs: [
@@ -35,10 +38,14 @@ export function getFlowerFooter() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
                                 fontWeight: 'bold',
                                 borderBottom: '1px solid #EEEEEE',
-                                marginBottom: '10px',
-                                padding: '10px 15px',
+                                paddingBlockStart: '10px',
+                                paddingInlineEnd: '15px',
+                                paddingBlockEnd: '10px',
+                                paddingInlineStart: '15px',
+                                marginBlockEnd: '10px',
                             }
                         },
                         txt: 'FLOWERTIN'
@@ -49,7 +56,12 @@ export function getFlowerFooter() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                padding: '10px 15px',
+                                display: 'flex',
+                                paddingBlockStart: '10px',
+                                paddingInlineEnd: '15px',
+                                paddingBlockEnd: '10px',
+                                paddingInlineStart: '15px',
+                                marginBlockEnd: '10px',
                             }
                         },
                         txt: 'FLOWERS'
@@ -60,7 +72,12 @@ export function getFlowerFooter() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                padding: '10px 15px',
+                                display: 'flex',
+                                paddingBlockStart: '10px',
+                                paddingInlineEnd: '15px',
+                                paddingBlockEnd: '10px',
+                                paddingInlineStart: '15px',
+                                marginBlockEnd: '10px',
                             }
                         },
                         txt: 'DELIVERIES'
@@ -71,7 +88,12 @@ export function getFlowerFooter() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                padding: '10px 15px',
+                                display: 'flex',
+                                paddingBlockStart: '10px',
+                                paddingInlineEnd: '15px',
+                                paddingBlockEnd: '10px',
+                                paddingInlineStart: '15px',
+                                marginBlockEnd: '10px',
                             }
                         },
                         txt: 'SHOP'
@@ -82,7 +104,12 @@ export function getFlowerFooter() {
                         role: 'childless',
                         prefs: {
                             style: {
-                                padding: '10px 15px',
+                                display: 'flex',
+                                paddingBlockStart: '10px',
+                                paddingInlineEnd: '15px',
+                                paddingBlockEnd: '10px',
+                                paddingInlineStart: '15px',
+                                marginBlockEnd: '10px',
                             }
                         },
                         txt: 'FAQS'
@@ -95,6 +122,7 @@ export function getFlowerFooter() {
                 role: 'childless',
                 prefs: {
                     style: {
+                        display: 'flex',
                         fontSize: '10px',
                     }
                 },
