@@ -15,6 +15,7 @@ export function TemplatePreview({ template, onSetData }) {
                     <div className="circle"></div>
                     <div className="circle"></div>
                 </div>
+
                 <div style={{ backgroundImage: `url("${template.image}")` }} className="template-img">
                     <div className="template-img-hover">
                         <button>Edit</button>

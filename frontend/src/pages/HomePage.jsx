@@ -103,15 +103,23 @@ export class _HomePage extends React.Component {
                     {isLoading && <Loading />}
                     {!isLoading &&
                         <div className="grid templates-preview-container">
-                            <div onClick={() => {
-                                localStorage.removeItem('website');
-                                this.onSetData({ childs: [] })
-                            }} className="flex column space-between template-preview make-new">
-                                <div className="flex justify-center align-center template-name-new">
-                                    <span>Make New</span>
-                                </div>
-                                <div className="flex align-center justify-center template-hover-menu">
-                                    <div className="fas plus-icon edit-template-button"></div>
+                            <div className="template-card-container">
+                                <div onClick={() => {
+                                    localStorage.removeItem('website');
+                                    this.onSetData({ childs: [] })
+                                }}
+                                    className="template-card">
+                                    <div className="template-bar">
+                                        <div className="circle"></div>
+                                        <div className="circle"></div>
+                                        <div className="circle"></div>
+                                    </div>
+                                    <div className="template-img">
+                                        <div className="template-img-hover">
+                                            <button>Start</button>
+                                        </div>
+                                    </div>
+                                    <div className="template-title">Make New</div>
                                 </div>
                             </div>
                             {templates.slice(0, 5).map(template => <TemplatePreview key={template._id} onSetData={this.onSetData} template={template} />)}
