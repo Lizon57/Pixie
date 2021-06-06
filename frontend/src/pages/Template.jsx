@@ -26,20 +26,6 @@ class _Template extends React.Component {
 
                 {/* Make new website */}
 
-                {/* <div onClick={() => {
-                        localStorage.removeItem('website');
-                        this.onSetData({ childs: [] })
-                    }}
-                        className="flex column space-between template-preview make-new">
-
-                        <div className="flex justify-center align-center template-name-new">
-                            <span>Make New</span>
-                        </div>
-                        <div className="flex align-center justify-center template-hover-menu">
-                            <div className="fas plus-icon edit-template-button"></div>
-                        </div>
-                    </div> */}
-
                 <div className="template-card-container">
                     <div onClick={() => {
                         localStorage.removeItem('website');
