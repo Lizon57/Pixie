@@ -2,7 +2,7 @@ import React from 'react';
 import { connect } from 'react-redux';
 import { Steps } from 'intro.js-react';
 import { setData, addSection } from '../store/actions/data-actions';
-import { removeEditingElement } from '../store/actions/editor-actions';
+import { removeEditingElement, setEditorMode } from '../store/actions/editor-actions';
 import { isEditorMode } from '../store/actions/app-actions';
 import { elementService } from '../service/element-service';
 import { storageService } from '../service/storage-service';
@@ -59,7 +59,8 @@ class _Editor extends React.Component {
     }
 
     componentWillUnmount() {
-        const { isEditorMode } = this.props;
+        const { isEditorMode, setEditorMode } = this.props;
+        setEditorMode('addElement');
         isEditorMode(false);
         this.setState(prevState => ({ ...prevState, stepsEnabled: false }));
     }
@@ -156,6 +157,7 @@ const mapDispatchToProps = {
     addSection,
     isEditorMode,
     removeEditingElement,
+    setEditorMode
 }
 
 function mapStateToProps(state) {

@@ -11,10 +11,13 @@ export function getFlowerTextSection() {
             style: {
                 display: 'flex',
                 flexDirection: 'column',
-                justifyContent: 'space-between',
-                padding: '30px',
-                backgroundColor: ' #FFFFFF',
                 gap: '15px',
+                justifyContent: 'space-between',
+                backgroundColor: '#FFFFFF',
+                paddingBlockStart: '30px',
+                paddingInlineEnd: '30px',
+                paddingBlockEnd: '30px',
+                paddingInlineStart: '30px',
             }
         },
         childs: [
@@ -28,9 +31,9 @@ export function getFlowerTextSection() {
                     style: {
                         display: 'flex',
                         flexDirection: 'column',
+                        gap: '30px',
                         justifyContent: 'center',
                         width: '100%',
-                        gap: '30px',
                     }
                 },
                 childs: [
@@ -40,9 +43,10 @@ export function getFlowerTextSection() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
+                                color: '#EF903A',
                                 fontSize: '64px',
                                 fontFamily: 'Josefine Sans',
-                                color: '#EF903A',
                             }
                         },
                         txt: 'Variety of flowers, at a phone call reach.'
@@ -53,6 +57,7 @@ export function getFlowerTextSection() {
                         role: 'childless',
                         prefs: {
                             style: {
+                                display: 'flex',
                                 fontSize: '20px',
                                 fontFamily: 'Montserrat',
                             }
@@ -68,12 +73,13 @@ export function getFlowerTextSection() {
                 prefs: {
                     className: 'flower-text-section-img',
                     style: {
-                        width: '100%',
-                        height: '400px',
+                        display: 'flex',
                         backgroundImage: 'url("https://i.ibb.co/cLsDqjw/tphkq3tozqklg261ku8x.jpg")',
                         backgroundSize: 'cover',
                         backgroundPosition: 'top',
                         borderRadius: '5px',
+                        height: '400px',
+                        width: '100%',
                     }
                 },
             }

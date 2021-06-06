@@ -52,7 +52,6 @@ class _PublishTool extends React.Component {
 
                 return;
             } catch (err) {
-                console.log('Error on Save', err)
                 return;
             }
         }
@@ -66,8 +65,7 @@ class _PublishTool extends React.Component {
         };
         try {
             await saveWeb(webInfo);
-            userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`)
-
+            userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`);
         } catch (err) {
             console.log('Error on Save', err);
         }
