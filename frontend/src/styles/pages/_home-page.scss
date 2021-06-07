@@ -52,7 +52,6 @@
     }
 
     a {
-      cursor: pointer;
       border-radius: rem(10px);
       background-color: $azure;
       color: $white;
@@ -72,6 +71,7 @@
 
       &:hover {
         width: 13rem;
+        background-color: darken($azure, 10);
       }
     }
   }
@@ -169,26 +169,41 @@
 
 .templates-container {
   max-width: 1000px;
+  margin-block-start: 1rem;
   padding-block-end: 1rem;
-
-  & > * {
-    padding: 0 1rem;
-  }
 
   & h2 {
     color: $azure;
     font-size: 2rem;
     font-weight: $fw-bold;
     font-family: RobotoSlab;
-    padding: 1rem;
+    margin-block-end: 1rem;
   }
 
   & .templates-preview-container {
     grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
     gap: 2rem;
+    margin-block-end: 1rem;
   }
 
-  & a {
+  & .show-more-container {
     padding: 1rem;
+    text-align: center;
+
+    & a {
+      border-radius: rem(10px);
+      background-color: $azure;
+      color: $white;
+      font-size: 1.2rem;
+      font-weight: $fw-bold;
+      font-family: RobotoSlab;
+      letter-spacing: 1px;
+      padding: 0.5rem 1rem;
+      transition: all ease-in-out $t-fast;
+
+      &:hover{
+        background-color: darken($azure, 10);
+      }
+    }
   }
 }

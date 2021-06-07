@@ -5,8 +5,12 @@
   padding: 1rem;
 
   @include for-normal-layout {
-    flex-basis: 45%;
+    border-radius: 0px;
     background-color: unset;
     padding: 0;
+  }
+
+  @include for-wide-layout {
+    max-width: 500px;
   }
 }

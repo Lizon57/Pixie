@@ -48,7 +48,9 @@ class _PublishTool extends React.Component {
             };
             try {
                 await saveWeb(webInfo);
-                userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`);
+                userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`)
+                window.open(`http://localhost:3000/#/view/${webInfo._id}`); //change to heroku
+                // window.open(`https://pixie.herokuapp.com/#/view/${webInfo._id}`); //heroku
                 return;
             } catch (err) {
                 return;
@@ -63,8 +65,10 @@ class _PublishTool extends React.Component {
             creatorId: user._id,
         };
         try {
-            await saveWeb(webInfo);
+            const savedWeb = await saveWeb(webInfo);
             userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`);
+            window.open(`http://localhost:3000/#/view/${savedWeb._id}`); //change to heroku
+            // window.open(`https://pixie.herokuapp.com/#/view/${savedWeb._id}`); //heroku
         } catch (err) {
             console.log('Error on Save', err);
         }
@@ -108,7 +112,8 @@ const mapDispatchToProps = {
 function mapStateToProps(state) {
     return {
         data: state.dataModule.data,
-        user: state.userModule.user
+        user: state.userModule.user,
+        web: state.webModule.web
     }
 }
 

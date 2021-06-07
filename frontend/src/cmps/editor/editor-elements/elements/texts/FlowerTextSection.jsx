@@ -13,7 +13,7 @@ export function getFlowerTextSection() {
                 flexDirection: 'column',
                 gap: '15px',
                 justifyContent: 'space-between',
-                backgroundColor: '#FFFFFF',
+                backgroundColor: '#eeeeee',
                 paddingBlockStart: '30px',
                 paddingInlineEnd: '30px',
                 paddingBlockEnd: '30px',
@@ -33,6 +33,7 @@ export function getFlowerTextSection() {
                         flexDirection: 'column',
                         gap: '30px',
                         justifyContent: 'center',
+                        flexGrow: 1,
                         width: '100%',
                     }
                 },
