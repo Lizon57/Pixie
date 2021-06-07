@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
+import ScrollAnimation from 'react-animate-on-scroll';
 import { setData } from '../store/actions/data-actions';
 import { loadTemplates } from '../store/actions/template-action';
 import hero from '../assets/img/homepage/hero.gif';
@@ -50,43 +51,49 @@ export class _HomePage extends React.Component {
                 <section>
                     <div className="guide-parse-background">
                         <section className="container" data-aos="fade-left">
-                            <div className="flex wrap space-between">
-                                <div className="text">
-                                    <h2>The Freedom to Create the Websites You Want</h2>
-                                    <p>
-                                        Design and build your own high-quality websites.
-                                        Whether you’re promoting your business,
-                                        showcasing your work,
+                            <ScrollAnimation animateIn='bounceInLeft' duration={2}>
+                                <div className="flex wrap space-between">
+                                    <div className="text">
+                                        <h2>The Freedom to Create the Websites You Want</h2>
+                                        <p>
+                                            Design and build your own high-quality websites.
+                                            Whether you’re promoting your business,
+                                            showcasing your work,
                                     you can do it all with the <span>Pixie</span> website Editor.</p>
+                                    </div>
+                                    <img src={freedom} alt="guide parse" />
                                 </div>
-                                <img src={freedom} alt="guide parse" />
-                            </div>
+                            </ScrollAnimation>
                         </section>
                     </div>
 
                     <div className="guide-parse-background">
                         <section className="container">
-                            <div className="flex wrap space-between">
-                                <div className="text">
-                                    <h2>Customize your site</h2>
-                                    <p>Pick a template and customize anything,
+                            <ScrollAnimation animateIn='bounceInLeft' duration={2}>
+                                <div className="flex wrap space-between">
+                                    <div className="text">
+                                        <h2>Customize your site</h2>
+                                        <p>Pick a template and customize anything,
                                     or answer a few questions and get a free website designed just for you</p>
+                                    </div>
+                                    <img src={customize} className="parse-even" alt="guide parse" />
                                 </div>
-                                <img src={customize} className="parse-even" alt="guide parse" />
-                            </div>
+                            </ScrollAnimation>
                         </section>
                     </div>
 
                     <div className="guide-parse-background">
                         <section className="container">
-                            <div className="flex wrap space-between">
-                                <div className="text">
-                                    <h2>Pixie Editor</h2>
-                                    <p>Start from scratch or choose from over designer-made templates that you can fully
+                            <ScrollAnimation animateIn='bounceInLeft' duration={2}>
+                                <div className="flex wrap space-between">
+                                    <div className="text">
+                                        <h2>Pixie Editor</h2>
+                                        <p>Start from scratch or choose from over designer-made templates that you can fully
                                     customize using <span>Pixie</span> website Editor.</p>
+                                    </div>
+                                    <img src={editor} alt="guide parse" />
                                 </div>
-                                <img src={editor} alt="guide parse" />
-                            </div>
+                            </ScrollAnimation>
                         </section>
                     </div>
                 </section>
