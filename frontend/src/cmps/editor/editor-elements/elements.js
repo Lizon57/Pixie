@@ -41,6 +41,7 @@ import { getImg } from './elements/Img';
 
 //Galleries
 import { getFlowerGallery } from './elements/galleries/FlowerGallery'
+import { getToyGallery } from './elements/galleries/ToyGallery'
 
 // Texts
 import { getText } from './elements/texts/Text';
@@ -109,8 +110,9 @@ export const elements = {
 
     // Galleries
     getFlowerGallery,
+    getToyGallery,
 
-    // Img    
+    // Img
     getImg,
 
     // Maps

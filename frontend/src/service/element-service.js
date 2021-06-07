@@ -92,6 +92,8 @@ function getElement(type, src = null) {
         // Galleries
         case 'FlowerGallery':
             return elements.getFlowerGallery();
+        case 'ToyGallery':
+            return elements.getToyGallery();
 
         // Images
         case 'img':
