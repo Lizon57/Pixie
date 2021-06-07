@@ -2,7 +2,8 @@ const express = require('express');
 const cors = require('cors');
 const path = require('path');
 const expressSession = require('express-session');
-
+const logger = require('./services/logger.service')
+const port = process.env.PORT || 3030
 const app = express();
 const http = require('http').createServer(app);
 
@@ -35,31 +36,20 @@ const templateRoutes = require('./api/template/template.routes');
 const setupAsyncLocalStorage = require('./middlewares/setupAls.middleware');
 app.all('*', setupAsyncLocalStorage);
 
-//Sockets
-// IF 2 USERS LOG IN WITH SAME USER SEE THE CHANGES ONLINE
-// const {connectSockets} = require('./services/socket.service')
-// app.get('/api/setup-session', (req, res) =>{
-//     req.session.connectedAt = Date.now()
-//     console.log('setup-session:', req.sessionID);
-//     res.end()
-// })
-// connectSockets(http, session)
+
 
 app.use('/api/auth', authRoutes);
 app.use('/api/user', userRoutes);
 app.use('/api/web', webRoutes);
 app.use('/api/template', templateRoutes);
 
-// Make every server-side-route to match the index.html
-// so when requesting http://localhost:3030/index.html/car/123 it will still respond with
-// our SPA (single page app) (the index.html file) and allow vue/react-router to take it from there
+
 
 app.get('/**', (req, res) => {
     res.sendFile(path.join(__dirname, 'public', 'index.html'))
 })
 
-const logger = require('./services/logger.service')
-const port = process.env.PORT || 3030
+
 http.listen(port, () => {
     logger.info('Server is running on port: ' + port)
 })

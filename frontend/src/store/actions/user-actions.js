@@ -7,6 +7,7 @@ export function loadUser(credentials) {
             const user = await userService.getUser(credentials)
             dispatch({ type: 'LOGIN_USER', user })
         } catch (err) {
+            dispatch({ type: 'LOADING_USER', isLoading: false })
             console.log(err)
             throw err
         }
@@ -35,6 +36,7 @@ export function signUp(userInfo) {
             const user = await userService.signUp(userInfo)
             dispatch({ type: `LOGIN_USER`, user })
         } catch (err) {
+            dispatch({ type: 'LOADING_USER', isLoading: false })
             console.log(err)
             throw err
         }

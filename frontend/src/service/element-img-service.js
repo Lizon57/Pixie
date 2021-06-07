@@ -43,6 +43,7 @@ export const flowerText = require('../assets/img/editor/elements/texts/flower.jp
 
 // Export galleries
 export const flowerGallery = require('../assets/img/editor/elements/galleries/flower.jpg');
+export const toyGallery = require('../assets/img/editor/elements/galleries/toy.jpg');
 
 // Export Maps
 export const mapBlock = require('../assets/img/editor/elements/maps/block.jpg');

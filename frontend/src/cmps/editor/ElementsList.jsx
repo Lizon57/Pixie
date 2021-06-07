@@ -9,7 +9,7 @@ import {
     coffeeForm, flowerForm,
     maizFooter, coffeeFooter, flowerFooter, withSocials,
     boxText, alwaysCenterText, styleText, maizText, coffeeText, flowerText,
-    flowerGallery,
+    flowerGallery, toyGallery,
     mapBlock, mapBeforeText, textBeforeMap
 } from '../../service/element-img-service';
 import { UserMsg } from '../../cmps/UserMsg';
@@ -176,7 +176,7 @@ export class ElementsList extends React.Component {
                             </AccordionItemButton>
                         </AccordionItemHeading>
                         <AccordionItemPanel className="elements-container">
-                            <div className="text-center pointer item" onClick={() => onAddSection('ToyGallery')}>Inner text</div>
+                            <img src={toyGallery['default']} alt="Toy gallery" title="Toy gallery" className="lg-img" onClick={() => onAddSection('ToyGallery')} />
                             <img src={flowerGallery['default']} alt="Flower gallery" title="Flower gallery" className="lg-img" onClick={() => onAddSection('FlowerGallery')} />
                         </AccordionItemPanel>
                     </AccordionItem>

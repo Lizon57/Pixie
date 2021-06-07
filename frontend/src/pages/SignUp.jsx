@@ -57,6 +57,7 @@ class _SignUp extends React.Component {
             this.props.history.push(`/profile/${user._id}`);
         } catch (err) {
             this.userMsgShow('Email Already in use');
+            return
         }
 
     }

@@ -50,7 +50,7 @@ class _PublishTool extends React.Component {
                 await saveWeb(webInfo);
                 userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`)
                 window.open(`http://localhost:3000/#/view/${webInfo._id}`); //change to heroku
-                // window.open(`https://pixie.herokuapp.com/#/view/${webInfo._id}`); //heroku
+                // window.open(`https://pixie-ca.herokuapp.com/#/view/${webInfo._id}`); //heroku
                 return;
             } catch (err) {
                 return;
@@ -68,7 +68,7 @@ class _PublishTool extends React.Component {
             const savedWeb = await saveWeb(webInfo);
             userMsgShow(`${isPublished ? 'Published!' : 'Saved to Drafts'}`);
             window.open(`http://localhost:3000/#/view/${savedWeb._id}`); //change to heroku
-            // window.open(`https://pixie.herokuapp.com/#/view/${savedWeb._id}`); //heroku
+            // window.open(`https://pixie-ca.herokuapp.com/#/view/${savedWeb._id}`); //heroku
         } catch (err) {
             console.log('Error on Save', err);
         }
