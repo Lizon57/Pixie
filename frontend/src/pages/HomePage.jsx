@@ -40,13 +40,13 @@ export class _HomePage extends React.Component {
                             <img src={hero} alt="Go Pixie!" />
                         </div>
                     </div>
-                </section>
-                <div className="scroll-down-animation">
-                    <div className="flex column justify-center align-center msg">
-                        <h6>Scroll Down</h6>
-                        <span className="fas scroll-arrow-icn"></span>
+                    <div className="scroll-down-animation">
+                        <div className="flex column justify-center align-center msg">
+                            <h6>Scroll Down</h6>
+                            <span className="fas scroll-arrow-icn"></span>
+                        </div>
                     </div>
-                </div>
+                </section>
 
                 <section>
                     <div className="guide-parse-background">
