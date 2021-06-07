@@ -1,19 +1,14 @@
 .scroll-down-animation {
   flex-basis: 100%;
+  color: rgba($color: $black, $alpha: 0.5);
   font-weight: $fw-extra-bold;
   font-family: RobotoSlab;
-  color: rgba($color: $black, $alpha: 0.5);
+  margin-block-start: rem(40px);
   height: 48px;
-  
 
   & .msg {
     position: relative;
     animation: jump 1s linear infinite;
-  }
-
-  & img {
-    height: 30px;
-    width: 30px;
   }
 }
 
