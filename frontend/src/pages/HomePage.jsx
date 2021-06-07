@@ -29,7 +29,7 @@ export class _HomePage extends React.Component {
 
         return (
             <section className="homepage">
-                <section className="flex align-center justify-center hero-container">
+                <section className="flex wrap align-center justify-center hero-container">
                     <div>
                         <h1 className="title">Create a website you're proud of with <span>Pixie!</span></h1>
                         <div className="flex wrap">
