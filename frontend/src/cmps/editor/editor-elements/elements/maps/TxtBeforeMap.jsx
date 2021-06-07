@@ -15,8 +15,8 @@ export function getTxtBeforeMap() {
                 flexWrap: 'wrap',
                 gap: '30px',
                 backgroundColor: '#eeeeee',
-                paddingInlineStart: '36px',
-                paddingInlineEnd: '36px',
+                paddingInlineStart: '30px',
+                paddingInlineEnd: '30px',
                 paddingBlockStart: '10px',
                 paddingBlockEnd: '10px',
             }

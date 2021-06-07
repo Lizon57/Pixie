@@ -7,9 +7,10 @@ export function getFlowerHeader() {
         role: 'header',
         isContainer: true,
         prefs: {
+            className: 'flower-header-container',
             style: {
                 display: 'flex',
-                flexDirection: 'column',
+                justifyContent: 'space-between',
                 gap: '30px',
                 alignItems: 'center',
                 backgroundColor: '#FFB2DF',
@@ -41,6 +42,7 @@ export function getFlowerHeader() {
                 role: 'div',
                 isContainer: true,
                 prefs: {
+                    className: 'nav-btns-container',
                     style: {
                     }
                 },
@@ -50,41 +52,6 @@ export function getFlowerHeader() {
                         type: 'span',
                         role: 'childless',
                         prefs: {
-                            className: 'nav-desktop',
-                            style: {
-                                display: 'flex',
-                                paddingBlockStart: '5px',
-                                paddingInlineStart: '30px',
-                                paddingBlockEnd: '5px',
-                                paddingInlineEnd: '30px',
-                                color: '#53440c',
-                            }
-                        },
-                        txt: 'FLOWERS'
-                    },
-                    {
-                        id: utilService.makeId(),
-                        type: 'span',
-                        role: 'childless',
-                        prefs: {
-                            className: 'nav-desktop',
-                            style: {
-                                display: 'flex',
-                                paddingBlockStart: '5px',
-                                paddingInlineStart: '30px',
-                                paddingBlockEnd: '5px',
-                                paddingInlineEnd: '30px',
-                                color: '#53440c',
-                            }
-                        },
-                        txt: 'DELIVERIES'
-                    },
-                    {
-                        id: utilService.makeId(),
-                        type: 'span',
-                        role: 'childless',
-                        prefs: {
-                            className: 'nav-desktop',
                             style: {
                                 display: 'flex',
                                 paddingBlockStart: '5px',
@@ -101,7 +68,38 @@ export function getFlowerHeader() {
                         type: 'span',
                         role: 'childless',
                         prefs: {
-                            className: 'nav-desktop',
+                            style: {
+                                display: 'flex',
+                                paddingBlockStart: '5px',
+                                paddingInlineStart: '30px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineEnd: '30px',
+                                color: '#53440c',
+                            }
+                        },
+                        txt: 'DELIVERIES'
+                    },
+                    {
+                        id: utilService.makeId(),
+                        type: 'span',
+                        role: 'childless',
+                        prefs: {
+                            style: {
+                                display: 'flex',
+                                paddingBlockStart: '5px',
+                                paddingInlineStart: '30px',
+                                paddingBlockEnd: '5px',
+                                paddingInlineEnd: '30px',
+                                color: '#53440c',
+                            }
+                        },
+                        txt: 'CONTACT'
+                    },
+                    {
+                        id: utilService.makeId(),
+                        type: 'span',
+                        role: 'childless',
+                        prefs: {
                             style: {
                                 display: 'flex',
                                 paddingBlockStart: '5px',
@@ -113,25 +111,22 @@ export function getFlowerHeader() {
                         },
                         txt: 'FAQS'
                     },
-                    {
-                        id: utilService.makeId(),
-                        type: 'span',
-                        role: 'childless',
-                        prefs: {
-                            className: 'fas hamburger-icon',
-                            style: {
-                                cursor: 'pointer',
-                                display: 'flex',
-                                paddingBlockStart: '5px',
-                                paddingInlineStart: '30px',
-                                paddingBlockEnd: '5px',
-                                paddingInlineEnd: '30px',
-                                color: '#53440c',
-                            }
-                        },
-                        txt: ''
-                    },
                 ]
+            },
+            {
+                id: utilService.makeId(),
+                type: 'span',
+                role: 'childless',
+                prefs: {
+                    className: 'fas hamburger-icon',
+                    style: {
+                        cursor: 'pointer',
+                        display: 'flex',
+                        paddingBlockStart: '5px',
+                        paddingBlockEnd: '5px',
+                        color: '#53440c',
+                    }
+                },
             },
         ]
     })

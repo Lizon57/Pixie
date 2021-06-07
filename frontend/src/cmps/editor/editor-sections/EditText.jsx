@@ -161,7 +161,7 @@ export class EditText extends React.Component {
                     {/* Edit line height */}
                     <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Height:</span>
-                        <Slider max={50} value={strippedPropsFromPx.lineHeight} onChange={(value) => onChangeSpecialInput('lineHeight', value)} />
+                        <Slider max={100} value={strippedPropsFromPx.lineHeight} onChange={(value) => onChangeSpecialInput('lineHeight', value)} />
                         <span className="editor-indicator">{strippedPropsFromPx.lineHeight} px</span>
                     </div>
                 </div>

@@ -82,9 +82,10 @@ export function getFlowerHero() {
                                         display: 'flex',
                                         color: '#eeeeee',
                                         fontSize: '64px',
+                                        lineHeight: '80px'
                                     }
                                 },
-                                txt: 'Everybody Loves the Sunshine.'
+                                txt: '“It\'s never too late to have a happy childhood„'
                             },
                             {
                                 id: utilService.makeId(),
@@ -95,9 +96,10 @@ export function getFlowerHero() {
                                         display: 'flex',
                                         color: '#53440c',
                                         fontSize: '20px',
+                                        maxWidth: '40ch'
                                     }
                                 },
-                                txt: 'After you’ve finished your Friday shopping and had brunch, it’s well worth it to pass through the flower shop at the end of the market.'
+                                txt: 'Tom Robbins defined the secret of life. Don\'t you fill the same? Just grab a new toy and feel like a HAPPY child once again!'
                             },
                             {
                                 id: utilService.makeId(),
@@ -119,7 +121,7 @@ export function getFlowerHero() {
                                         paddingInlineEnd: '32px',
                                     }
                                 },
-                                txt: 'TAKE ME'
+                                txt: 'LET\'S BUY!'
                             },
                         ]
                     }

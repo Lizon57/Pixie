@@ -136,7 +136,7 @@ export function getFlowerCards() {
                                 marginBlockEnd: '24px',
                             }
                         },
-                        txt: 'Quick to Arive'
+                        txt: 'Expect Your Order TODAY'
                     },
                     {
                         id: utilService.makeId(),
@@ -148,7 +148,7 @@ export function getFlowerCards() {
                                 fontSize: '18px',
                             }
                         },
-                        txt: 'Call us - an hour later the flowers will be at your doorstep. Guaranteed.'
+                        txt: 'Just place your order and an hour later our delivery guy will be at your doorstep. Guaranteed.'
                     }
                 ]
             },
@@ -202,7 +202,7 @@ export function getFlowerCards() {
                                 marginBlockEnd: '24px',
                             }
                         },
-                        txt: 'Handled With Care'
+                        txt: 'Handled With Care And Love'
                     },
                     {
                         id: utilService.makeId(),
@@ -214,7 +214,7 @@ export function getFlowerCards() {
                                 fontSize: '18px',
                             }
                         },
-                        txt: 'Get fresh and beautiful floral arrangements, hand-delivered with care.'
+                        txt: 'We supply only the best products available, each chosen with 100% attention.'
                     }
                 ]
             }
