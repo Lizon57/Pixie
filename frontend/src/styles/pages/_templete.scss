@@ -1,18 +1,26 @@
+.templates-page-title{
+  color: $azure;
+  font-size: 2rem;
+  font-weight: $fw-bold;
+  font-family: RobotoSlab;
+  margin: 1rem;
+
+  @include for-normal-layout{
+    margin-block-start: 2rem;
+  }
+}
+
 .template-list {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
   gap: 2rem;
-  padding: 0 5px;
-
-  @include for-normal-layout {
-    padding: 2rem 1rem;
-  }
+  margin: 1rem 1rem;
 }
 
 .template-card-container {
+  @include ease-rounded-corners;
   @include aspect-ratio(390, 275);
   box-shadow: 0 0 7px 0px #e2e2e2;
-  border-radius: 5px;
 
   .template-card {
     display: flex;
