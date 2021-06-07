@@ -50,8 +50,8 @@ export class _HomePage extends React.Component {
 
                 <section>
                     <div className="guide-parse-background">
-                        <ScrollAnimation animateIn='bounceInRight' duration={2}>
-                            <section className="container" data-aos="fade-left">
+                        <section className="container" data-aos="fade-left">
+                            <ScrollAnimation animateIn='bounceInRight' duration={2}>
                                 <div className="flex wrap space-between">
                                     <div className="text">
                                         <h2>The Freedom to Create the Websites You Want</h2>
@@ -63,13 +63,13 @@ export class _HomePage extends React.Component {
                                     </div>
                                     <img src={freedom} alt="guide parse" />
                                 </div>
-                            </section>
-                        </ScrollAnimation>
+                            </ScrollAnimation>
+                        </section>
                     </div>
 
                     <div className="guide-parse-background">
-                        <ScrollAnimation animateIn='bounceInLeft' duration={2}>
-                            <section className="container">
+                        <section className="container">
+                            <ScrollAnimation animateIn='bounceInLeft' duration={2}>
                                 <div className="flex wrap space-between">
                                     <div className="text">
                                         <h2>Customize your site</h2>
@@ -78,13 +78,13 @@ export class _HomePage extends React.Component {
                                     </div>
                                     <img src={customize} className="parse-even" alt="guide parse" />
                                 </div>
-                            </section>
-                        </ScrollAnimation>
+                            </ScrollAnimation>
+                        </section>
                     </div>
 
                     <div className="guide-parse-background">
-                        <ScrollAnimation animateIn='bounceInRight' duration={2}>
-                            <section className="container">
+                        <section className="container">
+                            <ScrollAnimation animateIn='bounceInRight' duration={2}>
                                 <div className="flex wrap space-between">
                                     <div className="text">
                                         <h2>Pixie Editor</h2>
@@ -93,8 +93,8 @@ export class _HomePage extends React.Component {
                                     </div>
                                     <img src={editor} alt="guide parse" />
                                 </div>
-                            </section>
-                        </ScrollAnimation>
+                            </ScrollAnimation>
+                        </section>
                     </div>
                 </section>
 
