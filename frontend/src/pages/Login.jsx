@@ -55,6 +55,7 @@ class _Login extends React.Component {
             this.props.history.push(`/profile/${user._id}`);
         } catch (err) {
             this.userMsgShow('Invalid Email or Password');
+            return
         }
     }
 
