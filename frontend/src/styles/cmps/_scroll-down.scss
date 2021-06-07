@@ -1,8 +1,10 @@
 .scroll-down-animation {
+  flex-basis: 100%;
   font-weight: $fw-extra-bold;
   font-family: RobotoSlab;
   color: rgba($color: $black, $alpha: 0.5);
   height: 48px;
+  
 
   & .msg {
     position: relative;

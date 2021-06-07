@@ -75,8 +75,9 @@ class _Editor extends React.Component {
     onAddSection = async (section, src = null) => {
         const addedSection = elementService.getElement(section, src);
         await this.props.addSection(addedSection);
-
         this.resetEditorAccordion();
+        const siteContainer = document.querySelector('.site-container');
+        siteContainer.scrollTo({top: siteContainer.scrollHeight, behavior: 'smooth'});
     }
 
     onAddElement = (elementType, src = null) => {
