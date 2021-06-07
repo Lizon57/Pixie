@@ -8,6 +8,8 @@ import { DragDropContext, Droppable } from 'react-beautiful-dnd';
 
 class _PageRenderV2 extends React.Component {
 
+    siteContainerRef = React.createRef();
+
     reorder = (startIndex, endIndex) => {
         const { childs } = this.props;
         let data = childs.slice();
@@ -26,10 +28,9 @@ class _PageRenderV2 extends React.Component {
         this.props.editData(childs)
     }
 
-
     render() {
         const { childs, onReorderingElement, onRemoveElement, setEditingElement, editingElement, saveWebsiteToStorage, onUpdateElement } = this.props;
-        
+
         if (childs.length === 0) {
             //if there is no childs in store it shows msg.
             // localStorage.removeItem('website');
@@ -76,6 +77,7 @@ class _PageRenderV2 extends React.Component {
                 <Droppable droppableId="childs">
                     {(provided) => (
                         <section
+                            ref={this.siteContainerRef}
                             data-id={utilService.makeId()}
                             className="site-container"
                             {...provided.droppableProps}
