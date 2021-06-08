@@ -46,6 +46,7 @@ class _PageRenderV2 extends React.Component {
                                 prefs: {
                                     style: {
                                         display: 'flex',
+                                        backgroundColor: '#FEFEFE',
                                         alignItems: 'center',
                                         justifyContent: 'center',
                                         border: '5px dashed #aaaaaa',

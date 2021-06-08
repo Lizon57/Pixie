@@ -80,7 +80,8 @@ export class EditBoxStyling extends React.Component {
                     {/* Upload background-image */}
                     {!isImg && <div className="flex align-center editor-pref-warper">
                         <span className="editor-label">Upload:</span>
-                        <input type="file" onChange={this.uploadImg} />
+                        <label className="src-input-btn left" htmlFor="element-src">Choose a file...</label>
+                        <input id="element-src" type="file" onChange={this.uploadImg} />
                     </div>}
                 </div>
 

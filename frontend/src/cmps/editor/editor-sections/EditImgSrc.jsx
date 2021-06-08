@@ -14,7 +14,8 @@ export class EditImgSrc extends React.Component {
         return (
             <div className="flex align-center edit-img-src">
                 <span className="editor-label">Upload:</span>
-                <input type="file" onChange={this.uploadImg} />
+                <label className="src-input-btn" htmlFor="change-src">Choose a file...</label>
+                <input className="src-input" id="change-src" type="file" onChange={this.uploadImg} />
             </div>
         )
     }

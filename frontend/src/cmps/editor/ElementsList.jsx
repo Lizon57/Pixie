@@ -189,8 +189,8 @@ export class ElementsList extends React.Component {
                         </AccordionItemHeading>
                         <AccordionItemPanel>
                             <div className="file-upload">
-                                <input type="file"
-                                    style={{ display: 'block', marginTop: '10px' }}
+                                <label className="src-input-btn" htmlFor="upload-new">Choose a file...</label>
+                                <input id="upload-new" type="file"
                                     onChange={this.uploadImg} />
                             </div>
                         </AccordionItemPanel>

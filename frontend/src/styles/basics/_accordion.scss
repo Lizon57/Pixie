@@ -1,11 +1,10 @@
 // Accordion
 .accordion {
-  border: 1px solid $grey;
-  font-family: inter;
+  border: 1px solid $light-grey1;
+  font-family: Inter;
 
   & .accordion__heading {
     cursor: pointer;
-    background-color: $light-grey1;
     color: $dark-grey;
     font-weight: $fw-bold;
 
@@ -16,7 +15,7 @@
 }
 
 .accordion__item + .accordion__item {
-  border-block-start: 1px solid $grey;
+  border-block-start: 1px solid $light-grey1;
 }
 
 .accordion__button {
