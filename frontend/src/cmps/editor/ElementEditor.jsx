@@ -71,7 +71,7 @@ export class _ElementEditor extends React.Component {
         } = {} } = prefs;
 
         return (
-            <Accordion preExpanded={['txtAC', 'imgAc', 'videoAc', 'mapAc']} allowZeroExpanded={true} allowMultipleExpanded={false}>
+            <Accordion preExpanded={['txtAC', 'imgAc', 'videoAc', 'mapAc', 'styling']} allowZeroExpanded={true} allowMultipleExpanded={false}>
 
                 {('txt' in element && element.role !== 'img') &&
                     <AccordionItem uuid={'txtAC'}>
@@ -146,7 +146,7 @@ export class _ElementEditor extends React.Component {
                     </AccordionItem>
                 }
 
-                <AccordionItem>
+                <AccordionItem uuid={'styling'}>
                     <AccordionItemHeading>
                         <AccordionItemButton>
                             Styling
