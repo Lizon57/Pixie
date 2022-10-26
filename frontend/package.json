@@ -15,7 +15,6 @@
     "i": "^0.3.6",
     "intro.js": "^3.4.0",
     "intro.js-react": "^0.3.0",
-    "node-sass": "^4.14.1",
     "npm": "^7.15.0",
     "rc-slider": "^9.7.2",
     "react": "^17.0.2",
@@ -31,6 +30,7 @@
     "react-select": "^4.3.1",
     "redux": "^4.1.0",
     "redux-thunk": "^2.3.0",
+    "sass": "^1.55.0",
     "socket.io-client": "^4.1.2",
     "web-vitals": "^1.1.2"
   },
